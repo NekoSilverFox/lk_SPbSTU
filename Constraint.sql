@@ -1,0 +1,56 @@
+USE master
+USE db_SPbSTU
+
+ALTER TABLE tb_Account	-- DONE
+	ADD CONSTRAINT UQ_Account_Account UNIQUE(Account),
+		CONSTRAINT CK_Account_Password CHECK(LEN(Passwd)>=6)
+
+
+ALTER TABLE tb_Degree	-- DONE
+	ADD CONSTRAINT PK_Degree_DegreeID PRIMARY KEY(DegreeID),
+		CONSTRAINT UQ_Degree_DegreeType UNIQUE(DegreeType)
+
+
+ALTER TABLE tb_StudyType	-- DONE
+	ADD CONSTRAINT PK_StudyType_StudyTypeID PRIMARY KEY(StudyTypeID),
+		CONSTRAINT UQ_StudyType_StudyType UNIQUE(StudyType)
+
+
+ALTER TABLE tb_Institute	-- DONE
+	ADD CONSTRAINT PK_Institute_InstituteID PRIMARY KEY(InstituteID),
+		CONSTRAINT UQ_Institute_InstituteName UNIQUE(InstituteName),
+		CONSTRAINT UQ_Institute_ShortName UNIQUE(ShortName)
+
+
+ALTER TABLE tb_Profession	-- DONE
+	ADD CONSTRAINT PK_Profession_ProfessionID PRIMARY KEY(ProfessionID),
+		CONSTRAINT UQ_Profession_ProfessionName UNIQUE(ProfessionName),
+		CONSTRAINT UQ_Profession_ProfessionCode UNIQUE(ProfessionCode),
+		CONSTRAINT DF_Profession_TuitionFee DEFAULT(20000) FOR TuitionFee
+
+
+ALTER TABLE tb_Student
+	ADD CONSTRAINT PK_Student_StudentID PRIMARY KEY(StudentID),
+		CONSTRAINT FK_Student_InstituteShortName FOREIGN KEY(InstituteShortName) REFERENCES tb_Institute(ShortName),
+		CONSTRAINT FK_Student_ProfessionCode FOREIGN KEY(ProfessionCode) REFERENCES tb_Profession(ProfessionCode),
+		CONSTRAINT FK_Student_Degree FOREIGN KEY(Degree) REFERENCES tb_Degree(DegreeType),
+		CONSTRAINT FK_Student_StudyType FOREIGN KEY(StudyType) REFERENCES tb_StudyType(StudyType),
+		CONSTRAINT DF_Student_EnrollTime DEFAULT(DATENAME(YYYY, GETDATE()) + '09-01'),
+		CONSTRAINT FK_Student_TrainStatus FOREIGN KEY(TrainStatus) REFERENCES (#TODO) Ìí¼ÓÑ§Ï°×´Ì¬±í
+
+
+ALTER TABLE tb_Post	-- DONE
+	ADD CONSTRAINT PK_Post_PostID PRIMARY KEY(PostID),
+		CONSTRAINT UQ_Post_PostName UNIQUE(PostName),
+		CONSTRAINT DF_Post_Salary DEFAULT(40000) FOR Salary
+
+
+ALTER TABLE tb_Condition	-- DONE
+	ADD CONSTRAINT PK_Condition_ConditionID PRIMARY KEY(ConditionID),
+		CONSTRAINT UQ_Condition_ConditionType UNIQUE(ConditionType)
+
+ALTER TABLE tb_Staff	-- DONE
+	ADD CONSTRAINT PK_Staff_StaffID PRIMARY KEY(StaffID),
+		CONSTRAINT DF_Staff_Hiredate DEFAULT(GETDATE()) FOR Hiredate,
+		CONSTRAINT FK_Staff_Post FOREIGN KEY(Post) REFERENCES tb_Post(PostName),
+		CONSTRAINT FK_Staff_Condition FOREIGN KEY(Condition) REFERENCES tb_Condition(ConditionType)

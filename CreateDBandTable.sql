@@ -29,7 +29,7 @@ LOG ON
 	FILEGROWTH=1%,
 	MAXSIZE=1024MB
 )
-
+GO
 
 ----------------------- 创建 Account 账号表 -----------------------
 USE db_SPbSTU
@@ -52,14 +52,14 @@ GO
 
 CREATE TABLE tb_Student
 (
-	StudentID		char(16)		not null,
+	StudentID		int				IDENTITY(1935000, 1) not null,
 	StudentName		nchar(64)		not null,
 	Gender			bit				not null,
 	Birthday		datetime		null,
 	Phone			char(10)		not null,
 	Account			char(64)		null,		-- edu email
 	Email			char(64)		null,
-	InstituteID		smallint		null,		-- 院系 Учебное подразделение
+	InstituteShortName	char(16)	null,		-- 院系 Учебное подразделение
 	ProfessionCode	char(16)		null,		-- 方向 Направление подготовки
 	Degree			nchar(64)		not null,	-- 学位 Уровень подготовки
 	StudyType		nchar(64)		not null,	-- 培训方式 Форма обучения+
@@ -79,7 +79,7 @@ GO
 
 CREATE TABLE tb_Degree
 (
-	DegreeID		smallint		not null,
+	DegreeID		smallint		IDENTITY(1, 1) not null,
 	DegreeType		nchar(64)		not null
 )
 
@@ -92,7 +92,7 @@ GO
 
 CREATE TABLE tb_StudyType
 (
-	StudyTypeID		smallint		not null,
+	StudyTypeID		smallint		IDENTITY(1, 1) not null,
 	StudyType		nchar(64)		not null
 )
 
@@ -104,8 +104,8 @@ GO
 
 CREATE TABLE tb_Institute
 (
-	InstituteID		smallint		not null,
-	InstituteName	nvarchar(255)	not null,
+	InstituteID		smallint		IDENTITY(1, 1) not null,
+	InstituteName	nvarchar(256)	not null,
 	ShortName		char(16)		null,
 	Email			char(64)		null,
 	Website			char(128)		null,
@@ -122,9 +122,8 @@ GO
 
 CREATE TABLE tb_Profession
 (
-	ProfessionID	smallint		not null,
-	InstituteID		smallint		not null,
-	ProfessionName	nvarchar(255)	not null,
+	ProfessionID	smallint		IDENTITY(1, 1) not null,
+	ProfessionName	nvarchar(256)	not null,
 	ProfessionCode	char(16)		not null,
 	TuitionFee		money			not null
 )
@@ -138,7 +137,7 @@ GO
 
 CREATE TABLE tb_Staff
 (
-	StaffID			char(16)		not null,
+	StaffID			int				IDENTITY(1, 1) not null,
 	StaffName		nchar(64)		not null,
 	Gender			bit				not null,
 	Birthday		datetime		null,
@@ -146,9 +145,9 @@ CREATE TABLE tb_Staff
 	Account			char(64)		null,		-- edu email
 	Email			char(64)		null,
 	Hiredate		datetime		not null,	-- 入职时间 Год поступления
-	Post			nvarchar(255)	null,		-- 职务
-	Institute		nvarchar(255)	null,		-- 院系 Учебное подразделение
-	Condition		nchar(32)		not null	-- 工作状态
+	Post			nvarchar(256)	null,		-- 职务
+	Institute		nvarchar(256)	null,		-- 院系 Учебное подразделение
+	Condition		nvarchar(64)	not null	-- 工作状态
 )
 
 
@@ -160,7 +159,20 @@ GO
 
 CREATE TABLE tb_Post
 (
-	PostID		char(16)		not null,
-	PostName	nchar(64)		not null,
+	PostID		int				IDENTITY(1, 1) not null,
+	PostName	nvarchar(256)	not null,
 	Salary		money			not null
+)
+
+
+----------------------- 创建 Condition 工作状态表 -----------------------
+USE db_SPbSTU
+IF EXISTS(SELECT * FROM sysobjects WHERE NAME='tb_Condition')
+	DROP TABLE tb_Condition
+GO
+
+CREATE TABLE tb_Condition
+(
+	ConditionID		smallint		IDENTITY(1, 1) not null,
+	ConditionType	nvarchar(64)	not null
 )
