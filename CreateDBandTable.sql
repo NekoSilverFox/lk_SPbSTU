@@ -1,5 +1,6 @@
 ﻿USE master
 
+
 ----------------------- 创建数据库 -----------------------
 IF EXISTS(SELECT * FROM sysdatabases WHERE NAME='db_SPbSTU')
 	DROP DATABASE db_SPbSTU
@@ -44,6 +45,19 @@ CREATE TABLE tb_Account
 )
 
 
+----------------------- 创建 TrainStatus 学生培训状态表 -----------------------
+USE db_SPbSTU
+IF EXISTS(SELECT * FROM sysobjects WHERE NAME='tb_TrainStatus')
+	DROP TABLE tb_TrainStatus
+GO
+
+CREATE TABLE tb_TrainStatus
+(
+	TrainStatusID		smallint		IDENTITY(1, 1) not null,
+	TrainStatusType		nchar(64)		not null
+)
+
+
 ----------------------- 创建 Student 表 -----------------------
 USE db_SPbSTU
 IF EXISTS(SELECT * FROM sysobjects WHERE NAME='tb_Student')
@@ -63,11 +77,9 @@ CREATE TABLE tb_Student
 	ProfessionCode	char(16)		null,		-- 方向 Направление подготовки
 	Degree			nchar(64)		not null,	-- 学位 Уровень подготовки
 	StudyType		nchar(64)		not null,	-- 培训方式 Форма обучения+
-	EnrollTime		datetime		not null,	-- 入学年份 Год поступления
-	Grade			smallint		not null,	-- 年级 Курс
-	Semester		smallint		not null,	-- 学期 Семестр
+	EnrollTime		datetime		not null,	-- 入学年份/时间 Год поступления
 	Class			char(16)		null,		-- 班级 Группа
-	TrainStatus		nchar(32)		not null	-- 状态 Статус обучения
+	TrainStatus		nchar(64)	not null	-- 状态 Статус обучения
 )
 
 
@@ -104,7 +116,7 @@ GO
 
 CREATE TABLE tb_Institute
 (
-	InstituteID		smallint		IDENTITY(1, 1) not null,
+	InstituteID		smallint		IDENTITY(10, 1) not null,
 	InstituteName	nvarchar(256)	not null,
 	ShortName		char(16)		null,
 	Email			char(64)		null,
