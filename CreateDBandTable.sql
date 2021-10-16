@@ -1,6 +1,5 @@
 ﻿USE master
 
-
 ----------------------- 创建数据库 -----------------------
 IF EXISTS(SELECT * FROM sysdatabases WHERE NAME='db_SPbSTU')
 	DROP DATABASE db_SPbSTU
@@ -31,6 +30,12 @@ LOG ON
 	MAXSIZE=1024MB
 )
 GO
+
+EXECUTE sp_helpdb DB_SPBSTU
+GO
+
+
+
 
 ----------------------- 创建 Account 账号表 -----------------------
 USE db_SPbSTU
@@ -73,13 +78,13 @@ CREATE TABLE tb_Student
 	Phone			char(10)		not null,
 	Account			char(64)		null,		-- edu email
 	Email			char(64)		null,
-	InstituteShortName	char(16)	null,		-- 院系 Учебное подразделение
+	InstituteShortName	nchar(16)	null,		-- 院系 Учебное подразделение
 	ProfessionCode	char(16)		null,		-- 方向 Направление подготовки
 	Degree			nchar(64)		not null,	-- 学位 Уровень подготовки
 	StudyType		nchar(64)		not null,	-- 培训方式 Форма обучения+
 	EnrollTime		datetime		not null,	-- 入学年份/时间 Год поступления
-	Grade			as CEILING(DATEDIFF(MM, EnrollTime, GETDATE())/12),	-- 年级 Курс
-	Semester		as CEILING(DATEDIFF(MM, EnrollTime, GETDATE())/6),	-- 学期 Семестр
+	Grade			as CEILING(DATEDIFF(MM, EnrollTime, GETDATE())/12+1),	-- 年级 Курс
+	Semester		as CEILING(DATEDIFF(MM, EnrollTime, GETDATE())/6+1),	-- 学期 Семестр
 	Class			char(16)		null,		-- 班级 Группа
 	TrainStatus		nchar(64)	not null	-- 状态 Статус обучения
 )
@@ -120,7 +125,7 @@ CREATE TABLE tb_Institute
 (
 	InstituteID		smallint		IDENTITY(10, 1) not null,
 	InstituteName	nvarchar(256)	not null,
-	ShortName		char(16)		null,
+	ShortName		nchar(16)		null,
 	Email			char(64)		null,
 	Website			char(128)		null,
 	DetAddress		nvarchar(512)	null,
@@ -137,8 +142,9 @@ GO
 CREATE TABLE tb_Profession
 (
 	ProfessionID	smallint		IDENTITY(1, 1) not null,
-	ProfessionName	nvarchar(256)	not null,
+	InstituteShortName nchar(16)	null,
 	ProfessionCode	char(16)		not null,
+	ProfessionName	nvarchar(256)	not null,
 	TuitionFee		money			not null
 )
 
@@ -160,7 +166,7 @@ CREATE TABLE tb_Staff
 	Email			char(64)		null,
 	Hiredate		datetime		not null,	-- 入职时间 Год поступления
 	Post			nvarchar(256)	null,		-- 职务
-	Institute		nvarchar(256)	null,		-- 院系 Учебное подразделение
+	InstituteShortName nchar(16)		null,		-- 院系 Учебное подразделение
 	Condition		nvarchar(64)	not null	-- 工作状态
 )
 

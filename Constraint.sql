@@ -23,6 +23,7 @@ ALTER TABLE tb_Institute
 USE db_SPbSTU
 ALTER TABLE tb_Profession
 	ADD CONSTRAINT PK_Profession_ProfessionID PRIMARY KEY(ProfessionID),
+		CONSTRAINT KF_Profession_InstituteShortName FOREIGN KEY(InstituteShortName) REFERENCES tb_Institute(ShortName),
 		CONSTRAINT UQ_Profession_ProfessionName UNIQUE(ProfessionName),
 		CONSTRAINT UQ_Profession_ProfessionCode UNIQUE(ProfessionCode),
 		CONSTRAINT DF_Profession_TuitionFee DEFAULT(20000) FOR TuitionFee
@@ -35,6 +36,8 @@ ALTER TABLE tb_TrainStatus
 USE db_SPbSTU
 ALTER TABLE tb_Student
 	ADD CONSTRAINT PK_Student_StudentID PRIMARY KEY(StudentID),
+		CONSTRAINT FK_Student_Account FOREIGN KEY(Account) REFERENCES tb_Account(Account),
+		CONSTRAINT UQ_Student_Account UNIQUE(Account),
 		CONSTRAINT FK_Student_InstituteShortName FOREIGN KEY(InstituteShortName) REFERENCES tb_Institute(ShortName),
 		CONSTRAINT FK_Student_ProfessionCode FOREIGN KEY(ProfessionCode) REFERENCES tb_Profession(ProfessionCode),
 		CONSTRAINT FK_Student_Degree FOREIGN KEY(Degree) REFERENCES tb_Degree(DegreeType),
@@ -56,6 +59,8 @@ ALTER TABLE tb_Condition
 USE db_SPbSTU
 ALTER TABLE tb_Staff
 	ADD CONSTRAINT PK_Staff_StaffID PRIMARY KEY(StaffID),
+		CONSTRAINT FK_Staff_Account FOREIGN KEY(Account) REFERENCES tb_Account(Account),
 		CONSTRAINT DF_Staff_Hiredate DEFAULT(GETDATE()) FOR Hiredate,
 		CONSTRAINT FK_Staff_Post FOREIGN KEY(Post) REFERENCES tb_Post(PostName),
+		CONSTRAINT FK_Staff_InstituteShortName FOREIGN KEY(InstituteShortName) REFERENCES tb_Institute(ShortName),
 		CONSTRAINT FK_Staff_Condition FOREIGN KEY(Condition) REFERENCES tb_Condition(ConditionType)
