@@ -80,13 +80,13 @@ CREATE TABLE tb_Student
 	Email			char(64)		null,
 	InstituteShortName	nchar(16)	null,		-- 院系 Учебное подразделение
 	ProfessionCode	char(16)		null,		-- 方向 Направление подготовки
-	Degree			nchar(64)		not null,	-- 学位 Уровень подготовки
-	StudyType		nchar(64)		not null,	-- 培训方式 Форма обучения+
+	DegreeID		nchar(64)		not null,	-- 学位 Уровень подготовки
+	StudyTypeID		nchar(64)		not null,	-- 培训方式 Форма обучения+
 	EnrollTime		datetime		not null,	-- 入学年份/时间 Год поступления
 	Grade			as CEILING(DATEDIFF(MM, EnrollTime, GETDATE())/12+1),	-- 年级 Курс
 	Semester		as CEILING(DATEDIFF(MM, EnrollTime, GETDATE())/6+1),	-- 学期 Семестр
 	Class			char(16)		null,		-- 班级 Группа
-	TrainStatus		nchar(64)	not null	-- 状态 Статус обучения
+	TrainStatusID	nchar(64)		not null	-- 状态 Статус обучения
 )
 
 

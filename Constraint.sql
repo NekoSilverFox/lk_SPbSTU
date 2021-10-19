@@ -33,7 +33,8 @@ ALTER TABLE tb_TrainStatus
 	ADD CONSTRAINT PK_TrainStatus_TrainStatusID PRIMARY KEY(TrainStatusID),
 		CONSTRAINT UQ_TrainStatus_TrainStatusType UNIQUE(TrainStatusType)
 --
-USE db_SPbSTU
+
+USE db_SPbSTU 
 ALTER TABLE tb_Student
 	ADD CONSTRAINT PK_Student_StudentID PRIMARY KEY(StudentID),
 		CONSTRAINT FK_Student_Account FOREIGN KEY(Account) REFERENCES tb_Account(Account),
