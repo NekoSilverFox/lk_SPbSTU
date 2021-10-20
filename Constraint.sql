@@ -19,6 +19,7 @@ ALTER TABLE tb_Institute
 	ADD CONSTRAINT PK_Institute_InstituteID PRIMARY KEY(InstituteID),
 		CONSTRAINT UQ_Institute_InstituteName UNIQUE(InstituteName),
 		CONSTRAINT UQ_Institute_ShortName UNIQUE(ShortName)
+		CONSTRAINT CK_Institute_Phone CHECK(Phone LIKE '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]')
 --
 USE db_SPbSTU
 ALTER TABLE tb_Profession
@@ -37,14 +38,15 @@ ALTER TABLE tb_TrainStatus
 USE db_SPbSTU 
 ALTER TABLE tb_Student
 	ADD CONSTRAINT PK_Student_StudentID PRIMARY KEY(StudentID),
+		CONSTRAINT CK_Institute_Phone CHECK(Phone LIKE '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'),
 		CONSTRAINT FK_Student_Account FOREIGN KEY(Account) REFERENCES tb_Account(Account),
 		CONSTRAINT UQ_Student_Account UNIQUE(Account),
 		CONSTRAINT FK_Student_InstituteShortName FOREIGN KEY(InstituteShortName) REFERENCES tb_Institute(ShortName),
 		CONSTRAINT FK_Student_ProfessionCode FOREIGN KEY(ProfessionCode) REFERENCES tb_Profession(ProfessionCode),
-		CONSTRAINT FK_Student_Degree FOREIGN KEY(Degree) REFERENCES tb_Degree(DegreeType),
-		CONSTRAINT FK_Student_StudyType FOREIGN KEY(StudyType) REFERENCES tb_StudyType(StudyType),
+		CONSTRAINT FK_Student_DegreeID FOREIGN KEY(DegreeID) REFERENCES tb_Degree(DegreeID),
+		CONSTRAINT FK_Student_StudyTypeID FOREIGN KEY(StudyTypeID) REFERENCES tb_StudyType(StudyTypeID),
 		CONSTRAINT DF_Student_EnrollTime DEFAULT(DATENAME(YYYY, GETDATE()) + '-09-01') FOR EnrollTime,
-		CONSTRAINT FK_Student_TrainStatus FOREIGN KEY(TrainStatus) REFERENCES tb_TrainStatus(TrainStatusType)
+		CONSTRAINT FK_Student_TrainStatusID FOREIGN KEY(TrainStatusID) REFERENCES tb_TrainStatus(TrainStatusID)
 --
 USE db_SPbSTU
 ALTER TABLE tb_Post
@@ -60,6 +62,7 @@ ALTER TABLE tb_Condition
 USE db_SPbSTU
 ALTER TABLE tb_Staff
 	ADD CONSTRAINT PK_Staff_StaffID PRIMARY KEY(StaffID),
+		CONSTRAINT CK_Institute_Phone CHECK(Phone LIKE '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'),
 		CONSTRAINT FK_Staff_Account FOREIGN KEY(Account) REFERENCES tb_Account(Account),
 		CONSTRAINT DF_Staff_Hiredate DEFAULT(GETDATE()) FOR Hiredate,
 		CONSTRAINT FK_Staff_Post FOREIGN KEY(Post) REFERENCES tb_Post(PostName),

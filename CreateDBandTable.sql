@@ -45,48 +45,8 @@ GO
 
 CREATE TABLE tb_Account
 (
-	Account		char(64)		not null,
-	Passwd		char(16)		not null
-)
-
-
------------------------ 创建 TrainStatus 学生培训状态表 -----------------------
-USE db_SPbSTU
-IF EXISTS(SELECT * FROM sysobjects WHERE NAME='tb_TrainStatus')
-	DROP TABLE tb_TrainStatus
-GO
-
-CREATE TABLE tb_TrainStatus
-(
-	TrainStatusID		smallint		IDENTITY(1, 1) not null,
-	TrainStatusType		nchar(64)		not null
-)
-
-
------------------------ 创建 Student 表 -----------------------
-USE db_SPbSTU
-IF EXISTS(SELECT * FROM sysobjects WHERE NAME='tb_Student')
-	DROP TABLE tb_Student
-GO
-
-CREATE TABLE tb_Student
-(
-	StudentID		int				IDENTITY(1935000, 1) not null,
-	StudentName		nchar(64)		not null,
-	Gender			bit				not null,
-	Birthday		datetime		null,
-	Phone			char(10)		not null,
-	Account			char(64)		null,		-- edu email
-	Email			char(64)		null,
-	InstituteShortName	nchar(16)	null,		-- 院系 Учебное подразделение
-	ProfessionCode	char(16)		null,		-- 方向 Направление подготовки
-	DegreeID		nchar(64)		not null,	-- 学位 Уровень подготовки
-	StudyTypeID		nchar(64)		not null,	-- 培训方式 Форма обучения+
-	EnrollTime		datetime		not null,	-- 入学年份/时间 Год поступления
-	Grade			as CEILING(DATEDIFF(MM, EnrollTime, GETDATE())/12+1),	-- 年级 Курс
-	Semester		as CEILING(DATEDIFF(MM, EnrollTime, GETDATE())/6+1),	-- 学期 Семестр
-	Class			char(16)		null,		-- 班级 Группа
-	TrainStatusID	nchar(64)		not null	-- 状态 Статус обучения
+	Account		varchar(64)		not null,
+	Passwd		varchar(16)		not null
 )
 
 
@@ -98,8 +58,8 @@ GO
 
 CREATE TABLE tb_Degree
 (
-	DegreeID		smallint		IDENTITY(1, 1) not null,
-	DegreeType		nchar(64)		not null
+	DegreeID		int				IDENTITY(1, 1) not null,
+	DegreeType		nvarchar(64)	not null
 )
 
 
@@ -111,8 +71,8 @@ GO
 
 CREATE TABLE tb_StudyType
 (
-	StudyTypeID		smallint		IDENTITY(1, 1) not null,
-	StudyType		nchar(64)		not null
+	StudyTypeID		int				IDENTITY(1, 1) not null,
+	StudyType		nvarchar(64)	not null
 )
 
 ----------------------- 创建 Institute 院系表 -----------------------
@@ -123,11 +83,11 @@ GO
 
 CREATE TABLE tb_Institute
 (
-	InstituteID		smallint		IDENTITY(10, 1) not null,
+	InstituteID		int				IDENTITY(10, 1) not null,
 	InstituteName	nvarchar(256)	not null,
-	ShortName		nchar(16)		null,
-	Email			char(64)		null,
-	Website			char(128)		null,
+	ShortName		nvarchar(16)	not null,
+	Email			varchar(64)		null,
+	Website			varchar(512)	null,
 	DetAddress		nvarchar(512)	null,
 	Phone			char(10)		not null
 )
@@ -141,33 +101,51 @@ GO
 
 CREATE TABLE tb_Profession
 (
-	ProfessionID	smallint		IDENTITY(1, 1) not null,
-	InstituteShortName nchar(16)	null,
-	ProfessionCode	char(16)		not null,
+	ProfessionID	int				IDENTITY(1, 1) not null,
+	InstituteShortName nvarchar(16)	not null,
+	ProfessionCode	varchar(16)		not null,
 	ProfessionName	nvarchar(256)	not null,
 	TuitionFee		money			not null
 )
 
 
------------------------ 创建 Staff 员工表 -----------------------
+----------------------- 创建 TrainStatus 学生培训状态表 -----------------------
 USE db_SPbSTU
-IF EXISTS(SELECT * FROM sysobjects WHERE NAME='tb_Staff')
-	DROP TABLE tb_Staff
+IF EXISTS(SELECT * FROM sysobjects WHERE NAME='tb_TrainStatus')
+	DROP TABLE tb_TrainStatus
 GO
 
-CREATE TABLE tb_Staff
+CREATE TABLE tb_TrainStatus
 (
-	StaffID			int				IDENTITY(1, 1) not null,
-	StaffName		nchar(64)		not null,
+	TrainStatusID		int				IDENTITY(1, 1) not null,
+	TrainStatusType		nvarchar(64)	not null
+)
+
+
+----------------------- 创建 Student 表 -----------------------
+USE db_SPbSTU
+IF EXISTS(SELECT * FROM sysobjects WHERE NAME='tb_Student')
+	DROP TABLE tb_Student
+GO
+
+CREATE TABLE tb_Student
+(
+	StudentID		int				IDENTITY(1935000, 1) not null,
+	StudentName		nvarchar(64)	not null,
 	Gender			bit				not null,
 	Birthday		datetime		null,
 	Phone			char(10)		not null,
-	Account			char(64)		null,		-- edu email
-	Email			char(64)		null,
-	Hiredate		datetime		not null,	-- 入职时间 Год поступления
-	Post			nvarchar(256)	null,		-- 职务
-	InstituteShortName nchar(16)		null,		-- 院系 Учебное подразделение
-	Condition		nvarchar(64)	not null	-- 工作状态
+	Account			varchar(64)		null,		-- edu email
+	Email			varchar(64)		null,
+	InstituteShortName	nvarchar(16)	null,	-- 院系 Учебное подразделение
+	ProfessionCode	varchar(16)		null,		-- 方向 Направление подготовки
+	DegreeID		int				not null,	-- 学位 Уровень подготовки
+	StudyTypeID		int				not null,	-- 培训方式 Форма обучения
+	EnrollTime		datetime		not null,	-- 入学年份/时间 Год поступления
+	Grade			as CEILING(DATEDIFF(MM, EnrollTime, GETDATE())/12+1),	-- 年级 Курс
+	Semester		as CEILING(DATEDIFF(MM, EnrollTime, GETDATE())/6+1),	-- 学期 Семестр
+	Class			varchar(16)		null,		-- 班级 Группа
+	TrainStatusID	int		not null	-- 状态 Статус обучения
 )
 
 
@@ -193,6 +171,30 @@ GO
 
 CREATE TABLE tb_Condition
 (
-	ConditionID		smallint		IDENTITY(1, 1) not null,
+	ConditionID		int		IDENTITY(1, 1) not null,
 	ConditionType	nvarchar(64)	not null
 )
+
+
+
+----------------------- 创建 Staff 员工表 -----------------------
+USE db_SPbSTU
+IF EXISTS(SELECT * FROM sysobjects WHERE NAME='tb_Staff')
+	DROP TABLE tb_Staff
+GO
+
+CREATE TABLE tb_Staff
+(
+	StaffID			int				IDENTITY(1, 1) not null,
+	StaffName		nvarchar(64)	not null,
+	Gender			bit				not null,
+	Birthday		datetime		null,
+	Phone			char(10)		not null,
+	Account			varchar(64)		null,		-- edu email
+	Email			varchar(64)		null,
+	Hiredate		datetime		not null,	-- 入职时间 Время введения в должность 
+	Post			nvarchar(256)	null,		-- 职务
+	InstituteShortName nvarchar(16)	null,		-- 院系 Учебное подразделение
+	Condition		nvarchar(64)	not null	-- 工作状态
+)
+
