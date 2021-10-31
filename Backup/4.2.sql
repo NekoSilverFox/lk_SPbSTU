@@ -33,7 +33,7 @@ UPDATE dbo.tb_Account SET Passwd='NIOEMNO' WHERE Account='men.ts@edu.spbstu.ru'
 SELECT * FROM tb_Account WHERE Account='men.ts@edu.spbstu.ru'
 
 INSERT INTO tb_Student(StudentName, Gender, Birthday, Phone, Account, Email, 
-						InstituteShortName, ProfessionCode, Degree, StudyType, EnrollTime, Class, TrainStatus)
+						InstituteShortName, ProfessionCode, DegreeID, StudyTypeID, EnrollTime, Class, TrainStatusID)
 	VALUES('§®§ï§ß §¸§Ù§ñ§ß§Ú§ß', 1, '2000-3-1', '9046465602', 'men.ts@edu.spbstu.ru', 'weidufox@gmail.com',
 			'§ª§¬§¯§´', '09.03.04', '§¢§Ñ§Ü§Ñ§Ý§Ñ§Ó§â§Ñ', '§°§é§ß§Ñ§ñ', '2019-9-1', '3530404/90102', '§µ§é§Ú§ä§ã§ñ')
 
@@ -48,3 +48,4 @@ SELECT InstituteShortName AS §ª§ß§ã§ä§Ú§Õ§å§ä, Class AS §¤§â§å§á§á§Ñ, COUNT(*) A
 
 SELECT * FROM tb_Student WHERE StudentName LIKE '§®§ï§ß %'
 DELETE FROM tb_Student WHERE StudentName LIKE '§®§ï§ß %'
+

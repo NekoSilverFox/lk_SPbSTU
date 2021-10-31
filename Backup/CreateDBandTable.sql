@@ -36,6 +36,7 @@ GO
 
 
 
+
 ----------------------- 创建 Account 账号表 -----------------------
 USE db_SPbSTU
 IF EXISTS(SELECT * FROM sysobjects WHERE NAME='tb_Account')
@@ -44,8 +45,8 @@ GO
 
 CREATE TABLE tb_Account
 (
-	IDAccount	int				IDENTITY(1, 1) not null,
-	[Login]		varchar(64)		not null,
+	AccountID	int				IDENTITY(1, 1) not null,
+	Account		varchar(64)		not null,
 	Passwd		varchar(16)		not null
 )
 
@@ -58,8 +59,8 @@ GO
 
 CREATE TABLE tb_Degree
 (
-	IDDegree		int				IDENTITY(1, 1) not null,
-	TypeDegree		nvarchar(64)	not null
+	DegreeID		int				IDENTITY(1, 1) not null,
+	DegreeType		nvarchar(64)	not null
 )
 
 
@@ -71,7 +72,7 @@ GO
 
 CREATE TABLE tb_StudyType
 (
-	IDStudyType		int				IDENTITY(1, 1) not null,
+	StudyTypeID		int				IDENTITY(1, 1) not null,
 	StudyType		nvarchar(64)	not null
 )
 
@@ -83,9 +84,9 @@ GO
 
 CREATE TABLE tb_Institute
 (
-	IDInstitute		int				IDENTITY(10, 1) not null,
-	NameInstitute	nvarchar(256)	not null,
-	ShortNameInst	nvarchar(16)	not null,
+	InstituteID		int				IDENTITY(10, 1) not null,
+	InstituteName	nvarchar(256)	not null,
+	ShortName		nvarchar(16)	not null,
 	Email			varchar(64)		null,
 	Website			varchar(512)	null,
 	DetAddress		nvarchar(512)	null,
@@ -101,11 +102,11 @@ GO
 
 CREATE TABLE tb_Profession
 (
-	IDProfession		int				IDENTITY(1, 1) not null,
-	InstShortName		nvarchar(16)	not null,
-	CodeProfession		varchar(16)		not null,
-	NameProfession		nvarchar(256)	not null,
-	TuitionFee			money			not null
+	ProfessionID	int				IDENTITY(1, 1) not null,
+	InstituteShortName nvarchar(16)	not null,
+	ProfessionCode	varchar(16)		not null,
+	ProfessionName	nvarchar(256)	not null,
+	TuitionFee		money			not null
 )
 
 
@@ -117,8 +118,8 @@ GO
 
 CREATE TABLE tb_TrainStatus
 (
-	IDTrainStatus		int				IDENTITY(1, 1) not null,
-	TypeTrainStatus		nvarchar(64)	not null
+	TrainStatusID		int				IDENTITY(1, 1) not null,
+	TrainStatusType		nvarchar(64)	not null
 )
 
 
@@ -128,60 +129,13 @@ IF EXISTS(SELECT * FROM sysobjects WHERE NAME='tb_Groups')
 	DROP TABLE tb_Groups
 GO
 
-CREATE TABLE tb_Group
+CREATE TABLE tb_Groups
 (
-	IDGroup				int				IDENTITY(1, 1) not null,
-	NameGroup			varchar(16)		not null,		-- 班级 Группа
+	GroupId				int				IDENTITY(1, 1) not null,
+	GroupName			varchar(16)		not null,		-- 班级 Группа
 	ProfessionCode		varchar(16)		not null,		-- 方向 Направление подготовки
 	Quantity			int				null
 )
-
-
------------------------ 创建 Discipline 科目表 -----------------------
-USE db_SPbSTU
-IF EXISTS(SELECT * FROM sysobjects WHERE NAME='tb_Disciplines')
-	DROP TABLE tb_Disciplines
-GO
-
-CREATE TABLE tb_Discipline
-(
-	IDDiscipline		int				IDENTITY(1, 1) not null,
-	NameDiscipline		nvarchar(256)	not null,
-	PeriodDiscipline	int				not null		-- 课时
-)
-
-
------------------------ 创建 StudyPlan 学习计划表 -----------------------
-USE db_SPbSTU
-IF EXISTS(SELECT * FROM sysobjects WHERE NAME='tb_StudyPlan')
-	DROP TABLE tb_StudyPlan
-GO
-
-CREATE TABLE tb_StudyPlan
-(
-	IDStudyPlan			int				IDENTITY(1, 1) not null,
-	GroupID				int				not null,
-	DisciplineID		int				not null,
-	Semestr				int				not null,
-	StaffID				int				not null
-)
-
-
------------------------ 创建 ExamRecord 表 -----------------------
-USE db_SPbSTU
-IF EXISTS(SELECT * FROM sysobjects WHERE NAME='tb_ExamRecord')
-	DROP TABLE tb_ExamRecord
-GO
-
-CREATE TABLE tb_ExamRecord
-(
-	IDExamRecord		int				IDENTITY(1, 1) not null,
-	StudyPlanID			int				not null,
-	StudentID			int				not null,
-	Mark				int				not null,
-	ExamDate			datetime		not null
-)
-
 
 ----------------------- 创建 Student 表 -----------------------
 USE db_SPbSTU
@@ -191,22 +145,22 @@ GO
 
 CREATE TABLE tb_Student
 (
-	IDStudent			int				IDENTITY(1935000, 1) not null,
-	NameStudent			nvarchar(64)	not null,
-	Gender				bit				not null,
-	Birthday			datetime		null,
-	Phone				char(10)		not null,
-	AccountID			int				null,		-- edu email
-	Email				varchar(64)		null,
-	InstShortName		nvarchar(16)	null,		-- 院系 Учебное подразделение
-	ProfessionCode		varchar(16)		null,		-- 方向 Направление подготовки
-	DegreeID			int				not null,	-- 学位 Уровень подготовки
-	StudyTypeID			int				not null,	-- 培训方式 Форма обучения
-	EnrollTime			datetime		not null,	-- 入学年份/时间 Год поступления
-	Grade				as CEILING(DATEDIFF(MM, EnrollTime, GETDATE())/12+1),	-- 年级 Курс
-	Semester			as CEILING(DATEDIFF(MM, EnrollTime, GETDATE())/6+1),	-- 学期 Семестр
-	GroupID				int				null,		-- 班级 Группа
-	TrainStatusID		int				not null	-- 状态 Статус обучения
+	StudentID		int				IDENTITY(1935000, 1) not null,
+	StudentName		nvarchar(64)	not null,
+	Gender			bit				not null,
+	Birthday		datetime		null,
+	Phone			char(10)		not null,
+	Account			varchar(64)		null,		-- edu email
+	Email			varchar(64)		null,
+	InstituteShortName	nvarchar(16)	null,	-- 院系 Учебное подразделение
+	ProfessionCode	varchar(16)		null,		-- 方向 Направление подготовки
+	DegreeID		int				not null,	-- 学位 Уровень подготовки
+	StudyTypeID		int				not null,	-- 培训方式 Форма обучения
+	EnrollTime		datetime		not null,	-- 入学年份/时间 Год поступления
+	Grade			as CEILING(DATEDIFF(MM, EnrollTime, GETDATE())/12+1),	-- 年级 Курс
+	Semester		as CEILING(DATEDIFF(MM, EnrollTime, GETDATE())/6+1),	-- 学期 Семестр
+	GroupName		varchar(16)		null,		-- 班级 Группа
+	TrainStatusID	int		not null	-- 状态 Статус обучения
 )
 
 
@@ -218,10 +172,24 @@ GO
 
 CREATE TABLE tb_Post
 (
-	IDPost		int				IDENTITY(1, 1) not null,
-	NamePost	nvarchar(256)	not null,
+	PostID		int				IDENTITY(1, 1) not null,
+	PostName	nvarchar(256)	not null,
 	Salary		money			not null
 )
+
+
+----------------------- 创建 Condition 工作状态表 -----------------------
+USE db_SPbSTU
+IF EXISTS(SELECT * FROM sysobjects WHERE NAME='tb_Condition')
+	DROP TABLE tb_Condition
+GO
+
+CREATE TABLE tb_Condition
+(
+	ConditionID		int		IDENTITY(1, 1) not null,
+	ConditionType	nvarchar(64)	not null
+)
+
 
 
 ----------------------- 创建 Staff 员工表 -----------------------
@@ -232,15 +200,16 @@ GO
 
 CREATE TABLE tb_Staff
 (
-	IDStaff			int				IDENTITY(1, 1) not null,
-	NameStaff		nvarchar(64)	not null,
+	StaffID			int				IDENTITY(1, 1) not null,
+	StaffName		nvarchar(64)	not null,
 	Gender			bit				not null,
 	Birthday		datetime		null,
 	Phone			char(10)		not null,
-	AccountID		int				null,		-- edu email
+	Account			varchar(64)		null,		-- edu email
 	Email			varchar(64)		null,
 	Hiredate		datetime		not null,	-- 入职时间 Время введения в должность 
-	PostID			int				null,		-- 职务
-	InstShortName	varchar(16)		null,		-- 院系 Учебное подразделение
+	Post			nvarchar(256)	null,		-- 职务
+	InstituteShortName nvarchar(16)	null,		-- 院系 Учебное подразделение
+	Condition		nvarchar(64)	not null	-- 工作状态
 )
 
