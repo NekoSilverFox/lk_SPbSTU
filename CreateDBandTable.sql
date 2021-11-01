@@ -75,7 +75,8 @@ CREATE TABLE tb_StudyType
 	StudyType		nvarchar(64)	not null
 )
 
------------------------ 创建 Institute 院系表 -----------------------
+
+----------------------- 创建 Institute Учебное подразделение 院系表 -----------------------
 USE db_SPbSTU
 IF EXISTS(SELECT * FROM sysobjects WHERE NAME='tb_Institute')
 	DROP TABLE tb_Institute
@@ -93,7 +94,8 @@ CREATE TABLE tb_Institute
 )
 
 
------------------------ 创建 Profession 方向表 -----------------------
+
+----------------------- 创建 Profession Направление подготовки 方向表 -----------------------
 USE db_SPbSTU
 IF EXISTS(SELECT * FROM sysobjects WHERE NAME='tb_Profession')
 	DROP TABLE tb_Profession
@@ -109,6 +111,7 @@ CREATE TABLE tb_Profession
 )
 
 
+
 ----------------------- 创建 TrainStatus 学生培训状态表 -----------------------
 USE db_SPbSTU
 IF EXISTS(SELECT * FROM sysobjects WHERE NAME='tb_TrainStatus')
@@ -122,10 +125,11 @@ CREATE TABLE tb_TrainStatus
 )
 
 
+
 ----------------------- 创建 Group 表 -----------------------
 USE db_SPbSTU
-IF EXISTS(SELECT * FROM sysobjects WHERE NAME='tb_Groups')
-	DROP TABLE tb_Groups
+IF EXISTS(SELECT * FROM sysobjects WHERE NAME='tb_Group')
+	DROP TABLE tb_Group
 GO
 
 CREATE TABLE tb_Group
@@ -137,10 +141,11 @@ CREATE TABLE tb_Group
 )
 
 
+
 ----------------------- 创建 Discipline 科目表 -----------------------
 USE db_SPbSTU
-IF EXISTS(SELECT * FROM sysobjects WHERE NAME='tb_Disciplines')
-	DROP TABLE tb_Disciplines
+IF EXISTS(SELECT * FROM sysobjects WHERE NAME='tb_Discipline')
+	DROP TABLE tb_Discipline
 GO
 
 CREATE TABLE tb_Discipline
@@ -149,6 +154,7 @@ CREATE TABLE tb_Discipline
 	NameDiscipline		nvarchar(256)	not null,
 	PeriodDiscipline	int				not null		-- 课时
 )
+
 
 
 ----------------------- 创建 StudyPlan 学习计划表 -----------------------
@@ -165,6 +171,7 @@ CREATE TABLE tb_StudyPlan
 	Semestr				int				not null,
 	StaffID				int				not null
 )
+
 
 
 ----------------------- 创建 ExamRecord 表 -----------------------
@@ -198,8 +205,6 @@ CREATE TABLE tb_Student
 	Phone				char(10)		not null,
 	AccountID			int				null,		-- edu email
 	Email				varchar(64)		null,
-	InstShortName		nvarchar(16)	null,		-- 院系 Учебное подразделение
-	ProfessionCode		varchar(16)		null,		-- 方向 Направление подготовки
 	DegreeID			int				not null,	-- 学位 Уровень подготовки
 	StudyTypeID			int				not null,	-- 培训方式 Форма обучения
 	EnrollTime			datetime		not null,	-- 入学年份/时间 Год поступления
@@ -208,6 +213,7 @@ CREATE TABLE tb_Student
 	GroupID				int				null,		-- 班级 Группа
 	TrainStatusID		int				not null	-- 状态 Статус обучения
 )
+
 
 
 ----------------------- 创建 Post 部门表 -----------------------
@@ -222,6 +228,7 @@ CREATE TABLE tb_Post
 	NamePost	nvarchar(256)	not null,
 	Salary		money			not null
 )
+
 
 
 ----------------------- 创建 Staff 员工表 -----------------------
@@ -241,6 +248,6 @@ CREATE TABLE tb_Staff
 	Email			varchar(64)		null,
 	Hiredate		datetime		not null,	-- 入职时间 Время введения в должность 
 	PostID			int				null,		-- 职务
-	InstShortName	varchar(16)		null,		-- 院系 Учебное подразделение
+	InstShortName	nvarchar(16)	null,		-- 院系 Учебное подразделение
 )
 

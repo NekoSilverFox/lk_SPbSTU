@@ -1,7 +1,7 @@
 --
 USE db_SPbSTU
 ALTER TABLE tb_Account
-	ADD CONSTRAINT PK_Account_AccountID PRIMARY KEY(AccountID),
+	ADD CONSTRAINT PK_Account_IDAccount PRIMARY KEY(IDAccount),
 		CONSTRAINT UQ_Account_Account UNIQUE(Account),
 		CONSTRAINT CK_Account_Password CHECK(LEN(Passwd)>=6)
 --
