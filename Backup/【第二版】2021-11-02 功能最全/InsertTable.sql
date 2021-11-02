@@ -1,7 +1,32 @@
-﻿
+﻿USE db_SPbSTU
+INSERT tb_Degree VALUES('Бакалавр')
+INSERT tb_Degree VALUES('Магистр')
+INSERT tb_Degree VALUES('Исследователь. преподаватель-исследователь')
+GO
+
+
+USE db_SPbSTU
+INSERT tb_TrainStatus VALUES('Учится')
+INSERT tb_TrainStatus VALUES('Отстранен')
+INSERT tb_TrainStatus VALUES('Окончен')
+INSERT tb_TrainStatus VALUES('Исключен')
+GO
+
+
+USE db_SPbSTU
+INSERT tb_StudyType VALUES('Очная')
+INSERT tb_StudyType VALUES('Заочная')
+INSERT tb_StudyType VALUES('Очно-Заочная')
+GO
+
+
+
 USE db_SPbSTU
 INSERT tb_Post(NamePost, Salary) VALUES('Администратор', 150000)
+INSERT tb_Post(NamePost, Salary) VALUES('Ассистент профессора', 80000)
 INSERT tb_Post(NamePost, Salary) VALUES('Преподаватель', 90000)
+INSERT tb_Post(NamePost, Salary) VALUES('Доцент', 100000)
+INSERT tb_Post(NamePost, Salary) VALUES('Профессор', 110000)
 GO
 
 
@@ -998,37 +1023,37 @@ INSERT tb_Account VALUES('Kuznetsova.bb@edu.spbstu.ru', '2dg$LI')
 INSERT tb_Staff VALUES('Кузнецова Валерия Владимировна', 1, '1975-5-9', '9025675261', 1, 'dawawa@yandex.ru', '2008-9-1', 2, 'ИЭ')
 
 INSERT tb_Account VALUES('Grypko.aa@edu.spbstu.ru', 'm57Yx%%w')
-INSERT tb_Staff VALUES('Хрыпко Анна Андреевна', 0, '1970-8-19', '9025675262', 2, 'dwqax@gmail.com', '2010-8-12', 2, 'ИФНиТ')
+INSERT tb_Staff VALUES('Хрыпко Анна Андреевна', 0, '1970-8-19', '9025675262', 2, 'dwqax@gmail.com', '2010-8-12', 3, 'ИФНиТ')
 
 INSERT tb_Account VALUES('Erakina.eo@edu.spbstu.ru', 'q9^9Hi9X')
-INSERT tb_Staff VALUES('Еракина Екатерина Олеговна', 0, '1973-9-22', '9155565234', 3, 'hdfgbret@yandex.ru', '2012-4-14', 2, 'ИКНТ')
+INSERT tb_Staff VALUES('Еракина Екатерина Олеговна', 0, '1973-9-22', '9155565234', 3, 'hdfgbret@yandex.ru', '2012-4-14', 3, 'ИКНТ')
 
 INSERT tb_Account VALUES('Ozhegova.ac@edu.spbstu.ru', 'BAey8$W6')
-INSERT tb_Staff VALUES('Ожигова Анна Сергеевна', 0, '1976-10-4', '9025675264', 4, 'awsdf@gmail.com', '2003-11-25', 2, 'ИПММ')
+INSERT tb_Staff VALUES('Ожигова Анна Сергеевна', 0, '1976-10-4', '9025675264', 4, 'awsdf@gmail.com', '2003-11-25', 5, 'ИПММ')
 
 INSERT tb_Account VALUES('Stuchinskaya.pk@edu.spbstu.ru', 'dtC$aK!9')
-INSERT tb_Staff VALUES('Стучинская Полина Георгиевна', 1, '1977-12-12', '9025675265', 5, 'jytdfg@yandex.ru', '2004-12-2', 2, 'ИПММ')
+INSERT tb_Staff VALUES('Стучинская Полина Георгиевна', 1, '1977-12-12', '9025675265', 5, 'jytdfg@yandex.ru', '2004-12-2', 5, 'ИПММ')
 
 INSERT tb_Account VALUES('Ivanova.hn@edu.spbstu.ru', 'j&hMM53a')
-INSERT tb_Staff VALUES('Иванова Наталья Игоревна', 0, '1970-5-17', '9025675266', 6, 'dghyt@gmail.com', '2018-3-14', 2, 'ИПМЭиТ')
+INSERT tb_Staff VALUES('Иванова Наталья Игоревна', 0, '1970-5-17', '9025675266', 6, 'dghyt@gmail.com', '2018-3-14', 3, 'ИПМЭиТ')
 
 INSERT tb_Account VALUES('Kirillova.ye@edu.spbstu.ru', '$hn27FoM')
-INSERT tb_Staff VALUES('Кириллова Ульяна Евгеньевна', 1, '1983-6-5', '9025675267', 7, 'ifhg4@gmail.com', '2020-4-1', 2, 'ИПМЭиТ')
+INSERT tb_Staff VALUES('Кириллова Ульяна Евгеньевна', 1, '1983-6-5', '9025675267', 7, 'ifhg4@gmail.com', '2020-4-1', 5, 'ИПМЭиТ')
 
 INSERT tb_Account VALUES('Moles.cii@edu.spbstu.ru', 'mpQRm#2L')
-INSERT tb_Staff VALUES('Кротиков Сергей Ильич', 1, '1981-1-11', '9025675268', 8, 'htrs@yandex.ru', '2007-8-19', 2, 'ГИ')
+INSERT tb_Staff VALUES('Кротиков Сергей Ильич', 1, '1981-1-11', '9025675268', 8, 'htrs@yandex.ru', '2007-8-19', 5, 'ГИ')
 
 INSERT tb_Account VALUES('Lyzhina.mc@edu.spbstu.ru', 'sUUg^93V')
-INSERT tb_Staff VALUES('Лыжина Мария Сергеевна', 0, '1976-9-29', '9025675269', 9, 'f43sd@gmail.com', '2003-7-28', 2, 'ИБСиБ')
+INSERT tb_Staff VALUES('Лыжина Мария Сергеевна', 0, '1976-9-29', '9025675269', 9, 'f43sd@gmail.com', '2003-7-28', 5, 'ИБСиБ')
 
 INSERT tb_Account VALUES('Lukin.ka@edu.spbstu.ru', 'ao7E9^VE')
 INSERT tb_Staff VALUES('Лукин Константин Алексеевич', 1, '1983-7-30', '9025675210', 10, 'fs34@gmail.com', '1999-7-22', 1, 'ИКНТ')
 
 INSERT tb_Account VALUES('Litvin.mb@edu.spbstu.ru', 'Ne^26Ugg')
-INSERT tb_Staff VALUES('Литвин Мария Владимировна', 0, '1976-11-1', '9025675211', 11, 'gsre@yandex.ru', '1998-8-18', 1, 'ИКиЗИ')
+INSERT tb_Staff VALUES('Литвин Мария Владимировна', 0, '1976-11-1', '9025675211', 11, 'gsre@yandex.ru', '1998-8-18', 3, 'ИКиЗИ')
 
 INSERT tb_Account VALUES('Solovyov.eb@edu.spbstu.ru', '5&FSC9vK')
-INSERT tb_Staff VALUES('Соловьева Екатерина Витальевна', 1, '1970-5-31', '9025675212', 12, '34sdf5@gmail.com', '2008-9-16', 2, 'ИКНТ')
+INSERT tb_Staff VALUES('Соловьева Екатерина Витальевна', 1, '1970-5-31', '9025675212', 12, '34sdf5@gmail.com', '2008-9-16', 4, 'ИКНТ')
 GO
 
 

@@ -50,6 +50,32 @@ CREATE TABLE tb_Account
 )
 
 
+----------------------- 创建 Degree 学位表 -----------------------
+USE db_SPbSTU
+IF EXISTS(SELECT * FROM sysobjects WHERE NAME='tb_Degree')
+	DROP TABLE tb_Degree
+GO
+
+CREATE TABLE tb_Degree
+(
+	IDDegree		int				IDENTITY(1, 1) not null,
+	TypeDegree		nvarchar(64)	not null
+)
+
+
+----------------------- 创建 StudyType 培训方式表 -----------------------
+USE db_SPbSTU
+IF EXISTS(SELECT * FROM sysobjects WHERE NAME='tb_StudyType')
+	DROP TABLE tb_StudyType
+GO
+
+CREATE TABLE tb_StudyType
+(
+	IDStudyType		int				IDENTITY(1, 1) not null,
+	StudyType		nvarchar(64)	not null
+)
+
+
 ----------------------- 创建 Institute Учебное подразделение 院系表 -----------------------
 USE db_SPbSTU
 IF EXISTS(SELECT * FROM sysobjects WHERE NAME='tb_Institute')
@@ -82,6 +108,20 @@ CREATE TABLE tb_Profession
 	CodeProfession		varchar(16)		not null,
 	NameProfession		nvarchar(256)	not null,
 	TuitionFee			money			not null
+)
+
+
+
+----------------------- 创建 TrainStatus 学生培训状态表 -----------------------
+USE db_SPbSTU
+IF EXISTS(SELECT * FROM sysobjects WHERE NAME='tb_TrainStatus')
+	DROP TABLE tb_TrainStatus
+GO
+
+CREATE TABLE tb_TrainStatus
+(
+	IDTrainStatus		int				IDENTITY(1, 1) not null,
+	TypeTrainStatus		nvarchar(64)	not null
 )
 
 
@@ -165,10 +205,13 @@ CREATE TABLE tb_Student
 	Phone				char(10)		not null,
 	AccountID			int				not null,		-- edu email
 	Email				varchar(64)		null,
+	DegreeID			int				not null,	-- 学位 Уровень подготовки
+	StudyTypeID			int				not null,	-- 培训方式 Форма обучения
 	EnrollTime			datetime		not null,	-- 入学年份/时间 Год поступления
 	Grade				as CEILING(DATEDIFF(MM, EnrollTime, GETDATE())/12+1),	-- 年级 Курс
 	Semester			as CEILING(DATEDIFF(MM, EnrollTime, GETDATE())/6+1),	-- 学期 Семестр
 	GroupID				int				not null,		-- 班级 Группа
+	TrainStatusID		int				not null		-- 状态 Статус обучения
 )
 
 

@@ -4,8 +4,16 @@ ALTER TABLE tb_Account
 	ADD CONSTRAINT PK_Account_IDAccount PRIMARY KEY(IDAccount),
 		CONSTRAINT UQ_Account_Login UNIQUE([Login]),
 		CONSTRAINT CK_Account_Passwd CHECK(LEN(Passwd) BETWEEN 6 AND 18)
-
-		
+--
+USE db_SPbSTU
+ALTER TABLE tb_Degree
+	ADD CONSTRAINT PK_Degree_IDDegree PRIMARY KEY(IDDegree),
+		CONSTRAINT UQ_Degree_TypeDegree UNIQUE(TypeDegree)
+--
+USE db_SPbSTU
+ALTER TABLE tb_StudyType
+	ADD CONSTRAINT PK_StudyType_IDStudyType PRIMARY KEY(IDStudyType),
+		CONSTRAINT UQ_StudyType_StudyType UNIQUE(StudyType)
 --
 USE db_SPbSTU
 ALTER TABLE tb_Institute
@@ -21,6 +29,11 @@ ALTER TABLE tb_Profession
 		CONSTRAINT UQ_Profession_CodeProfession UNIQUE(CodeProfession),
 		CONSTRAINT DF_Profession_TuitionFee DEFAULT(20000) FOR TuitionFee
 
+--
+USE db_SPbSTU
+ALTER TABLE tb_TrainStatus
+	ADD CONSTRAINT PK_TrainStatus_IDTrainStatus PRIMARY KEY(IDTrainStatus),
+		CONSTRAINT UQ_TrainStatus_TypeTrainStatus UNIQUE(TypeTrainStatus)
 
 --
 USE db_SPbSTU
@@ -49,7 +62,10 @@ ALTER TABLE tb_Student
 		CONSTRAINT UQ_Student_Phone UNIQUE(Phone),
 		CONSTRAINT FK_Student_AccountID FOREIGN KEY(AccountID) REFERENCES tb_Account(IDAccount),
 		CONSTRAINT UQ_Student_AccountID UNIQUE(AccountID),
+		CONSTRAINT FK_Student_DegreeID FOREIGN KEY(DegreeID) REFERENCES tb_Degree(IDDegree),
+		CONSTRAINT FK_Student_StudyTypeID FOREIGN KEY(StudyTypeID) REFERENCES tb_StudyType(IDStudyType),
 		CONSTRAINT DF_Student_EnrollTime DEFAULT(DATENAME(YYYY, GETDATE()) + '-09-01') FOR EnrollTime,
+		CONSTRAINT FK_Student_TrainStatusID FOREIGN KEY(TrainStatusID) REFERENCES tb_TrainStatus(IDTrainStatus),
 		CONSTRAINT FK_Student_GroupID FOREIGN KEY(GroupID) REFERENCES tb_Group(IDGroup)
 
 
@@ -81,7 +97,6 @@ ALTER TABLE tb_StudyPlan
 		CONSTRAINT FK_StudyPlan_GroupID FOREIGN KEY(GroupID) REFERENCES tb_Group(IDGroup),
 		CONSTRAINT FK_StudyPlan_DisciplineCode FOREIGN KEY(DisciplineID) REFERENCES tb_Discipline(IDDiscipline),
 		CONSTRAINT FK_StudyPlan_StaffID FOREIGN KEY(StaffID) REFERENCES tb_Staff(IDStaff)
-
 
 --
 USE db_SPbSTU
