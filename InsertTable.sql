@@ -1058,24 +1058,6 @@ GO
 
 
 
-
-USE db_SPbSTU
-INSERT tb_Account VALUES('Abbasov.jew@edu.spbstu.ru', '7uXkf6L')
-INSERT tb_Student(NameStudent, Gender, Birthday, Phone, AccountID, Email, DegreeID, StudyTypeID, EnrollTime, GroupID, TrainStatusID) VALUES('NAME1', 1, '1997-05-16 12:08:08', '9545663949', (SELECT IDAccount FROM tb_Account WHERE [Login]='Abbasov.jew@edu.spbstu.ru'), 'dfwfopuvvcp@hotmail.com', 1, 1, '2019-09-01', (SELECT IDGroup FROM tb_Group WHERE NameGroup='3431104/90002'), 1)
-
-
-
-EXEC sp_configure 'max degree of parallelism', 0;  
-GO  
-RECONFIGURE WITH OVERRIDE;  
-GO  
-EXEC sp_configure 'max degree of parallelism'
-
-SELECT COUNT(*) FROM tb_Student
-
-
-
-
 INSERT tb_StudyPlan VALUES(81, 1, 1, 3)
 INSERT tb_StudyPlan VALUES(81, 2, 1, 3)
 INSERT tb_StudyPlan VALUES(81, 3, 2, 3)
