@@ -27,7 +27,7 @@ USE db_SPbSTU
 ALTER TABLE tb_Group
 	ADD CONSTRAINT PK_Groups_IDGroup PRIMARY KEY(IDGroup),
 		CONSTRAINT UQ_Groups_NameGroup UNIQUE(NameGroup),
-		CONSTRAINT FK_Groups_ProfessionCode FOREIGN KEY(ProfessionCode) REFERENCES tb_Profession(CodeProfession),
+		CONSTRAINT FK_Groups_ProfessionID  FOREIGN KEY(ProfessionID) REFERENCES tb_Profession(IDProfession),
 		CONSTRAINT DF_Groups_Grade DEFAULT(DATENAME(YYYY, GETDATE())) FOR Grade,
 		CONSTRAINT DF_Groups_Quantity DEFAULT(40) FOR Quantity
 

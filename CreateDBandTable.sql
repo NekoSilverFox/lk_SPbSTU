@@ -96,7 +96,7 @@ CREATE TABLE tb_Group
 (
 	IDGroup				int				IDENTITY(1, 1) not null,
 	NameGroup			varchar(16)		not null,		-- 班级 Группа
-	ProfessionCode		varchar(16)		not null,		-- 方向 Направление подготовки
+	ProfessionID		int				not null,		-- 方向 Направление подготовки
 	Grade				int				not null,		-- Курс
 	Quantity			int				null
 )
