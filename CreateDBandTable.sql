@@ -58,7 +58,7 @@ GO
 
 CREATE TABLE tb_Institute
 (
-	IDInstitute		int				IDENTITY(10, 1) not null,
+	IDInstitute		int				IDENTITY(1, 1) not null,
 	NameInstitute	nvarchar(256)	not null,
 	ShortNameInst	nvarchar(16)	not null,
 	Email			varchar(64)		null,
