@@ -11,13 +11,13 @@ USE db_SPbSTU
 ALTER TABLE tb_Institute
 	ADD CONSTRAINT PK_Institute_IDInstitute PRIMARY KEY(IDInstitute),
 		CONSTRAINT UQ_Institute_NameInstitute UNIQUE(NameInstitute),
-		CONSTRAINT UQ_Institute_ShortNameInst UNIQUE(ShortNameInst),
-		CONSTRAINT CK_Institute_Phone CHECK(Phone LIKE '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]')
+		CONSTRAINT UQ_Institute_ShortNameInst UNIQUE(ShortNameInst)
+
 --
 USE db_SPbSTU
 ALTER TABLE tb_Profession
 	ADD CONSTRAINT PK_Profession_IDProfession PRIMARY KEY(IDProfession),
-		CONSTRAINT FK_Profession_InstShortName FOREIGN KEY(InstShortName) REFERENCES tb_Institute(ShortNameInst),
+		CONSTRAINT FK_Profession_InstituteID FOREIGN KEY(InstituteID) REFERENCES tb_Institute(IDInstitute),
 		CONSTRAINT UQ_Profession_CodeProfession UNIQUE(CodeProfession),
 		CONSTRAINT DF_Profession_TuitionFee DEFAULT(20000) FOR TuitionFee
 
@@ -28,6 +28,7 @@ ALTER TABLE tb_Group
 	ADD CONSTRAINT PK_Groups_IDGroup PRIMARY KEY(IDGroup),
 		CONSTRAINT UQ_Groups_NameGroup UNIQUE(NameGroup),
 		CONSTRAINT FK_Groups_ProfessionCode FOREIGN KEY(ProfessionCode) REFERENCES tb_Profession(CodeProfession),
+		CONSTRAINT DF_Groups_Grade DEFAULT(DATENAME(YYYY, GETDATE())) FOR Grade,
 		CONSTRAINT DF_Groups_Quantity DEFAULT(40) FOR Quantity
 
 
@@ -39,13 +40,10 @@ ALTER TABLE tb_Discipline
 		CONSTRAINT DF_Discipline_PeriodDiscipline DEFAULT(100) FOR PeriodDiscipline
 
 
-
-
 --
 USE db_SPbSTU 
 ALTER TABLE tb_Student
 	ADD CONSTRAINT PK_Student_IDStudent PRIMARY KEY(IDStudent),
-		CONSTRAINT CK_Student_Phone CHECK(Phone LIKE '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'),
 		CONSTRAINT UQ_Student_Phone UNIQUE(Phone),
 		CONSTRAINT FK_Student_AccountID FOREIGN KEY(AccountID) REFERENCES tb_Account(IDAccount),
 		CONSTRAINT UQ_Student_AccountID UNIQUE(AccountID),
@@ -57,21 +55,19 @@ ALTER TABLE tb_Student
 USE db_SPbSTU
 ALTER TABLE tb_Post
 	ADD CONSTRAINT PK_Post_IDPost PRIMARY KEY(IDPost),
-		CONSTRAINT UQ_Post_NamePost UNIQUE(NamePost),
-		CONSTRAINT DF_Post_Salary DEFAULT(40000) FOR Salary
+		CONSTRAINT UQ_Post_NamePost UNIQUE(NamePost)
 
 
 --
 USE db_SPbSTU
 ALTER TABLE tb_Staff
 	ADD CONSTRAINT PK_Staff_IDStaff PRIMARY KEY(IDStaff),
-		CONSTRAINT CK_Staff_Phone CHECK(Phone LIKE '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'),
 		CONSTRAINT UQ_Staff_Phone UNIQUE(Phone),
 		CONSTRAINT FK_Staff_AccountID FOREIGN KEY(AccountID) REFERENCES tb_Account(IDAccount),
 		CONSTRAINT UQ_Staff_AccountID UNIQUE(AccountID),
 		CONSTRAINT DF_Staff_Hiredate DEFAULT(GETDATE()) FOR Hiredate,
 		CONSTRAINT FK_Staff_PostID FOREIGN KEY(PostID) REFERENCES tb_Post(IDPost),
-		CONSTRAINT FK_Staff_InstShortName FOREIGN KEY(InstShortName) REFERENCES tb_Institute(ShortNameInst)
+		CONSTRAINT FK_Staff_InstituteID FOREIGN KEY(InstituteID) REFERENCES tb_Institute(IDInstitute)
 
 
 --
