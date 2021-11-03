@@ -64,7 +64,7 @@ CREATE TABLE tb_Institute
 	Email			varchar(64)		null,
 	Website			varchar(512)	null,
 	DetAddress		nvarchar(512)	null,
-	Phone			char(15)		not null
+	Phone			char(10)		not null
 )
 
 
@@ -78,7 +78,7 @@ GO
 CREATE TABLE tb_Profession
 (
 	IDProfession		int				IDENTITY(1, 1) not null,
-	InstituteID			int				not null,
+	InstShortName		nvarchar(16)	not null,
 	CodeProfession		varchar(16)		not null,
 	NameProfession		nvarchar(256)	not null,
 	TuitionFee			money			not null
@@ -97,7 +97,6 @@ CREATE TABLE tb_Group
 	IDGroup				int				IDENTITY(1, 1) not null,
 	NameGroup			varchar(16)		not null,		-- 班级 Группа
 	ProfessionCode		varchar(16)		not null,		-- 方向 Направление подготовки
-	Grade				int				not null,		-- Курс
 	Quantity			int				null
 )
 
@@ -111,10 +110,9 @@ GO
 
 CREATE TABLE tb_Discipline
 (
-	IDDiscipline			int				IDENTITY(1, 1) not null,
-	NameDiscipline			nvarchar(256)	not null,
-	PeriodDiscipline		int				not null,		-- 课时
-	DescriptionDiscipline	nvarchar(512)	null
+	IDDiscipline		int				IDENTITY(1, 1) not null,
+	NameDiscipline		nvarchar(256)	not null,
+	PeriodDiscipline	int				not null		-- 课时
 )
 
 
@@ -148,7 +146,7 @@ CREATE TABLE tb_ExamRecord
 	StudyPlanID			int				not null,
 	StudentID			int				not null,
 	Mark				int				not null,
-	ExamDate			date			not null
+	ExamDate			datetime		not null
 )
 
 
@@ -163,11 +161,13 @@ CREATE TABLE tb_Student
 	IDStudent			int				IDENTITY(1935000, 1) not null,
 	NameStudent			nvarchar(64)	not null,
 	Gender				bit				not null,
-	Birthday			date			null,
-	Phone				char(15)		not null,
+	Birthday			datetime		null,
+	Phone				char(10)		not null,
 	AccountID			int				not null,		-- edu email
 	Email				varchar(64)		null,
-	EnrollTime			date			not null,	-- 入学年份/时间 Год поступления
+	EnrollTime			datetime		not null,	-- 入学年份/时间 Год поступления
+	Grade				as CEILING(DATEDIFF(MM, EnrollTime, GETDATE())/12+1),	-- 年级 Курс
+	Semester			as CEILING(DATEDIFF(MM, EnrollTime, GETDATE())/6+1),	-- 学期 Семестр
 	GroupID				int				not null,		-- 班级 Группа
 )
 
@@ -182,7 +182,8 @@ GO
 CREATE TABLE tb_Post
 (
 	IDPost		int				IDENTITY(1, 1) not null,
-	NamePost	nvarchar(256)	not null
+	NamePost	nvarchar(256)	not null,
+	Salary		money			not null
 )
 
 
@@ -198,12 +199,12 @@ CREATE TABLE tb_Staff
 	IDStaff			int				IDENTITY(1, 1) not null,
 	NameStaff		nvarchar(64)	not null,
 	Gender			bit				not null,
-	Birthday		date			null,
-	Phone			char(15)		not null,
+	Birthday		datetime		null,
+	Phone			char(10)		not null,
 	AccountID		int				not null,		-- edu email
 	Email			varchar(64)		null,
-	Hiredate		date			not null,	-- 入职时间 Время введения в должность 
+	Hiredate		datetime		not null,	-- 入职时间 Время введения в должность 
 	PostID			int				null,		-- 职务
-	InstituteID		int				not null,
+	InstShortName	nvarchar(16)	null,		-- 院系 Учебное подразделение
 )
 
