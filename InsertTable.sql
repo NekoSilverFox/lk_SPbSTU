@@ -1071,13 +1071,14 @@ GO
 
 USE db_SPbSTU
 DECLARE @idStu INT=(SELECT IDStudent FROM tb_Student WHERE NameStudent='Мэн Цзянин')
-INSERT tb_ExamRecord VALUES(30, @idStu, 2, GETDATE())
-INSERT tb_ExamRecord VALUES(30, @idStu, 5, GETDATE())
+INSERT tb_ExamRecord VALUES(25, @idStu, 3, GETDATE())
 INSERT tb_ExamRecord VALUES(26, @idStu, 4, GETDATE())
 INSERT tb_ExamRecord VALUES(27, @idStu, 4, GETDATE())
 INSERT tb_ExamRecord VALUES(28, @idStu, 3, GETDATE())
 INSERT tb_ExamRecord VALUES(29, @idStu, 5, GETDATE())
+INSERT tb_ExamRecord VALUES(30, @idStu, 2, GETDATE())
 INSERT tb_ExamRecord VALUES(30, @idStu, 3, GETDATE())
+INSERT tb_ExamRecord VALUES(30, @idStu, 5, GETDATE())
 GO
 
 USE db_SPbSTU
@@ -1085,3 +1086,9 @@ DECLARE @idStu INT=(SELECT IDStudent FROM tb_Student WHERE NameStudent='Ли И�
 INSERT tb_ExamRecord VALUES(25, @idStu, 4, GETDATE())
 INSERT tb_ExamRecord VALUES(26, @idStu, 5, GETDATE())
 INSERT tb_ExamRecord VALUES(27, @idStu, 4, GETDATE())
+GO
+
+--SELECT * FROM tb_Group WHERE IDGroup=22
+--SELECT * FROM tb_Student WHERE GroupID=81
+INSERT tb_ExamRecord VALUES(22, 1935089, 5, GETDATE())
+INSERT tb_ExamRecord VALUES(22, 1936899, 2, GETDATE())
