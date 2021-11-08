@@ -1031,30 +1031,57 @@ INSERT tb_Account VALUES('Solovyov.eb@edu.spbstu.ru', '5&FSC9vK')
 INSERT tb_Staff VALUES('Соловьева Екатерина Витальевна', 1, '1970-5-31', '9025675212', 12, '34sdf5@gmail.com', '2008-9-16', 2, (SELECT IDInstitute FROM tb_Institute WHERE ShortNameInst='ИКНТ'))
 GO
 
+--USE db_SPbSTU
+--delete from tb_StudyPlan
 
+
+INSERT tb_StudyPlan VALUES(169, 31, 4, 11)
+INSERT tb_StudyPlan VALUES(169, 33, 2, 12)
+INSERT tb_StudyPlan VALUES(169, 34, 3, 10)
+INSERT tb_StudyPlan VALUES(169, 35, 3, 9)
+INSERT tb_StudyPlan VALUES(169, 36, 1, 9)
+INSERT tb_StudyPlan VALUES(169, 27, 5, 4)
 
 INSERT tb_StudyPlan VALUES(81, 1, 1, 3)
-INSERT tb_StudyPlan VALUES(81, 2, 1, 3)
-INSERT tb_StudyPlan VALUES(81, 3, 2, 3)
-INSERT tb_StudyPlan VALUES(81, 4, 3, 3)
-INSERT tb_StudyPlan VALUES(81, 5, 4, 3)
-INSERT tb_StudyPlan VALUES(81, 6, 5, 3)
-INSERT tb_StudyPlan VALUES(81, 7, 2, 3)
+--INSERT tb_StudyPlan VALUES(81, 2, 1, 3)
+--INSERT tb_StudyPlan VALUES(81, 3, 2, 3)
+--INSERT tb_StudyPlan VALUES(81, 4, 3, 3)
+--INSERT tb_StudyPlan VALUES(81, 5, 4, 3)
+--INSERT tb_StudyPlan VALUES(81, 6, 5, 3)
+--INSERT tb_StudyPlan VALUES(81, 7, 2, 3)
 
 INSERT tb_StudyPlan VALUES(62, 1, 1, 4)
-INSERT tb_StudyPlan VALUES(62, 2, 1, 4)
-INSERT tb_StudyPlan VALUES(62, 3, 2, 4)
-INSERT tb_StudyPlan VALUES(62, 4, 3, 4)
-INSERT tb_StudyPlan VALUES(62, 5, 4, 4)
-INSERT tb_StudyPlan VALUES(62, 6, 5, 4)
-INSERT tb_StudyPlan VALUES(62, 7, 2, 4)
+--INSERT tb_StudyPlan VALUES(62, 2, 1, 4)
+--INSERT tb_StudyPlan VALUES(62, 3, 2, 4)
+--INSERT tb_StudyPlan VALUES(62, 4, 3, 4)
+--INSERT tb_StudyPlan VALUES(62, 5, 4, 4)
+--INSERT tb_StudyPlan VALUES(62, 6, 5, 4)
+--INSERT tb_StudyPlan VALUES(62, 7, 2, 4)
 
 INSERT tb_StudyPlan VALUES(73, 5, 1, 3)
-INSERT tb_StudyPlan VALUES(73, 9, 1, 3)
-INSERT tb_StudyPlan VALUES(73, 10, 2, 3)
-INSERT tb_StudyPlan VALUES(73, 12, 3, 3)
-INSERT tb_StudyPlan VALUES(73, 13, 4, 3)
-INSERT tb_StudyPlan VALUES(73, 17, 5, 3)
-INSERT tb_StudyPlan VALUES(73, 12, 2, 3)
+--INSERT tb_StudyPlan VALUES(73, 9, 1, 3)
+--INSERT tb_StudyPlan VALUES(73, 10, 2, 3)
+--INSERT tb_StudyPlan VALUES(73, 12, 3, 3)
+--INSERT tb_StudyPlan VALUES(73, 13, 4, 3)
+--INSERT tb_StudyPlan VALUES(73, 17, 5, 3)
+--INSERT tb_StudyPlan VALUES(73, 12, 2, 3)
 GO
 
+
+
+USE db_SPbSTU
+DECLARE @idStu INT=(SELECT IDStudent FROM tb_Student WHERE NameStudent='Мэн Цзянин')
+INSERT tb_ExamRecord VALUES(30, @idStu, 2, GETDATE())
+INSERT tb_ExamRecord VALUES(30, @idStu, 5, GETDATE())
+INSERT tb_ExamRecord VALUES(26, @idStu, 4, GETDATE())
+INSERT tb_ExamRecord VALUES(27, @idStu, 4, GETDATE())
+INSERT tb_ExamRecord VALUES(28, @idStu, 3, GETDATE())
+INSERT tb_ExamRecord VALUES(29, @idStu, 5, GETDATE())
+INSERT tb_ExamRecord VALUES(30, @idStu, 3, GETDATE())
+GO
+
+USE db_SPbSTU
+DECLARE @idStu INT=(SELECT IDStudent FROM tb_Student WHERE NameStudent='Ли Ицзя')
+INSERT tb_ExamRecord VALUES(25, @idStu, 4, GETDATE())
+INSERT tb_ExamRecord VALUES(26, @idStu, 5, GETDATE())
+INSERT tb_ExamRecord VALUES(27, @idStu, 4, GETDATE())
