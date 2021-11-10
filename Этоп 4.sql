@@ -599,5 +599,79 @@ EXEC usp_addExamRecord @NameDiscipline='Физика', @NameGroup='3530904/90001
 
 --Триггеры
 --1.	Триггер, запрещающий добавлять новый студент в группе, если группа переполнена
+USE db_SPbSTU
+IF EXISTS(SELECT * FROM SYSOBJECTS WHERE name='tr_addStudentInGroup')
+	DROP TRIGGER tr_addStudentInGroup
+GO
+CREATE TRIGGER tr_addStudentInGroup
+	ON tb_Student
+	AFTER INSERT, UPDATE
+AS
+BEGIN
+	DECLARE @GroupID INT=(SELECT GroupID FROM inserted)
+	DECLARE @quantityGroup INT=(SELECT Quantity FROM tb_Group WHERE IDGroup=@GroupID)
+	DECLARE @numStuInGroup INT=(SELECT COUNT(*) FROM tb_Student WHERE GroupID=@GroupID)
+
+	IF (@quantityGroup<=@numStuInGroup)
+	BEGIN
+		PRINT '[ERROR] This Group already has full, can not insert to this group!'
+		ROLLBACK TRANSACTION
+	END
+END
+
+GO
+DISABLE TRIGGER tr_addStudentInGroup ON TB_STUDENT
+GO
+ENABLE TRIGGER tr_addStudentInGroup ON TB_STUDENT
+GO
+
+-- 314 这个班级满人了
+SELECT * 
+	FROM tb_Group,
+	(SELECT GroupID, COUNT(*) AS numStuNow FROM tb_Student GROUP BY GroupID) setectGroup
+	WHERE Quantity=setectGroup.numStuNow
+	AND IDGroup=setectGroup.GroupID
+
+-- 测试数据（Insert）：
+INSERT tb_Account VALUES('testlogin', 'testpwd')
+INSERT tb_Student(NameStudent, Gender, Phone, AccountID, EnrollTime, GroupID)
+	VALUES('test', 1, '111111111', (select IDAccount from tb_Account where [Login]='testlogin'), '2018-8-9', 314)
+
+-- 测试数据（Update）：
+UPDATE tb_Student SET GroupID=314 WHERE IDStudent=1935000
+
+
+
+
+
 --2.	Триггер, запрещающий добавлять новый учебный план, если он раньше, чем курс группы
- 
+USE db_SPbSTU
+IF EXISTS(SELECT * FROM SYSOBJECTS WHERE name='tr_addStudyPlan')
+	DROP TRIGGER tr_addStudyPlan
+GO
+CREATE TRIGGER tr_addStudyPlan
+	ON tb_StudyPlan
+	AFTER INSERT, UPDATE
+AS
+BEGIN
+	DECLARE @GroupID INT=(SELECT GroupID FROM inserted)
+	DECLARE @Grade INT=(SELECT Grade FROM tb_Group WHERE IDGroup=@GroupID)
+	DECLARE @EnrollTime CHAR(10)=(CONVERT(CHAR(4), @Grade) + '-09-01')
+	DECLARE @semestrGroupNow INT=(CEILING(DATEDIFF(MM, @EnrollTime, GETDATE())/6+1))
+	DECLARE @semestrStydyPlan INT=(SELECT Semestr FROM inserted)
+
+	IF (@semestrStydyPlan < @semestrGroupNow)
+	BEGIN
+		PRINT '[ERROR] Can not insert to this semestr, semestr can not be less than the current semestr of the group!'
+		ROLLBACK TRANSACTION
+	END
+END
+GO
+DISABLE TRIGGER tr_addStudyPlan ON tb_StudyPlan
+GO
+ENABLE TRIGGER tr_addStudyPlan ON tb_StudyPlan
+GO
+
+SELECT * FROM tb_Group WHERE IDGroup=314
+INSERT tb_StudyPlan VALUES(314, 1, 3, 1)	-- ERROR
+INSERT tb_StudyPlan VALUES(314, 1, 8, 1)	-- OK
