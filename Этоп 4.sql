@@ -1,10 +1,13 @@
 ﻿USE db_SPbSTU
-
+-- ============================================================================================
 --Добавление
 --1.	Добавление информации о институте (Institute)
 --2.	Добавление информации о направление (Profession)
 --3.	Добавление информации о группе (Group)
 --4.	Добавление информации о дисциплине (Discipline)
+-- ============================================================================================
+
+-- ============================================================================================
 --Изменение
 --1.	Изменение информации о институте (Institute)
 --2.	Изменение информации о направление (Profession)
@@ -13,14 +16,16 @@
 --5.	Изменение информации о дисциплине (Discipline)
 --6.	Изменение информации о учебном плане (StudyPlan)
 --7.	Изменение информации о студенте (Student)
+-- ============================================================================================
 
+-- ============================================================================================
 --Удаление
 --1.	Удаление записи учебного плана из системы (StudyPlan)
 --2.	Удаление записи студенты из системы (Student)
 --3.	Удаление записи из зачетной книге (ExamRecord)
+-- ============================================================================================
 
-
-
+-- ============================================================================================
 --Вывод
 --1.	Вывод информации обо всех институтах (Institute)
 SELECT * FROM tb_Institute
@@ -52,11 +57,15 @@ DECLARE @idStaff INT=0
 DECLARE @nameStaff NCHAR(50)='Кротиков Сергей Ильич'
 SELECT * FROM tb_Staff WHERE NameStaff=@nameStaff OR IDStaff=@idStaff
 GO
+-- ============================================================================================
 
 
 
 
+
+-- ============================================================================================
 --Сложные
+-- ============================================================================================
 --1.	Просмотр информаций о указанном преподаватели по указанном ID преподаватели (Staff, Account, Institute, Post)
 DECLARE @idStaff INT=5
 SELECT IDStaff, NameStaff, Gender, Birthday, tb_Staff.Phone, tb_Account.[Login], tb_Staff.Email, Hiredate, tb_Post.NamePost, tb_Institute.NameInstitute
@@ -116,8 +125,9 @@ SELECT IDStudyPlan, NameDiscipline, Semestr AS 'Семестра', PeriodDiscipl
 GO
 
 --5.	Вывод зачетной книжки студента по указанном ID студента (Student, Group, StudyPlan, ExamRecord, Discipline, Staff)
+--		Выход по наивысшей оценке
 -- 如果同一个考试有多个考试，那么就把分数最高的那次给输出！
--- 【重点】如果要某一列的最高分，就用它自交来筛选！！！https://www.codenong.com/7745609/
+-- 【重点】如果要某一列的最高分，就用它【自交】来筛选！！！参考：codenong.com/7745609/
 DECLARE @idStu INT=(SELECT IDStudent FROM tb_Student WHERE NameStudent='Мэн Цзянин')
 SELECT *
 	FROM tb_ExamRecord
@@ -170,21 +180,25 @@ SELECT Semestr, NameDiscipline, Mark, ExamDate
 GO
 
 
-
+-- ============================================================================================
 --Представления
+-- ============================================================================================
 --1.	Представление, показывающее групп и ей направлениях и институтах
 IF EXISTS(select * from sysobjects where name='VW_ProfByInst')
 	drop view VW_ProfByInst
 GO
 CREATE VIEW VW_ProfByInst
 AS
-	SELECT ShortNameInst, CodeProfession, NameProfession, TuitionFee
+	SELECT ShortNameInst, CodeProfession, NameProfession, NameGroup
 		FROM tb_Profession
 		INNER JOIN tb_Institute
 			ON tb_Profession.InstituteID=tb_Institute.IDInstitute
+		INNER JOIN tb_Group
+			ON tb_Group.ProfessionID=tb_Profession.IDProfession
 GO
 
 SELECT * FROM VW_ProfByInst
+
 
 
 --2.	Представление, показывающее предлагаемых дисциплиной и их преподаватели
@@ -204,6 +218,7 @@ AS
 GO
 
 SELECT * FROM VW_StudyPlanAndTeacher
+
 
 
 --3.	Представление, показывающее подробной информации о результатах экзаменов (с информацией о студенте, группе и преподавателе)
@@ -231,7 +246,8 @@ GO
 SELECT * FROM VW_ExamWithInfo
 
 
---4.	Представление, показывающее студентов, которые сдали все экзамены (而且分数要大于3分)
+
+--4.	Представление, показывающее студентов, которые сдали все экзамены и оценка должна быть больше или равна 3 (而且分数要大于3分)
 -- 先找到学生(通过的)考试的次数统计
 SELECT tb_ExamRecord.StudentID, COUNT(tb_ExamRecord.StudentID) AS numPassExam
 	FROM tb_ExamRecord
@@ -442,8 +458,9 @@ SELECT * FROM VW_GroupHavePlace
 
 
 
-
+-- ============================================================================================
 --Хранимые процедуры
+-- ============================================================================================
 --1.	Добавление информации о новом работнике, его логине и пароле (Staff, Account)
 IF exists(select * from sysobjects where name='usp_addStaff')
 	drop proc usp_addStaff
@@ -597,7 +614,13 @@ GO
 --SELECT * FROM tb_Student WHERE GroupID=(SELECT IDGroup FROM tb_Group WHERE NameGroup='3530904/90001')
 EXEC usp_addExamRecord @NameDiscipline='Физика', @NameGroup='3530904/90001', @Semestr=2, @NameStudent='Викторов Дмитрий Дмитриевич', @Mark=5, @ExamDate='2021-10-05'
 
+
+
+
+
+-- ============================================================================================
 --Триггеры
+-- ============================================================================================
 --1.	Триггер, запрещающий добавлять новый студент в группе, если группа переполнена
 USE db_SPbSTU
 IF EXISTS(SELECT * FROM SYSOBJECTS WHERE name='tr_addStudentInGroup')
@@ -619,6 +642,7 @@ BEGIN
 	END
 END
 
+--
 GO
 DISABLE TRIGGER tr_addStudentInGroup ON TB_STUDENT
 GO
@@ -645,6 +669,7 @@ UPDATE tb_Student SET GroupID=314 WHERE IDStudent=1935000
 
 
 --2.	Триггер, запрещающий добавлять новый учебный план, если он раньше, чем курс группы
+-- Пример: Если студент (грппа) сейчас учится в 5-ом семестре, то для него нельзя добавлять новый учебный план 1-ого семестра.
 USE db_SPbSTU
 IF EXISTS(SELECT * FROM SYSOBJECTS WHERE name='tr_addStudyPlan')
 	DROP TRIGGER tr_addStudyPlan
