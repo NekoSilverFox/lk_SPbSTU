@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.tsmiMyInfo = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiUpPwd = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiUpUserName = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiClass = new System.Windows.Forms.ToolStripMenuItem();
@@ -36,7 +37,6 @@
             this.tmiFeedBack = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiWindow = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiMyInfo = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,9 +54,16 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.MdiWindowListItem = this.tsmiWindow;
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(1274, 25);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // tsmiMyInfo
+            // 
+            this.tsmiMyInfo.Name = "tsmiMyInfo";
+            this.tsmiMyInfo.Size = new System.Drawing.Size(68, 21);
+            this.tsmiMyInfo.Text = "我的信息";
+            this.tsmiMyInfo.Click += new System.EventHandler(this.tsmiMyInfo_Click);
             // 
             // tsmiUpPwd
             // 
@@ -100,18 +107,11 @@
             this.tsmiExit.Size = new System.Drawing.Size(44, 21);
             this.tsmiExit.Text = "退出";
             // 
-            // tsmiMyInfo
-            // 
-            this.tsmiMyInfo.Name = "tsmiMyInfo";
-            this.tsmiMyInfo.Size = new System.Drawing.Size(68, 21);
-            this.tsmiMyInfo.Text = "我的信息";
-            this.tsmiMyInfo.Click += new System.EventHandler(this.tsmiMyInfo_Click);
-            // 
             // AdminMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1274, 700);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.Name = "AdminMainForm";

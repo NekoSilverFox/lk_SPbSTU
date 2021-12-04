@@ -39,6 +39,8 @@ namespace UI
                     BLL.UserTypeManger userTypeManger = new BLL.UserTypeManger();
                     MODEL.UserType userType = userTypeManger.GetUserType(account_id);
                     MODEL.UserType.userType = userType.AccountUserType;
+                    MODEL.tb_Account.accountIDNow = account.IDAccount;
+                    MODEL.tb_Account.accountLoginNow = account.Login;
 
                     MessageBox.Show("Login successful\n" +
                         "Welcome: " + account.Login + "\n" +

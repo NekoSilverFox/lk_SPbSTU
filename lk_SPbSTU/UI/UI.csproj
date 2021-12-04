@@ -72,6 +72,9 @@
     <EmbeddedResource Include="LKStaffInfoForm.resx">
       <DependentUpon>LKStaffInfoForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LKStaffInfoForm.ru-RU.resx">
+      <DependentUpon>LKStaffInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>

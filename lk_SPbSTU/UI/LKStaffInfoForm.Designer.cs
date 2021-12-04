@@ -30,234 +30,168 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LKStaffInfoForm));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.ID = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtGender = new System.Windows.Forms.TextBox();
+            this.txtBirthday = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.txtLogin = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtHiredate = new System.Windows.Forms.TextBox();
+            this.phone = new System.Windows.Forms.Label();
+            this.Email = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.txtPost = new System.Windows.Forms.TextBox();
+            this.txtInstitulate = new System.Windows.Forms.TextBox();
+            this.Post = new System.Windows.Forms.Label();
+            this.Institulate = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(111, 46);
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(350, 93);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox1
+            // txtID
             // 
-            this.textBox1.Location = new System.Drawing.Point(590, 59);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(184, 21);
-            this.textBox1.TabIndex = 1;
+            resources.ApplyResources(this.txtID, "txtID");
+            this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
             // 
             // ID
             // 
-            this.ID.AutoSize = true;
-            this.ID.Location = new System.Drawing.Point(533, 62);
+            resources.ApplyResources(this.ID, "ID");
             this.ID.Name = "ID";
-            this.ID.Size = new System.Drawing.Size(17, 12);
-            this.ID.TabIndex = 2;
-            this.ID.Text = "ID";
             // 
-            // textBox2
+            // txtName
             // 
-            this.textBox2.Location = new System.Drawing.Point(111, 185);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(182, 21);
-            this.textBox2.TabIndex = 1;
+            resources.ApplyResources(this.txtName, "txtName");
+            this.txtName.Name = "txtName";
+            this.txtName.ReadOnly = true;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(52, 188);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 12);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Name";
             // 
-            // textBox3
+            // txtGender
             // 
-            this.textBox3.Location = new System.Drawing.Point(111, 245);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(182, 21);
-            this.textBox3.TabIndex = 1;
+            resources.ApplyResources(this.txtGender, "txtGender");
+            this.txtGender.Name = "txtGender";
+            this.txtGender.ReadOnly = true;
             // 
-            // textBox4
+            // txtBirthday
             // 
-            this.textBox4.Location = new System.Drawing.Point(111, 314);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(182, 21);
-            this.textBox4.TabIndex = 1;
+            resources.ApplyResources(this.txtBirthday, "txtBirthday");
+            this.txtBirthday.Name = "txtBirthday";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(52, 248);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 12);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Gender";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(52, 317);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 12);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Birthday";
             // 
-            // textBox5
+            // txtPhone
             // 
-            this.textBox5.Location = new System.Drawing.Point(398, 185);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(168, 21);
-            this.textBox5.TabIndex = 1;
+            resources.ApplyResources(this.txtPhone, "txtPhone");
+            this.txtPhone.Name = "txtPhone";
             // 
-            // textBox6
+            // txtLogin
             // 
-            this.textBox6.Location = new System.Drawing.Point(590, 106);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(184, 21);
-            this.textBox6.TabIndex = 1;
+            resources.ApplyResources(this.txtLogin, "txtLogin");
+            this.txtLogin.Name = "txtLogin";
+            this.txtLogin.ReadOnly = true;
             // 
-            // textBox7
+            // txtEmail
             // 
-            this.textBox7.Location = new System.Drawing.Point(398, 245);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(168, 21);
-            this.textBox7.TabIndex = 1;
+            resources.ApplyResources(this.txtEmail, "txtEmail");
+            this.txtEmail.Name = "txtEmail";
             // 
-            // textBox8
+            // txtHiredate
             // 
-            this.textBox8.Location = new System.Drawing.Point(398, 314);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(168, 21);
-            this.textBox8.TabIndex = 1;
+            resources.ApplyResources(this.txtHiredate, "txtHiredate");
+            this.txtHiredate.Name = "txtHiredate";
+            this.txtHiredate.ReadOnly = true;
             // 
-            // label4
+            // phone
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(339, 191);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 12);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Phone";
+            resources.ApplyResources(this.phone, "phone");
+            this.phone.Name = "phone";
             // 
-            // label5
+            // Email
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(339, 248);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 12);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Email";
+            resources.ApplyResources(this.Email, "Email");
+            this.Email.Name = "Email";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(533, 109);
+            resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 12);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Login";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(339, 317);
+            resources.ApplyResources(this.label7, "label7");
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 12);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Hiredate";
             // 
-            // textBox9
+            // txtPost
             // 
-            this.textBox9.Location = new System.Drawing.Point(696, 185);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(170, 21);
-            this.textBox9.TabIndex = 1;
+            resources.ApplyResources(this.txtPost, "txtPost");
+            this.txtPost.Name = "txtPost";
+            this.txtPost.ReadOnly = true;
             // 
-            // textBox10
+            // txtInstitulate
             // 
-            this.textBox10.Location = new System.Drawing.Point(696, 245);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(170, 21);
-            this.textBox10.TabIndex = 1;
+            resources.ApplyResources(this.txtInstitulate, "txtInstitulate");
+            this.txtInstitulate.Name = "txtInstitulate";
+            this.txtInstitulate.ReadOnly = true;
             // 
-            // label8
+            // Post
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(634, 188);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(29, 12);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Post";
+            resources.ApplyResources(this.Post, "Post");
+            this.Post.Name = "Post";
             // 
-            // label9
+            // Institulate
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(620, 248);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(71, 12);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "Institulate";
+            resources.ApplyResources(this.Institulate, "Institulate");
+            this.Institulate.Name = "Institulate";
             // 
             // LKStaffInfoForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(903, 391);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.Institulate);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.Email);
+            this.Controls.Add(this.Post);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.phone);
             this.Controls.Add(this.ID);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtHiredate);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtInstitulate);
+            this.Controls.Add(this.txtBirthday);
+            this.Controls.Add(this.txtLogin);
+            this.Controls.Add(this.txtPost);
+            this.Controls.Add(this.txtGender);
+            this.Controls.Add(this.txtPhone);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.pictureBox1);
             this.Name = "LKStaffInfoForm";
-            this.Text = "LKStaffInfo";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.LKStaffInfoForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -269,25 +203,25 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label ID;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtGender;
+        private System.Windows.Forms.TextBox txtBirthday;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.TextBox txtLogin;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtHiredate;
+        private System.Windows.Forms.Label phone;
+        private System.Windows.Forms.Label Email;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtPost;
+        private System.Windows.Forms.TextBox txtInstitulate;
+        private System.Windows.Forms.Label Post;
+        private System.Windows.Forms.Label Institulate;
     }
 }

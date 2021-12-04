@@ -17,3 +17,6 @@ C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\UI\obj\Debug\UI.exe
 C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\UI\obj\Debug\UI.pdb
 C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\UI\obj\Debug\UI.AdminMainForm.resources
 C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\UI\obj\Debug\UI.LKStaffInfoForm.resources
+C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\UI\bin\Debug\ru-RU\UI.resources.dll
+C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\UI\obj\Debug\UI.LKStaffInfoForm.ru-RU.resources
+C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\UI\obj\Debug\ru-RU\UI.resources.dll

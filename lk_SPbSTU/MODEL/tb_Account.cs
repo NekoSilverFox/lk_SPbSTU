@@ -15,6 +15,8 @@ namespace MODEL
 		public tb_Account()
 		{ }
 		#region Model
+		static public int accountIDNow;  // 记录现在操作中的用户 ID
+		static public string accountLoginNow;  // 记录现在操作中的用户名
 		private int _idaccount;
 		private string _login;
 		private string _passwd;

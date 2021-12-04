@@ -104,6 +104,19 @@ SELECT IDStaff, NameStaff, Gender, Birthday, tb_Staff.Phone, tb_Account.[Login],
 	WHERE IDStaff=@idStaff
 GO
 
+--1.	Просмотр информаций о указанном преподаватели по указанном ID 账号 (Staff, Account, Institute, Post)
+DECLARE @AccountID INT=5
+SELECT IDStaff, NameStaff, Gender, Birthday, tb_Staff.Phone, tb_Account.[Login], tb_Staff.Email, Hiredate, tb_Post.NamePost, tb_Institute.NameInstitute
+	FROM tb_Staff
+	INNER JOIN tb_Account
+		ON tb_Account.IDAccount=tb_Staff.AccountID
+	INNER JOIN tb_Post
+		ON tb_Post.IDPost=tb_Staff.PostID
+	INNER JOIN tb_Institute
+		ON tb_Institute.IDInstitute=tb_Staff.InstituteID
+	WHERE AccountID=@AccountID
+GO
+
 --2.	Вывод групп и студентов, которых обучает указанный преподаватель по ID преподаватели (Staff, StudyPlan, Group, Student)
 DECLARE @idStaff INT=11
 SELECT IDStudyPlan, NameDiscipline, NameGroup, NameStudent, Semestr
@@ -510,7 +523,7 @@ AS
 GO	
 
 EXEC usp_AccountType 7435
-EXEC usp_AccountType 7420
+EXEC usp_AccountType 32
 
 
 
@@ -677,6 +690,31 @@ select * from tb_ExamRecord where studentid=(select IDStudent from tb_Student wh
 
 
 
+--获取员工个人信息
+IF exists(select * from sysobjects where name='usp_getStaffInfo')
+	drop proc usp_getStaffInfo
+GO
+CREATE PROC usp_getStaffInfo
+	@AccountID		INT
+AS
+	SELECT IDStaff, NameStaff, 
+		CASE Gender
+				WHEN 0 THEN 'Man'
+				WHEN 1 THEN 'Woman'
+		ELSE 'Empty'
+		END AS 'Gender'
+	, Birthday, tb_Staff.Phone, tb_Account.[Login], tb_Staff.Email, Hiredate, tb_Post.NamePost, tb_Institute.NameInstitute
+		FROM tb_Staff
+		INNER JOIN tb_Account
+			ON tb_Account.IDAccount=tb_Staff.AccountID
+		INNER JOIN tb_Post
+			ON tb_Post.IDPost=tb_Staff.PostID
+		INNER JOIN tb_Institute
+			ON tb_Institute.IDInstitute=tb_Staff.InstituteID
+		WHERE AccountID=@AccountID
+GO
+
+EXEC usp_getStaffInfo 3
 
 -- ============================================================================================
 --Триггеры

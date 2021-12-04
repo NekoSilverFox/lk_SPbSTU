@@ -471,39 +471,14 @@
 </value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>174, 93</value>
+    <value>127, 57</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="pictureBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
-  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>350, 93</value>
-  </data>
-  <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>AutoSize</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="txtID.Font" type="System.Drawing.Font, System.Drawing">
-    <value>JetBrains Mono NL Light, 10.499999pt</value>
-  </data>
   <data name="txtID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>768, 89</value>
+    <value>713, 53</value>
   </data>
   <data name="txtID.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -511,29 +486,11 @@
   <data name="txtID.Size" type="System.Drawing.Size, System.Drawing">
     <value>244, 26</value>
   </data>
-  <data name="txtID.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;txtID.Name" xml:space="preserve">
-    <value>txtID</value>
-  </data>
-  <data name="&gt;&gt;txtID.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtID.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtID.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="ID.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="ID.Font" type="System.Drawing.Font, System.Drawing">
     <value>JetBrains Mono NL Light, 10.499999pt</value>
   </data>
   <data name="ID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>692, 94</value>
+    <value>637, 57</value>
   </data>
   <data name="ID.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
@@ -541,29 +498,8 @@
   <data name="ID.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 18</value>
   </data>
-  <data name="ID.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="ID.Text" xml:space="preserve">
-    <value>ID</value>
-  </data>
-  <data name="&gt;&gt;ID.Name" xml:space="preserve">
-    <value>ID</value>
-  </data>
-  <data name="&gt;&gt;ID.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ID.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ID.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="txtName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>JetBrains Mono NL Light, 10.499999pt</value>
-  </data>
   <data name="txtName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>135, 277</value>
+    <value>153, 250</value>
   </data>
   <data name="txtName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -571,29 +507,11 @@
   <data name="txtName.Size" type="System.Drawing.Size, System.Drawing">
     <value>241, 26</value>
   </data>
-  <data name="txtName.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;txtName.Name" xml:space="preserve">
-    <value>txtName</value>
-  </data>
-  <data name="&gt;&gt;txtName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtName.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtName.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
     <value>JetBrains Mono NL Light, 10.499999pt</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>56, 281</value>
+    <value>74, 255</value>
   </data>
   <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
@@ -601,29 +519,8 @@
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 18</value>
   </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Name</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="txtGender.Font" type="System.Drawing.Font, System.Drawing">
-    <value>JetBrains Mono NL Light, 10.499999pt</value>
-  </data>
   <data name="txtGender.Location" type="System.Drawing.Point, System.Drawing">
-    <value>135, 367</value>
+    <value>153, 340</value>
   </data>
   <data name="txtGender.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -631,26 +528,8 @@
   <data name="txtGender.Size" type="System.Drawing.Size, System.Drawing">
     <value>241, 26</value>
   </data>
-  <data name="txtGender.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;txtGender.Name" xml:space="preserve">
-    <value>txtGender</value>
-  </data>
-  <data name="&gt;&gt;txtGender.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtGender.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtGender.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="txtBirthday.Font" type="System.Drawing.Font, System.Drawing">
-    <value>JetBrains Mono NL Light, 10.499999pt</value>
-  </data>
   <data name="txtBirthday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>135, 470</value>
+    <value>153, 444</value>
   </data>
   <data name="txtBirthday.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -658,29 +537,11 @@
   <data name="txtBirthday.Size" type="System.Drawing.Size, System.Drawing">
     <value>241, 26</value>
   </data>
-  <data name="txtBirthday.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;txtBirthday.Name" xml:space="preserve">
-    <value>txtBirthday</value>
-  </data>
-  <data name="&gt;&gt;txtBirthday.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtBirthday.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtBirthday.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
     <value>JetBrains Mono NL Light, 10.499999pt</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>56, 371</value>
+    <value>74, 345</value>
   </data>
   <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
@@ -688,32 +549,11 @@
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 18</value>
   </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Gender</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
     <value>JetBrains Mono NL Light, 10.499999pt</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>56, 475</value>
+    <value>74, 448</value>
   </data>
   <data name="label3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
@@ -721,56 +561,20 @@
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 18</value>
   </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Birthday</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="txtPhone.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="textBox5.Font" type="System.Drawing.Font, System.Drawing">
     <value>JetBrains Mono NL Light, 10.499999pt</value>
   </data>
-  <data name="txtPhone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>517, 277</value>
+  <data name="textBox5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>536, 250</value>
   </data>
-  <data name="txtPhone.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="textBox5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
-  <data name="txtPhone.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="textBox5.Size" type="System.Drawing.Size, System.Drawing">
     <value>223, 26</value>
   </data>
-  <data name="txtPhone.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;txtPhone.Name" xml:space="preserve">
-    <value>txtPhone</value>
-  </data>
-  <data name="&gt;&gt;txtPhone.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtPhone.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtPhone.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="txtLogin.Font" type="System.Drawing.Font, System.Drawing">
-    <value>JetBrains Mono NL Light, 10.499999pt</value>
-  </data>
   <data name="txtLogin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>768, 160</value>
+    <value>713, 123</value>
   </data>
   <data name="txtLogin.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -778,53 +582,17 @@
   <data name="txtLogin.Size" type="System.Drawing.Size, System.Drawing">
     <value>244, 26</value>
   </data>
-  <data name="txtLogin.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="textBox7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>536, 340</value>
   </data>
-  <data name="&gt;&gt;txtLogin.Name" xml:space="preserve">
-    <value>txtLogin</value>
-  </data>
-  <data name="&gt;&gt;txtLogin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtLogin.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtLogin.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="txtEmail.Font" type="System.Drawing.Font, System.Drawing">
-    <value>JetBrains Mono NL Light, 10.499999pt</value>
-  </data>
-  <data name="txtEmail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>517, 367</value>
-  </data>
-  <data name="txtEmail.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="textBox7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
-  <data name="txtEmail.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="textBox7.Size" type="System.Drawing.Size, System.Drawing">
     <value>223, 26</value>
   </data>
-  <data name="txtEmail.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;txtEmail.Name" xml:space="preserve">
-    <value>txtEmail</value>
-  </data>
-  <data name="&gt;&gt;txtEmail.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtEmail.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtEmail.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="txtHiredate.Font" type="System.Drawing.Font, System.Drawing">
-    <value>JetBrains Mono NL Light, 10.499999pt</value>
-  </data>
   <data name="txtHiredate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>517, 470</value>
+    <value>536, 444</value>
   </data>
   <data name="txtHiredate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -832,95 +600,35 @@
   <data name="txtHiredate.Size" type="System.Drawing.Size, System.Drawing">
     <value>223, 26</value>
   </data>
-  <data name="txtHiredate.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;txtHiredate.Name" xml:space="preserve">
-    <value>txtHiredate</value>
-  </data>
-  <data name="&gt;&gt;txtHiredate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtHiredate.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtHiredate.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="phone.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="phone.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="txtPhone.Font" type="System.Drawing.Font, System.Drawing">
     <value>JetBrains Mono NL Light, 10.499999pt</value>
   </data>
-  <data name="phone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>438, 285</value>
+  <data name="txtPhone.Location" type="System.Drawing.Point, System.Drawing">
+    <value>457, 253</value>
   </data>
-  <data name="phone.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="txtPhone.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
   </data>
-  <data name="phone.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtPhone.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 18</value>
   </data>
-  <data name="phone.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="phone.Text" xml:space="preserve">
-    <value>Phone</value>
-  </data>
-  <data name="&gt;&gt;phone.Name" xml:space="preserve">
-    <value>phone</value>
-  </data>
-  <data name="&gt;&gt;phone.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;phone.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;phone.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="Email.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Email.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="txtEmail.Font" type="System.Drawing.Font, System.Drawing">
     <value>JetBrains Mono NL Light, 10.499999pt</value>
   </data>
-  <data name="Email.Location" type="System.Drawing.Point, System.Drawing">
-    <value>438, 371</value>
+  <data name="txtEmail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>457, 345</value>
   </data>
-  <data name="Email.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="txtEmail.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
   </data>
-  <data name="Email.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtEmail.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 18</value>
-  </data>
-  <data name="Email.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="Email.Text" xml:space="preserve">
-    <value>Email</value>
-  </data>
-  <data name="&gt;&gt;Email.Name" xml:space="preserve">
-    <value>Email</value>
-  </data>
-  <data name="&gt;&gt;Email.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Email.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Email.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
     <value>JetBrains Mono NL Light, 10.499999pt</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>692, 165</value>
+    <value>637, 127</value>
   </data>
   <data name="label6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
@@ -928,32 +636,11 @@
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 18</value>
   </data>
-  <data name="label6.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>Login</value>
-  </data>
-  <data name="&gt;&gt;label6.Name" xml:space="preserve">
-    <value>label6</value>
-  </data>
-  <data name="&gt;&gt;label6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="label7.Font" type="System.Drawing.Font, System.Drawing">
     <value>JetBrains Mono NL Light, 10.499999pt</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>438, 475</value>
+    <value>456, 448</value>
   </data>
   <data name="label7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
@@ -961,155 +648,56 @@
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 18</value>
   </data>
-  <data name="label7.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="textBox9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>JetBrains Mono NL Light, 10.499999pt</value>
   </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>Hiredate</value>
+  <data name="textBox9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>921, 250</value>
   </data>
-  <data name="&gt;&gt;label7.Name" xml:space="preserve">
-    <value>label7</value>
+  <data name="textBox9.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
-  <data name="&gt;&gt;label7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="textBox9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>225, 26</value>
   </data>
-  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="textBox10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>921, 340</value>
   </data>
-  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="textBox10.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="textBox10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>225, 26</value>
   </data>
   <data name="txtPost.Font" type="System.Drawing.Font, System.Drawing">
     <value>JetBrains Mono NL Light, 10.499999pt</value>
   </data>
   <data name="txtPost.Location" type="System.Drawing.Point, System.Drawing">
-    <value>897, 277</value>
+    <value>837, 249</value>
   </data>
   <data name="txtPost.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="txtPost.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 26</value>
-  </data>
-  <data name="txtPost.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;txtPost.Name" xml:space="preserve">
-    <value>txtPost</value>
-  </data>
-  <data name="&gt;&gt;txtPost.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtPost.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtPost.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>40, 18</value>
   </data>
   <data name="txtInstitulate.Font" type="System.Drawing.Font, System.Drawing">
     <value>JetBrains Mono NL Light, 10.499999pt</value>
   </data>
   <data name="txtInstitulate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>897, 367</value>
+    <value>820, 345</value>
   </data>
   <data name="txtInstitulate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="txtInstitulate.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="txtInstitulate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 68</value>
-  </data>
-  <data name="txtInstitulate.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;txtInstitulate.Name" xml:space="preserve">
-    <value>txtInstitulate</value>
-  </data>
-  <data name="&gt;&gt;txtInstitulate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtInstitulate.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtInstitulate.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="Post.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Post.Font" type="System.Drawing.Font, System.Drawing">
-    <value>JetBrains Mono NL Light, 10.499999pt</value>
-  </data>
-  <data name="Post.Location" type="System.Drawing.Point, System.Drawing">
-    <value>814, 281</value>
-  </data>
-  <data name="Post.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="Post.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 18</value>
-  </data>
-  <data name="Post.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="Post.Text" xml:space="preserve">
-    <value>Post</value>
-  </data>
-  <data name="&gt;&gt;Post.Name" xml:space="preserve">
-    <value>Post</value>
-  </data>
-  <data name="&gt;&gt;Post.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Post.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Post.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="Institulate.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Institulate.Font" type="System.Drawing.Font, System.Drawing">
-    <value>JetBrains Mono NL Light, 10.499999pt</value>
-  </data>
-  <data name="Institulate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>796, 371</value>
-  </data>
-  <data name="Institulate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="Institulate.Size" type="System.Drawing.Size, System.Drawing">
     <value>96, 18</value>
   </data>
-  <data name="Institulate.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="Institulate.Text" xml:space="preserve">
-    <value>Institulate</value>
-  </data>
-  <data name="&gt;&gt;Institulate.Name" xml:space="preserve">
-    <value>Institulate</value>
-  </data>
-  <data name="&gt;&gt;Institulate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Institulate.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Institulate.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>8, 18</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1204, 586</value>
+    <value>1204, 587</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>JetBrains Mono NL Light, 10.499999pt</value>
@@ -1975,23 +1563,5 @@
         ev9zxGX/Z79X/2G9UP9hvVD/Yb1Q/2G9UP9hvVD/Z79X/3PEZf+IzXz/veO2//f89v8AAAAAAAEAAAAB
         AAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAA==
 </value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 6, 5, 6</value>
-  </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>LKStaffInfo</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>LKStaffInfoForm</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

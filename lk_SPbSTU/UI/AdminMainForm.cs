@@ -33,7 +33,7 @@ namespace UI
             }
             else
             {
-                Application.OpenForms["ClassForm"].Show();
+                Application.OpenForms["LKStaffInfoForm"].Show();
             }
         }
     }

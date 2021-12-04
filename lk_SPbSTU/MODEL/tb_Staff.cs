@@ -18,13 +18,16 @@ namespace MODEL
 		private int _idstaff;
 		private string _namestaff;
 		private bool _gender;
+		private string _strgender;
 		private DateTime? _birthday;
 		private string _phone;
 		private int _accountid;
 		private string _email;
 		private DateTime _hiredate = DateTime.Now;
 		private int? _postid;
+		private string _strpost;
 		private int _instituteid;
+		private string _strinstitute;
 		/// <summary>
 		///
 		/// </summary>
@@ -49,6 +52,17 @@ namespace MODEL
 			set { _gender = value; }
 			get { return _gender; }
 		}
+
+		/// <summary>
+		///
+		/// </summary>
+		public string StrGender
+		{
+			set { _strgender = value; }
+			get { return _strgender; }
+		}
+
+
 		/// <summary>
 		///
 		/// </summary>
@@ -97,6 +111,17 @@ namespace MODEL
 			set { _postid = value; }
 			get { return _postid; }
 		}
+
+		/// <summary>
+		///
+		/// </summary>
+		public string StrPost
+		{
+			set { _strpost = value; }
+			get { return _strpost; }
+		}
+
+
 		/// <summary>
 		///
 		/// </summary>
@@ -105,6 +130,16 @@ namespace MODEL
 			set { _instituteid = value; }
 			get { return _instituteid; }
 		}
+
+		/// <summary>
+		///
+		/// </summary>
+		public string StrInstitute
+		{
+			set { _strinstitute = value; }
+			get { return _strinstitute; }
+		}
+
 		#endregion Model
 
 	}
