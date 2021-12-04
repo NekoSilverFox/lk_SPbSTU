@@ -10,20 +10,45 @@
 -- ============================================================================================
 --Изменение
 --1.	Изменение информации о институте (Institute)
+UPDATE tb_Institute set Phone='9999998999' where ShortNameInst='ГИ'
+
 --2.	Изменение информации о направление (Profession)
+UPDATE tb_Profession set NameProfession='Лингвистика2' where CodeProfession='45.04.02'
+
 --3.	Изменение информации о работнике (Staff)
+UPDATE tb_Staff set NameStaff='Иван А. С.'  where NameStaff='Иван2'
+
 --4.	Изменение информации о группе (Group)
+UPDATE tb_Group SET NameGroup='3530904/90105' WHERE NameGroup='3530904/90005'
+
 --5.	Изменение информации о дисциплине (Discipline)
+UPDATE tb_Discipline SET PeriodDiscipline=88 WHERE NameDiscipline='История'
+
 --6.	Изменение информации о учебном плане (StudyPlan)
+UPDATE tb_StudyPlan SET StaffID=4 WHERE IDStudyPlan=3
+
 --7.	Изменение информации о студенте (Student)
+UPDATE tb_Student SET Phone='9555555555' WHERE NameStudent='Мэн Цзянин'
+
+
+
 -- ============================================================================================
 
 -- ============================================================================================
 --Удаление
 --1.	Удаление записи учебного плана из системы (StudyPlan)
+DELETE tb_StudyPlan WHERE IDStudyPlan=41
+
 --2.	Удаление записи студенты из системы (Student)
+DELETE tb_Student WHERE IDStudent=(SELECT IDStudent FROM tb_Student WHERE NameStudent='Мэн Цзянин')
+
 --3.	Удаление записи из зачетной книге (ExamRecord)
+DELETE tb_ExamRecord WHERE IDExamRecord=44
 -- ============================================================================================
+
+
+
+
 
 -- ============================================================================================
 --Вывод
@@ -436,6 +461,7 @@ GO
 SELECT * FROM VW_studentPassAllExam
 
 
+
 --5.	Представление, показывающее групп, в которых нет свободных мест
 IF EXISTS(select * from sysobjects where name='VW_GroupHavePlace')
 	drop view VW_GroupHavePlace
@@ -498,9 +524,9 @@ BEGIN TRANSACTION
 GO
 
 EXEC usp_addStaff
-	@Login='iwann.bnn@@edu.spbstu.ru', @Passwd='asg4wafa', 
-	@NameStaff='Иван', @Birthday='1991-05-04',
-	@Phone='9456123025', @Hiredate='2018-04-02',
+	@Login='iwann.bnn2@@edu.spbstu.ru', @Passwd='asg4wafa', 
+	@NameStaff='Иван2', @Birthday='1991-05-04',
+	@Phone='9456123565', @Hiredate='2018-04-02',
 	@PostName='Преподаватель', @ShortNameInst='ИКНТ'
 
 
@@ -540,10 +566,10 @@ GO
 
 
 EXEC usp_addStudent
-	@Login='tomcat@@edu.spbstu.ru', @Passwd='asg4wafa', 
-	@NameStudent='Tom', @Birthday='1999-05-04',
-	@Phone='9456684025', @EnrollTime='2019-09-02',
-	@NameGroup='3530904/90002'
+	@Login='jerry@@edu.spbstu.ru', @Passwd='asg4wafa', 
+	@NameStudent='jerry', @Birthday='1999-05-04',
+	@Phone='9456694025', @EnrollTime='2019-09-02',
+	@NameGroup='3530904/90004'
 
 
 --3.	Добавление информации о новом учебном плане по названию группы и названию дисциплины (StudyPlan, Group, Discipline)
@@ -577,7 +603,7 @@ BEGIN TRANSACTION
 		COMMIT TRANSACTION
 GO
 
-EXEC usp_addStudyPlan @NameDiscipline='Физика', @NameGroup='3530904/90001', @Semestr=2, @NameTeacher='Соловьева Екатерина Витальевна'
+EXEC usp_addStudyPlan @NameDiscipline='Физика', @NameGroup='3530904/90004', @Semestr=6, @NameTeacher='Соловьева Екатерина Витальевна'
 
 
 -- 4.	Добавление нового записи в зачетном книге по ФИО студенту,
@@ -614,6 +640,7 @@ GO
 --SELECT * FROM tb_Student WHERE GroupID=(SELECT IDGroup FROM tb_Group WHERE NameGroup='3530904/90001')
 EXEC usp_addExamRecord @NameDiscipline='Физика', @NameGroup='3530904/90001', @Semestr=2, @NameStudent='Викторов Дмитрий Дмитриевич', @Mark=5, @ExamDate='2021-10-05'
 
+select * from tb_ExamRecord where studentid=(select IDStudent from tb_Student where NameStudent='Викторов Дмитрий Дмитриевич')
 
 
 
