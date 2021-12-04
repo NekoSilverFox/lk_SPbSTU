@@ -524,11 +524,16 @@ BEGIN TRANSACTION
 GO
 
 EXEC usp_addStaff
-	@Login='iwann.bnn2@@edu.spbstu.ru', @Passwd='asg4wafa', 
+	@Login='iwann.bnn2@edu.spbstu.ru', @Passwd='asg4wafa', 
 	@NameStaff='Иван2', @Birthday='1991-05-04',
 	@Phone='9456123565', @Hiredate='2018-04-02',
 	@PostName='Преподаватель', @ShortNameInst='ИКНТ'
 
+EXEC usp_addStaff
+	@Login='admin@edu.spbstu.ru', @Passwd='adminadmin', 
+	@NameStaff='admin', @Birthday='1990-01-01',
+	@Phone='9999999999', @Hiredate='2017-01-01',
+	@PostName='Администратор', @ShortNameInst='ИКНТ'
 
 --2.	Добавление информации о новом студенте, его логине и пароле (Student, Account)
 IF exists(select * from sysobjects where name='usp_addStudent')

@@ -18,6 +18,8 @@ namespace MODEL
 		private int _idaccount;
 		private string _login;
 		private string _passwd;
+		private string _post;
+
 		/// <summary>
 		///
 		/// </summary>
@@ -42,6 +44,16 @@ namespace MODEL
 			set { _passwd = value; }
 			get { return _passwd; }
 		}
+
+		/// <summary>
+		///
+		/// </summary>
+		public string Post
+		{
+			set { _post = value; }
+			get { return _post; }
+		}
+
 		#endregion Model
 
 	}

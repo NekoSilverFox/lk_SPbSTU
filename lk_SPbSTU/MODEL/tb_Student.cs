@@ -22,7 +22,7 @@ namespace MODEL
 		private string _phone;
 		private int _accountid;
 		private string _email;
-		private DateTime _enrolltime = Convert.ToDateTime(datenameyear, getdate + "-09-01");
+		private DateTime _enrolltime = Convert.ToDateTime(DateTime.Now.Year + "-09-01");
 		private int _groupid;
 		/// <summary>
 		///
