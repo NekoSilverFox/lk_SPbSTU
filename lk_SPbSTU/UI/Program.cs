@@ -16,7 +16,27 @@ namespace UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+
+            // 【起始窗体】
+            LoginForm loginForm = new LoginForm();
+
+            // 打开的窗体会返回一个 DialogResult 值
+            if (loginForm.ShowDialog() == DialogResult.OK)
+            {
+                if (MODEL.UserType.userType == "Admin")
+                {
+                    Application.Run(new AdminMainForm());    // 【主窗体】
+                }
+                else if (MODEL.UserType.userType == "Teacher")
+                {
+
+                }
+                else if (MODEL.UserType.userType == "Student")
+                {
+
+                }
+
+            }
         }
     }
 }

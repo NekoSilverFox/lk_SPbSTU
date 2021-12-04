@@ -16,6 +16,7 @@ namespace MODEL
 		{ }
 
 		#region Model
+		static public string userType;
 		private string _accountusertype;
 		/// <summary>
 		///
