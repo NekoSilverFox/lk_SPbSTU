@@ -208,6 +208,7 @@ GO
 -- ============================================================================================
 --Представления
 -- ============================================================================================
+
 --1.	Представление, показывающее групп и ей направлениях и институтах
 IF EXISTS(select * from sysobjects where name='VW_ProfByInst')
 	drop view VW_ProfByInst
@@ -487,6 +488,33 @@ SELECT * FROM VW_GroupHavePlace
 -- ============================================================================================
 --Хранимые процедуры
 -- ============================================================================================
+-- 确定用户类型
+IF exists(select * from sysobjects where name='usp_AccountType')
+	drop proc usp_AccountType
+GO
+CREATE PROC usp_AccountType
+	@AccountID			int
+AS
+	SELECT 
+		CASE PostID
+			WHEN 1 THEN 'Admin'
+			WHEN 2 THEN 'Teacher'
+			ELSE 'Student'
+		END AS 'UserType'
+	FROM tb_Account
+		FULL JOIN tb_Staff
+			ON tb_Staff.AccountID=tb_Account.IDAccount
+		FULL JOIN tb_Student
+			ON tb_Student.AccountID=tb_Account.IDAccount
+	WHERE tb_Account.IDAccount=@AccountID
+GO	
+
+EXEC usp_AccountType 7435
+EXEC usp_AccountType 7420
+
+
+
+
 --1.	Добавление информации о новом работнике, его логине и пароле (Staff, Account)
 IF exists(select * from sysobjects where name='usp_addStaff')
 	drop proc usp_addStaff

@@ -33,8 +33,16 @@ namespace UI
             {
                 if (pwd == account.Passwd)
                 {
+                    // 说明系统中存在这个用户，接下来应该判断用户的类型是什么
+                    int account_id = account.IDAccount;
+                    BLL.UserTypeManger userTypeManger = new BLL.UserTypeManger();
+                    MODEL.UserType userType = userTypeManger.GetUserType(account_id);
+
                     MessageBox.Show("Login successful\n" +
-                        "Welcome：" + account.Login);
+                        "Welcome: " + account.Login + "\n" +
+                        "You are: " + userType.AccountUserType);
+
+
 
                     // 使用 ShowDialog方式打开的窗体，只要你能给其一个除了 None 之外的 DialogResult 值，那么窗体就可以关闭！
                     //this.Close();   // 【重点】将这个窗体关闭，会关闭由这个窗体打开的所有其他的窗体，不只是当前窗体！

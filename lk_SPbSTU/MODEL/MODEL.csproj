@@ -52,6 +52,7 @@
     <Compile Include="tb_Staff.cs" />
     <Compile Include="tb_Student.cs" />
     <Compile Include="tb_StudyPlan.cs" />
+    <Compile Include="UserType.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
