@@ -20,3 +20,4 @@ C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\UI\obj\Debug\UI.LKStaffInfoFor
 C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\UI\bin\Debug\ru-RU\UI.resources.dll
 C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\UI\obj\Debug\UI.LKStaffInfoForm.ru-RU.resources
 C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\UI\obj\Debug\ru-RU\UI.resources.dll
+C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\UI\obj\Debug\UI.AdminInstitueForm.resources

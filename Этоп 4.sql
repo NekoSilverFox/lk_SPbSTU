@@ -699,8 +699,8 @@ CREATE PROC usp_getStaffInfo
 AS
 	SELECT IDStaff, NameStaff, 
 		CASE Gender
-				WHEN 0 THEN 'Man'
-				WHEN 1 THEN 'Woman'
+				WHEN 1 THEN 'Man'
+				WHEN 0 THEN 'Woman'
 		ELSE 'Empty'
 		END AS 'Gender'
 	, Birthday, tb_Staff.Phone, tb_Account.[Login], tb_Staff.Email, Hiredate, tb_Post.NamePost, tb_Institute.NameInstitute

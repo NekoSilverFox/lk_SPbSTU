@@ -1109,7 +1109,7 @@
     <value>8, 18</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1204, 586</value>
+    <value>1264, 681</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>JetBrains Mono NL Light, 10.499999pt</value>
@@ -1975,9 +1975,6 @@
         ev9zxGX/Z79X/2G9UP9hvVD/Yb1Q/2G9UP9hvVD/Z79X/3PEZf+IzXz/veO2//f89v8AAAAAAAEAAAAB
         AAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAA==
 </value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 6, 5, 6</value>
