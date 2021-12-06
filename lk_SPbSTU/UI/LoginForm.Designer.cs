@@ -85,7 +85,7 @@
             this.txtPwd.Name = "txtPwd";
             this.txtPwd.Size = new System.Drawing.Size(193, 26);
             this.txtPwd.TabIndex = 3;
-            this.txtPwd.Text = "adminadmin";
+            this.txtPwd.Text = "student";
             // 
             // txtLogin
             // 
@@ -94,7 +94,7 @@
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(193, 26);
             this.txtLogin.TabIndex = 4;
-            this.txtLogin.Text = "admin@edu.spbstu.ru";
+            this.txtLogin.Text = "men.ts@edu.spbstu.ru";
             // 
             // label3
             // 
