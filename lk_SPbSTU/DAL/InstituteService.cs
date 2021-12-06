@@ -17,7 +17,7 @@ namespace DAL
         /// </summary>
         /// <param name=""></param>
         /// <returns></returns>
-        public List<MODEL.tb_Institute> getAllInstituteList()
+        public List<MODEL.tb_Institute> GetAllInstituteList()
         {
             string sql = "SELECT IDInstitute, NameInstitute, ShortNameInst, Email, Website, Phone, DetAddress FROM tb_Institute";
             DataTable dataTable = SqlHelper.ExectureTabel(sql);
@@ -46,7 +46,7 @@ namespace DAL
 
         #region 将 institute 数据行转换为 Institute 对象 + void InstituteRow2InstutiteObject(DataRow row, MODEL.tb_Institute institute)
         /// <summary>
-        /// 将 classes 数据行转换为Classes 对象
+        /// 将 institute 数据行转换为 Institute 对象
         /// </summary>
         /// <param name="row"></param>
         /// <param name="institute"></param>

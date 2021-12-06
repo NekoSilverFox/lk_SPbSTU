@@ -58,6 +58,12 @@
     <Compile Include="AdminMainForm.Designer.cs">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminProfessionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminProfessionForm.Designer.cs">
+      <DependentUpon>AdminProfessionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LKStaffInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminMainForm.resx">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminProfessionForm.resx">
+      <DependentUpon>AdminProfessionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LKStaffInfoForm.resx">
       <DependentUpon>LKStaffInfoForm.cs</DependentUpon>

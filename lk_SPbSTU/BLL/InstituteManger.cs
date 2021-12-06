@@ -17,9 +17,9 @@ namespace BLL
         /// </summary>
         /// <param name=""></param>
         /// <returns></returns>
-        public List<MODEL.tb_Institute> getAllInstituteList()
+        public List<MODEL.tb_Institute> GetAllInstituteList()
         {
-            return instituteService.getAllInstituteList();
+            return instituteService.GetAllInstituteList();
         }
         #endregion
 

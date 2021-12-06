@@ -56,5 +56,25 @@ namespace UI
                 Application.OpenForms["AdminInstitueForm"].Show();
             }
         }
+
+        private void tsmiProfession_Click(object sender, EventArgs e)
+        {
+            // 使用另一种方式打开唯一的窗体
+            AdminProfessionForm adminProfessionForm = null;
+
+            // 所有生成的窗体都保存在了系统的 `Application` 中，可以通过使用 `Application.OpenForms["窗体名"]` 来调用
+            if (Application.OpenForms["AdminProfessionForm"] == null)
+            {
+                adminProfessionForm = new AdminProfessionForm();
+
+                // 【重点】这里是首次打开此窗体，所以要设置 MDI 父窗体
+                adminProfessionForm.MdiParent = this;
+                adminProfessionForm.Show();
+            }
+            else
+            {
+                Application.OpenForms["AdminProfessionForm"].Show();
+            }
+        }
     }
 }

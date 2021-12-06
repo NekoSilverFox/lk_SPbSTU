@@ -32,7 +32,7 @@ namespace UI
         /// <param name="e"></param>
         private void AdminInstitueForm_Load(object sender, EventArgs e)
         {
-            this.dgvList.DataSource = instituteManger.getAllInstituteList();
+            this.dgvList.DataSource = instituteManger.GetAllInstituteList();
         }
 
         private void gpAdd_Enter(object sender, EventArgs e)
@@ -67,7 +67,7 @@ namespace UI
                 MessageBox.Show("Successfully added new institute");
 
                 // 【重点】添加成功后记得刷新！！！！也就是重新加载一下
-                this.dgvList.DataSource = instituteManger.getAllInstituteList();
+                this.dgvList.DataSource = instituteManger.GetAllInstituteList();
             }
             else
             {

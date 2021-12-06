@@ -80,6 +80,7 @@
             this.tsmiProfession.Name = "tsmiProfession";
             this.tsmiProfession.Size = new System.Drawing.Size(68, 21);
             this.tsmiProfession.Text = "方向管理";
+            this.tsmiProfession.Click += new System.EventHandler(this.tsmiProfession_Click);
             // 
             // tsmiStaff
             // 

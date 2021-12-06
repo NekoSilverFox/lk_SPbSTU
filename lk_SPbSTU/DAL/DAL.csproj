@@ -45,6 +45,7 @@
     <Compile Include="AccountService.cs" />
     <Compile Include="ExamRecordService.cs" />
     <Compile Include="InstituteService.cs" />
+    <Compile Include="ProfessionServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlHelper.cs" />
     <Compile Include="StaffService.cs" />
