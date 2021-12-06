@@ -21,5 +21,17 @@ namespace BLL
             return professionServer.GetAllProfessionList();
         }
         #endregion
+
+        #region 插入新方向+int InsertProfession(MODEL.tb_Profession newProfession)
+        /// <summary>
+        /// 插入新方向
+        /// </summary>
+        /// <param name="newProfession"></param>
+        /// <returns></returns>
+        public int InsertProfession(MODEL.tb_Profession newProfession)
+        {
+            return professionServer.InsertProfession(newProfession);
+        }
+        #endregion
     }
 }

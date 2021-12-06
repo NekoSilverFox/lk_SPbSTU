@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 
+
 namespace DAL
 {
     public class ProfessionServer
@@ -56,6 +57,28 @@ namespace DAL
             profession.CodeProfession = row["CodeProfession"].ToString().Trim();
             profession.NameProfession = row["NameProfession"].ToString().Trim();
             profession.TuitionFee = (decimal)row["TuitionFee"];
+        }
+        #endregion
+
+
+        #region 插入新方向+int InsertProfession(MODEL.tb_Profession newProfession)
+        /// <summary>
+        /// 插入新方向
+        /// </summary>
+        /// <param name="newProfession"></param>
+        /// <returns></returns>
+        public int InsertProfession(MODEL.tb_Profession newProfession)
+        {
+            string sql = "INSERT tb_Profession VALUES(@InstituteID, @CodeProfession, @NameProfession, @TuitionFee)";
+
+            SqlParameter[] ps =
+{
+                new SqlParameter("InstituteID", newProfession.InstituteID),
+                new SqlParameter("CodeProfession", newProfession.CodeProfession),
+                new SqlParameter("NameProfession", newProfession.NameProfession),
+                new SqlParameter("TuitionFee", newProfession.TuitionFee)
+            };
+            return SqlHelper.ExecuteNonQuery(sql, ps);
         }
         #endregion
     }

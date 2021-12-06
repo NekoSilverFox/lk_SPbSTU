@@ -49,6 +49,25 @@ namespace UI
             {
                 return;
             }
+
+            MODEL.tb_Profession newProfession = new MODEL.tb_Profession();
+
+            newProfession.InstituteID = (this.cboInstitute.SelectedItem as MODEL.tb_Institute).IDInstitute;
+            newProfession.CodeProfession = this.txtCodeProfession.Text.ToString().Trim();
+            newProfession.NameProfession = this.txtNameProfession.Text.ToString().Trim();
+            newProfession.TuitionFee = Convert.ToDecimal(this.txtTuitionFee.Text.ToString().Trim());
+
+            if (professionManger.InsertProfession(newProfession) == 1)
+            {
+                MessageBox.Show("Successfully added new profession");
+
+                // 【重点】添加成功后记得刷新！！！！也就是重新加载一下
+                this.dgvList.DataSource = professionManger.GetAllProfessionList();
+            }
+            else
+            {
+                MessageBox.Show("Failed to add new profession");
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -89,7 +108,7 @@ namespace UI
             }
 
             // 如果为空，或者有非法字符
-            if (string.IsNullOrEmpty(this.txtTuitionFee.Text.Trim()) || Regex.IsMatch(txtTuitionFee.Text.Trim(), @"\d"))
+            if (string.IsNullOrEmpty(this.txtTuitionFee.Text.Trim()) || Regex.IsMatch(txtTuitionFee.Text.Trim(), @"\D"))
             {
                 MessageBox.Show("Please enter a legal tuition fee");
 

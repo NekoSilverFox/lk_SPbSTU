@@ -177,6 +177,7 @@
             this.txtTuitionFee.Name = "txtTuitionFee";
             this.txtTuitionFee.Size = new System.Drawing.Size(284, 26);
             this.txtTuitionFee.TabIndex = 19;
+            this.txtTuitionFee.Text = "220000";
             // 
             // label1
             // 
