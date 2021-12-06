@@ -57,7 +57,7 @@ namespace DAL
         void ExamRecordStudentShowRow2ExamRecord(DataRow row, MODEL.tb_ExamRecord examRecord)
         {
             examRecord.Semester = (int)row["Semestr"];
-            examRecord.NameDiscipline = row["NameDiscipline"].ToString();
+            examRecord.NameDiscipline = row["NameDiscipline"].ToString().Trim();
             examRecord.Mark = (int)row["Mark"];
             examRecord.ExamDate = Convert.ToDateTime(row["ExamDate"]);
         }

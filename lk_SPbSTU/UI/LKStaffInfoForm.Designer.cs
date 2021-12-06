@@ -50,6 +50,7 @@
             this.txtInstitulate = new System.Windows.Forms.TextBox();
             this.Post = new System.Windows.Forms.Label();
             this.Institulate = new System.Windows.Forms.Label();
+            this.btnSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -166,10 +167,17 @@
             resources.ApplyResources(this.Institulate, "Institulate");
             this.Institulate.Name = "Institulate";
             // 
+            // btnSave
+            // 
+            resources.ApplyResources(this.btnSave, "btnSave");
+            this.btnSave.Name = "btnSave";
+            this.btnSave.UseVisualStyleBackColor = true;
+            // 
             // LKStaffInfoForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Institulate);
@@ -223,5 +231,6 @@
         private System.Windows.Forms.TextBox txtInstitulate;
         private System.Windows.Forms.Label Post;
         private System.Windows.Forms.Label Institulate;
+        private System.Windows.Forms.Button btnSave;
     }
 }

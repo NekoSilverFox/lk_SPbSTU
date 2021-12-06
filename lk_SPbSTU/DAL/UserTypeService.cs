@@ -30,7 +30,7 @@ namespace DAL
                 if (reader.Read())
                 {
                     userType = new MODEL.UserType();
-                    userType.AccountUserType = reader["UserType"].ToString();
+                    userType.AccountUserType = reader["UserType"].ToString().Trim();
                 }
             }
 

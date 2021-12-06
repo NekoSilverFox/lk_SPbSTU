@@ -57,12 +57,12 @@ namespace DAL
         {
             studentStudyPlan.IDStudyPlan = (int)row["IDStudyPlan"];
             studentStudyPlan.Semestr = (int)row["Semestr"];
-            studentStudyPlan.NameDiscipline = row["NameDiscipline"].ToString();
+            studentStudyPlan.NameDiscipline = row["NameDiscipline"].ToString().Trim();
             studentStudyPlan.PeriodDiscipline = (int)row["PeriodDiscipline"];
-            studentStudyPlan.NameStaff = row["NameStaff"].ToString();
-            studentStudyPlan.EmailTeacher = row["EmailTeacher"].ToString();
-            studentStudyPlan.EduEmailTeacher = row["EduEmailTeacher"].ToString();
-            studentStudyPlan.PhoneTeacher = row["PhoneTeacher"].ToString();
+            studentStudyPlan.NameStaff = row["NameStaff"].ToString().Trim();
+            studentStudyPlan.EmailTeacher = row["EmailTeacher"].ToString().Trim();
+            studentStudyPlan.EduEmailTeacher = row["EduEmailTeacher"].ToString().Trim();
+            studentStudyPlan.PhoneTeacher = row["PhoneTeacher"].ToString().Trim();
         }
         #endregion
     }

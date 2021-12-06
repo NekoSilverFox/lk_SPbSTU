@@ -53,12 +53,37 @@ namespace DAL
         void InstituteRow2InstutiteObject(DataRow row, MODEL.tb_Institute institute)
         {
             institute.IDInstitute = (int)row["IDInstitute"];
-            institute.NameInstitute = row["NameInstitute"].ToString();
-            institute.ShortNameInst = row["ShortNameInst"].ToString();
-            institute.Email = row["Email"].ToString();
-            institute.Website = row["Website"].ToString();
-            institute.Phone = row["Phone"].ToString();
-            institute.DetAddress = row["DetAddress"].ToString();
+            institute.NameInstitute = row["NameInstitute"].ToString().Trim();
+            institute.ShortNameInst = row["ShortNameInst"].ToString().Trim();
+            institute.Email = row["Email"].ToString().Trim();
+            institute.Website = row["Website"].ToString().Trim();
+            institute.Phone = row["Phone"].ToString().Trim();
+            institute.DetAddress = row["DetAddress"].ToString().Trim();
+        }
+        #endregion
+
+
+        #region 添加新的学院到tb_institute表中 +int InsertInstitute(MODEL.tb_Institute newInstitute)
+        /// <summary>
+        /// 添加新的学院到tb_institute表中
+        /// </summary>
+        /// <param name="newInstitute"></param>
+        /// <returns></returns>
+        public int InsertInstitute(MODEL.tb_Institute newInstitute)
+        {
+            string sql = "INSERT tb_Institute VALUES(@NameInstitute, @ShortNameInst, @Email, @Website, @DetAddress, @Phone)";
+
+            SqlParameter[] ps =
+            {
+                new SqlParameter("@NameInstitute", newInstitute.NameInstitute),
+                new SqlParameter("@ShortNameInst", newInstitute.ShortNameInst),
+                new SqlParameter("@Email", string.IsNullOrEmpty(newInstitute.Email) ? DBNull.Value : (object)newInstitute.Email),
+                new SqlParameter("@Website", string.IsNullOrEmpty(newInstitute.Website) ? DBNull.Value : (object)newInstitute.Website),
+                new SqlParameter("@DetAddress", string.IsNullOrEmpty(newInstitute.DetAddress) ? DBNull.Value : (object)newInstitute.DetAddress),
+                new SqlParameter("@Phone", newInstitute.Phone)
+            };
+
+            return SqlHelper.ExecuteNonQuery(sql, ps);
         }
         #endregion
 

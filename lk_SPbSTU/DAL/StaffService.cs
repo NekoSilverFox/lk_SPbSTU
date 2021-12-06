@@ -33,14 +33,14 @@ namespace DAL
                     staff = new MODEL.tb_Staff();
 
                     staff.IDStaff = (int)reader["IDStaff"];
-                    staff.NameStaff = reader["NameStaff"].ToString();
-                    staff.StrGender = reader["Gender"].ToString();
+                    staff.NameStaff = reader["NameStaff"].ToString().Trim();
+                    staff.StrGender = reader["Gender"].ToString().Trim();
                     staff.Birthday = Convert.ToDateTime(reader["Birthday"]);
-                    staff.Phone = reader["Phone"].ToString();
-                    staff.Email = reader["Email"].ToString();
+                    staff.Phone = reader["Phone"].ToString().Trim();
+                    staff.Email = reader["Email"].ToString().Trim();
                     staff.Hiredate = Convert.ToDateTime(reader["Hiredate"]);
-                    staff.StrPost = reader["NamePost"].ToString();
-                    staff.StrInstitute = reader["NameInstitute"].ToString();
+                    staff.StrPost = reader["NamePost"].ToString().Trim();
+                    staff.StrInstitute = reader["NameInstitute"].ToString().Trim();
                 }
             }
             return staff;

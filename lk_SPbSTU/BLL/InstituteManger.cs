@@ -22,5 +22,18 @@ namespace BLL
             return instituteService.getAllInstituteList();
         }
         #endregion
+
+        #region 添加新的学院到tb_institute表中 +int InsertInstitute(MODEL.tb_Institute newInstitute)
+        /// <summary>
+        /// 添加新的学院到tb_institute表中
+        /// </summary>
+        /// <param name="newInstitute"></param>
+        /// <returns></returns>
+        public int InsertInstitute(MODEL.tb_Institute newInstitute)
+        {
+            return instituteService.InsertInstitute(newInstitute);
+        }
+        #endregion
+
     }
 }
