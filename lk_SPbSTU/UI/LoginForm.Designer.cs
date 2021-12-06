@@ -40,35 +40,39 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(152, 164);
+            this.label2.Font = new System.Drawing.Font("JetBrains Mono", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(143, 164);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 12);
+            this.label2.Size = new System.Drawing.Size(40, 18);
             this.label2.TabIndex = 7;
             this.label2.Text = "密码";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(152, 117);
+            this.label1.Font = new System.Drawing.Font("JetBrains Mono", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(143, 117);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 12);
+            this.label1.Size = new System.Drawing.Size(56, 18);
             this.label1.TabIndex = 8;
             this.label1.Text = "用户名";
             // 
             // btnCanel
             // 
-            this.btnCanel.Location = new System.Drawing.Point(321, 218);
+            this.btnCanel.Font = new System.Drawing.Font("JetBrains Mono", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCanel.Location = new System.Drawing.Point(306, 216);
             this.btnCanel.Name = "btnCanel";
-            this.btnCanel.Size = new System.Drawing.Size(75, 23);
+            this.btnCanel.Size = new System.Drawing.Size(91, 33);
             this.btnCanel.TabIndex = 5;
             this.btnCanel.Text = "取消";
             this.btnCanel.UseVisualStyleBackColor = true;
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(174, 218);
+            this.btnLogin.Font = new System.Drawing.Font("JetBrains Mono", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Location = new System.Drawing.Point(159, 216);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 23);
+            this.btnLogin.Size = new System.Drawing.Size(91, 33);
             this.btnLogin.TabIndex = 6;
             this.btnLogin.Text = "登录";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -76,17 +80,19 @@
             // 
             // txtPwd
             // 
-            this.txtPwd.Location = new System.Drawing.Point(226, 161);
+            this.txtPwd.Font = new System.Drawing.Font("JetBrains Mono", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPwd.Location = new System.Drawing.Point(217, 161);
             this.txtPwd.Name = "txtPwd";
-            this.txtPwd.Size = new System.Drawing.Size(193, 21);
+            this.txtPwd.Size = new System.Drawing.Size(193, 26);
             this.txtPwd.TabIndex = 3;
             this.txtPwd.Text = "adminadmin";
             // 
             // txtLogin
             // 
-            this.txtLogin.Location = new System.Drawing.Point(226, 114);
+            this.txtLogin.Font = new System.Drawing.Font("JetBrains Mono", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLogin.Location = new System.Drawing.Point(217, 114);
             this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(193, 21);
+            this.txtLogin.Size = new System.Drawing.Size(193, 26);
             this.txtLogin.TabIndex = 4;
             this.txtLogin.Text = "admin@edu.spbstu.ru";
             // 
@@ -113,7 +119,7 @@
             this.Controls.Add(this.txtPwd);
             this.Controls.Add(this.txtLogin);
             this.Name = "LoginForm";
-            this.Text = "Form1";
+            this.Text = "LoginForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 
