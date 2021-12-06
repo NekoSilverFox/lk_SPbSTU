@@ -724,7 +724,7 @@ GO
 CREATE PROC usp_getStudentInfo
 	@AccountID		INT
 AS
-	SELECT IDStudent, Login, NameStudent, Gender, Birthday, tb_Student.Phone, tb_Student.Email, NameGroup, Grade, EnrollTime, NameInstitute, CodeProfession, ProfessionID
+	SELECT IDStudent, Login, NameStudent, Gender, Birthday, tb_Student.Phone, tb_Student.Email, NameGroup, Grade, EnrollTime, NameInstitute, CodeProfession, NameProfession
 	FROM tb_Student
 		INNER JOIN tb_Account
 			ON tb_Student.AccountID=tb_Account.IDAccount
@@ -738,6 +738,31 @@ AS
 GO
 
 EXEC usp_getStudentInfo 4220
+
+
+
+-- 根据学生的账号ID获取他的 培训计划
+IF exists(select * from sysobjects where name='usp_getStudentStudyPlan')
+	drop proc usp_getStudentStudyPlan
+GO
+CREATE PROC usp_getStudentStudyPlan
+	@AccountID		INT
+AS
+	SELECT IDStudyPlan, Semestr, NameDiscipline, PeriodDiscipline, NameStaff
+	FROM tb_StudyPlan
+	INNER JOIN tb_Staff
+		ON tb_Staff.IDStaff=tb_StudyPlan.StaffID
+	INNER JOIN tb_Group
+		ON tb_Group.IDGroup=tb_StudyPlan.GroupID
+	INNER JOIN tb_Discipline
+		ON tb_Discipline.IDDiscipline=tb_StudyPlan.DisciplineID
+	INNER JOIN tb_Student
+		ON tb_Student.GroupID=tb_Group.IDGroup
+	WHERE tb_Student.AccountID=@AccountID
+	ORDER BY Semestr
+GO
+
+EXEC usp_getStudentStudyPlan 4220
 
 -- ============================================================================================
 --Триггеры

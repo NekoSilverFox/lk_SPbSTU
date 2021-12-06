@@ -20,6 +20,13 @@ namespace MODEL
 		private int _disciplineid;
 		private int _semestr;
 		private int _staffid;
+
+
+		private string _nameDiscipline;
+		private int _periodDiscipline;
+		private string _nameStaff;
+
+
 		/// <summary>
 		///
 		/// </summary>
@@ -60,6 +67,10 @@ namespace MODEL
 			set { _staffid = value; }
 			get { return _staffid; }
 		}
+
+		public string NameDiscipline { get => _nameDiscipline; set => _nameDiscipline = value; }
+		public int PeriodDiscipline { get => _periodDiscipline; set => _periodDiscipline = value; }
+		public string NameStaff { get => _nameStaff; set => _nameStaff = value; }
 		#endregion Model
 
 	}

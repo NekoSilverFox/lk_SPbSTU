@@ -49,6 +49,7 @@
     <Compile Include="SqlHelper.cs" />
     <Compile Include="StaffService.cs" />
     <Compile Include="StudentServer.cs" />
+    <Compile Include="StudyPlanServer.cs" />
     <Compile Include="UserTypeService.cs" />
   </ItemGroup>
   <ItemGroup>
