@@ -22,6 +22,9 @@ namespace MODEL
 		private int _staffid;
 
 
+		private string _emailTeacher;
+		private string _eduEmailTeacher;
+		private string _phoneTeacher;
 		private string _nameDiscipline;
 		private int _periodDiscipline;
 		private string _nameStaff;
@@ -71,6 +74,9 @@ namespace MODEL
 		public string NameDiscipline { get => _nameDiscipline; set => _nameDiscipline = value; }
 		public int PeriodDiscipline { get => _periodDiscipline; set => _periodDiscipline = value; }
 		public string NameStaff { get => _nameStaff; set => _nameStaff = value; }
+		public string EmailTeacher { get => _emailTeacher; set => _emailTeacher = value; }
+		public string EduEmailTeacher { get => _eduEmailTeacher; set => _eduEmailTeacher = value; }
+		public string PhoneTeacher { get => _phoneTeacher; set => _phoneTeacher = value; }
 		#endregion Model
 
 	}

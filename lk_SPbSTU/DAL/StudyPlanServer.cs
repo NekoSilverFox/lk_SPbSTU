@@ -60,6 +60,9 @@ namespace DAL
             studentStudyPlan.NameDiscipline = row["NameDiscipline"].ToString();
             studentStudyPlan.PeriodDiscipline = (int)row["PeriodDiscipline"];
             studentStudyPlan.NameStaff = row["NameStaff"].ToString();
+            studentStudyPlan.EmailTeacher = row["EmailTeacher"].ToString();
+            studentStudyPlan.EduEmailTeacher = row["EduEmailTeacher"].ToString();
+            studentStudyPlan.PhoneTeacher = row["PhoneTeacher"].ToString();
         }
         #endregion
     }

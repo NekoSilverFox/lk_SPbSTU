@@ -498,6 +498,8 @@ SELECT * FROM VW_GroupHavePlace
 
 
 
+
+
 -- ============================================================================================
 --Хранимые процедуры
 -- ============================================================================================
@@ -748,7 +750,7 @@ GO
 CREATE PROC usp_getStudentStudyPlan
 	@AccountID		INT
 AS
-	SELECT IDStudyPlan, Semestr, NameDiscipline, PeriodDiscipline, NameStaff
+	SELECT IDStudyPlan, Semestr, NameDiscipline, PeriodDiscipline, NameStaff, tb_Staff.Email AS EmailTeacher, tb_Account.Login AS EduEmailTeacher, tb_Staff.Phone AS PhoneTeacher
 	FROM tb_StudyPlan
 	INNER JOIN tb_Staff
 		ON tb_Staff.IDStaff=tb_StudyPlan.StaffID
@@ -758,12 +760,40 @@ AS
 		ON tb_Discipline.IDDiscipline=tb_StudyPlan.DisciplineID
 	INNER JOIN tb_Student
 		ON tb_Student.GroupID=tb_Group.IDGroup
+	INNER JOIN tb_Account
+		ON tb_Staff.AccountID=tb_Account.IDAccount
 	WHERE tb_Student.AccountID=@AccountID
 	ORDER BY Semestr
 GO
 
 EXEC usp_getStudentStudyPlan 4220
 
+
+
+-- 根据学生的账号ID获取他的 老师
+IF exists(select * from sysobjects where name='usp_getStudentsTeacher')
+	drop proc usp_getStudentsTeacher
+GO
+CREATE PROC usp_getStudentsTeacher
+	@AccountID		INT
+AS
+	SELECT NameStaff, Semestr, NameDiscipline, tb_Staff.Email, tb_Account.Login, tb_Staff.Phone
+	FROM tb_StudyPlan
+	INNER JOIN tb_Staff
+		ON tb_Staff.IDStaff=tb_StudyPlan.StaffID
+	INNER JOIN tb_Group
+		ON tb_Group.IDGroup=tb_StudyPlan.GroupID
+	INNER JOIN tb_Discipline
+		ON tb_Discipline.IDDiscipline=tb_StudyPlan.DisciplineID
+	INNER JOIN tb_Student
+		ON tb_Student.GroupID=tb_Group.IDGroup
+	INNER JOIN tb_Account
+		ON tb_Staff.AccountID=tb_Account.IDAccount
+	WHERE tb_Student.AccountID=@AccountID
+	ORDER BY Semestr
+GO
+
+EXEC usp_getStudentsTeacher 4220
 -- ============================================================================================
 --Триггеры
 -- ============================================================================================

@@ -81,6 +81,7 @@
             this.tmiMyTeacher.Name = "tmiMyTeacher";
             this.tmiMyTeacher.Size = new System.Drawing.Size(145, 21);
             this.tmiMyTeacher.Text = "Мой преподаватель";
+            this.tmiMyTeacher.Click += new System.EventHandler(this.tmiMyTeacher_Click);
             // 
             // tsmiWindow
             // 
@@ -105,6 +106,7 @@
             this.IsMdiContainer = true;
             this.Name = "StudentMainForm";
             this.Text = "StudentMainForm";
+            this.Load += new System.EventHandler(this.StudentMainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
