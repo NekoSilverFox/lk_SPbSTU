@@ -64,6 +64,12 @@
     <Compile Include="LKStaffInfoForm.Designer.cs">
       <DependentUpon>LKStaffInfoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LKStudentInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LKStudentInfoForm.Designer.cs">
+      <DependentUpon>LKStudentInfoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StudentExamRecordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentExamRecordForm.Designer.cs">
+      <DependentUpon>StudentExamRecordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentMainForm.Designer.cs">
+      <DependentUpon>StudentMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentStudyPlanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentStudyPlanForm.Designer.cs">
+      <DependentUpon>StudentStudyPlanForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdminInstitueForm.resx">
       <DependentUpon>AdminInstitueForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -83,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LKStaffInfoForm.ru-RU.resx">
       <DependentUpon>LKStaffInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LKStudentInfoForm.resx">
+      <DependentUpon>LKStudentInfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -96,6 +123,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="StudentExamRecordForm.resx">
+      <DependentUpon>StudentExamRecordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentMainForm.resx">
+      <DependentUpon>StudentMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentStudyPlanForm.resx">
+      <DependentUpon>StudentStudyPlanForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

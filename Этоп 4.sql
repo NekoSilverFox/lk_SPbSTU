@@ -612,9 +612,9 @@ GO
 
 
 EXEC usp_addStudent
-	@Login='jerry@@edu.spbstu.ru', @Passwd='asg4wafa', 
-	@NameStudent='jerry', @Birthday='1999-05-04',
-	@Phone='9456694025', @EnrollTime='2019-09-02',
+	@Login='student@edu.spbstu.ru', @Passwd='student', 
+	@NameStudent='student', @Birthday='1999-05-04',
+	@Phone='8888888888', @EnrollTime='2019-09-02',
 	@NameGroup='3530904/90004'
 
 
@@ -715,6 +715,29 @@ AS
 GO
 
 EXEC usp_getStaffInfo 3
+
+
+--通过账号ID获取员工个人信息
+IF exists(select * from sysobjects where name='usp_getStudentInfo')
+	drop proc usp_getStudentInfo
+GO
+CREATE PROC usp_getStudentInfo
+	@AccountID		INT
+AS
+	SELECT IDStudent, Login, NameStudent, Gender, Birthday, tb_Student.Phone, tb_Student.Email, NameGroup, Grade, EnrollTime, NameInstitute, CodeProfession, ProfessionID
+	FROM tb_Student
+		INNER JOIN tb_Account
+			ON tb_Student.AccountID=tb_Account.IDAccount
+		INNER JOIN tb_Group
+			ON tb_Student.GroupID=tb_Group.IDGroup
+		INNER JOIN tb_Profession
+			ON tb_Group.ProfessionID=tb_Profession.IDProfession
+		INNER JOIN tb_Institute
+			ON tb_Profession.InstituteID=tb_Institute.IDInstitute
+	WHERE AccountID=@AccountID
+GO
+
+EXEC usp_getStudentInfo 4220
 
 -- ============================================================================================
 --Триггеры

@@ -34,6 +34,7 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.txtPwd = new System.Windows.Forms.TextBox();
             this.txtLogin = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -89,11 +90,22 @@
             this.txtLogin.TabIndex = 4;
             this.txtLogin.Text = "admin@edu.spbstu.ru";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 27);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(125, 108);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "用于测试：\r\nAdmin账号：\r\nadmin@edu.spbstu.ru\r\nadminadmin\r\n\r\nStudent账号：\r\nmen.ts@edu.spbstu" +
+    ".ru\r\nstudent\r\n\r\n";
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(570, 357);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCanel);
@@ -115,6 +127,7 @@
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.TextBox txtPwd;
         private System.Windows.Forms.TextBox txtLogin;
+        private System.Windows.Forms.Label label3;
     }
 }
 

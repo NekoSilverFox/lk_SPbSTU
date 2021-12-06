@@ -21,3 +21,7 @@ C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\UI\bin\Debug\ru-RU\UI.resource
 C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\UI\obj\Debug\UI.LKStaffInfoForm.ru-RU.resources
 C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\UI\obj\Debug\ru-RU\UI.resources.dll
 C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\UI\obj\Debug\UI.AdminInstitueForm.resources
+C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\UI\obj\Debug\UI.LKStudentInfoForm.resources
+C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\UI\obj\Debug\UI.StudentExamRecordForm.resources
+C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\UI\obj\Debug\UI.StudentMainForm.resources
+C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\UI\obj\Debug\UI.StudentStudyPlanForm.resources

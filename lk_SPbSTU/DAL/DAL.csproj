@@ -43,10 +43,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountService.cs" />
+    <Compile Include="ExamRecordService.cs" />
     <Compile Include="InstituteService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlHelper.cs" />
     <Compile Include="StaffService.cs" />
+    <Compile Include="StudentServer.cs" />
     <Compile Include="UserTypeService.cs" />
   </ItemGroup>
   <ItemGroup>

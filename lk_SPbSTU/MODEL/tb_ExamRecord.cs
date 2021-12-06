@@ -20,6 +20,22 @@ namespace MODEL
 		private int _studentid;
 		private int _mark;
 		private DateTime _examdate = DateTime.Now;
+
+		private int _semester;
+		private string _namediscipline;
+
+		public int Semester
+		{
+			set { _semester = value; }
+			get { return _semester; }
+		}
+
+		public string NameDiscipline
+		{
+			set { _namediscipline = value; }
+			get { return _namediscipline; }
+		}
+
 		/// <summary>
 		///
 		/// </summary>

@@ -33,7 +33,7 @@ namespace UI
                 }
                 else if (MODEL.UserType.userType == "Student")
                 {
-
+                    Application.Run(new StudentMainForm());    // 【主窗体】
                 }
 
             }

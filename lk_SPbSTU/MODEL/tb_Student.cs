@@ -24,6 +24,16 @@ namespace MODEL
 		private string _email;
 		private DateTime _enrolltime = Convert.ToDateTime(DateTime.Now.Year + "-09-01");
 		private int _groupid;
+
+		private string _strgender;
+		private string _login;
+		private string _namegroup;
+		private int _grade;
+		private string _nameinstitute;
+		private string _codeprofession;
+		private string _nameprofession;
+
+
 		/// <summary>
 		///
 		/// </summary>
@@ -96,6 +106,19 @@ namespace MODEL
 			set { _groupid = value; }
 			get { return _groupid; }
 		}
+
+		public string StrGender
+		{
+			get { return _gender == true ? "Man" : "Male"; }
+			set { _gender = value == "Man" ? true : false; }
+		}
+
+		public string Namegroup { get => _namegroup; set => _namegroup = value; }
+		public int Grade { get => _grade; set => _grade = value; }
+		public string NameInstitute { get => _nameinstitute; set => _nameinstitute = value; }
+		public string CodeProfession { get => _codeprofession; set => _codeprofession = value; }
+		public string NameProfession { get => _nameprofession; set => _nameprofession = value; }
+		public string Login { get => _login; set => _login = value; }
 		#endregion Model
 
 	}
