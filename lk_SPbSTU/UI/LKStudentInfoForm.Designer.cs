@@ -388,6 +388,7 @@
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LKStudentInfoForm";
             this.Text = "LKStudentInfoForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

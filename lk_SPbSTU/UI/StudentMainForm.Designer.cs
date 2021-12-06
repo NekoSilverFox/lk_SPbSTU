@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentMainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tsmiMyInfo = new System.Windows.Forms.ToolStripMenuItem();
             this.tmiStudyPlan = new System.Windows.Forms.ToolStripMenuItem();
             this.tmiExamRecord = new System.Windows.Forms.ToolStripMenuItem();
+            this.tmiMyTeacher = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiWindow = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.tmiMyTeacher = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,41 +58,41 @@
             // tsmiMyInfo
             // 
             this.tsmiMyInfo.Name = "tsmiMyInfo";
-            this.tsmiMyInfo.Size = new System.Drawing.Size(68, 21);
-            this.tsmiMyInfo.Text = "我的信息";
+            this.tsmiMyInfo.Size = new System.Drawing.Size(123, 21);
+            this.tsmiMyInfo.Text = "Личный кабинет";
             this.tsmiMyInfo.Click += new System.EventHandler(this.tsmiMyInfo_Click);
             // 
             // tmiStudyPlan
             // 
             this.tmiStudyPlan.Name = "tmiStudyPlan";
-            this.tmiStudyPlan.Size = new System.Drawing.Size(68, 21);
-            this.tmiStudyPlan.Text = "培训计划";
+            this.tmiStudyPlan.Size = new System.Drawing.Size(108, 21);
+            this.tmiStudyPlan.Text = "Учебный план";
             this.tmiStudyPlan.Click += new System.EventHandler(this.tmiStudyPlan_Click);
             // 
             // tmiExamRecord
             // 
             this.tmiExamRecord.Name = "tmiExamRecord";
-            this.tmiExamRecord.Size = new System.Drawing.Size(56, 21);
-            this.tmiExamRecord.Text = "成绩册";
+            this.tmiExamRecord.Size = new System.Drawing.Size(126, 21);
+            this.tmiExamRecord.Text = "Зачетная книжка";
             this.tmiExamRecord.Click += new System.EventHandler(this.tmiExamRecord_Click);
-            // 
-            // tsmiWindow
-            // 
-            this.tsmiWindow.Name = "tsmiWindow";
-            this.tsmiWindow.Size = new System.Drawing.Size(44, 21);
-            this.tsmiWindow.Text = "窗口";
-            // 
-            // tsmiExit
-            // 
-            this.tsmiExit.Name = "tsmiExit";
-            this.tsmiExit.Size = new System.Drawing.Size(44, 21);
-            this.tsmiExit.Text = "退出";
             // 
             // tmiMyTeacher
             // 
             this.tmiMyTeacher.Name = "tmiMyTeacher";
-            this.tmiMyTeacher.Size = new System.Drawing.Size(68, 21);
-            this.tmiMyTeacher.Text = "我的老师";
+            this.tmiMyTeacher.Size = new System.Drawing.Size(145, 21);
+            this.tmiMyTeacher.Text = "Мой преподаватель";
+            // 
+            // tsmiWindow
+            // 
+            this.tsmiWindow.Name = "tsmiWindow";
+            this.tsmiWindow.Size = new System.Drawing.Size(53, 21);
+            this.tsmiWindow.Text = "Окно";
+            // 
+            // tsmiExit
+            // 
+            this.tsmiExit.Name = "tsmiExit";
+            this.tsmiExit.Size = new System.Drawing.Size(58, 21);
+            this.tsmiExit.Text = "Выйти";
             // 
             // StudentMainForm
             // 
@@ -100,6 +101,7 @@
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("宋体", 9F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "StudentMainForm";
             this.Text = "StudentMainForm";

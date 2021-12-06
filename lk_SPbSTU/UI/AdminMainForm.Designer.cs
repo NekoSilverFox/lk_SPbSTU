@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tsmiMyInfo = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiInstitute = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,15 +64,15 @@
             // tsmiMyInfo
             // 
             this.tsmiMyInfo.Name = "tsmiMyInfo";
-            this.tsmiMyInfo.Size = new System.Drawing.Size(68, 21);
-            this.tsmiMyInfo.Text = "我的信息";
+            this.tsmiMyInfo.Size = new System.Drawing.Size(123, 21);
+            this.tsmiMyInfo.Text = "Личный кабинет";
             this.tsmiMyInfo.Click += new System.EventHandler(this.tsmiMyInfo_Click);
             // 
             // tsmiInstitute
             // 
             this.tsmiInstitute.Name = "tsmiInstitute";
-            this.tsmiInstitute.Size = new System.Drawing.Size(68, 21);
-            this.tsmiInstitute.Text = "学院管理";
+            this.tsmiInstitute.Size = new System.Drawing.Size(73, 21);
+            this.tsmiInstitute.Text = "Институт";
             this.tsmiInstitute.Click += new System.EventHandler(this.tsmiInstitute_Click);
             // 
             // tsmiProfession
@@ -107,14 +108,14 @@
             // tsmiWindow
             // 
             this.tsmiWindow.Name = "tsmiWindow";
-            this.tsmiWindow.Size = new System.Drawing.Size(44, 21);
-            this.tsmiWindow.Text = "窗口";
+            this.tsmiWindow.Size = new System.Drawing.Size(53, 21);
+            this.tsmiWindow.Text = "Окно";
             // 
             // tsmiExit
             // 
             this.tsmiExit.Name = "tsmiExit";
-            this.tsmiExit.Size = new System.Drawing.Size(44, 21);
-            this.tsmiExit.Text = "退出";
+            this.tsmiExit.Size = new System.Drawing.Size(58, 21);
+            this.tsmiExit.Text = "Выйти";
             // 
             // AdminMainForm
             // 
@@ -122,6 +123,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "AdminMainForm";
             this.Text = "AdminMainForm";
