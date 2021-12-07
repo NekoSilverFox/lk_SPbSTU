@@ -20,6 +20,54 @@ namespace MODEL
 		private int _professionid;
 		private int _grade = DateTime.Now.Year;
 		private int? _quantity = 40;
+
+
+
+		private int _idinstitute;
+		public int IDInstitute
+		{
+			set { _idinstitute = value; }
+			get { return _idinstitute; }
+		}
+
+		private string _nameinstitute;
+		public string NameInstitute
+		{
+			set { _nameinstitute = value; }
+			get { return _nameinstitute; }
+		}
+		/// <summary>
+		///
+		/// </summary>
+		private string _shortnameinst;
+
+		public string ShortNameInst
+		{
+			set { _shortnameinst = value; }
+			get { return _shortnameinst; }
+		}
+
+		private int _idprofession;
+		public int IDProfession
+		{
+			set { _idprofession = value; }
+			get { return _idprofession; }
+		}
+
+		private string _nameprofession;
+		public string NameProfession
+		{
+			set { _nameprofession = value; }
+			get { return _nameprofession; }
+		}
+
+		private string _codeprofession;
+		public string CodeProfession
+		{
+			set { _codeprofession = value; }
+			get { return _codeprofession; }
+		}
+
 		/// <summary>
 		///
 		/// </summary>

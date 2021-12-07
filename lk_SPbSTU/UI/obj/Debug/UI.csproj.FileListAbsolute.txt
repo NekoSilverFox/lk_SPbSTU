@@ -27,3 +27,4 @@ C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\UI\obj\Debug\UI.StudentMainFor
 C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\UI\obj\Debug\UI.StudentStudyPlanForm.resources
 C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\UI\obj\Debug\UI.StudentMyTeacherForm.resources
 C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\UI\obj\Debug\UI.AdminProfessionForm.resources
+C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\UI\obj\Debug\UI.AdminGroupForm.resources

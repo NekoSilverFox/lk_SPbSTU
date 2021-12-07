@@ -81,8 +81,8 @@
             // tsmiAddInstitue
             // 
             this.tsmiAddInstitue.Name = "tsmiAddInstitue";
-            this.tsmiAddInstitue.Size = new System.Drawing.Size(32, 22);
-            this.tsmiAddInstitue.Text = "新增";
+            this.tsmiAddInstitue.Size = new System.Drawing.Size(84, 22);
+            this.tsmiAddInstitue.Text = "Добавление";
             this.tsmiAddInstitue.Click += new System.EventHandler(this.tsmiAddInstitue_Click);
             // 
             // tsmiUpdate

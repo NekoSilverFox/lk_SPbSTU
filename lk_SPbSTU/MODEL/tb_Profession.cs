@@ -15,10 +15,7 @@ namespace MODEL
 		public tb_Profession()
 		{ }
 		#region Model
-		private int _idprofession;
 		private int _instituteid;
-		private string _codeprofession;
-		private string _nameprofession;
 		private decimal _tuitionfee = 20000M;
 
 		private string _nameinstitute;
@@ -34,11 +31,13 @@ namespace MODEL
 		/// <summary>
 		///
 		/// </summary>
+		private int _idprofession;
 		public int IDProfession
 		{
 			set { _idprofession = value; }
 			get { return _idprofession; }
 		}
+
 		/// <summary>
 		///
 		/// </summary>
@@ -50,6 +49,7 @@ namespace MODEL
 		/// <summary>
 		///
 		/// </summary>
+		private string _codeprofession;
 		public string CodeProfession
 		{
 			set { _codeprofession = value; }
@@ -58,6 +58,7 @@ namespace MODEL
 		/// <summary>
 		///
 		/// </summary>
+		private string _nameprofession;
 		public string NameProfession
 		{
 			set { _nameprofession = value; }

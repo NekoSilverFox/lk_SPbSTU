@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="AccountManger.cs" />
     <Compile Include="ExamRecordManger.cs" />
+    <Compile Include="GroupManger.cs" />
     <Compile Include="InstituteManger.cs" />
     <Compile Include="ProfessionManger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

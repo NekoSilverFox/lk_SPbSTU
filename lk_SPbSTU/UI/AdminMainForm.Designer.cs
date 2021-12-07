@@ -48,8 +48,8 @@
             this.tsmiMyInfo,
             this.tsmiInstitute,
             this.tsmiProfession,
-            this.tsmiStaff,
             this.tsmiClass,
+            this.tsmiStaff,
             this.tmiStudyPlan,
             this.tmiStudent,
             this.tsmiWindow,
@@ -93,6 +93,7 @@
             this.tsmiClass.Name = "tsmiClass";
             this.tsmiClass.Size = new System.Drawing.Size(68, 21);
             this.tsmiClass.Text = "班级管理";
+            this.tsmiClass.Click += new System.EventHandler(this.tsmiClass_Click);
             // 
             // tmiStudyPlan
             // 

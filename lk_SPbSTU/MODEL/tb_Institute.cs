@@ -15,9 +15,6 @@ namespace MODEL
 		public tb_Institute()
 		{ }
 		#region Model
-		private int _idinstitute;
-		private string _nameinstitute;
-		private string _shortnameinst;
 		private string _email;
 		private string _website;
 		private string _detaddress;
@@ -25,6 +22,7 @@ namespace MODEL
 		/// <summary>
 		///
 		/// </summary>
+		private int _idinstitute;
 		public int IDInstitute
 		{
 			set { _idinstitute = value; }
@@ -34,6 +32,7 @@ namespace MODEL
 		/// <summary>
 		///
 		/// </summary>
+		private string _nameinstitute;
 		public string NameInstitute
 		{
 			set { _nameinstitute = value; }
@@ -42,11 +41,14 @@ namespace MODEL
 		/// <summary>
 		///
 		/// </summary>
+		private string _shortnameinst;
+
 		public string ShortNameInst
 		{
 			set { _shortnameinst = value; }
 			get { return _shortnameinst; }
 		}
+
 		/// <summary>
 		///
 		/// </summary>
