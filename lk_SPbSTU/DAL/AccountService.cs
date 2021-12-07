@@ -33,8 +33,8 @@ namespace DAL
                     tb_Account = new MODEL.tb_Account();
 
                     tb_Account.IDAccount = (int)reader["IDAccount"];
-                    tb_Account.Login = reader["Login"].ToString();
-                    tb_Account.Passwd = reader["Passwd"].ToString();
+                    tb_Account.Login = reader["Login"].ToString().Trim();
+                    tb_Account.Passwd = reader["Passwd"].ToString().Trim();
                 }
             }
             return tb_Account;

@@ -19,7 +19,7 @@ namespace DAL
         /// <returns></returns>
         public List<MODEL.tb_Profession> GetAllProfessionList()
         {
-            string sql = "SELECT IDProfession, InstituteID, CodeProfession, NameProfession, TuitionFee FROM tb_Profession";
+            string sql = "SELECT IDProfession, InstituteID, NameInstitute, CodeProfession, NameProfession, TuitionFee FROM tb_Profession INNER JOIN tb_Institute ON tb_Profession.InstituteID=tb_Institute.IDInstitute";
             DataTable dataTable = SqlHelper.ExectureTabel(sql);
 
             // 将表的每一行数据转换为对象然后添加到集合中。因为表的每一行，每一列是一个 Object ，如果后期在控件中修改的话要在对象中做
@@ -57,6 +57,7 @@ namespace DAL
             profession.CodeProfession = row["CodeProfession"].ToString().Trim();
             profession.NameProfession = row["NameProfession"].ToString().Trim();
             profession.TuitionFee = (decimal)row["TuitionFee"];
+            profession.NameInstitute = row["NameInstitute"].ToString().Trim();
         }
         #endregion
 
@@ -72,7 +73,7 @@ namespace DAL
             string sql = "INSERT tb_Profession VALUES(@InstituteID, @CodeProfession, @NameProfession, @TuitionFee)";
 
             SqlParameter[] ps =
-{
+            {
                 new SqlParameter("InstituteID", newProfession.InstituteID),
                 new SqlParameter("CodeProfession", newProfession.CodeProfession),
                 new SqlParameter("NameProfession", newProfession.NameProfession),

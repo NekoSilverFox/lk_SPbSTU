@@ -20,6 +20,17 @@ namespace MODEL
 		private string _codeprofession;
 		private string _nameprofession;
 		private decimal _tuitionfee = 20000M;
+
+		private string _nameinstitute;
+		/// <summary>
+		///
+		/// </summary>
+		public string NameInstitute
+		{
+			set { _nameinstitute = value; }
+			get { return _nameinstitute; }
+		}
+
 		/// <summary>
 		///
 		/// </summary>

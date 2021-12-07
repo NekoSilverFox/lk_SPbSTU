@@ -68,7 +68,6 @@
             this.txtPwd.Font = new System.Drawing.Font("JetBrains Mono", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPwd.Location = new System.Drawing.Point(48, 296);
             this.txtPwd.Name = "txtPwd";
-            this.txtPwd.PasswordChar = '*';
             this.txtPwd.Size = new System.Drawing.Size(217, 19);
             this.txtPwd.TabIndex = 3;
             this.txtPwd.Text = "adminadmin";

@@ -30,6 +30,7 @@ namespace MODEL
 			set { _idinstitute = value; }
 			get { return _idinstitute; }
 		}
+
 		/// <summary>
 		///
 		/// </summary>

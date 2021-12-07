@@ -255,12 +255,12 @@
             // Column2
             // 
             this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column2.DataPropertyName = "InstituteID";
+            this.Column2.DataPropertyName = "NameInstitute";
             this.Column2.FillWeight = 30.45833F;
             this.Column2.HeaderText = "Институт";
-            this.Column2.MinimumWidth = 250;
+            this.Column2.MinimumWidth = 450;
             this.Column2.Name = "Column2";
-            this.Column2.Width = 250;
+            this.Column2.Width = 450;
             // 
             // Column3
             // 
