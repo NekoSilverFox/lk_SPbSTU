@@ -32,7 +32,7 @@ namespace UI
             // 如果没有绑定的列不会自动生成显示
             this.dgvList.AutoGenerateColumns = false;
 
-            // 绑定班级下拉列表数据
+            // 绑定学院下拉列表数据
             this.cboInstitute.DisplayMember = "NameInstitute";      // 显示的值
             this.cboInstitute.ValueMember = "IDInstitute";              // 注意这里，绑定实际的值
             this.cboInstitute.DataSource = instituteManger.GetAllInstituteList();  // 绑定集合

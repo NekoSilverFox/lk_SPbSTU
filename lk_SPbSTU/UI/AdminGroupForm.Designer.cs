@@ -44,8 +44,22 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gpAdd = new System.Windows.Forms.GroupBox();
+            this.cboInstitute = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtNumStu = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnOk = new System.Windows.Forms.Button();
+            this.txtGrade = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtNameProfession = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cboProfession = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
+            this.gpAdd.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -67,6 +81,7 @@
             this.tsmiAddInstitue.Name = "tsmiAddInstitue";
             this.tsmiAddInstitue.Size = new System.Drawing.Size(84, 22);
             this.tsmiAddInstitue.Text = "Добавление";
+            this.tsmiAddInstitue.Click += new System.EventHandler(this.tsmiAddInstitue_Click);
             // 
             // tsmiUpdate
             // 
@@ -185,11 +200,143 @@
             this.Column7.HeaderText = "Кол-во студентов";
             this.Column7.Name = "Column7";
             // 
+            // gpAdd
+            // 
+            this.gpAdd.BackColor = System.Drawing.Color.Linen;
+            this.gpAdd.Controls.Add(this.cboProfession);
+            this.gpAdd.Controls.Add(this.label2);
+            this.gpAdd.Controls.Add(this.cboInstitute);
+            this.gpAdd.Controls.Add(this.label9);
+            this.gpAdd.Controls.Add(this.txtNumStu);
+            this.gpAdd.Controls.Add(this.label1);
+            this.gpAdd.Controls.Add(this.btnCancel);
+            this.gpAdd.Controls.Add(this.btnOk);
+            this.gpAdd.Controls.Add(this.txtGrade);
+            this.gpAdd.Controls.Add(this.label4);
+            this.gpAdd.Controls.Add(this.txtNameProfession);
+            this.gpAdd.Controls.Add(this.label3);
+            this.gpAdd.Location = new System.Drawing.Point(182, 90);
+            this.gpAdd.Name = "gpAdd";
+            this.gpAdd.Size = new System.Drawing.Size(900, 500);
+            this.gpAdd.TabIndex = 17;
+            this.gpAdd.TabStop = false;
+            this.gpAdd.Text = "Добавление направления";
+            this.gpAdd.Visible = false;
+            // 
+            // cboInstitute
+            // 
+            this.cboInstitute.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboInstitute.FormattingEnabled = true;
+            this.cboInstitute.Location = new System.Drawing.Point(117, 168);
+            this.cboInstitute.Name = "cboInstitute";
+            this.cboInstitute.Size = new System.Drawing.Size(713, 26);
+            this.cboInstitute.TabIndex = 21;
+            this.cboInstitute.SelectedIndexChanged += new System.EventHandler(this.cboInstitute_SelectedIndexChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(39, 171);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(72, 18);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "Институт";
+            // 
+            // txtNumStu
+            // 
+            this.txtNumStu.Location = new System.Drawing.Point(625, 340);
+            this.txtNumStu.Name = "txtNumStu";
+            this.txtNumStu.Size = new System.Drawing.Size(205, 26);
+            this.txtNumStu.TabIndex = 19;
+            this.txtNumStu.Text = "40";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(451, 343);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(168, 18);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Количество студентов";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(755, 434);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 17;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnOk
+            // 
+            this.btnOk.Location = new System.Drawing.Point(635, 434);
+            this.btnOk.Name = "btnOk";
+            this.btnOk.Size = new System.Drawing.Size(75, 23);
+            this.btnOk.TabIndex = 16;
+            this.btnOk.Text = "Insert";
+            this.btnOk.UseVisualStyleBackColor = true;
+            // 
+            // txtGrade
+            // 
+            this.txtGrade.Location = new System.Drawing.Point(117, 340);
+            this.txtGrade.Name = "txtGrade";
+            this.txtGrade.Size = new System.Drawing.Size(205, 26);
+            this.txtGrade.TabIndex = 6;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(71, 343);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 18);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Курс";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // txtNameProfession
+            // 
+            this.txtNameProfession.Location = new System.Drawing.Point(117, 77);
+            this.txtNameProfession.Name = "txtNameProfession";
+            this.txtNameProfession.Size = new System.Drawing.Size(713, 26);
+            this.txtNameProfession.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(39, 77);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 18);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Название";
+            // 
+            // cboProfession
+            // 
+            this.cboProfession.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboProfession.FormattingEnabled = true;
+            this.cboProfession.Location = new System.Drawing.Point(117, 260);
+            this.cboProfession.Name = "cboProfession";
+            this.cboProfession.Size = new System.Drawing.Size(713, 26);
+            this.cboProfession.TabIndex = 23;
+            this.cboProfession.SelectedIndexChanged += new System.EventHandler(this.cboProfession_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 263);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 18);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Направление";
+            // 
             // AdminGroupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.gpAdd);
             this.Controls.Add(this.dgvList);
             this.Controls.Add(this.toolStrip1);
             this.Font = new System.Drawing.Font("JetBrains Mono NL Light", 10.5F);
@@ -202,6 +349,8 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).EndInit();
+            this.gpAdd.ResumeLayout(false);
+            this.gpAdd.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,5 +372,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.GroupBox gpAdd;
+        private System.Windows.Forms.ComboBox cboProfession;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cboInstitute;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtNumStu;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnOk;
+        private System.Windows.Forms.TextBox txtGrade;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtNameProfession;
+        private System.Windows.Forms.Label label3;
     }
 }
