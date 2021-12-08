@@ -46,29 +46,29 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gpAdd = new System.Windows.Forms.GroupBox();
+            this.rdoWoman = new System.Windows.Forms.RadioButton();
+            this.rdoMam = new System.Windows.Forms.RadioButton();
+            this.cboInstutite = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dtpHiredate = new System.Windows.Forms.DateTimePicker();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbPhone = new System.Windows.Forms.Label();
+            this.lbBirthday = new System.Windows.Forms.Label();
+            this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
+            this.txtPwd = new System.Windows.Forms.TextBox();
+            this.lbPwd = new System.Windows.Forms.Label();
+            this.txtLogin = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.kbName = new System.Windows.Forms.Label();
             this.cboPost = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOk = new System.Windows.Forms.Button();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.kbName = new System.Windows.Forms.Label();
-            this.txtLogin = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtPwd = new System.Windows.Forms.TextBox();
-            this.lbPwd = new System.Windows.Forms.Label();
-            this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
-            this.lbBirthday = new System.Windows.Forms.Label();
-            this.txtPhone = new System.Windows.Forms.TextBox();
-            this.lbPhone = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.dtpHiredate = new System.Windows.Forms.DateTimePicker();
-            this.cboInstutite = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.rdoWoman = new System.Windows.Forms.RadioButton();
-            this.rdoMam = new System.Windows.Forms.RadioButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
             this.gpAdd.SuspendLayout();
@@ -93,6 +93,7 @@
             this.tsmiAddInstitue.Name = "tsmiAddInstitue";
             this.tsmiAddInstitue.Size = new System.Drawing.Size(84, 22);
             this.tsmiAddInstitue.Text = "Добавление";
+            this.tsmiAddInstitue.Click += new System.EventHandler(this.tsmiAddInstitue_Click);
             // 
             // tsmiUpdate
             // 
@@ -261,6 +262,176 @@
             this.gpAdd.Text = "Добавление";
             this.gpAdd.Visible = false;
             // 
+            // rdoWoman
+            // 
+            this.rdoWoman.AutoSize = true;
+            this.rdoWoman.Location = new System.Drawing.Point(725, 118);
+            this.rdoWoman.Name = "rdoWoman";
+            this.rdoWoman.Size = new System.Drawing.Size(34, 22);
+            this.rdoWoman.TabIndex = 39;
+            this.rdoWoman.TabStop = true;
+            this.rdoWoman.Text = "W";
+            this.rdoWoman.UseVisualStyleBackColor = true;
+            // 
+            // rdoMam
+            // 
+            this.rdoMam.AutoSize = true;
+            this.rdoMam.Checked = true;
+            this.rdoMam.Location = new System.Drawing.Point(604, 118);
+            this.rdoMam.Name = "rdoMam";
+            this.rdoMam.Size = new System.Drawing.Size(34, 22);
+            this.rdoMam.TabIndex = 38;
+            this.rdoMam.TabStop = true;
+            this.rdoMam.Text = "M";
+            this.rdoMam.UseVisualStyleBackColor = true;
+            // 
+            // cboInstutite
+            // 
+            this.cboInstutite.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboInstutite.FormattingEnabled = true;
+            this.cboInstutite.Location = new System.Drawing.Point(541, 358);
+            this.cboInstutite.Name = "cboInstutite";
+            this.cboInstutite.Size = new System.Drawing.Size(286, 26);
+            this.cboInstutite.TabIndex = 37;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(463, 361);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(72, 18);
+            this.label8.TabIndex = 36;
+            this.label8.Text = "Институт";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(415, 274);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(120, 18);
+            this.label7.TabIndex = 35;
+            this.label7.Text = "Время введения";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // dtpHiredate
+            // 
+            this.dtpHiredate.Location = new System.Drawing.Point(541, 271);
+            this.dtpHiredate.Name = "dtpHiredate";
+            this.dtpHiredate.Size = new System.Drawing.Size(286, 26);
+            this.dtpHiredate.TabIndex = 34;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(114, 271);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(286, 26);
+            this.txtEmail.TabIndex = 33;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(60, 274);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(48, 18);
+            this.label6.TabIndex = 32;
+            this.label6.Text = "Почта";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // txtPhone
+            // 
+            this.txtPhone.Location = new System.Drawing.Point(541, 189);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(286, 26);
+            this.txtPhone.TabIndex = 31;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(503, 122);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(32, 18);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Пол";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // lbPhone
+            // 
+            this.lbPhone.AutoSize = true;
+            this.lbPhone.Location = new System.Drawing.Point(471, 192);
+            this.lbPhone.Name = "lbPhone";
+            this.lbPhone.Size = new System.Drawing.Size(64, 18);
+            this.lbPhone.TabIndex = 30;
+            this.lbPhone.Text = "Телефон";
+            this.lbPhone.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // lbBirthday
+            // 
+            this.lbBirthday.AutoSize = true;
+            this.lbBirthday.Location = new System.Drawing.Point(36, 179);
+            this.lbBirthday.Name = "lbBirthday";
+            this.lbBirthday.Size = new System.Drawing.Size(72, 36);
+            this.lbBirthday.TabIndex = 29;
+            this.lbBirthday.Text = "День\r\nрождения";
+            this.lbBirthday.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // dtpBirthday
+            // 
+            this.dtpBirthday.Location = new System.Drawing.Point(114, 189);
+            this.dtpBirthday.Name = "dtpBirthday";
+            this.dtpBirthday.Size = new System.Drawing.Size(286, 26);
+            this.dtpBirthday.TabIndex = 28;
+            // 
+            // txtPwd
+            // 
+            this.txtPwd.Location = new System.Drawing.Point(541, 45);
+            this.txtPwd.Name = "txtPwd";
+            this.txtPwd.Size = new System.Drawing.Size(286, 26);
+            this.txtPwd.TabIndex = 27;
+            // 
+            // lbPwd
+            // 
+            this.lbPwd.AutoSize = true;
+            this.lbPwd.Location = new System.Drawing.Point(479, 48);
+            this.lbPwd.Name = "lbPwd";
+            this.lbPwd.Size = new System.Drawing.Size(56, 18);
+            this.lbPwd.TabIndex = 26;
+            this.lbPwd.Text = "Пароль";
+            this.lbPwd.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // txtLogin
+            // 
+            this.txtLogin.Location = new System.Drawing.Point(114, 45);
+            this.txtLogin.Name = "txtLogin";
+            this.txtLogin.Size = new System.Drawing.Size(286, 26);
+            this.txtLogin.TabIndex = 25;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(60, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 18);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Логин";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(114, 119);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(286, 26);
+            this.txtName.TabIndex = 23;
+            // 
+            // kbName
+            // 
+            this.kbName.AutoSize = true;
+            this.kbName.Location = new System.Drawing.Point(76, 122);
+            this.kbName.Name = "kbName";
+            this.kbName.Size = new System.Drawing.Size(32, 18);
+            this.kbName.TabIndex = 22;
+            this.kbName.Text = "ФИО";
+            this.kbName.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // cboPost
             // 
             this.cboPost.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -287,6 +458,7 @@
             this.btnCancel.TabIndex = 17;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnOk
             // 
@@ -296,176 +468,6 @@
             this.btnOk.TabIndex = 16;
             this.btnOk.Text = "Insert";
             this.btnOk.UseVisualStyleBackColor = true;
-            // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(114, 119);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(286, 26);
-            this.txtName.TabIndex = 23;
-            // 
-            // kbName
-            // 
-            this.kbName.AutoSize = true;
-            this.kbName.Location = new System.Drawing.Point(76, 122);
-            this.kbName.Name = "kbName";
-            this.kbName.Size = new System.Drawing.Size(32, 18);
-            this.kbName.TabIndex = 22;
-            this.kbName.Text = "ФИО";
-            this.kbName.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // txtLogin
-            // 
-            this.txtLogin.Location = new System.Drawing.Point(114, 45);
-            this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(286, 26);
-            this.txtLogin.TabIndex = 25;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(60, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 18);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "Логин";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // txtPwd
-            // 
-            this.txtPwd.Location = new System.Drawing.Point(541, 45);
-            this.txtPwd.Name = "txtPwd";
-            this.txtPwd.Size = new System.Drawing.Size(286, 26);
-            this.txtPwd.TabIndex = 27;
-            // 
-            // lbPwd
-            // 
-            this.lbPwd.AutoSize = true;
-            this.lbPwd.Location = new System.Drawing.Point(479, 48);
-            this.lbPwd.Name = "lbPwd";
-            this.lbPwd.Size = new System.Drawing.Size(56, 18);
-            this.lbPwd.TabIndex = 26;
-            this.lbPwd.Text = "Пароль";
-            this.lbPwd.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // dtpBirthday
-            // 
-            this.dtpBirthday.Location = new System.Drawing.Point(114, 189);
-            this.dtpBirthday.Name = "dtpBirthday";
-            this.dtpBirthday.Size = new System.Drawing.Size(286, 26);
-            this.dtpBirthday.TabIndex = 28;
-            // 
-            // lbBirthday
-            // 
-            this.lbBirthday.AutoSize = true;
-            this.lbBirthday.Location = new System.Drawing.Point(36, 179);
-            this.lbBirthday.Name = "lbBirthday";
-            this.lbBirthday.Size = new System.Drawing.Size(72, 36);
-            this.lbBirthday.TabIndex = 29;
-            this.lbBirthday.Text = "День\r\nрождения";
-            this.lbBirthday.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // txtPhone
-            // 
-            this.txtPhone.Location = new System.Drawing.Point(541, 189);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(286, 26);
-            this.txtPhone.TabIndex = 31;
-            // 
-            // lbPhone
-            // 
-            this.lbPhone.AutoSize = true;
-            this.lbPhone.Location = new System.Drawing.Point(471, 192);
-            this.lbPhone.Name = "lbPhone";
-            this.lbPhone.Size = new System.Drawing.Size(64, 18);
-            this.lbPhone.TabIndex = 30;
-            this.lbPhone.Text = "Телефон";
-            this.lbPhone.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(114, 271);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(286, 26);
-            this.txtEmail.TabIndex = 33;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(60, 274);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 18);
-            this.label6.TabIndex = 32;
-            this.label6.Text = "Почта";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(415, 274);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(120, 18);
-            this.label7.TabIndex = 35;
-            this.label7.Text = "Время введения";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // dtpHiredate
-            // 
-            this.dtpHiredate.Location = new System.Drawing.Point(541, 271);
-            this.dtpHiredate.Name = "dtpHiredate";
-            this.dtpHiredate.Size = new System.Drawing.Size(286, 26);
-            this.dtpHiredate.TabIndex = 34;
-            // 
-            // cboInstutite
-            // 
-            this.cboInstutite.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboInstutite.FormattingEnabled = true;
-            this.cboInstutite.Location = new System.Drawing.Point(541, 358);
-            this.cboInstutite.Name = "cboInstutite";
-            this.cboInstutite.Size = new System.Drawing.Size(286, 26);
-            this.cboInstutite.TabIndex = 37;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(463, 361);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(72, 18);
-            this.label8.TabIndex = 36;
-            this.label8.Text = "Институт";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(503, 122);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 18);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Пол";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // rdoWoman
-            // 
-            this.rdoWoman.AutoSize = true;
-            this.rdoWoman.Location = new System.Drawing.Point(725, 118);
-            this.rdoWoman.Name = "rdoWoman";
-            this.rdoWoman.Size = new System.Drawing.Size(34, 22);
-            this.rdoWoman.TabIndex = 39;
-            this.rdoWoman.TabStop = true;
-            this.rdoWoman.Text = "W";
-            this.rdoWoman.UseVisualStyleBackColor = true;
-            // 
-            // rdoMam
-            // 
-            this.rdoMam.AutoSize = true;
-            this.rdoMam.Checked = true;
-            this.rdoMam.Location = new System.Drawing.Point(604, 118);
-            this.rdoMam.Name = "rdoMam";
-            this.rdoMam.Size = new System.Drawing.Size(34, 22);
-            this.rdoMam.TabIndex = 38;
-            this.rdoMam.TabStop = true;
-            this.rdoMam.Text = "M";
-            this.rdoMam.UseVisualStyleBackColor = true;
             // 
             // AdminStaffForm
             // 

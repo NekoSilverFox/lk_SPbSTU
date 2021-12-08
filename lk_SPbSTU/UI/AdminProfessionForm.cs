@@ -78,6 +78,7 @@ namespace UI
         private void tsmiAddInstitue_Click(object sender, EventArgs e)
         {
             gpAdd.Visible = true;
+            gpAdd.Text = "Добавление";
         }
 
         #region 用户信息输入检测+bool ValidataUser()

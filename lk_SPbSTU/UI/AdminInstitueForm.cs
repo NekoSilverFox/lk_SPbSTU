@@ -135,6 +135,7 @@ namespace UI
         private void tsmiAddInstitue_Click(object sender, EventArgs e)
         {
             gpAdd.Visible = true;
+            gpAdd.Text = "Добавление";
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

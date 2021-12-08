@@ -44,20 +44,20 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NameStaff = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gpAdd = new System.Windows.Forms.GroupBox();
-            this.cboInstitute = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnOk = new System.Windows.Forms.Button();
+            this.cboTeacher = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cboSemester = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cboDiscipline = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.cboGroup = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cboProfession = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.cboDiscipline = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cboSemester = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cboTeacher = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.cboInstitute = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnOk = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
             this.gpAdd.SuspendLayout();
@@ -82,6 +82,7 @@
             this.tsmiAddInstitue.Name = "tsmiAddInstitue";
             this.tsmiAddInstitue.Size = new System.Drawing.Size(84, 22);
             this.tsmiAddInstitue.Text = "Добавление";
+            this.tsmiAddInstitue.Click += new System.EventHandler(this.tsmiAddInstitue_Click);
             // 
             // tsmiUpdate
             // 
@@ -221,41 +222,68 @@
             this.gpAdd.Text = "Добавление";
             this.gpAdd.Visible = false;
             // 
-            // cboInstitute
+            // cboTeacher
             // 
-            this.cboInstitute.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboInstitute.FormattingEnabled = true;
-            this.cboInstitute.Location = new System.Drawing.Point(117, 51);
-            this.cboInstitute.Name = "cboInstitute";
-            this.cboInstitute.Size = new System.Drawing.Size(713, 26);
-            this.cboInstitute.TabIndex = 21;
+            this.cboTeacher.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTeacher.FormattingEnabled = true;
+            this.cboTeacher.Location = new System.Drawing.Point(520, 304);
+            this.cboTeacher.Name = "cboTeacher";
+            this.cboTeacher.Size = new System.Drawing.Size(310, 26);
+            this.cboTeacher.TabIndex = 40;
             // 
-            // label9
+            // label5
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(39, 54);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(72, 18);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "Институт";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(402, 307);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(112, 18);
+            this.label5.TabIndex = 39;
+            this.label5.Text = "Преподаватель";
             // 
-            // btnCancel
+            // cboSemester
             // 
-            this.btnCancel.Location = new System.Drawing.Point(755, 434);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 17;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.cboSemester.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboSemester.FormattingEnabled = true;
+            this.cboSemester.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"});
+            this.cboSemester.Location = new System.Drawing.Point(117, 304);
+            this.cboSemester.Name = "cboSemester";
+            this.cboSemester.Size = new System.Drawing.Size(260, 26);
+            this.cboSemester.TabIndex = 38;
             // 
-            // btnOk
+            // label4
             // 
-            this.btnOk.Location = new System.Drawing.Point(635, 434);
-            this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(75, 23);
-            this.btnOk.TabIndex = 16;
-            this.btnOk.Text = "Insert";
-            this.btnOk.UseVisualStyleBackColor = true;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(39, 307);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(72, 18);
+            this.label4.TabIndex = 37;
+            this.label4.Text = "Семестра";
+            // 
+            // cboDiscipline
+            // 
+            this.cboDiscipline.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboDiscipline.FormattingEnabled = true;
+            this.cboDiscipline.Location = new System.Drawing.Point(520, 216);
+            this.cboDiscipline.Name = "cboDiscipline";
+            this.cboDiscipline.Size = new System.Drawing.Size(310, 26);
+            this.cboDiscipline.TabIndex = 36;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(426, 219);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(88, 18);
+            this.label3.TabIndex = 35;
+            this.label3.Text = "Дисциплине";
             // 
             // cboGroup
             // 
@@ -293,68 +321,42 @@
             this.label2.TabIndex = 31;
             this.label2.Text = "Направление";
             // 
-            // cboDiscipline
+            // cboInstitute
             // 
-            this.cboDiscipline.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboDiscipline.FormattingEnabled = true;
-            this.cboDiscipline.Location = new System.Drawing.Point(520, 216);
-            this.cboDiscipline.Name = "cboDiscipline";
-            this.cboDiscipline.Size = new System.Drawing.Size(310, 26);
-            this.cboDiscipline.TabIndex = 36;
+            this.cboInstitute.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboInstitute.FormattingEnabled = true;
+            this.cboInstitute.Location = new System.Drawing.Point(117, 51);
+            this.cboInstitute.Name = "cboInstitute";
+            this.cboInstitute.Size = new System.Drawing.Size(713, 26);
+            this.cboInstitute.TabIndex = 21;
             // 
-            // label3
+            // label9
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(426, 219);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 18);
-            this.label3.TabIndex = 35;
-            this.label3.Text = "Дисциплине";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(39, 54);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(72, 18);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "Институт";
             // 
-            // cboSemester
+            // btnCancel
             // 
-            this.cboSemester.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboSemester.FormattingEnabled = true;
-            this.cboSemester.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8"});
-            this.cboSemester.Location = new System.Drawing.Point(117, 304);
-            this.cboSemester.Name = "cboSemester";
-            this.cboSemester.Size = new System.Drawing.Size(260, 26);
-            this.cboSemester.TabIndex = 38;
+            this.btnCancel.Location = new System.Drawing.Point(755, 434);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 17;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // label4
+            // btnOk
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(39, 307);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 18);
-            this.label4.TabIndex = 37;
-            this.label4.Text = "Семестра";
-            // 
-            // cboTeacher
-            // 
-            this.cboTeacher.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboTeacher.FormattingEnabled = true;
-            this.cboTeacher.Location = new System.Drawing.Point(520, 304);
-            this.cboTeacher.Name = "cboTeacher";
-            this.cboTeacher.Size = new System.Drawing.Size(310, 26);
-            this.cboTeacher.TabIndex = 40;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(402, 307);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 18);
-            this.label5.TabIndex = 39;
-            this.label5.Text = "Преподаватель";
+            this.btnOk.Location = new System.Drawing.Point(635, 434);
+            this.btnOk.Name = "btnOk";
+            this.btnOk.Size = new System.Drawing.Size(75, 23);
+            this.btnOk.TabIndex = 16;
+            this.btnOk.Text = "Insert";
+            this.btnOk.UseVisualStyleBackColor = true;
             // 
             // AdminStudyPlanForm
             // 

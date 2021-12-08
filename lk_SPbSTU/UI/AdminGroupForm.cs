@@ -60,11 +60,13 @@ namespace UI
         private void tsmiAddInstitue_Click(object sender, EventArgs e)
         {
             gpAdd.Visible = true;
+            gpAdd.Text = "Добавление";
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            gpAdd.Visible = false;
+            // 隐藏面板
+            this.gpAdd.Visible = false;
         }
 
         // 当下拉列表选项发生改变时，触发事件

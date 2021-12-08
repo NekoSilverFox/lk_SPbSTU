@@ -52,6 +52,12 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gpAdd = new System.Windows.Forms.GroupBox();
+            this.cboAddGroup = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cboAddProfession = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cboIAddnstitute = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.rdoWoman = new System.Windows.Forms.RadioButton();
             this.rdoMam = new System.Windows.Forms.RadioButton();
             this.label7 = new System.Windows.Forms.Label();
@@ -71,12 +77,6 @@
             this.kbName = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOk = new System.Windows.Forms.Button();
-            this.cboAddGroup = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cboAddProfession = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.cboIAddnstitute = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
             this.gpAdd.SuspendLayout();
@@ -139,6 +139,7 @@
             this.tsmiAddInstitue.Name = "tsmiAddInstitue";
             this.tsmiAddInstitue.Size = new System.Drawing.Size(84, 22);
             this.tsmiAddInstitue.Text = "Добавление";
+            this.tsmiAddInstitue.Click += new System.EventHandler(this.tsmiAddInstitue_Click);
             // 
             // tsmiUpdate
             // 
@@ -322,6 +323,60 @@
             this.gpAdd.Text = "Добавление";
             this.gpAdd.Visible = false;
             // 
+            // cboAddGroup
+            // 
+            this.cboAddGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboAddGroup.FormattingEnabled = true;
+            this.cboAddGroup.Location = new System.Drawing.Point(541, 311);
+            this.cboAddGroup.Name = "cboAddGroup";
+            this.cboAddGroup.Size = new System.Drawing.Size(286, 26);
+            this.cboAddGroup.TabIndex = 45;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(479, 314);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(56, 18);
+            this.label5.TabIndex = 44;
+            this.label5.Text = "Группа";
+            // 
+            // cboAddProfession
+            // 
+            this.cboAddProfession.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboAddProfession.FormattingEnabled = true;
+            this.cboAddProfession.Location = new System.Drawing.Point(114, 380);
+            this.cboAddProfession.Name = "cboAddProfession";
+            this.cboAddProfession.Size = new System.Drawing.Size(713, 26);
+            this.cboAddProfession.TabIndex = 43;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(12, 383);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(96, 18);
+            this.label8.TabIndex = 42;
+            this.label8.Text = "Направление";
+            // 
+            // cboIAddnstitute
+            // 
+            this.cboIAddnstitute.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboIAddnstitute.FormattingEnabled = true;
+            this.cboIAddnstitute.Location = new System.Drawing.Point(114, 311);
+            this.cboIAddnstitute.Name = "cboIAddnstitute";
+            this.cboIAddnstitute.Size = new System.Drawing.Size(286, 26);
+            this.cboIAddnstitute.TabIndex = 41;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(36, 314);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(72, 18);
+            this.label10.TabIndex = 40;
+            this.label10.Text = "Институт";
+            // 
             // rdoWoman
             // 
             this.rdoWoman.AutoSize = true;
@@ -482,6 +537,7 @@
             this.btnCancel.TabIndex = 17;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnOk
             // 
@@ -491,60 +547,6 @@
             this.btnOk.TabIndex = 16;
             this.btnOk.Text = "Insert";
             this.btnOk.UseVisualStyleBackColor = true;
-            // 
-            // cboAddGroup
-            // 
-            this.cboAddGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboAddGroup.FormattingEnabled = true;
-            this.cboAddGroup.Location = new System.Drawing.Point(541, 311);
-            this.cboAddGroup.Name = "cboAddGroup";
-            this.cboAddGroup.Size = new System.Drawing.Size(286, 26);
-            this.cboAddGroup.TabIndex = 45;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(479, 314);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 18);
-            this.label5.TabIndex = 44;
-            this.label5.Text = "Группа";
-            // 
-            // cboAddProfession
-            // 
-            this.cboAddProfession.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboAddProfession.FormattingEnabled = true;
-            this.cboAddProfession.Location = new System.Drawing.Point(114, 380);
-            this.cboAddProfession.Name = "cboAddProfession";
-            this.cboAddProfession.Size = new System.Drawing.Size(713, 26);
-            this.cboAddProfession.TabIndex = 43;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 383);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(96, 18);
-            this.label8.TabIndex = 42;
-            this.label8.Text = "Направление";
-            // 
-            // cboIAddnstitute
-            // 
-            this.cboIAddnstitute.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboIAddnstitute.FormattingEnabled = true;
-            this.cboIAddnstitute.Location = new System.Drawing.Point(114, 311);
-            this.cboIAddnstitute.Name = "cboIAddnstitute";
-            this.cboIAddnstitute.Size = new System.Drawing.Size(286, 26);
-            this.cboIAddnstitute.TabIndex = 41;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(36, 314);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(72, 18);
-            this.label10.TabIndex = 40;
-            this.label10.Text = "Институт";
             // 
             // AdminStudentForm
             // 
@@ -564,7 +566,7 @@
             this.Controls.Add(this.label9);
             this.Font = new System.Drawing.Font("JetBrains Mono NL Light", 10.5F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminStudentForm";
             this.Text = "AdminStudentForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

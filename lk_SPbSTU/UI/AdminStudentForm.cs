@@ -115,5 +115,17 @@ namespace UI
 
             this.dgvList.DataSource = studentManger.GetStudentListByGroupID(idGroup);
         }
+
+        private void tsmiAddInstitue_Click(object sender, EventArgs e)
+        {
+            gpAdd.Visible = true;
+            gpAdd.Text = "Добавление";
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            // 隐藏面板
+            this.gpAdd.Visible = false;
+        }
     }
 }

@@ -53,8 +53,8 @@
             this.tsmiClass,
             this.tsmiDiscipline,
             this.tsmiStudyPlan,
-            this.tsmiStaff,
             this.tmiStudent,
+            this.tsmiStaff,
             this.tsmiChangePwd,
             this.tsmiWindow,
             this.tsmiExit});
