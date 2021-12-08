@@ -750,7 +750,7 @@ GO
 CREATE PROC usp_getStudentStudyPlan
 	@AccountID		INT
 AS
-	SELECT IDStudyPlan, Semestr, NameDiscipline, PeriodDiscipline, NameStaff, tb_Staff.Email AS EmailTeacher, tb_Account.Login AS EduEmailTeacher, tb_Staff.Phone AS PhoneTeacher
+	SELECT IDStudyPlan, Semestr, NameDiscipline, PeriodDiscipline, NameStaff, tb_Staff.Email, IDGroup, NameGroup AS EmailTeacher, tb_Account.Login AS EduEmailTeacher, tb_Staff.Phone AS PhoneTeacher
 	FROM tb_StudyPlan
 	INNER JOIN tb_Staff
 		ON tb_Staff.IDStaff=tb_StudyPlan.StaffID
@@ -769,7 +769,27 @@ GO
 EXEC usp_getStudentStudyPlan 4220
 
 
+-- 所有培训计划
+IF exists(select * from sysobjects where name='usp_getAllStudyPlan')
+	drop proc usp_getAllStudyPlan
+GO
+CREATE PROC usp_getAllStudyPlan
+AS
+	SELECT IDStudyPlan, Semestr, NameDiscipline, PeriodDiscipline, NameStaff, tb_Staff.Email, IDGroup, NameGroup AS EmailTeacher, tb_Account.Login AS EduEmailTeacher, tb_Staff.Phone AS PhoneTeacher
+	FROM tb_StudyPlan
+	INNER JOIN tb_Staff
+		ON tb_Staff.IDStaff=tb_StudyPlan.StaffID
+	INNER JOIN tb_Group
+		ON tb_Group.IDGroup=tb_StudyPlan.GroupID
+	INNER JOIN tb_Discipline
+		ON tb_Discipline.IDDiscipline=tb_StudyPlan.DisciplineID
+	INNER JOIN tb_Student
+		ON tb_Student.GroupID=tb_Group.IDGroup
+	INNER JOIN tb_Account
+		ON tb_Staff.AccountID=tb_Account.IDAccount
+GO
 
+EXEC usp_getAllStudyPlan
 -- 根据学生的账号ID获取他的 老师
 IF exists(select * from sysobjects where name='usp_getStudentsTeacher')
 	drop proc usp_getStudentsTeacher

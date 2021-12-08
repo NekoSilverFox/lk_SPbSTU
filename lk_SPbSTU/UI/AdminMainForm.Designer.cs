@@ -33,12 +33,15 @@
             this.tsmiMyInfo = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiInstitute = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiProfession = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiStaff = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiClass = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiDiscipline = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiStaff = new System.Windows.Forms.ToolStripMenuItem();
             this.tmiStudyPlan = new System.Windows.Forms.ToolStripMenuItem();
             this.tmiStudent = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiChangePwd = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiWindow = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiStudyPlan = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,9 +52,12 @@
             this.tsmiInstitute,
             this.tsmiProfession,
             this.tsmiClass,
+            this.tsmiDiscipline,
+            this.tsmiStudyPlan,
             this.tsmiStaff,
             this.tmiStudyPlan,
             this.tmiStudent,
+            this.tsmiChangePwd,
             this.tsmiWindow,
             this.tsmiExit});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -82,18 +88,25 @@
             this.tsmiProfession.Text = "方向管理";
             this.tsmiProfession.Click += new System.EventHandler(this.tsmiProfession_Click);
             // 
-            // tsmiStaff
-            // 
-            this.tsmiStaff.Name = "tsmiStaff";
-            this.tsmiStaff.Size = new System.Drawing.Size(68, 21);
-            this.tsmiStaff.Text = "员工管理";
-            // 
             // tsmiClass
             // 
             this.tsmiClass.Name = "tsmiClass";
             this.tsmiClass.Size = new System.Drawing.Size(68, 21);
             this.tsmiClass.Text = "班级管理";
             this.tsmiClass.Click += new System.EventHandler(this.tsmiClass_Click);
+            // 
+            // tsmiDiscipline
+            // 
+            this.tsmiDiscipline.Name = "tsmiDiscipline";
+            this.tsmiDiscipline.Size = new System.Drawing.Size(97, 21);
+            this.tsmiDiscipline.Text = "Дисциплине";
+            this.tsmiDiscipline.Click += new System.EventHandler(this.tsmiDiscipline_Click);
+            // 
+            // tsmiStaff
+            // 
+            this.tsmiStaff.Name = "tsmiStaff";
+            this.tsmiStaff.Size = new System.Drawing.Size(68, 21);
+            this.tsmiStaff.Text = "员工管理";
             // 
             // tmiStudyPlan
             // 
@@ -107,6 +120,13 @@
             this.tmiStudent.Size = new System.Drawing.Size(68, 21);
             this.tmiStudent.Text = "学生管理";
             // 
+            // tsmiChangePwd
+            // 
+            this.tsmiChangePwd.Name = "tsmiChangePwd";
+            this.tsmiChangePwd.Size = new System.Drawing.Size(68, 21);
+            this.tsmiChangePwd.Text = "更改密码";
+            this.tsmiChangePwd.Click += new System.EventHandler(this.更改密码ToolStripMenuItem_Click);
+            // 
             // tsmiWindow
             // 
             this.tsmiWindow.Name = "tsmiWindow";
@@ -118,6 +138,13 @@
             this.tsmiExit.Name = "tsmiExit";
             this.tsmiExit.Size = new System.Drawing.Size(58, 21);
             this.tsmiExit.Text = "Выйти";
+            // 
+            // tsmiStudyPlan
+            // 
+            this.tsmiStudyPlan.Name = "tsmiStudyPlan";
+            this.tsmiStudyPlan.Size = new System.Drawing.Size(108, 21);
+            this.tsmiStudyPlan.Text = "Учебный план";
+            this.tsmiStudyPlan.Click += new System.EventHandler(this.tsmiStudyPlan_Click);
             // 
             // AdminMainForm
             // 
@@ -148,5 +175,8 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiExit;
         private System.Windows.Forms.ToolStripMenuItem tsmiMyInfo;
         private System.Windows.Forms.ToolStripMenuItem tmiStudent;
+        private System.Windows.Forms.ToolStripMenuItem tsmiChangePwd;
+        private System.Windows.Forms.ToolStripMenuItem tsmiDiscipline;
+        private System.Windows.Forms.ToolStripMenuItem tsmiStudyPlan;
     }
 }

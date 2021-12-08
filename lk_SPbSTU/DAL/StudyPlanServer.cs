@@ -63,7 +63,44 @@ namespace DAL
             studentStudyPlan.EmailTeacher = row["EmailTeacher"].ToString().Trim();
             studentStudyPlan.EduEmailTeacher = row["EduEmailTeacher"].ToString().Trim();
             studentStudyPlan.PhoneTeacher = row["PhoneTeacher"].ToString().Trim();
+
+            studentStudyPlan.IDGroup = (int)row["IDGroup"];
+            studentStudyPlan.NameGroup = row["NameGroup"].ToString().Trim();
         }
         #endregion
+
+        #region 获取所有的培训计划 + List<MODEL.tb_StudyPlan> GetAllStudyPlanList()
+        /// <summary>
+        /// 获取所有的培训计划
+        /// </summary>
+        public List<MODEL.tb_StudyPlan> GetAllStudyPlanList()
+        {
+            string sql = "EXEC usp_getAllStudyPlan";
+
+            DataTable dataTable = SqlHelper.ExectureTabel(sql);
+            List<MODEL.tb_StudyPlan> studentStudyPlansList = null;
+
+            // 判断有没有行
+            if (dataTable.Rows.Count > 0)
+            {
+                studentStudyPlansList = new List<MODEL.tb_StudyPlan>();
+
+                // 遍历表，将表的每一行转换为对应的实体对象
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    // 每一行数据对应一个 Person 对象
+                    MODEL.tb_StudyPlan tmpStudentStudyPlan = new MODEL.tb_StudyPlan();
+
+                    // 调用方法，将当前的数据行转换为 Person 对象
+                    StudentStudyPlanRow2StudentStudyPlanObject(row, tmpStudentStudyPlan);
+
+                    // 将对象添加到集合当中
+                    studentStudyPlansList.Add(tmpStudentStudyPlan);
+                }
+            }
+            return studentStudyPlansList;
+        }
+        #endregion
+
     }
 }

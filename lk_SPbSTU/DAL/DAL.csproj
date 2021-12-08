@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountService.cs" />
+    <Compile Include="DisciplineService.cs" />
     <Compile Include="ExamRecordService.cs" />
     <Compile Include="GroupService.cs" />
     <Compile Include="InstituteService.cs" />

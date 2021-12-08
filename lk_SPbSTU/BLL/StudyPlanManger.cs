@@ -13,7 +13,7 @@ namespace BLL
         /// </summary>
         DAL.StudyPlanServer studyPlanServer = new DAL.StudyPlanServer();
 
-        #region
+        #region 通过 accountID 获取指定学生的培训计划 +List<MODEL.tb_StudyPlan> GetStudentStudyPlanByAccountID(int accountID)
         /// <summary>
         /// 通过 accountID 获取指定学生的培训计划
         /// </summary>
@@ -22,6 +22,16 @@ namespace BLL
         public List<MODEL.tb_StudyPlan> GetStudentStudyPlanByAccountID(int accountID)
         {
             return studyPlanServer.GetStudentStudyPlanByAccountID(accountID);
+        }
+        #endregion
+
+        #region 获取所有的培训计划 + List<MODEL.tb_StudyPlan> GetAllStudyPlanList()
+        /// <summary>
+        /// 获取所有的培训计划
+        /// </summary>
+        public List<MODEL.tb_StudyPlan> GetAllStudyPlanList()
+        {
+            return studyPlanServer.GetAllStudyPlanList();
         }
         #endregion
     }

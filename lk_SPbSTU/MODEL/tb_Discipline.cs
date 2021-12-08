@@ -19,6 +19,7 @@ namespace MODEL
 		private string _namediscipline;
 		private int _perioddiscipline = 100;
 		private string _descriptiondiscipline;
+
 		/// <summary>
 		///
 		/// </summary>

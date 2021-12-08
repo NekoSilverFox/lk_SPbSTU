@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountManger.cs" />
+    <Compile Include="CommonHelper.cs" />
+    <Compile Include="DisciplineManger.cs" />
     <Compile Include="ExamRecordManger.cs" />
     <Compile Include="GroupManger.cs" />
     <Compile Include="InstituteManger.cs" />

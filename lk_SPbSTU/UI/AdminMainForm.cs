@@ -96,5 +96,65 @@ namespace UI
                 Application.OpenForms["AdminGroupForm"].Show();
             }
         }
+
+        private void 更改密码ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // 使用另一种方式打开唯一的窗体
+            ChangePasswordForm changePasswordForm = null;
+
+            // 所有生成的窗体都保存在了系统的 `Application` 中，可以通过使用 `Application.OpenForms["窗体名"]` 来调用
+            if (Application.OpenForms["ChangePasswordForm"] == null)
+            {
+                changePasswordForm = new ChangePasswordForm();
+
+                // 【重点】这里是首次打开此窗体，所以要设置 MDI 父窗体
+                changePasswordForm.MdiParent = this;
+                changePasswordForm.Show();
+            }
+            else
+            {
+                Application.OpenForms["ChangePasswordForm"].Show();
+            }
+        }
+
+        private void tsmiDiscipline_Click(object sender, EventArgs e)
+        {
+            // 使用另一种方式打开唯一的窗体
+            AdminDisciplineForm adminDisciplineForm = null;
+
+            // 所有生成的窗体都保存在了系统的 `Application` 中，可以通过使用 `Application.OpenForms["窗体名"]` 来调用
+            if (Application.OpenForms["AdminDisciplineForm"] == null)
+            {
+                adminDisciplineForm = new AdminDisciplineForm();
+
+                // 【重点】这里是首次打开此窗体，所以要设置 MDI 父窗体
+                adminDisciplineForm.MdiParent = this;
+                adminDisciplineForm.Show();
+            }
+            else
+            {
+                Application.OpenForms["AdminDisciplineForm"].Show();
+            }
+        }
+
+        private void tsmiStudyPlan_Click(object sender, EventArgs e)
+        {
+            // 使用另一种方式打开唯一的窗体
+            AdminStudyPlanForm studyPlanForm = null;
+
+            // 所有生成的窗体都保存在了系统的 `Application` 中，可以通过使用 `Application.OpenForms["窗体名"]` 来调用
+            if (Application.OpenForms["AdminStudyPlanForm"] == null)
+            {
+                studyPlanForm = new AdminStudyPlanForm();
+
+                // 【重点】这里是首次打开此窗体，所以要设置 MDI 父窗体
+                studyPlanForm.MdiParent = this;
+                studyPlanForm.Show();
+            }
+            else
+            {
+                Application.OpenForms["AdminStudyPlanForm"].Show();
+            }
+        }
     }
 }
