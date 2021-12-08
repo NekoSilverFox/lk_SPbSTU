@@ -133,9 +133,11 @@
             // 
             // NameGroup
             // 
+            this.NameGroup.DataPropertyName = "NameGroup";
             this.NameGroup.HeaderText = "Группа";
-            this.NameGroup.MinimumWidth = 100;
+            this.NameGroup.MinimumWidth = 200;
             this.NameGroup.Name = "NameGroup";
+            this.NameGroup.Width = 200;
             // 
             // Column2
             // 
@@ -143,10 +145,10 @@
             this.Column2.DataPropertyName = "NameDiscipline";
             this.Column2.FillWeight = 30.45833F;
             this.Column2.HeaderText = "Название дисциплины";
-            this.Column2.MinimumWidth = 500;
+            this.Column2.MinimumWidth = 550;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 500;
+            this.Column2.Width = 550;
             // 
             // Column4
             // 
