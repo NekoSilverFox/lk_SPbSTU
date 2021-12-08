@@ -220,7 +220,7 @@
             this.gpAdd.Size = new System.Drawing.Size(900, 500);
             this.gpAdd.TabIndex = 17;
             this.gpAdd.TabStop = false;
-            this.gpAdd.Text = "Добавление направления";
+            this.gpAdd.Text = "Добавление";
             this.gpAdd.Visible = false;
             // 
             // cboProfession
@@ -297,6 +297,7 @@
             this.btnOk.TabIndex = 16;
             this.btnOk.Text = "Insert";
             this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // txtGrade
             // 

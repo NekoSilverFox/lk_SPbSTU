@@ -37,6 +37,11 @@
             this.tsmiExit = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.dgvList = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gpAdd = new System.Windows.Forms.GroupBox();
             this.cboInstitute = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -48,11 +53,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtNameProfession = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
             this.gpAdd.SuspendLayout();
@@ -132,6 +132,52 @@
             this.dgvList.Size = new System.Drawing.Size(1235, 619);
             this.dgvList.TabIndex = 15;
             // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column1.DataPropertyName = "IDProfession";
+            this.Column1.FillWeight = 10F;
+            this.Column1.HeaderText = "№";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 41;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column2.DataPropertyName = "NameInstitute";
+            this.Column2.FillWeight = 30.45833F;
+            this.Column2.HeaderText = "Институт";
+            this.Column2.MinimumWidth = 450;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 450;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column3.DataPropertyName = "CodeProfession";
+            this.Column3.FillWeight = 30.56631F;
+            this.Column3.HeaderText = "Код направления";
+            this.Column3.MinimumWidth = 30;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 111;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column4.DataPropertyName = "NameProfession";
+            this.Column4.FillWeight = 30.66916F;
+            this.Column4.HeaderText = "Название направления";
+            this.Column4.MinimumWidth = 500;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 500;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column5.DataPropertyName = "TuitionFee";
+            this.Column5.HeaderText = "Плата за обучение";
+            this.Column5.Name = "Column5";
+            // 
             // gpAdd
             // 
             this.gpAdd.BackColor = System.Drawing.Color.Linen;
@@ -150,7 +196,7 @@
             this.gpAdd.Size = new System.Drawing.Size(900, 500);
             this.gpAdd.TabIndex = 16;
             this.gpAdd.TabStop = false;
-            this.gpAdd.Text = "Добавление направления";
+            this.gpAdd.Text = "Добавление";
             this.gpAdd.Visible = false;
             // 
             // cboInstitute
@@ -242,52 +288,6 @@
             this.label3.Size = new System.Drawing.Size(72, 18);
             this.label3.TabIndex = 0;
             this.label3.Text = "Название";
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column1.DataPropertyName = "IDProfession";
-            this.Column1.FillWeight = 10F;
-            this.Column1.HeaderText = "№";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 41;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column2.DataPropertyName = "NameInstitute";
-            this.Column2.FillWeight = 30.45833F;
-            this.Column2.HeaderText = "Институт";
-            this.Column2.MinimumWidth = 450;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 450;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column3.DataPropertyName = "CodeProfession";
-            this.Column3.FillWeight = 30.56631F;
-            this.Column3.HeaderText = "Код направления";
-            this.Column3.MinimumWidth = 30;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 111;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column4.DataPropertyName = "NameProfession";
-            this.Column4.FillWeight = 30.66916F;
-            this.Column4.HeaderText = "Название направления";
-            this.Column4.MinimumWidth = 500;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 500;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column5.DataPropertyName = "TuitionFee";
-            this.Column5.HeaderText = "Плата за обучение";
-            this.Column5.Name = "Column5";
             // 
             // AdminProfessionForm
             // 

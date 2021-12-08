@@ -117,8 +117,8 @@
             // tmiStudent
             // 
             this.tmiStudent.Name = "tmiStudent";
-            this.tmiStudent.Size = new System.Drawing.Size(68, 21);
-            this.tmiStudent.Text = "学生管理";
+            this.tmiStudent.Size = new System.Drawing.Size(66, 21);
+            this.tmiStudent.Text = "Студент";
             this.tmiStudent.Click += new System.EventHandler(this.tmiStudent_Click);
             // 
             // tsmiChangePwd

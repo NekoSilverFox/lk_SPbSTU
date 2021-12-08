@@ -49,5 +49,61 @@ namespace DAL
         }
         #endregion
 
+
+        #region 根据班级ID获取所有学生 + List<MODEL.tb_Student> GetStudentListByGroupID(int idGroup)
+        /// <summary>
+        /// 根据班级ID获取所有学生
+        /// </summary>
+        /// <param name=""></param>
+        /// <returns></returns>
+        public List<MODEL.tb_Student> GetStudentListByGroupID(int idGroup)
+        {
+            string sql = "SELECT IDStudent, NameStudent, Birthday, Phone, AccountID, Login, Email, EnrollTime, GroupID, NameGroup, Grade FROM tb_Student JOIN tb_Account ON tb_Student.AccountID=tb_Account.IDAccount JOIN tb_Group ON tb_Student.GroupID=tb_Group.IDGroup WHERE IDGroup=@IDGroup";
+            SqlParameter ps = new SqlParameter("@IDGroup", idGroup);
+            DataTable dataTable = SqlHelper.ExectureTabel(sql, ps);
+
+            // 将表的每一行数据转换为对象然后添加到集合中。因为表的每一行，每一列是一个 Object ，如果后期在控件中修改的话要在对象中做
+            List<MODEL.tb_Student> studentList = null;
+            if (dataTable.Rows.Count > 0)
+            {
+                // 一定要实例化对象的数据！
+                studentList = new List<MODEL.tb_Student>();
+
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    // 每一行就对应着一条数据
+                    MODEL.tb_Student tmpStudent = new MODEL.tb_Student();
+                    StudentRow2Object(row, tmpStudent);
+                    // 将当前生成的对象添加到集合中
+                    studentList.Add(tmpStudent);
+                }
+            }
+
+            return studentList;
+        }
+        #endregion
+
+
+        #region 将 student 数据行转换为 student 对象 + void StudentRow2Object(DataRow row, MODEL.tb_Student student)
+        /// <summary>
+        /// 将 institute 数据行转换为 Institute 对象
+        /// </summary>
+        /// <param name="row"></param>
+        /// <param name="student"></param>
+        void StudentRow2Object(DataRow row, MODEL.tb_Student student)
+        {
+            student.IDStudent = (int)row["IDStudent"];
+            student.NameStudent = row["NameStudent"].ToString().Trim();
+            student.Birthday = Convert.ToDateTime(row["Birthday"]);
+            student.Phone = row["Phone"].ToString().Trim();
+            student.AccountID = (int)row["AccountID"];
+            student.Login = row["Login"].ToString().Trim();
+            student.Email = row["Email"].ToString().Trim();
+            student.EnrollTime = Convert.ToDateTime(row["EnrollTime"]);
+            student.GroupID = (int)row["GroupID"];
+            student.Namegroup = row["Namegroup"].ToString().Trim();
+            student.Grade = (int)row["Grade"];
+        }
+        #endregion
     }
 }

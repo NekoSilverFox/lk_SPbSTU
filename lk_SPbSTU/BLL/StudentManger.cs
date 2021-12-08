@@ -24,5 +24,17 @@ namespace BLL
             return studentServer.getStudentInfo(accountID);
         }
         #endregion
+
+        #region 根据班级ID获取所有学生 + List<MODEL.tb_Student> GetStudentListByGroupID(int idGroup)
+        /// <summary>
+        /// 根据班级ID获取所有学生
+        /// </summary>
+        /// <param name=""></param>
+        /// <returns></returns>
+        public List<MODEL.tb_Student> GetStudentListByGroupID(int idGroup)
+        {
+            return studentServer.GetStudentListByGroupID(idGroup);
+        }
+        #endregion
     }
 }

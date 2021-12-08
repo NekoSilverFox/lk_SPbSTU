@@ -28,13 +28,15 @@ namespace UI
         /// </summary>
         BLL.GroupManger groupManger = new BLL.GroupManger();
 
+        BLL.StudentManger studentManger = new BLL.StudentManger();
+
 
         public AdminStudentForm()
         {
             InitializeComponent();
 
             // 如果没有绑定的列不会自动生成显示
-            //this.dgvList.AutoGenerateColumns = false;
+            this.dgvList.AutoGenerateColumns = false;
         }
 
         private void AdminStudentForm_Load(object sender, EventArgs e)
@@ -53,6 +55,8 @@ namespace UI
 
             this.cboGroup.DisplayMember = "NameGroup";
             this.cboGroup.ValueMember = "IDGroup";
+
+
         }
 
         private void cboInstitute_SelectedIndexChanged(object sender, EventArgs e)
@@ -93,6 +97,23 @@ namespace UI
             }
 
             this.cboGroup.DataSource = showGroupList;
+        }
+
+        private void dgvList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnSeach_Click(object sender, EventArgs e)
+        {
+            if (cboGroup.SelectedItem == null)
+            {
+                MessageBox.Show("Please chose a group");
+            }
+
+            int idGroup = (cboGroup.SelectedItem as MODEL.tb_Group).IDGroup;
+
+            this.dgvList.DataSource = studentManger.GetStudentListByGroupID(idGroup);
         }
     }
 }

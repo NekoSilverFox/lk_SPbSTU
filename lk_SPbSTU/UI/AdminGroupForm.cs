@@ -87,5 +87,10 @@ namespace UI
 
             this.cboProfession.DataSource = showProfessionsList;
         }
+
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
