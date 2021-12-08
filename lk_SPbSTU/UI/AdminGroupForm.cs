@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+// 正则表达式
+using System.Text.RegularExpressions;
 
 namespace UI
 {
@@ -92,7 +94,100 @@ namespace UI
 
         private void btnOk_Click(object sender, EventArgs e)
         {
+            if (!ValidataUser())
+            {
+                return;
+            }
 
+            MODEL.tb_Group newGroup = null;
+
+            if (gpAdd.Text == "Добавление")
+            {
+                newGroup = new MODEL.tb_Group();
+            }
+            else
+            {
+                newGroup = this.dgvList.CurrentRow.DataBoundItem as MODEL.tb_Group;
+            }
+
+            // ----------------------------------------------------------------------------------------------------------
+            newGroup.NameGroup = this.txtNameGroup.Text.ToString().Trim();
+            newGroup.ProfessionID = (this.cboProfession.SelectedItem as MODEL.tb_Profession).IDProfession;
+            newGroup.Grade = Convert.ToInt32(this.txtGrade.Text.ToString().Trim());
+            newGroup.Quantity = Convert.ToInt32(this.txtNumStu.Text.ToString().Trim());
+            // ----------------------------------------------------------------------------------------------------------
+
+            if (gpAdd.Text == "Добавление")
+            {
+                if (personManager.InsertPerson(newPerson) == 1)
+                {
+                    MessageBox.Show("Successfully added new group");
+
+                    // 【重点】添加成功后记得刷新！！！！也就是重新加载一下
+                    this.dgvList.DataSource = personManager.GetAllPersonList(false);
+                }
+                else
+                {
+                    MessageBox.Show("Failed to add new group");
+                }
+            }
+            else
+            {
+                if (personManager.UpdatePerson(newPerson) == 1)
+                {
+                    MessageBox.Show("Successfully change group");
+
+                    // 【重点】添加成功后记得刷新！！！！也就是重新加载一下
+                    this.dgvList.DataSource = personManager.GetAllPersonList(false);
+                }
+                else
+                {
+                    MessageBox.Show("Failed to change group");
+                }
+            }
+        }
+
+        #region 用户信息输入检测+bool ValidataUser()
+        /// <summary>
+        /// 用户信息输入检测
+        /// </summary>
+        /// <returns></returns>
+        bool ValidataUser()
+        {
+            // 如果为空，或者有非法字符
+            if (string.IsNullOrEmpty(this.txtGrade.Text.Trim()) || Regex.IsMatch(txtGrade.Text.Trim(), @"\D"))
+            {
+                MessageBox.Show("Please enter a legal grade");
+
+                // 【重点】定位光标
+                txtGrade.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(this.txtNumStu.Text.Trim()) || Regex.IsMatch(txtNumStu.Text.Trim(), @"\D"))
+            {
+                MessageBox.Show("Please enter a legal number student");
+
+                // 【重点】定位光标
+                txtNumStu.Focus();
+                return false;
+            }
+
+            return true;
+        }
+        #endregion
+
+        private void tsmiUpdate_Click(object sender, EventArgs e)
+        {
+            if (this.dgvList.SelectedRows.Count == 0)
+            {
+                return;
+            }
+            gpAdd.Visible = true;
+            gpAdd.Text = "Изменение";
+
+            // 获取绑定项
+            //MODEL.Person person = this.dgvList.CurrentRow.DataBoundItem as MODEL.Person;
         }
     }
 }

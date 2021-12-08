@@ -37,5 +37,17 @@ namespace BLL
             return staffService.GetAllStaffList();
         }
         #endregion
+
+        #region 插入新员工 +int InsertStaff(MODEL.tb_Staff newStaff)
+        /// <summary>
+        /// 插入新员工
+        /// </summary>
+        /// <param name="newStaff"></param>
+        /// <returns></returns>
+        public int InsertStaff(MODEL.tb_Staff newStaff)
+        {
+            return staffService.InsertStaff(newStaff);
+        }
+        #endregion
     }
 }

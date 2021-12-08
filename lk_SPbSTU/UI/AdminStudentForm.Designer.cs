@@ -144,8 +144,9 @@
             // tsmiUpdate
             // 
             this.tsmiUpdate.Name = "tsmiUpdate";
-            this.tsmiUpdate.Size = new System.Drawing.Size(32, 22);
-            this.tsmiUpdate.Text = "修改";
+            this.tsmiUpdate.Size = new System.Drawing.Size(78, 22);
+            this.tsmiUpdate.Text = "Изменение";
+            this.tsmiUpdate.Click += new System.EventHandler(this.tsmiUpdate_Click);
             // 
             // tsmiDelete
             // 

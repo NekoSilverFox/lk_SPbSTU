@@ -22,5 +22,18 @@ namespace BLL
             return disciplineService.GetAllDisciplineList();
         }
         #endregion
+
+
+        #region 插入新科目 +int InsertDiscipline(MODEL.tb_Discipline newDiscipline)
+        /// <summary>
+        /// 插入新科目
+        /// </summary>
+        /// <param name="newDiscipline"></param>
+        /// <returns></returns>
+        public int InsertDiscipline(MODEL.tb_Discipline newDiscipline)
+        {
+            return disciplineService.InsertDiscipline(newDiscipline);
+        }
+        #endregion
     }
 }

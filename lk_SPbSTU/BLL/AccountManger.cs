@@ -26,5 +26,18 @@ namespace BLL
         }
         #endregion
 
+
+
+        #region 插入新账号 +
+        /// <summary>
+        /// 插入新
+        /// </summary>
+        /// <param name=""></param>
+        /// <returns></returns>
+        public int InsertAccount(MODEL.tb_Account newAccount)
+        {
+            return accountService.InsertAccount(newAccount);
+        }
+        #endregion
     }
 }

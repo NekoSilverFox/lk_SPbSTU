@@ -25,5 +25,17 @@ namespace BLL
             return examRecordService.GetExamRecordsByStudentID(studentID);
         }
         #endregion
+
+        #region 插入新ExamRecord +int InsertExamRecord(MODEL.tb_ExamRecord newExamRecord)
+        /// <summary>
+        /// 插入新科目
+        /// </summary>
+        /// <param name="newExamRecord"></param>
+        /// <returns></returns>
+        public int InsertExamRecord(MODEL.tb_ExamRecord newExamRecord)
+        {
+            return examRecordService.InsertExamRecord(newExamRecord);
+        }
+        #endregion
     }
 }

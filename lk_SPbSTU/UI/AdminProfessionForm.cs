@@ -121,5 +121,18 @@ namespace UI
             return true;
         }
         #endregion
+
+        private void tsmiUpdate_Click(object sender, EventArgs e)
+        {
+            if (this.dgvList.SelectedRows.Count == 0)
+            {
+                return;
+            }
+            gpAdd.Visible = true;
+            gpAdd.Text = "Изменение";
+
+            // 获取绑定项
+            //MODEL.Person person = this.dgvList.CurrentRow.DataBoundItem as MODEL.Person;
+        }
     }
 }

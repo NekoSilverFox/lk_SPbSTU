@@ -20,5 +20,18 @@ namespace BLL
             return groupService.GetAllGroupList();
         }
         #endregion
+
+
+        #region 插入新班级 +int InsertGroup(MODEL.tb_Group newGroup)
+        /// <summary>
+        /// 插入新方向
+        /// </summary>
+        /// <param name="newGroup"></param>
+        /// <returns></returns>
+        public int InsertGroup(MODEL.tb_Group newGroup)
+        {
+            return groupServer.InsertGroup(newGroup);
+        }
+        #endregion
     }
 }

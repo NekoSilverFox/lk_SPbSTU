@@ -55,7 +55,7 @@
             this.btnOk = new System.Windows.Forms.Button();
             this.txtGrade = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtNameProfession = new System.Windows.Forms.TextBox();
+            this.txtNameGroup = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
@@ -86,8 +86,9 @@
             // tsmiUpdate
             // 
             this.tsmiUpdate.Name = "tsmiUpdate";
-            this.tsmiUpdate.Size = new System.Drawing.Size(32, 22);
-            this.tsmiUpdate.Text = "修改";
+            this.tsmiUpdate.Size = new System.Drawing.Size(78, 22);
+            this.tsmiUpdate.Text = "Изменение";
+            this.tsmiUpdate.Click += new System.EventHandler(this.tsmiUpdate_Click);
             // 
             // tsmiDelete
             // 
@@ -213,7 +214,7 @@
             this.gpAdd.Controls.Add(this.btnOk);
             this.gpAdd.Controls.Add(this.txtGrade);
             this.gpAdd.Controls.Add(this.label4);
-            this.gpAdd.Controls.Add(this.txtNameProfession);
+            this.gpAdd.Controls.Add(this.txtNameGroup);
             this.gpAdd.Controls.Add(this.label3);
             this.gpAdd.Location = new System.Drawing.Point(182, 90);
             this.gpAdd.Name = "gpAdd";
@@ -316,12 +317,12 @@
             this.label4.Text = "Курс";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // txtNameProfession
+            // txtNameGroup
             // 
-            this.txtNameProfession.Location = new System.Drawing.Point(117, 77);
-            this.txtNameProfession.Name = "txtNameProfession";
-            this.txtNameProfession.Size = new System.Drawing.Size(713, 26);
-            this.txtNameProfession.TabIndex = 5;
+            this.txtNameGroup.Location = new System.Drawing.Point(117, 77);
+            this.txtNameGroup.Name = "txtNameGroup";
+            this.txtNameGroup.Size = new System.Drawing.Size(713, 26);
+            this.txtNameGroup.TabIndex = 5;
             // 
             // label3
             // 
@@ -384,7 +385,7 @@
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.TextBox txtGrade;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtNameProfession;
+        private System.Windows.Forms.TextBox txtNameGroup;
         private System.Windows.Forms.Label label3;
     }
 }
