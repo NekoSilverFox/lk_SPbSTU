@@ -36,7 +36,6 @@
             this.tsmiClass = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDiscipline = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiStaff = new System.Windows.Forms.ToolStripMenuItem();
-            this.tmiStudyPlan = new System.Windows.Forms.ToolStripMenuItem();
             this.tmiStudent = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiChangePwd = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiWindow = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,7 +54,6 @@
             this.tsmiDiscipline,
             this.tsmiStudyPlan,
             this.tsmiStaff,
-            this.tmiStudyPlan,
             this.tmiStudent,
             this.tsmiChangePwd,
             this.tsmiWindow,
@@ -84,15 +82,15 @@
             // tsmiProfession
             // 
             this.tsmiProfession.Name = "tsmiProfession";
-            this.tsmiProfession.Size = new System.Drawing.Size(68, 21);
-            this.tsmiProfession.Text = "方向管理";
+            this.tsmiProfession.Size = new System.Drawing.Size(103, 21);
+            this.tsmiProfession.Text = "Направление";
             this.tsmiProfession.Click += new System.EventHandler(this.tsmiProfession_Click);
             // 
             // tsmiClass
             // 
             this.tsmiClass.Name = "tsmiClass";
-            this.tsmiClass.Size = new System.Drawing.Size(68, 21);
-            this.tsmiClass.Text = "班级管理";
+            this.tsmiClass.Size = new System.Drawing.Size(63, 21);
+            this.tsmiClass.Text = "Группа";
             this.tsmiClass.Click += new System.EventHandler(this.tsmiClass_Click);
             // 
             // tsmiDiscipline
@@ -105,14 +103,9 @@
             // tsmiStaff
             // 
             this.tsmiStaff.Name = "tsmiStaff";
-            this.tsmiStaff.Size = new System.Drawing.Size(68, 21);
-            this.tsmiStaff.Text = "员工管理";
-            // 
-            // tmiStudyPlan
-            // 
-            this.tmiStudyPlan.Name = "tmiStudyPlan";
-            this.tmiStudyPlan.Size = new System.Drawing.Size(92, 21);
-            this.tmiStudyPlan.Text = "学习计划管理";
+            this.tsmiStaff.Size = new System.Drawing.Size(78, 21);
+            this.tsmiStaff.Text = "Работник";
+            this.tsmiStaff.Click += new System.EventHandler(this.tsmiStaff_Click);
             // 
             // tmiStudent
             // 
@@ -170,7 +163,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiProfession;
         private System.Windows.Forms.ToolStripMenuItem tsmiClass;
         private System.Windows.Forms.ToolStripMenuItem tsmiStaff;
-        private System.Windows.Forms.ToolStripMenuItem tmiStudyPlan;
         private System.Windows.Forms.ToolStripMenuItem tsmiWindow;
         private System.Windows.Forms.ToolStripMenuItem tsmiExit;
         private System.Windows.Forms.ToolStripMenuItem tsmiMyInfo;

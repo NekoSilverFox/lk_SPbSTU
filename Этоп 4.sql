@@ -750,7 +750,7 @@ GO
 CREATE PROC usp_getStudentStudyPlan
 	@AccountID		INT
 AS
-	SELECT IDStudyPlan, Semestr, NameDiscipline, PeriodDiscipline, NameStaff, tb_Staff.Email AS EmailTeacher, tb_Account.Login AS EduEmailTeacher, tb_Staff.Phone AS PhoneTeacher, IDGroup, NameGroup
+	SELECT DISTINCT IDStudyPlan, Semestr, NameDiscipline, PeriodDiscipline, NameStaff, tb_Staff.Email AS EmailTeacher, tb_Account.Login AS EduEmailTeacher, tb_Staff.Phone AS PhoneTeacher, IDGroup, NameGroup
 	FROM tb_StudyPlan
 	INNER JOIN tb_Staff
 		ON tb_Staff.IDStaff=tb_StudyPlan.StaffID
@@ -775,7 +775,7 @@ IF exists(select * from sysobjects where name='usp_getAllStudyPlan')
 GO
 CREATE PROC usp_getAllStudyPlan
 AS
-	SELECT IDStudyPlan, Semestr, NameDiscipline, PeriodDiscipline, NameStaff, tb_Staff.Email AS EmailTeacher, tb_Account.Login AS EduEmailTeacher, tb_Staff.Phone AS PhoneTeacher, IDGroup, NameGroup
+	SELECT DISTINCT IDStudyPlan, Semestr, NameDiscipline, PeriodDiscipline, NameStaff, tb_Staff.Email AS EmailTeacher, tb_Account.Login AS EduEmailTeacher, tb_Staff.Phone AS PhoneTeacher, IDGroup, NameGroup
 	FROM tb_StudyPlan
 	INNER JOIN tb_Staff
 		ON tb_Staff.IDStaff=tb_StudyPlan.StaffID
@@ -816,6 +816,27 @@ AS
 GO
 
 EXEC usp_getStudentsTeacher 4220
+
+
+
+
+-- 所有与员工信息
+IF exists(select * from sysobjects where name='usp_getAllStaff')
+	drop proc usp_getAllStaff
+GO
+CREATE PROC usp_getAllStaff
+AS
+	SELECT DISTINCT IDStaff, NameStaff, Gender, Birthday, tb_Staff.Phone, AccountID, Login, tb_Staff.Email, Hiredate, PostID, NamePost, InstituteID, ShortNameInst, NameInstitute
+	FROM tb_Staff
+		INNER JOIN tb_Account
+			ON tb_Staff.AccountID=tb_Account.IDAccount
+		INNER JOIN tb_Post
+			ON tb_Staff.PostID=tb_Post.IDPost
+		INNER JOIN tb_Institute
+			ON tb_Staff.InstituteID=tb_Institute.IDInstitute
+GO
+
+EXEC usp_getAllStaff
 -- ============================================================================================
 --Триггеры
 -- ============================================================================================

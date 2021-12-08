@@ -28,6 +28,31 @@ namespace MODEL
 		private string _strpost;
 		private int _instituteid;
 		private string _strinstitute;
+
+
+		private string _login;
+		private string _namepost;
+
+		/// <summary>
+		///
+		/// </summary>
+		private string _nameinstitute;
+		public string NameInstitute
+		{
+			set { _nameinstitute = value; }
+			get { return _nameinstitute; }
+		}
+		/// <summary>
+		///
+		/// </summary>
+		private string _shortnameinst;
+
+		public string ShortNameInst
+		{
+			set { _shortnameinst = value; }
+			get { return _shortnameinst; }
+		}
+
 		/// <summary>
 		///
 		/// </summary>
@@ -62,6 +87,12 @@ namespace MODEL
 			get { return _strgender; }
 		}
 
+		public string GetGenderString
+		{
+			// 注意，这里是给 PGender 和判断和赋值
+			set { _gender = value == "Man" ? true : false; }
+			get { return _gender ? "Man" : "Male"; }
+		}
 
 		/// <summary>
 		///
@@ -139,6 +170,9 @@ namespace MODEL
 			set { _strinstitute = value; }
 			get { return _strinstitute; }
 		}
+
+		public string Login { get => _login; set => _login = value; }
+		public string NamePost { get => _namepost; set => _namepost = value; }
 
 		#endregion Model
 

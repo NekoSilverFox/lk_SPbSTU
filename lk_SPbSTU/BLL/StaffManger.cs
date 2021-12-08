@@ -24,5 +24,18 @@ namespace BLL
             return staffService.getStaffInfo(accountID);
         }
         #endregion
+
+
+        #region 获取所有员工信息 + List<MODEL.tb_Staff> GetAllStaffList()
+        /// <summary>
+        /// 获取所有班级信息
+        /// </summary>
+        /// <param name=""></param>
+        /// <returns></returns>
+        public List<MODEL.tb_Staff> GetAllStaffList()
+        {
+            return staffService.GetAllStaffList();
+        }
+        #endregion
     }
 }
