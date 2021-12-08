@@ -44,7 +44,7 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NameStaff = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gpAdd = new System.Windows.Forms.GroupBox();
-            this.cboTeacher = new System.Windows.Forms.ComboBox();
+            this.cboStaff = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cboSemester = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -201,7 +201,7 @@
             // gpAdd
             // 
             this.gpAdd.BackColor = System.Drawing.Color.Linen;
-            this.gpAdd.Controls.Add(this.cboTeacher);
+            this.gpAdd.Controls.Add(this.cboStaff);
             this.gpAdd.Controls.Add(this.label5);
             this.gpAdd.Controls.Add(this.cboSemester);
             this.gpAdd.Controls.Add(this.label4);
@@ -223,14 +223,14 @@
             this.gpAdd.Text = "Добавление";
             this.gpAdd.Visible = false;
             // 
-            // cboTeacher
+            // cboStaff
             // 
-            this.cboTeacher.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboTeacher.FormattingEnabled = true;
-            this.cboTeacher.Location = new System.Drawing.Point(520, 304);
-            this.cboTeacher.Name = "cboTeacher";
-            this.cboTeacher.Size = new System.Drawing.Size(310, 26);
-            this.cboTeacher.TabIndex = 40;
+            this.cboStaff.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboStaff.FormattingEnabled = true;
+            this.cboStaff.Location = new System.Drawing.Point(520, 304);
+            this.cboStaff.Name = "cboStaff";
+            this.cboStaff.Size = new System.Drawing.Size(310, 26);
+            this.cboStaff.TabIndex = 40;
             // 
             // label5
             // 
@@ -358,6 +358,7 @@
             this.btnOk.TabIndex = 16;
             this.btnOk.Text = "Insert";
             this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // AdminStudyPlanForm
             // 
@@ -409,7 +410,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cboDiscipline;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cboTeacher;
+        private System.Windows.Forms.ComboBox cboStaff;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cboSemester;
         private System.Windows.Forms.Label label4;

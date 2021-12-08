@@ -133,12 +133,12 @@ namespace UI
             }
             else
             {
-                if (groupManger.UpdatePerson(newPerson) == 1)
+                if (groupManger.UpdateGroup(newGroup) == 1)
                 {
                     MessageBox.Show("Successfully change group");
 
                     // 【重点】添加成功后记得刷新！！！！也就是重新加载一下
-                    this.dgvList.DataSource = groupManger.GetAllPersonList(false);
+                    this.dgvList.DataSource = groupManger.GetAllGroupList();
                 }
                 else
                 {

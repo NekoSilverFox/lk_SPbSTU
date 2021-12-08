@@ -40,9 +40,9 @@ namespace BLL
         }
         #endregion
 
-        #region 修改账号信息+UpdateAccount(MODEL.Person updatePerson)
+        #region 修改账号信息+ int UpdateAccount(MODEL.tb_Account updateAccount)
         /// <summary>
-        /// 修改人员信息
+        /// 修改账号信息
         /// </summary>
         /// <param name="updateAccount"></param>
         public int UpdateAccount(MODEL.tb_Account updateAccount)

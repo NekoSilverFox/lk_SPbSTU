@@ -218,6 +218,7 @@
             this.btnOk.TabIndex = 16;
             this.btnOk.Text = "Insert";
             this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // txtPeriodDiscipline
             // 

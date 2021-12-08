@@ -51,5 +51,88 @@ namespace UI
             // 获取绑定项
             //MODEL.Person person = this.dgvList.CurrentRow.DataBoundItem as MODEL.Person;
         }
+
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+            if (!ValidataUser())
+            {
+                return;
+            }
+
+            MODEL.tb_StudyPlan newStudyPlan = null;
+
+            if (gpAdd.Text == "Добавление")
+            {
+                newStudyPlan = new MODEL.tb_StudyPlan();
+            }
+            else
+            {
+                newStudyPlan = this.dgvList.CurrentRow.DataBoundItem as MODEL.tb_StudyPlan;
+            }
+
+
+            // ----------------------------------------------------------------------------------------------------------
+            newStudyPlan.GroupID = (this.cboGroup.SelectedItem as MODEL.tb_Group).IDGroup;
+            newStudyPlan.DisciplineID = (this.cboDiscipline.SelectedItem as MODEL.tb_Discipline).IDDiscipline;
+            newStudyPlan.Semestr = this.cboSemester.SelectedIndex + 1;
+            newStudyPlan.StaffID = (this.cboStaff.SelectedItem as MODEL.tb_Staff).IDStaff;
+            // ----------------------------------------------------------------------------------------------------------
+
+
+            if (gpAdd.Text == "Добавление")
+            {
+                if (studyPlanManger.InsertStudyPlan(newStudyPlan) == 1)
+                {
+                    MessageBox.Show("Successfully added new Study Plan");
+
+                    // 【重点】添加成功后记得刷新！！！！也就是重新加载一下
+                    this.dgvList.DataSource = studyPlanManger.GetAllStudyPlanList();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to add new group");
+                }
+            }
+            else
+            {
+                if (studyPlanManger.UpdateStudyPlan(newStudyPlan) == 1)
+                {
+                    MessageBox.Show("Successfully change Study Plan");
+
+                    // 【重点】添加成功后记得刷新！！！！也就是重新加载一下
+                    this.dgvList.DataSource = studyPlanManger.GetAllStudyPlanList();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to change group");
+                }
+            }
+        }
+
+        #region 用户信息输入检测+bool ValidataUser()
+        /// <summary>
+        /// 用户信息输入检测
+        /// </summary>
+        /// <returns></returns>
+        bool ValidataUser()
+        {
+            if (cboInstitute.SelectedItem == null ||
+                cboProfession.SelectedItem == null ||
+                cboGroup.SelectedItem == null ||
+                cboDiscipline.SelectedItem == null ||
+                cboSemester.SelectedItem == null ||
+                cboStaff.SelectedItem == null )
+            {
+                MessageBox.Show("Please chose all items");
+
+                return false;
+            }
+
+
+            return true;
+        }
+        #endregion
+
     }
+
 }
