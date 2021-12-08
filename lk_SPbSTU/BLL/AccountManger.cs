@@ -36,7 +36,9 @@ namespace BLL
         /// <returns></returns>
         public int InsertAccount(MODEL.tb_Account newAccount)
         {
-            return accountService.InsertAccount(newAccount);
+            //return accountService.InsertAccount(newAccount);
+            return 0;
+
         }
         #endregion
 
@@ -47,7 +49,9 @@ namespace BLL
         /// <param name="updateAccount"></param>
         public int UpdateAccount(MODEL.tb_Account updateAccount)
         {
-            return accountService.UpdateAccount(updateAccount);
+            //return accountService.UpdateAccount(updateAccount);
+            return 0;
+
         }
         #endregion
     }

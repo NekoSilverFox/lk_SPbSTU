@@ -123,7 +123,7 @@ namespace UI
                 cboSemester.SelectedItem == null ||
                 cboStaff.SelectedItem == null )
             {
-                MessageBox.Show("Please chose all items");
+                MessageBox.Show("Please choose all items");
 
                 return false;
             }

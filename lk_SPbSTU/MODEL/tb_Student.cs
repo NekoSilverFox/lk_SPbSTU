@@ -27,6 +27,7 @@ namespace MODEL
 
 		private string _strgender;
 		private string _login;
+		private string _passwd;
 		private string _namegroup;
 		private int _grade;
 		private string _nameinstitute;
@@ -119,6 +120,7 @@ namespace MODEL
 		public string CodeProfession { get => _codeprofession; set => _codeprofession = value; }
 		public string NameProfession { get => _nameprofession; set => _nameprofession = value; }
 		public string Login { get => _login; set => _login = value; }
+		public string Passwd { get => _passwd; set => _passwd = value; }
 		#endregion Model
 
 	}

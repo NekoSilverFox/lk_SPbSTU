@@ -61,7 +61,7 @@
             this.rdoWoman = new System.Windows.Forms.RadioButton();
             this.rdoMam = new System.Windows.Forms.RadioButton();
             this.label7 = new System.Windows.Forms.Label();
-            this.dtpHiredate = new System.Windows.Forms.DateTimePicker();
+            this.dtpEnrollTime = new System.Windows.Forms.DateTimePicker();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.TextBox();
@@ -300,7 +300,7 @@
             this.gpAdd.Controls.Add(this.rdoWoman);
             this.gpAdd.Controls.Add(this.rdoMam);
             this.gpAdd.Controls.Add(this.label7);
-            this.gpAdd.Controls.Add(this.dtpHiredate);
+            this.gpAdd.Controls.Add(this.dtpEnrollTime);
             this.gpAdd.Controls.Add(this.txtEmail);
             this.gpAdd.Controls.Add(this.label6);
             this.gpAdd.Controls.Add(this.txtPhone);
@@ -411,12 +411,12 @@
             this.label7.Text = "Год\r\nпоступления";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // dtpHiredate
+            // dtpEnrollTime
             // 
-            this.dtpHiredate.Location = new System.Drawing.Point(541, 240);
-            this.dtpHiredate.Name = "dtpHiredate";
-            this.dtpHiredate.Size = new System.Drawing.Size(286, 26);
-            this.dtpHiredate.TabIndex = 34;
+            this.dtpEnrollTime.Location = new System.Drawing.Point(541, 240);
+            this.dtpEnrollTime.Name = "dtpEnrollTime";
+            this.dtpEnrollTime.Size = new System.Drawing.Size(286, 26);
+            this.dtpEnrollTime.TabIndex = 34;
             // 
             // txtEmail
             // 
@@ -548,6 +548,7 @@
             this.btnOk.TabIndex = 16;
             this.btnOk.Text = "Insert";
             this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // AdminStudentForm
             // 
@@ -609,7 +610,7 @@
         private System.Windows.Forms.RadioButton rdoWoman;
         private System.Windows.Forms.RadioButton rdoMam;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dtpHiredate;
+        private System.Windows.Forms.DateTimePicker dtpEnrollTime;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtPhone;

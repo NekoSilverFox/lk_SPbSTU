@@ -34,7 +34,9 @@ namespace BLL
         /// <returns></returns>
         public int InsertExamRecord(MODEL.tb_ExamRecord newExamRecord)
         {
-            return examRecordService.InsertExamRecord(newExamRecord);
+            // return examRecordService.InsertExamRecord(newExamRecord);
+            return 0;
+
         }
         #endregion
 
@@ -45,7 +47,9 @@ namespace BLL
         /// <param name="updateExamRecord"></param>
         public int UpdateExamRecord(MODEL.tb_ExamRecord updateExamRecord)
         {
-            return examRecordService.UpdateExamRecord(updateExamRecord);
+            //return examRecordService.UpdateExamRecord(updateExamRecord);
+            return 0;
+
         }
         #endregion
     }

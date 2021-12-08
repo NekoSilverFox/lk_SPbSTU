@@ -31,6 +31,7 @@ namespace MODEL
 
 
 		private string _login;
+		private string _passwd;
 		private string _namepost;
 
 		/// <summary>
@@ -173,6 +174,7 @@ namespace MODEL
 
 		public string Login { get => _login; set => _login = value; }
 		public string NamePost { get => _namepost; set => _namepost = value; }
+		public string Passwd { get => _passwd; set => _passwd = value; }
 
 		#endregion Model
 

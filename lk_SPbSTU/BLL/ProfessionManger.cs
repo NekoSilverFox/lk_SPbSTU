@@ -41,7 +41,9 @@ namespace BLL
         /// <param name="updateProfession"></param>
         public int UpdateProfession(MODEL.tb_Profession updateProfession)
         {
-            return professionServer.UpdateProfession(updateProfession);
+            //return professionServer.UpdateProfession(updateProfession);
+            return 0;
+
         }
         #endregion
     }

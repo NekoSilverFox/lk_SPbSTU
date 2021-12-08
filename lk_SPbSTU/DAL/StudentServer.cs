@@ -31,7 +31,9 @@ namespace DAL
                     student = new MODEL.tb_Student();
 
                     student.IDStudent = (int)reader["IDStudent"];
+                    student.AccountID = (int)reader["AccountID"];
                     student.Login = reader["Login"].ToString();
+                    student.Passwd = reader["Passwd"].ToString();
                     student.NameStudent = reader["NameStudent"].ToString();
                     student.Gender = (bool)reader["Gender"];
                     student.Birthday = Convert.ToDateTime(reader["Birthday"]);

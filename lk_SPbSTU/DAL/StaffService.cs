@@ -33,13 +33,17 @@ namespace DAL
 
                     staff.IDStaff = (int)reader["IDStaff"];
                     staff.NameStaff = reader["NameStaff"].ToString().Trim();
-                    staff.StrGender = reader["Gender"].ToString().Trim();
+                    staff.StrGender = reader["StrGender"].ToString().Trim();
+                    staff.Gender = (bool)reader["Gender"];
                     staff.Birthday = Convert.ToDateTime(reader["Birthday"]);
                     staff.Phone = reader["Phone"].ToString().Trim();
                     staff.Email = reader["Email"].ToString().Trim();
                     staff.Hiredate = Convert.ToDateTime(reader["Hiredate"]);
+                    staff.PostID = (int)reader["PostID"];
                     staff.StrPost = reader["NamePost"].ToString().Trim();
                     staff.StrInstitute = reader["NameInstitute"].ToString().Trim();
+                    staff.Login = reader["Login"].ToString().Trim();
+                    staff.Passwd = reader["Passwd"].ToString().Trim();
                 }
             }
             return staff;

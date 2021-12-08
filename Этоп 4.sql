@@ -704,8 +704,8 @@ AS
 				WHEN 1 THEN 'Man'
 				WHEN 0 THEN 'Woman'
 		ELSE 'Empty'
-		END AS 'Gender'
-	, Birthday, tb_Staff.Phone, tb_Account.[Login], tb_Staff.Email, Hiredate, tb_Post.NamePost, tb_Institute.NameInstitute
+		END AS 'StrGender'
+	,Gender, Birthday, tb_Staff.Phone, tb_Account.[Login], Passwd, tb_Staff.Email, Hiredate, tb_Post.NamePost, tb_Institute.NameInstitute
 		FROM tb_Staff
 		INNER JOIN tb_Account
 			ON tb_Account.IDAccount=tb_Staff.AccountID
@@ -726,7 +726,7 @@ GO
 CREATE PROC usp_getStudentInfo
 	@AccountID		INT
 AS
-	SELECT IDStudent, Login, NameStudent, Gender, Birthday, tb_Student.Phone, tb_Student.Email, NameGroup, Grade, EnrollTime, NameInstitute, CodeProfession, NameProfession
+	SELECT IDStudent, AccountID, Login, Passwd, NameStudent, Gender, Birthday, tb_Student.Phone, tb_Student.Email, NameGroup, Grade, EnrollTime, NameInstitute, CodeProfession, NameProfession
 	FROM tb_Student
 		INNER JOIN tb_Account
 			ON tb_Student.AccountID=tb_Account.IDAccount

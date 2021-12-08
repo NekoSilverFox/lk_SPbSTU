@@ -32,7 +32,9 @@ namespace BLL
         /// <returns></returns>
         public int InsertDiscipline(MODEL.tb_Discipline newDiscipline)
         {
-            return disciplineService.InsertDiscipline(newDiscipline);
+            // return disciplineService.InsertDiscipline(newDiscipline);
+            return 0;
+
         }
         #endregion
 
@@ -43,7 +45,9 @@ namespace BLL
         /// <param name="updateDiscipline"></param>
         public int UpdateDiscipline(MODEL.tb_Discipline updateDiscipline)
         {
-            return disciplineService.UpdateDiscipline(updateDiscipline);
+            //return disciplineService.UpdateDiscipline(updateDiscipline);
+            return 0;
+
         }
         #endregion
     }
