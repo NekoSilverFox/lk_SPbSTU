@@ -35,5 +35,15 @@ namespace BLL
         }
         #endregion
 
+        #region 修改学院信息+ int UpdateInstitute(MODEL.tb_Institute updateInstitute)
+        /// <summary>
+        /// 修改学院信息
+        /// </summary>
+        /// <param name="updateInstitute"></param>
+        public int UpdateInstitute(MODEL.tb_Institute updateInstitute)
+        {
+            return instituteService.UpdateInstitute(updateInstitute);
+        }
+        #endregion
     }
 }

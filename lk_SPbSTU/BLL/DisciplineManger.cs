@@ -35,5 +35,16 @@ namespace BLL
             return disciplineService.InsertDiscipline(newDiscipline);
         }
         #endregion
+
+        #region 修改科目信息+ int UpdateDiscipline(MODEL.tb_Discipline updateDiscipline)
+        /// <summary>
+        /// 修改科目信息
+        /// </summary>
+        /// <param name="updateDiscipline"></param>
+        public int UpdateDiscipline(MODEL.tb_Discipline updateDiscipline)
+        {
+            return disciplineService.UpdateDiscipline(updateDiscipline);
+        }
+        #endregion
     }
 }

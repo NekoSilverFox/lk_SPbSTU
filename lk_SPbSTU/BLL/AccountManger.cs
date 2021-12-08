@@ -28,15 +28,26 @@ namespace BLL
 
 
 
-        #region 插入新账号 +
+        #region 插入新账号 +int InsertAccount(MODEL.tb_Account newAccount)
         /// <summary>
-        /// 插入新
+        /// 插入新账号
         /// </summary>
         /// <param name=""></param>
         /// <returns></returns>
         public int InsertAccount(MODEL.tb_Account newAccount)
         {
             return accountService.InsertAccount(newAccount);
+        }
+        #endregion
+
+        #region 修改账号信息+UpdateAccount(MODEL.Person updatePerson)
+        /// <summary>
+        /// 修改人员信息
+        /// </summary>
+        /// <param name="updateAccount"></param>
+        public int UpdateAccount(MODEL.tb_Account updateAccount)
+        {
+            return accountService.UpdateAccount(updateAccount);
         }
         #endregion
     }

@@ -36,5 +36,29 @@ namespace BLL
             return studentServer.GetStudentListByGroupID(idGroup);
         }
         #endregion
+
+
+        #region 插入新学生 +int InsertStudent(MODEL.tb_Student newStudent)
+        /// <summary>
+        /// 插入新学生
+        /// </summary>
+        /// <param name="newStudent "></param>
+        /// <returns></returns>
+        public int InsertStudent(MODEL.tb_Student newStudent)
+        {
+            return studentServer.InsertStudent(newStudent);
+        }
+        #endregion
+
+        #region 修改账号信息+ int UpdateStudent(MODEL.tb_Student updateStudent)
+        /// <summary>
+        /// 修改账号信息
+        /// </summary>
+        /// <param name="updateStudent"></param>
+        public int UpdateStudent(MODEL.tb_Student updateStudent)
+        {
+            return studentServer.UpdateStudent(updateStudent);
+        }
+        #endregion
     }
 }

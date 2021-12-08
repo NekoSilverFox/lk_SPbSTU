@@ -49,5 +49,16 @@ namespace BLL
             return staffService.InsertStaff(newStaff);
         }
         #endregion
+
+        #region 修改员工信息+ int UpdateStaff(MODEL.tb_Staff updateStaff)
+        /// <summary>
+        /// 修改员工信息
+        /// </summary>
+        /// <param name="updateStaff"></param>
+        public int UpdateStaff(MODEL.tb_Staff updateStaff)
+        {
+            return staffService.UpdateStaff(updateStaff);
+        }
+        #endregion
     }
 }

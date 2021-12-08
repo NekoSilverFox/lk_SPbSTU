@@ -52,10 +52,12 @@ namespace UI
 
             MODEL.tb_Profession newProfession = new MODEL.tb_Profession();
 
+            // ----------------------------------------------------------------------------------------------------------
             newProfession.InstituteID = (this.cboInstitute.SelectedItem as MODEL.tb_Institute).IDInstitute;
             newProfession.CodeProfession = this.txtCodeProfession.Text.ToString().Trim();
             newProfession.NameProfession = this.txtNameProfession.Text.ToString().Trim();
             newProfession.TuitionFee = Convert.ToDecimal(this.txtTuitionFee.Text.ToString().Trim());
+            // ----------------------------------------------------------------------------------------------------------
 
             if (professionManger.InsertProfession(newProfession) == 1)
             {

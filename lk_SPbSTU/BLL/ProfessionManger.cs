@@ -33,5 +33,16 @@ namespace BLL
             return professionServer.InsertProfession(newProfession);
         }
         #endregion
+
+        #region 修改方向信息+ int UpdateProfession(MODEL.tb_Profession updateProfession)
+        /// <summary>
+        /// 修改方向信息
+        /// </summary>
+        /// <param name="updateProfession"></param>
+        public int UpdateProfession(MODEL.tb_Profession updateProfession)
+        {
+            return professionServer.UpdateProfession(updateProfession);
+        }
+        #endregion
     }
 }

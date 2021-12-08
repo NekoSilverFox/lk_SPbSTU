@@ -119,12 +119,12 @@ namespace UI
 
             if (gpAdd.Text == "Добавление")
             {
-                if (personManager.InsertPerson(newPerson) == 1)
+                if (groupManger.InsertGroup(newGroup) == 1)
                 {
                     MessageBox.Show("Successfully added new group");
 
                     // 【重点】添加成功后记得刷新！！！！也就是重新加载一下
-                    this.dgvList.DataSource = personManager.GetAllPersonList(false);
+                    this.dgvList.DataSource = groupManger.GetAllGroupList();
                 }
                 else
                 {
@@ -133,12 +133,12 @@ namespace UI
             }
             else
             {
-                if (personManager.UpdatePerson(newPerson) == 1)
+                if (groupManger.UpdatePerson(newPerson) == 1)
                 {
                     MessageBox.Show("Successfully change group");
 
                     // 【重点】添加成功后记得刷新！！！！也就是重新加载一下
-                    this.dgvList.DataSource = personManager.GetAllPersonList(false);
+                    this.dgvList.DataSource = groupManger.GetAllPersonList(false);
                 }
                 else
                 {

@@ -34,5 +34,28 @@ namespace BLL
             return studyPlanServer.GetAllStudyPlanList();
         }
         #endregion
+
+        #region 插入新培训计划 +int InsertStudyPlan(MODEL.tb_StudyPlan newStudyPlan)
+        /// <summary>
+        /// 插入新培训计划
+        /// </summary>
+        /// <param name="newStudent "></param>
+        /// <returns></returns>
+        public int InsertStudyPlan(MODEL.tb_StudyPlan newStudyPlan)
+        {
+            return studyPlanServer.InsertStudyPlan(newStudyPlan);
+        }
+        #endregion
+
+        #region 修改培训计划信息+ int UpdateStudyPlan(MODEL.tb_StudyPlan updateStudyPlan)
+        /// <summary>
+        /// 修改培训计划信息
+        /// </summary>
+        /// <param name="updateStudyPlan"></param>
+        public int UpdateStudyPlan(MODEL.tb_StudyPlan updateStudyPlan)
+        {
+            return studyPlanServer.UpdateStudyPlan(updateStudyPlan);
+        }
+        #endregion
     }
 }

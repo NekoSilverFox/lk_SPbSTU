@@ -37,5 +37,16 @@ namespace BLL
             return examRecordService.InsertExamRecord(newExamRecord);
         }
         #endregion
+
+        #region 修改ExamRecord 信息+ int UpdateExamRecord(MODEL.tb_ExamRecord updateExamRecord)
+        /// <summary>
+        /// 修改ExamRecord 信息
+        /// </summary>
+        /// <param name="updateExamRecord"></param>
+        public int UpdateExamRecord(MODEL.tb_ExamRecord updateExamRecord)
+        {
+            return examRecordService.UpdateExamRecord(updateExamRecord);
+        }
+        #endregion
     }
 }

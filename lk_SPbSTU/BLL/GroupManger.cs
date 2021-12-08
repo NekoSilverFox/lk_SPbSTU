@@ -33,5 +33,16 @@ namespace BLL
             return groupServer.InsertGroup(newGroup);
         }
         #endregion
+
+        #region 修改班级信息+ int UpdateGroup(MODEL.tb_Group updateGroup)
+        /// <summary>
+        /// 修改班级信息
+        /// </summary>
+        /// <param name="updateGroup"></param>
+        public int UpdateGroup(MODEL.tb_Group updateGroup)
+        {
+            return groupServer.UpdateGroup(updateGroup);
+        }
+        #endregion
     }
 }
