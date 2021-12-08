@@ -82,6 +82,12 @@
     <Compile Include="AdminStaffForm.Designer.cs">
       <DependentUpon>AdminStaffForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminStudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminStudentForm.Designer.cs">
+      <DependentUpon>AdminStudentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminStudyPlanForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminStaffForm.resx">
       <DependentUpon>AdminStaffForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminStudentForm.resx">
+      <DependentUpon>AdminStudentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminStudyPlanForm.resx">
       <DependentUpon>AdminStudyPlanForm.cs</DependentUpon>

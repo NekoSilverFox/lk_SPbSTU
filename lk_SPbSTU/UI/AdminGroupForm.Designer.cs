@@ -45,6 +45,8 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gpAdd = new System.Windows.Forms.GroupBox();
+            this.cboProfession = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.cboInstitute = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtNumStu = new System.Windows.Forms.TextBox();
@@ -55,8 +57,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtNameProfession = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.cboProfession = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
             this.gpAdd.SuspendLayout();
@@ -223,6 +223,25 @@
             this.gpAdd.Text = "Добавление направления";
             this.gpAdd.Visible = false;
             // 
+            // cboProfession
+            // 
+            this.cboProfession.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboProfession.FormattingEnabled = true;
+            this.cboProfession.Location = new System.Drawing.Point(117, 260);
+            this.cboProfession.Name = "cboProfession";
+            this.cboProfession.Size = new System.Drawing.Size(713, 26);
+            this.cboProfession.TabIndex = 23;
+            this.cboProfession.SelectedIndexChanged += new System.EventHandler(this.cboProfession_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 263);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 18);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Направление";
+            // 
             // cboInstitute
             // 
             this.cboInstitute.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -312,25 +331,6 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Название";
             // 
-            // cboProfession
-            // 
-            this.cboProfession.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboProfession.FormattingEnabled = true;
-            this.cboProfession.Location = new System.Drawing.Point(117, 260);
-            this.cboProfession.Name = "cboProfession";
-            this.cboProfession.Size = new System.Drawing.Size(713, 26);
-            this.cboProfession.TabIndex = 23;
-            this.cboProfession.SelectedIndexChanged += new System.EventHandler(this.cboProfession_SelectedIndexChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 263);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 18);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "Направление";
-            // 
             // AdminGroupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -341,7 +341,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Font = new System.Drawing.Font("JetBrains Mono NL Light", 10.5F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminGroupForm";
             this.Text = "AdminGroupForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

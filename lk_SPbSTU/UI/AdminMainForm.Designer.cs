@@ -35,12 +35,12 @@
             this.tsmiProfession = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiClass = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDiscipline = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiStudyPlan = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiStaff = new System.Windows.Forms.ToolStripMenuItem();
             this.tmiStudent = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiChangePwd = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiWindow = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiStudyPlan = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,6 +100,13 @@
             this.tsmiDiscipline.Text = "Дисциплине";
             this.tsmiDiscipline.Click += new System.EventHandler(this.tsmiDiscipline_Click);
             // 
+            // tsmiStudyPlan
+            // 
+            this.tsmiStudyPlan.Name = "tsmiStudyPlan";
+            this.tsmiStudyPlan.Size = new System.Drawing.Size(108, 21);
+            this.tsmiStudyPlan.Text = "Учебный план";
+            this.tsmiStudyPlan.Click += new System.EventHandler(this.tsmiStudyPlan_Click);
+            // 
             // tsmiStaff
             // 
             this.tsmiStaff.Name = "tsmiStaff";
@@ -112,6 +119,7 @@
             this.tmiStudent.Name = "tmiStudent";
             this.tmiStudent.Size = new System.Drawing.Size(68, 21);
             this.tmiStudent.Text = "学生管理";
+            this.tmiStudent.Click += new System.EventHandler(this.tmiStudent_Click);
             // 
             // tsmiChangePwd
             // 
@@ -131,13 +139,6 @@
             this.tsmiExit.Name = "tsmiExit";
             this.tsmiExit.Size = new System.Drawing.Size(58, 21);
             this.tsmiExit.Text = "Выйти";
-            // 
-            // tsmiStudyPlan
-            // 
-            this.tsmiStudyPlan.Name = "tsmiStudyPlan";
-            this.tsmiStudyPlan.Size = new System.Drawing.Size(108, 21);
-            this.tsmiStudyPlan.Text = "Учебный план";
-            this.tsmiStudyPlan.Click += new System.EventHandler(this.tsmiStudyPlan_Click);
             // 
             // AdminMainForm
             // 
