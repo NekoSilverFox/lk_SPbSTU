@@ -31,9 +31,7 @@ namespace UI
             this.txtLogin.Text = account.Login;
             this.txtName.Text = staff.NameStaff;
             this.txtGender.Text = staff.StrGender;
-            this.txtBirthday.Text = Convert.ToDateTime(staff.Birthday.ToString()).Year.ToString()
-                + "-" + Convert.ToDateTime(staff.Birthday.ToString()).Month.ToString()
-                + "-" + Convert.ToDateTime(staff.Birthday.ToString()).Day.ToString();
+            this.dtpBirthday.Value = staff.Birthday;
             this.txtPhone.Text = staff.Phone.Trim();
             this.txtEmail.Text = staff.Email;
             this.txtHiredate.Text = Convert.ToDateTime(staff.Hiredate.ToString()).Year.ToString()

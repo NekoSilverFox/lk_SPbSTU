@@ -557,7 +557,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ID.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="txtName.Font" type="System.Drawing.Font, System.Drawing">
     <value>JetBrains Mono NL Light, 10.499999pt</value>
@@ -617,7 +617,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="txtGender.Font" type="System.Drawing.Font, System.Drawing">
     <value>JetBrains Mono NL Light, 10.499999pt</value>
@@ -645,33 +645,6 @@
   </data>
   <data name="&gt;&gt;txtGender.ZOrder" xml:space="preserve">
     <value>17</value>
-  </data>
-  <data name="txtBirthday.Font" type="System.Drawing.Font, System.Drawing">
-    <value>JetBrains Mono NL Light, 10.499999pt</value>
-  </data>
-  <data name="txtBirthday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>135, 453</value>
-  </data>
-  <data name="txtBirthday.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="txtBirthday.Size" type="System.Drawing.Size, System.Drawing">
-    <value>241, 26</value>
-  </data>
-  <data name="txtBirthday.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;txtBirthday.Name" xml:space="preserve">
-    <value>txtBirthday</value>
-  </data>
-  <data name="&gt;&gt;txtBirthday.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtBirthday.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtBirthday.ZOrder" xml:space="preserve">
-    <value>14</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -704,7 +677,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -737,7 +710,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="txtPhone.Font" type="System.Drawing.Font, System.Drawing">
     <value>JetBrains Mono NL Light, 10.499999pt</value>
@@ -818,34 +791,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtEmail.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="txtHiredate.Font" type="System.Drawing.Font, System.Drawing">
-    <value>JetBrains Mono NL Light, 10.499999pt</value>
-  </data>
-  <data name="txtHiredate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>938, 277</value>
-  </data>
-  <data name="txtHiredate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="txtHiredate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 26</value>
-  </data>
-  <data name="txtHiredate.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;txtHiredate.Name" xml:space="preserve">
-    <value>txtHiredate</value>
-  </data>
-  <data name="&gt;&gt;txtHiredate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtHiredate.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtHiredate.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="phone.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -878,7 +824,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;phone.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="Email.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -911,7 +857,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Email.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -944,7 +890,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -977,7 +923,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="txtPost.Font" type="System.Drawing.Font, System.Drawing">
     <value>JetBrains Mono NL Light, 10.499999pt</value>
@@ -1034,7 +980,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtInstitulate.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="Post.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1067,7 +1013,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Post.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="Institulate.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1100,7 +1046,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Institulate.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="btnSave.Font" type="System.Drawing.Font, System.Drawing">
     <value>JetBrains Mono NL Light, 10.5pt</value>
@@ -1127,7 +1073,55 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnSave.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="dtpBirthday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>134, 453</value>
+  </data>
+  <data name="dtpBirthday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 26</value>
+  </data>
+  <data name="dtpBirthday.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;dtpBirthday.Name" xml:space="preserve">
+    <value>dtpBirthday</value>
+  </data>
+  <data name="&gt;&gt;dtpBirthday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dtpBirthday.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dtpBirthday.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="txtHiredate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>JetBrains Mono NL Light, 10.499999pt</value>
+  </data>
+  <data name="txtHiredate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>938, 277</value>
+  </data>
+  <data name="txtHiredate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="txtHiredate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>287, 26</value>
+  </data>
+  <data name="txtHiredate.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtHiredate.Name" xml:space="preserve">
+    <value>txtHiredate</value>
+  </data>
+  <data name="&gt;&gt;txtHiredate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtHiredate.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtHiredate.ZOrder" xml:space="preserve">
+    <value>12</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

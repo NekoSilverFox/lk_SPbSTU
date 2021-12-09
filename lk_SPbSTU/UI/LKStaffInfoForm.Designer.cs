@@ -35,13 +35,11 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtGender = new System.Windows.Forms.TextBox();
-            this.txtBirthday = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.txtLogin = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtHiredate = new System.Windows.Forms.TextBox();
             this.phone = new System.Windows.Forms.Label();
             this.Email = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -51,6 +49,8 @@
             this.Post = new System.Windows.Forms.Label();
             this.Institulate = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
+            this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
+            this.txtHiredate = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,11 +88,6 @@
             this.txtGender.Name = "txtGender";
             this.txtGender.ReadOnly = true;
             // 
-            // txtBirthday
-            // 
-            resources.ApplyResources(this.txtBirthday, "txtBirthday");
-            this.txtBirthday.Name = "txtBirthday";
-            // 
             // label2
             // 
             resources.ApplyResources(this.label2, "label2");
@@ -118,12 +113,6 @@
             // 
             resources.ApplyResources(this.txtEmail, "txtEmail");
             this.txtEmail.Name = "txtEmail";
-            // 
-            // txtHiredate
-            // 
-            resources.ApplyResources(this.txtHiredate, "txtHiredate");
-            this.txtHiredate.Name = "txtHiredate";
-            this.txtHiredate.ReadOnly = true;
             // 
             // phone
             // 
@@ -173,10 +162,23 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.UseVisualStyleBackColor = true;
             // 
+            // dtpBirthday
+            // 
+            resources.ApplyResources(this.dtpBirthday, "dtpBirthday");
+            this.dtpBirthday.MinDate = new System.DateTime(1930, 12, 18, 0, 0, 0, 0);
+            this.dtpBirthday.Name = "dtpBirthday";
+            // 
+            // txtHiredate
+            // 
+            resources.ApplyResources(this.txtHiredate, "txtHiredate");
+            this.txtHiredate.Name = "txtHiredate";
+            this.txtHiredate.ReadOnly = true;
+            // 
             // LKStaffInfoForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dtpBirthday);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
@@ -191,7 +193,6 @@
             this.Controls.Add(this.txtHiredate);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtInstitulate);
-            this.Controls.Add(this.txtBirthday);
             this.Controls.Add(this.txtLogin);
             this.Controls.Add(this.txtPost);
             this.Controls.Add(this.txtGender);
@@ -216,13 +217,11 @@
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtGender;
-        private System.Windows.Forms.TextBox txtBirthday;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.TextBox txtLogin;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtHiredate;
         private System.Windows.Forms.Label phone;
         private System.Windows.Forms.Label Email;
         private System.Windows.Forms.Label label6;
@@ -232,5 +231,7 @@
         private System.Windows.Forms.Label Post;
         private System.Windows.Forms.Label Institulate;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.DateTimePicker dtpBirthday;
+        private System.Windows.Forms.TextBox txtHiredate;
     }
 }
