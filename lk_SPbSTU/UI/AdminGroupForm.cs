@@ -197,7 +197,14 @@ namespace UI
             gpAdd.Text = "Изменение";
 
             // 获取绑定项
-            //MODEL.Person person = this.dgvList.CurrentRow.DataBoundItem as MODEL.Person;
+            MODEL.tb_Group group = this.dgvList.CurrentRow.DataBoundItem as MODEL.tb_Group;
+
+            // 将绑定项中的内容显示在修改窗口上
+            this.txtNameGroup.Text = group.NameGroup;
+            this.cboInstitute.SelectedValue = group.IDInstitute;
+            this.cboProfession.SelectedValue = group.ProfessionID;
+            this.txtGrade.Text = group.Grade.ToString();
+            this.txtNumStu.Text = group.Quantity.ToString();
         }
     }
 }
