@@ -48,7 +48,7 @@
             this.gpAdd = new System.Windows.Forms.GroupBox();
             this.rdoWoman = new System.Windows.Forms.RadioButton();
             this.rdoMam = new System.Windows.Forms.RadioButton();
-            this.cboInstutite = new System.Windows.Forms.ComboBox();
+            this.cboInstitute = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dtpHiredate = new System.Windows.Forms.DateTimePicker();
@@ -234,7 +234,7 @@
             this.gpAdd.BackColor = System.Drawing.Color.Linen;
             this.gpAdd.Controls.Add(this.rdoWoman);
             this.gpAdd.Controls.Add(this.rdoMam);
-            this.gpAdd.Controls.Add(this.cboInstutite);
+            this.gpAdd.Controls.Add(this.cboInstitute);
             this.gpAdd.Controls.Add(this.label8);
             this.gpAdd.Controls.Add(this.label7);
             this.gpAdd.Controls.Add(this.dtpHiredate);
@@ -286,14 +286,14 @@
             this.rdoMam.Text = "M";
             this.rdoMam.UseVisualStyleBackColor = true;
             // 
-            // cboInstutite
+            // cboInstitute
             // 
-            this.cboInstutite.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboInstutite.FormattingEnabled = true;
-            this.cboInstutite.Location = new System.Drawing.Point(541, 358);
-            this.cboInstutite.Name = "cboInstutite";
-            this.cboInstutite.Size = new System.Drawing.Size(286, 26);
-            this.cboInstutite.TabIndex = 37;
+            this.cboInstitute.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboInstitute.FormattingEnabled = true;
+            this.cboInstitute.Location = new System.Drawing.Point(541, 358);
+            this.cboInstitute.Name = "cboInstitute";
+            this.cboInstitute.Size = new System.Drawing.Size(286, 26);
+            this.cboInstitute.TabIndex = 37;
             // 
             // label8
             // 
@@ -532,7 +532,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label lbPhone;
-        private System.Windows.Forms.ComboBox cboInstutite;
+        private System.Windows.Forms.ComboBox cboInstitute;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RadioButton rdoWoman;

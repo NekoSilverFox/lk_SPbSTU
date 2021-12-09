@@ -27,6 +27,13 @@ namespace UI
         private void AdminStaffForm_Load(object sender, EventArgs e)
         {
             this.dgvList.DataSource = staffManger.GetAllStaffList();
+
+            // 绑定学院下拉列表数据
+            this.cboInstitute.DisplayMember = "ShortNameInst";      // 显示的值
+            this.cboInstitute.ValueMember = "IDInstitute";              // 注意这里，绑定实际的值
+            this.cboInstitute.DataSource = instituteManger.GetAllInstituteList();  // 绑定集合
+
+
         }
 
         private void tsmiAddInstitue_Click(object sender, EventArgs e)
@@ -81,13 +88,13 @@ namespace UI
             newStaff.Email = this.txtEmail.Text.ToString().Trim();
             newStaff.Hiredate = this.dtpHiredate.Value;
             newStaff.PostID = (this.cboPost.SelectedItem as MODEL.tb_Post).IDPost;
-            newStaff.InstituteID = (this.cboInstutite.SelectedItem as MODEL.tb_Institute).IDInstitute;
+            newStaff.InstituteID = (this.cboInstitute.SelectedItem as MODEL.tb_Institute).IDInstitute;
             newStaff.Gender = this.rdoMam.Checked ? true : false;
             // ----------------------------------------------------------------------------------------------------------
 
             if (gpAdd.Text == "Добавление")
             {
-                if (staffManger.UpdateStaff(newStaff) == 1)
+                if (staffManger.UpdateStaff(newStaff) != 1)
                 {
                     MessageBox.Show("Successfully added new staff");
 
@@ -101,7 +108,7 @@ namespace UI
             }
             else
             {
-                if (staffManger.UpdateStaff(newStaff) == 1)
+                if (staffManger.UpdateStaff(newStaff) != 1)
                 {
                     MessageBox.Show("Successfully change staff");
 
@@ -174,7 +181,7 @@ namespace UI
             }
 
             if (cboPost.SelectedItem == null ||
-                cboInstutite.SelectedItem == null)
+                cboInstitute.SelectedItem == null)
             {
                 MessageBox.Show("Please choose all items");
 
