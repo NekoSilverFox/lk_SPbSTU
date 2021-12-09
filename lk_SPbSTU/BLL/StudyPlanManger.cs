@@ -54,9 +54,7 @@ namespace BLL
         /// <param name="updateStudyPlan"></param>
         public int UpdateStudyPlan(MODEL.tb_StudyPlan updateStudyPlan)
         {
-            //return studyPlanServer.UpdateStudyPlan(updateStudyPlan);
-            return 0;
-
+            return studyPlanServer.UpdateStudyPlan(updateStudyPlan);
         }
         #endregion
     }

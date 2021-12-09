@@ -124,6 +124,25 @@ namespace DAL
         }
         #endregion
 
+        #region 修改培训计划信息+ int UpdateStudyPlan(MODEL.tb_StudyPlan updateStudyPlan)
+        /// <summary>
+        /// 修改培训计划信息
+        /// </summary>
+        /// <param name="updateStudyPlan"></param>
+        public int UpdateStudyPlan(MODEL.tb_StudyPlan updateStudyPlan)
+        {
+            string sql = "UPDATE tb_StudyPlan SET GroupID=@GroupID, DisciplineID=@DisciplineID, Semestr=@Semestr, StaffID=@StaffID WHERE IDStudyPlan=@IDStudyPlan";
 
+            SqlParameter[] ps =
+            {
+                new SqlParameter("IDStudyPlan", updateStudyPlan.IDStudyPlan),
+                new SqlParameter("GroupID", updateStudyPlan.GroupID),
+                new SqlParameter("DisciplineID", updateStudyPlan.DisciplineID),
+                new SqlParameter("Semestr", updateStudyPlan.Semestr),
+                new SqlParameter("StaffID", updateStudyPlan.StaffID)
+            };
+            return SqlHelper.ExecuteNonQuery(sql, ps);
+        }
+        #endregion
     }
 }
