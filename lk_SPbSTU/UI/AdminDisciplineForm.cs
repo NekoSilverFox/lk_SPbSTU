@@ -42,6 +42,7 @@ namespace UI
         {
             // 隐藏面板
             this.gpAdd.Visible = false;
+            this.txtNameDiscipline.Text = this.txtPeriodDiscipline.Text = this.txtDescriptionDiscipline.Text = "";
         }
 
         private void tsmiUpdate_Click(object sender, EventArgs e)

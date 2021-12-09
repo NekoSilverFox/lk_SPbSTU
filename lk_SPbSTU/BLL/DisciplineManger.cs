@@ -43,9 +43,7 @@ namespace BLL
         /// <param name="updateDiscipline"></param>
         public int UpdateDiscipline(MODEL.tb_Discipline updateDiscipline)
         {
-            //return disciplineService.UpdateDiscipline(updateDiscipline);
-            return 0;
-
+            return disciplineService.UpdateDiscipline(updateDiscipline);
         }
         #endregion
     }

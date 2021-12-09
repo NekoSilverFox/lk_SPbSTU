@@ -81,6 +81,27 @@ namespace DAL
         #endregion
 
 
+        #region 修改科目信息+ int UpdateDiscipline(MODEL.tb_Discipline updateDiscipline)
+        /// <summary>
+        /// 修改科目信息
+        /// </summary>
+        /// <param name="updateDiscipline"></param>
+        public int UpdateDiscipline(MODEL.tb_Discipline updateDiscipline)
+        {
+            string sql = "UPDATE tb_Discipline SET NameDiscipline=@NameDiscipline, PeriodDiscipline=@PeriodDiscipline, DescriptionDiscipline=@DescriptionDiscipline WHERE IDDiscipline=@IDDiscipline";
+
+            SqlParameter[] ps =
+            {
+                new SqlParameter("@IDDiscipline", updateDiscipline.IDDiscipline),
+                new SqlParameter("@NameDiscipline", updateDiscipline.NameDiscipline),
+                new SqlParameter("@PeriodDiscipline", updateDiscipline.PeriodDiscipline),
+                new SqlParameter("@DescriptionDiscipline", updateDiscipline.DescriptionDiscipline)
+            };
+
+            return SqlHelper.ExecuteNonQuery(sql, ps);
+        }
+        #endregion
+
     }
 
 }
