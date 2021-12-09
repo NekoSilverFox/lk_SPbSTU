@@ -160,7 +160,13 @@ namespace UI
             gpAdd.Text = "Изменение";
 
             // 获取绑定项
-            //MODEL.Person person = this.dgvList.CurrentRow.DataBoundItem as MODEL.Person;
+            MODEL.tb_Profession profession  = this.dgvList.CurrentRow.DataBoundItem as MODEL.tb_Profession;
+
+            // 将绑定项中的内容显示在修改窗口上
+            this.txtNameProfession.Text = profession.NameProfession;
+            this.cboInstitute.SelectedValue = profession.InstituteID;
+            this.txtCodeProfession.Text = profession.CodeProfession;
+            this.txtTuitionFee.Text = profession.TuitionFee.ToString();
         }
     }
 }
