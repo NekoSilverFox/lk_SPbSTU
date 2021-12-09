@@ -524,6 +524,7 @@
             this.btnSeachByPost.TabIndex = 44;
             this.btnSeachByPost.Text = "Найти";
             this.btnSeachByPost.UseVisualStyleBackColor = true;
+            this.btnSeachByPost.Click += new System.EventHandler(this.btnSeachByPost_Click);
             // 
             // btnShowAllStaff
             // 

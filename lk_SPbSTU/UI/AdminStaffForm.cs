@@ -258,5 +258,28 @@ namespace UI
 
             this.dgvList.DataSource = staffListByInst;
         }
+
+        private void btnSeachByPost_Click(object sender, EventArgs e)
+        {
+            if (cboPost.SelectedItem == null)
+            {
+                MessageBox.Show("Please chose a post");
+            }
+
+            int idPost = (cboPost.SelectedItem as MODEL.tb_Post).IDPost;
+
+            List<MODEL.tb_Staff> allStaffList = staffManger.GetAllStaffList();
+
+            List<MODEL.tb_Staff> staffListByPost = new List<MODEL.tb_Staff>();
+            foreach (MODEL.tb_Staff staff in allStaffList)
+            {
+                if (staff.PostID == idPost)
+                {
+                    staffListByPost.Add(staff);
+                }
+            }
+
+            this.dgvList.DataSource = staffListByPost;
+        }
     }
 }
