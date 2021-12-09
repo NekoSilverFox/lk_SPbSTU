@@ -116,11 +116,7 @@ namespace UI
             gpAdd.Text = "Добавление";
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            // 隐藏面板
-            this.gpAdd.Visible = false;
-        }
+
 
         private void tsmiUpdate_Click(object sender, EventArgs e)
         {
@@ -132,7 +128,15 @@ namespace UI
             gpAdd.Text = "Изменение";
 
             // 获取绑定项
-            //MODEL.Person person = this.dgvList.CurrentRow.DataBoundItem as MODEL.Person;
+            MODEL.tb_StudyPlan studyPlan = this.dgvList.CurrentRow.DataBoundItem as MODEL.tb_StudyPlan;
+
+            // 将绑定项中的内容显示在修改窗口上
+            //this.cboInstitute.SelectedValue = 0;
+            //this.cboProfession.SelectedValue = 0;
+            this.cboGroup.SelectedValue = studyPlan.GroupID;
+            this.cboDiscipline.SelectedValue = studyPlan.DisciplineID;
+            this.cboSemester.SelectedIndex = studyPlan.Semestr - 1;
+            this.cboStaff.SelectedValue = studyPlan.StaffID;
         }
 
         private void btnOk_Click(object sender, EventArgs e)
@@ -190,6 +194,14 @@ namespace UI
                     MessageBox.Show("Failed to change group");
                 }
             }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.cboInstitute.SelectedIndex = this.cboProfession.SelectedIndex = this.cboGroup.SelectedIndex = this.cboDiscipline.SelectedIndex = this.cboSemester.SelectedIndex = this.cboStaff.SelectedIndex = 0;
+
+            // 隐藏面板
+            this.gpAdd.Visible = false;
         }
 
         #region 用户信息输入检测+bool ValidataUser()
