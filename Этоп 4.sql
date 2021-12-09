@@ -690,8 +690,6 @@ EXEC usp_addExamRecord @NameDiscipline='Физика', @NameGroup='3530904/90001
 
 select * from tb_ExamRecord where studentid=(select IDStudent from tb_Student where NameStudent='Викторов Дмитрий Дмитриевич')
 
-
-
 --获取员工个人信息
 IF exists(select * from sysobjects where name='usp_getStaffInfo')
 	drop proc usp_getStaffInfo
@@ -705,7 +703,7 @@ AS
 				WHEN 0 THEN 'Woman'
 		ELSE 'Empty'
 		END AS 'StrGender'
-	,Gender, Birthday, tb_Staff.Phone, tb_Account.[Login], Passwd, tb_Staff.Email, Hiredate, PostID, tb_Post.NamePost, tb_Institute.NameInstitute
+	,Gender, Birthday, tb_Staff.Phone, IDAccount, tb_Account.[Login], Passwd, tb_Staff.Email, Hiredate, PostID, tb_Post.NamePost, InstituteID, tb_Institute.NameInstitute
 		FROM tb_Staff
 		INNER JOIN tb_Account
 			ON tb_Account.IDAccount=tb_Staff.AccountID
@@ -1007,6 +1005,7 @@ BEGIN TRANSACTION
 	ELSE 
 		COMMIT TRANSACTION
 GO
+
 
 -- ============================================================================================
 --Триггеры

@@ -471,7 +471,7 @@
 </value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>174, 93</value>
+    <value>99, 82</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="pictureBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
@@ -497,34 +497,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="txtID.Font" type="System.Drawing.Font, System.Drawing">
-    <value>JetBrains Mono NL Light, 10.499999pt</value>
-  </data>
-  <data name="txtID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>768, 89</value>
-  </data>
-  <data name="txtID.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="txtID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>244, 26</value>
-  </data>
-  <data name="txtID.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;txtID.Name" xml:space="preserve">
-    <value>txtID</value>
-  </data>
-  <data name="&gt;&gt;txtID.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtID.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtID.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>30</value>
   </data>
   <data name="ID.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -533,19 +506,23 @@
     <value>JetBrains Mono NL Light, 10.499999pt</value>
   </data>
   <data name="ID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>640, 92</value>
+    <value>510, 103</value>
   </data>
   <data name="ID.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
   </data>
   <data name="ID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 18</value>
+    <value>72, 36</value>
   </data>
   <data name="ID.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="ID.Text" xml:space="preserve">
-    <value>Рабочный номер</value>
+    <value>Рабочный
+номер</value>
+  </data>
+  <data name="ID.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
   </data>
   <data name="&gt;&gt;ID.Name" xml:space="preserve">
     <value>ID</value>
@@ -557,7 +534,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ID.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>18</value>
   </data>
   <data name="txtName.Font" type="System.Drawing.Font, System.Drawing">
     <value>JetBrains Mono NL Light, 10.499999pt</value>
@@ -584,7 +561,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtName.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>29</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -617,34 +594,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="txtGender.Font" type="System.Drawing.Font, System.Drawing">
-    <value>JetBrains Mono NL Light, 10.499999pt</value>
-  </data>
-  <data name="txtGender.Location" type="System.Drawing.Point, System.Drawing">
-    <value>135, 367</value>
-  </data>
-  <data name="txtGender.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="txtGender.Size" type="System.Drawing.Size, System.Drawing">
-    <value>241, 26</value>
-  </data>
-  <data name="txtGender.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;txtGender.Name" xml:space="preserve">
-    <value>txtGender</value>
-  </data>
-  <data name="&gt;&gt;txtGender.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtGender.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtGender.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>11</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -677,7 +627,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>16</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -710,7 +660,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>7</value>
   </data>
   <data name="txtPhone.Font" type="System.Drawing.Font, System.Drawing">
     <value>JetBrains Mono NL Light, 10.499999pt</value>
@@ -737,19 +687,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtPhone.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>27</value>
   </data>
   <data name="txtLogin.Font" type="System.Drawing.Font, System.Drawing">
     <value>JetBrains Mono NL Light, 10.499999pt</value>
   </data>
   <data name="txtLogin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>768, 160</value>
+    <value>938, 110</value>
   </data>
   <data name="txtLogin.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
   <data name="txtLogin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>244, 26</value>
+    <value>287, 26</value>
   </data>
   <data name="txtLogin.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -764,7 +714,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtLogin.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>23</value>
   </data>
   <data name="txtEmail.Font" type="System.Drawing.Font, System.Drawing">
     <value>JetBrains Mono NL Light, 10.499999pt</value>
@@ -791,7 +741,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtEmail.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>20</value>
   </data>
   <data name="phone.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -824,7 +774,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;phone.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>17</value>
   </data>
   <data name="Email.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -857,7 +807,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Email.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>12</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -866,7 +816,7 @@
     <value>JetBrains Mono NL Light, 10.499999pt</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>712, 163</value>
+    <value>882, 113</value>
   </data>
   <data name="label6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
@@ -890,7 +840,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>10</value>
   </data>
   <data name="label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -923,7 +873,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>6</value>
   </data>
   <data name="txtPost.Font" type="System.Drawing.Font, System.Drawing">
     <value>JetBrains Mono NL Light, 10.499999pt</value>
@@ -950,7 +900,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtPost.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>26</value>
   </data>
   <data name="txtInstitulate.Font" type="System.Drawing.Font, System.Drawing">
     <value>JetBrains Mono NL Light, 10.499999pt</value>
@@ -980,7 +930,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtInstitulate.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>21</value>
   </data>
   <data name="Post.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1013,7 +963,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Post.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>15</value>
   </data>
   <data name="Institulate.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1046,7 +996,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Institulate.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>8</value>
   </data>
   <data name="btnSave.Font" type="System.Drawing.Font, System.Drawing">
     <value>JetBrains Mono NL Light, 10.5pt</value>
@@ -1073,7 +1023,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnSave.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>5</value>
   </data>
   <data name="dtpBirthday.Location" type="System.Drawing.Point, System.Drawing">
     <value>134, 453</value>
@@ -1094,7 +1044,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dtpBirthday.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>4</value>
   </data>
   <data name="txtHiredate.Font" type="System.Drawing.Font, System.Drawing">
     <value>JetBrains Mono NL Light, 10.499999pt</value>
@@ -1121,7 +1071,358 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtHiredate.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>19</value>
+  </data>
+  <data name="txtPwd.Font" type="System.Drawing.Font, System.Drawing">
+    <value>JetBrains Mono NL Light, 10.499999pt</value>
+  </data>
+  <data name="txtPwd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>938, 166</value>
+  </data>
+  <data name="txtPwd.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="txtPwd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>287, 26</value>
+  </data>
+  <data name="txtPwd.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtPwd.Name" xml:space="preserve">
+    <value>txtPwd</value>
+  </data>
+  <data name="&gt;&gt;txtPwd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtPwd.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtPwd.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>JetBrains Mono NL Light, 10.499999pt</value>
+  </data>
+  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>874, 169</value>
+  </data>
+  <data name="label4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="rdoWoman.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rdoWoman.Location" type="System.Drawing.Point, System.Drawing">
+    <value>302, 369</value>
+  </data>
+  <data name="rdoWoman.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 22</value>
+  </data>
+  <data name="rdoWoman.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="rdoWoman.Text" xml:space="preserve">
+    <value>W</value>
+  </data>
+  <data name="&gt;&gt;rdoWoman.Name" xml:space="preserve">
+    <value>rdoWoman</value>
+  </data>
+  <data name="&gt;&gt;rdoWoman.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rdoWoman.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;rdoWoman.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="rdoMan.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rdoMan.Location" type="System.Drawing.Point, System.Drawing">
+    <value>166, 369</value>
+  </data>
+  <data name="rdoMan.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 22</value>
+  </data>
+  <data name="rdoMan.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="rdoMan.Text" xml:space="preserve">
+    <value>M</value>
+  </data>
+  <data name="&gt;&gt;rdoMan.Name" xml:space="preserve">
+    <value>rdoMan</value>
+  </data>
+  <data name="&gt;&gt;rdoMan.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rdoMan.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;rdoMan.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="txtAccountID.Font" type="System.Drawing.Font, System.Drawing">
+    <value>JetBrains Mono NL Light, 10.499999pt</value>
+  </data>
+  <data name="txtAccountID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>938, 55</value>
+  </data>
+  <data name="txtAccountID.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="txtAccountID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>287, 26</value>
+  </data>
+  <data name="txtAccountID.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="txtAccountID.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;txtAccountID.Name" xml:space="preserve">
+    <value>txtAccountID</value>
+  </data>
+  <data name="&gt;&gt;txtAccountID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtAccountID.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtAccountID.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>JetBrains Mono NL Light, 10.499999pt</value>
+  </data>
+  <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>850, 58</value>
+  </data>
+  <data name="label5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 18</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>AccountID</value>
+  </data>
+  <data name="label5.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtPostID.Font" type="System.Drawing.Font, System.Drawing">
+    <value>JetBrains Mono NL Light, 10.499999pt</value>
+  </data>
+  <data name="txtPostID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>537, 448</value>
+  </data>
+  <data name="txtPostID.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="txtPostID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 26</value>
+  </data>
+  <data name="txtPostID.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="txtPostID.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;txtPostID.Name" xml:space="preserve">
+    <value>txtPostID</value>
+  </data>
+  <data name="&gt;&gt;txtPostID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtPostID.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtPostID.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>JetBrains Mono NL Light, 10.499999pt</value>
+  </data>
+  <data name="label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>473, 451</value>
+  </data>
+  <data name="label8.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
+  </data>
+  <data name="label8.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>PostID</value>
+  </data>
+  <data name="label8.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="txtInstituteID.Font" type="System.Drawing.Font, System.Drawing">
+    <value>JetBrains Mono NL Light, 10.499999pt</value>
+  </data>
+  <data name="txtInstituteID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>537, 498</value>
+  </data>
+  <data name="txtInstituteID.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="txtInstituteID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 26</value>
+  </data>
+  <data name="txtInstituteID.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="txtInstituteID.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;txtInstituteID.Name" xml:space="preserve">
+    <value>txtInstituteID</value>
+  </data>
+  <data name="&gt;&gt;txtInstituteID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtInstituteID.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtInstituteID.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="label9.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>JetBrains Mono NL Light, 10.499999pt</value>
+  </data>
+  <data name="label9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>433, 501</value>
+  </data>
+  <data name="label9.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 18</value>
+  </data>
+  <data name="label9.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>InstituteID</value>
+  </data>
+  <data name="label9.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;label9.Name" xml:space="preserve">
+    <value>label9</value>
+  </data>
+  <data name="&gt;&gt;label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="txtID.Font" type="System.Drawing.Font, System.Drawing">
+    <value>JetBrains Mono NL Light, 10.499999pt</value>
+  </data>
+  <data name="txtID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>590, 113</value>
+  </data>
+  <data name="txtID.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="txtID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 26</value>
+  </data>
+  <data name="txtID.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtID.Name" xml:space="preserve">
+    <value>txtID</value>
+  </data>
+  <data name="&gt;&gt;txtID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtID.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtID.ZOrder" xml:space="preserve">
+    <value>28</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

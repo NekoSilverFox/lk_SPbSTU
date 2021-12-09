@@ -39,8 +39,12 @@ namespace DAL
                     staff.Phone = reader["Phone"].ToString().Trim();
                     staff.Email = reader["Email"].ToString().Trim();
                     staff.Hiredate = Convert.ToDateTime(reader["Hiredate"]);
+                    staff.PostID = (int)reader["PostID"];
                     staff.StrPost = reader["NamePost"].ToString().Trim();
+                    staff.InstituteID = (int)reader["InstituteID"];
                     staff.StrInstitute = reader["NameInstitute"].ToString().Trim();
+
+                    staff.AccountID = (int)reader["IDAccount"];
                     staff.Login = reader["Login"].ToString().Trim();
                     staff.Passwd = reader["Passwd"].ToString().Trim();
                 }
