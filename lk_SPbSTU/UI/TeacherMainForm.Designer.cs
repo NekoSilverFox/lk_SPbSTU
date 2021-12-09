@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeacherMainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tsmiMyInfo = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiInstitute = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiProfession = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiClass = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDiscipline = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiStudyPlan = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,12 +45,10 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiMyInfo,
-            this.tsmiInstitute,
-            this.tsmiProfession,
+            this.tmiStudent,
             this.tsmiClass,
             this.tsmiDiscipline,
             this.tsmiStudyPlan,
-            this.tmiStudent,
             this.tsmiStaff,
             this.tsmiWindow,
             this.tsmiExit});
@@ -68,18 +64,7 @@
             this.tsmiMyInfo.Name = "tsmiMyInfo";
             this.tsmiMyInfo.Size = new System.Drawing.Size(123, 21);
             this.tsmiMyInfo.Text = "Личный кабинет";
-            // 
-            // tsmiInstitute
-            // 
-            this.tsmiInstitute.Name = "tsmiInstitute";
-            this.tsmiInstitute.Size = new System.Drawing.Size(73, 21);
-            this.tsmiInstitute.Text = "Институт";
-            // 
-            // tsmiProfession
-            // 
-            this.tsmiProfession.Name = "tsmiProfession";
-            this.tsmiProfession.Size = new System.Drawing.Size(103, 21);
-            this.tsmiProfession.Text = "Направление";
+            this.tsmiMyInfo.Click += new System.EventHandler(this.tsmiMyInfo_Click);
             // 
             // tsmiClass
             // 
@@ -133,6 +118,7 @@
             this.IsMdiContainer = true;
             this.Name = "TeacherMainForm";
             this.Text = "TeacherMainForm";
+            this.Load += new System.EventHandler(this.TeacherMainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -144,8 +130,6 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem tsmiMyInfo;
-        private System.Windows.Forms.ToolStripMenuItem tsmiInstitute;
-        private System.Windows.Forms.ToolStripMenuItem tsmiProfession;
         private System.Windows.Forms.ToolStripMenuItem tsmiClass;
         private System.Windows.Forms.ToolStripMenuItem tsmiDiscipline;
         private System.Windows.Forms.ToolStripMenuItem tsmiStudyPlan;

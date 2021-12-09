@@ -59,6 +59,7 @@ namespace DAL
             studentStudyPlan.Semestr = (int)row["Semestr"];
             studentStudyPlan.NameDiscipline = row["NameDiscipline"].ToString().Trim();
             studentStudyPlan.PeriodDiscipline = (int)row["PeriodDiscipline"];
+            studentStudyPlan.StaffID = (int)row["StaffID"];
             studentStudyPlan.NameStaff = row["NameStaff"].ToString().Trim();
             studentStudyPlan.EmailTeacher = row["EmailTeacher"].ToString().Trim();
             studentStudyPlan.EduEmailTeacher = row["EduEmailTeacher"].ToString().Trim();

@@ -32,3 +32,4 @@ C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\UI\bin\Debug\BLL.pdb
 C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\UI\bin\Debug\MODEL.pdb
 C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\UI\bin\Debug\DAL.pdb
 C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\UI\obj\Debug\UI.csproj.CopyComplete
+C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\UI\obj\Debug\UI.TeacherMainForm.resources

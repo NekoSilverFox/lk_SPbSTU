@@ -54,5 +54,25 @@ namespace BLL
 
         }
         #endregion
+
+
+
+        /// <summary>
+        /// 根据学生ID获取他的实体类账号对象
+        /// </summary>
+        /// <param name="studentID"></param>
+        public MODEL.tb_Account GetAccountByStudentID(int studentID)
+        {
+            return accountService.GetAccountByStudentID(studentID);
+        }
+
+        /// <summary>
+        /// 根据学生姓名获取他的实体类账号对象
+        /// </summary>
+        /// <param name="studentName"></param>
+        public MODEL.tb_Account GetAccountByStudentName(string studentName)
+        {
+            return accountService.GetAccountByStudentName(studentName);
+        }
     }
 }

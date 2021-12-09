@@ -29,7 +29,7 @@ namespace UI
                 }
                 else if (MODEL.UserType.userType == "Teacher")
                 {
-
+                    Application.Run(new TeacherMainForm());    // 【主窗体】
                 }
                 else if (MODEL.UserType.userType == "Student")
                 {

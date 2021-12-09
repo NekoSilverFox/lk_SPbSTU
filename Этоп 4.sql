@@ -773,7 +773,7 @@ IF exists(select * from sysobjects where name='usp_getAllStudyPlan')
 GO
 CREATE PROC usp_getAllStudyPlan
 AS
-	SELECT DISTINCT IDStudyPlan, Semestr, NameDiscipline, PeriodDiscipline, NameStaff, tb_Staff.Email AS EmailTeacher, tb_Account.Login AS EduEmailTeacher, tb_Staff.Phone AS PhoneTeacher, IDGroup, NameGroup
+	SELECT DISTINCT IDStudyPlan, Semestr, NameDiscipline, PeriodDiscipline, StaffID, NameStaff, tb_Staff.Email AS EmailTeacher, tb_Account.Login AS EduEmailTeacher, tb_Staff.Phone AS PhoneTeacher, IDGroup, NameGroup
 	FROM tb_StudyPlan
 	INNER JOIN tb_Staff
 		ON tb_Staff.IDStaff=tb_StudyPlan.StaffID
