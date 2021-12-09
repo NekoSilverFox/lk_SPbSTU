@@ -57,9 +57,7 @@ namespace BLL
         /// <param name="updateStaff"></param>
         public int UpdateStaff(MODEL.tb_Staff updateStaff)
         {
-            // return staffService.UpdateStaff(updateStaff);
-            return 0;
-
+           return staffService.UpdateStaff(updateStaff);
         }
         #endregion
     }

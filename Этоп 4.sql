@@ -931,9 +931,9 @@ DECLARE @ValEmail			varchar(64)		='TESTADAS@ASD.CX'
 DECLARE @ValEnrollTime		date			='2019-8-8'
 DECLARE @ValGroupID			int				=696
 EXEC usp_updateStudentAndAccount 
-@Login='TEST@TT.CN', @Passwd=, @IDStudent=1942421, 
-@NameStudent='TTTTEST', @Gender=1, @Birthday='2000-9-9', 
-@Phone=, @AccountID=, @Email=, @EnrollTime=, @GroupID=
+@Login=@ValLogin, @Passwd=@ValPasswd, @IDStudent=@ValIDStudent, 
+@NameStudent=@ValNameStudent, @Gender=@ValGender, @Birthday=@ValBirthday, 
+@Phone=@ValPhone, @AccountID=@ValAccountID, @Email=@ValEmail, @EnrollTime=@ValEnrollTime, @GroupID=@ValGroupID
 
 SELECT * FROM tb_Student JOIN tb_Account ON tb_Student.AccountID=tb_Account.IDAccount WHERE IDStudent=1942421 
 
@@ -974,6 +974,39 @@ BEGIN TRANSACTION
 GO
 
 
+-- 更新员工和账号密码（根据ID）
+IF exists(select * from sysobjects where name='usp_updateStaffAndAccount')
+	drop proc usp_updateStaffAndAccount
+GO
+CREATE PROC usp_updateStaffAndAccount
+	@Login			varchar(64)		,
+	@Passwd			char(32)		,
+	@IDStaff		int				,
+	@NameStaff		nvarchar(64)	,
+	@Gender			bit=1			,
+	@Birthday		date=NULL		,
+	@Phone			char(15)		,
+	@AccountID		int				,
+	@Email			varchar(64)=NULL,
+	@Hiredate		date			,	
+	@PostID			int				,		
+	@InstituteID	int
+AS
+BEGIN TRANSACTION
+	DECLARE @errorNum INT=0;
+
+
+	UPDATE tb_Account SET Login=@Login, Passwd=@Passwd WHERE IDAccount=@AccountID
+	SET @errorNum+=@@ERROR
+
+	UPDATE tb_Staff SET NameStaff=@NameStaff, Gender=@Gender, Birthday=@Birthday, Phone=@Phone, Email=@Email, Hiredate=@Hiredate, PostID=@PostID, InstituteID=@InstituteID WHERE IDStaff=@IDStaff
+	SET @errorNum+=@@ERROR
+
+	IF (@errorNum<>0)
+		ROLLBACK TRANSACTION
+	ELSE 
+		COMMIT TRANSACTION
+GO
 
 -- ============================================================================================
 --Триггеры

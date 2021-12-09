@@ -123,7 +123,7 @@ namespace DAL
             {
                 new SqlParameter("@ValLogin", newStaff.Login),
                 new SqlParameter("@ValPasswd", newStaff.Passwd),
-                new SqlParameter("@ValNameStaff", newStaff.@NameStaff),
+                new SqlParameter("@ValNameStaff", newStaff.NameStaff),
                 new SqlParameter("@ValGender", newStaff.Gender),
                 new SqlParameter("@ValBirthday", newStaff.Birthday),
                 new SqlParameter("@ValPhone", newStaff.Phone),
@@ -136,6 +136,34 @@ namespace DAL
         }
         #endregion
 
+
+        #region 修改员工信息+ int UpdateStaff(MODEL.tb_Staff updateStaff)
+        /// <summary>
+        /// 修改员工信息
+        /// </summary>
+        /// <param name="updateStaff"></param>
+        public int UpdateStaff(MODEL.tb_Staff updateStaff)
+        {
+            string sql = "EXEC usp_updateStaffAndAccount @Login=@ValLogin, @Passwd=@ValPasswd, @IDStaff=@ValIDStaff, @NameStaff=@ValNameStaff, @Gender=@ValGender, @Birthday=@ValBirthday, @Phone=@ValPhone, @AccountID=@ValAccountID, @Email=@ValEmail, @Hiredate=@ValHiredate, @PostID=@ValPostID, @InstituteID=@ValInstituteID";
+
+            SqlParameter[] ps =
+            {
+                new SqlParameter("@ValLogin", updateStaff.Login),
+                new SqlParameter("@ValPasswd", updateStaff.Passwd),
+                new SqlParameter("@ValIDStaff", updateStaff.IDStaff),
+                new SqlParameter("@ValNameStaff", updateStaff.NameStaff),
+                new SqlParameter("@ValGender", updateStaff.Gender),
+                new SqlParameter("@ValBirthday", updateStaff.Birthday),
+                new SqlParameter("@ValPhone", updateStaff.Phone),
+                new SqlParameter("@ValAccountID", updateStaff.AccountID),
+                new SqlParameter("@ValEmail", updateStaff.Email),
+                new SqlParameter("@ValHiredate", updateStaff.Hiredate),
+                new SqlParameter("@ValPostID", updateStaff.PostID),
+                new SqlParameter("@ValInstituteID", updateStaff.InstituteID)
+            };
+            return SqlHelper.ExecuteNonQuery(sql, ps);
+        }
+        #endregion
 
     }
 }
