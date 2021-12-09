@@ -65,11 +65,6 @@ namespace UI
             gpAdd.Text = "Добавление";
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            // 隐藏面板
-            this.gpAdd.Visible = false;
-        }
 
         // 当下拉列表选项发生改变时，触发事件
         private void cboInstitute_SelectedIndexChanged(object sender, EventArgs e)
@@ -205,6 +200,15 @@ namespace UI
             this.cboProfession.SelectedValue = group.ProfessionID;
             this.txtGrade.Text = group.Grade.ToString();
             this.txtNumStu.Text = group.Quantity.ToString();
+        }
+
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            // 隐藏面板
+            this.gpAdd.Visible = false;
+            this.txtNameGroup.Text = this.txtGrade.Text = this.txtNumStu.Text = "";
+            this.cboInstitute.SelectedIndex = this.cboProfession.SelectedIndex = 0;
         }
     }
 }

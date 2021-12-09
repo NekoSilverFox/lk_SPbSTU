@@ -41,9 +41,7 @@ namespace BLL
         /// <param name="updateGroup"></param>
         public int UpdateGroup(MODEL.tb_Group updateGroup)
         {
-            // return groupService.UpdateGroup(updateGroup);
-            return 0;
-
+            return groupService.UpdateGroup(updateGroup);
         }
         #endregion
     }

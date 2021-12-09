@@ -85,5 +85,26 @@ namespace DAL
         }
         #endregion
 
+        #region 修改班级信息+ int UpdateGroup(MODEL.tb_Group updateGroup)
+        /// <summary>
+        /// 修改班级信息
+        /// </summary>
+        /// <param name="updateGroup"></param>
+        public int UpdateGroup(MODEL.tb_Group updateGroup)
+        {
+            string sql = "UPDATE tb_Group SET NameGroup=@NameGroup, ProfessionID=@ProfessionID, Grade=@Grade, Quantity=@Quantity WHERE IDGroup=@IDGroup";
+
+            SqlParameter[] ps =
+            {
+                new SqlParameter("@IDGroup", updateGroup.IDGroup),
+                new SqlParameter("@NameGroup", updateGroup.NameGroup),
+                new SqlParameter("@ProfessionID", updateGroup.ProfessionID),
+                new SqlParameter("@Grade", updateGroup.Grade),
+                new SqlParameter("@Quantity", updateGroup.Quantity)
+            };
+
+            return SqlHelper.ExecuteNonQuery(sql, ps);
+        }
+        #endregion
     }
 }
