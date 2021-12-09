@@ -181,8 +181,18 @@ namespace UI
             gpAdd.Visible = true;
             gpAdd.Text = "Изменение";
 
+
+
             // 获取绑定项
-            //MODEL.Person person = this.dgvList.CurrentRow.DataBoundItem as MODEL.Person;
+            MODEL.tb_Institute institute = this.dgvList.CurrentRow.DataBoundItem as MODEL.tb_Institute;
+
+            // 将绑定项中的内容显示在修改窗口上
+            txtNameInst.Text = institute.NameInstitute;
+            txtShortNameInst.Text = institute.ShortNameInst;
+            txtPhone.Text = institute.Phone;
+            txtEmail.Text = institute.Email;
+            txtWebsite.Text = institute.Website;
+            txtAdress.Text = institute.DetAddress;
         }
     }
 }
