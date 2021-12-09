@@ -14,6 +14,14 @@ namespace UI
 {
     public partial class AdminStaffForm : Form
     {
+        /// <summary>
+        /// 全局的 Institute 表业务层处理对象
+        /// 用于加载下拉列表中的内容！！！
+        /// </summary>
+        BLL.InstituteManger instituteManger = new BLL.InstituteManger();
+
+        BLL.PostManger postManger = new BLL.PostManger();
+
         BLL.StaffManger staffManger = new BLL.StaffManger();
 
         public AdminStaffForm()
@@ -33,7 +41,9 @@ namespace UI
             this.cboInstitute.ValueMember = "IDInstitute";              // 注意这里，绑定实际的值
             this.cboInstitute.DataSource = instituteManger.GetAllInstituteList();  // 绑定集合
 
-
+            this.cboPost.DisplayMember = "NamePost";      // 显示的值
+            this.cboPost.ValueMember = "IDPost";              // 注意这里，绑定实际的值
+            this.cboPost.DataSource = postManger.GetAllPostList();  // 绑定集合
         }
 
         private void tsmiAddInstitue_Click(object sender, EventArgs e)
