@@ -56,6 +56,8 @@ namespace UI
         {
             // 隐藏面板
             this.gpAdd.Visible = false;
+            this.txtLogin.Text = this.txtPwd.Text = this.txtName.Text = this.txtPhone.Text = this.txtEmail.Text = "";
+            this.cboInstitute.SelectedIndex = this.cboPost.SelectedIndex = 0;
         }
 
         private void tsmiUpdate_Click(object sender, EventArgs e)
@@ -68,7 +70,25 @@ namespace UI
             gpAdd.Text = "Изменение";
 
             // 获取绑定项
-            //MODEL.Person person = this.dgvList.CurrentRow.DataBoundItem as MODEL.Person;
+            MODEL.tb_Staff staff = this.dgvList.CurrentRow.DataBoundItem as MODEL.tb_Staff;
+
+            // 将绑定项中的内容显示在修改窗口上
+            this.txtLogin.Text = staff.Login;
+            this.txtPwd.Text = staff.Passwd;
+            this.txtName.Text = staff.NameStaff;
+
+            rdoMam.Checked = staff.Gender;
+            rdoWoman.Checked = !staff.Gender;
+
+            this.dtpBirthday.Value = staff.Birthday;
+
+            this.txtPhone.Text = staff.Phone.ToString();
+            this.txtEmail.Text = staff.Email;
+
+            this.dtpHiredate.Value = staff.Hiredate;
+
+            this.cboPost.SelectedValue = staff.PostID;
+            this.cboInstitute.SelectedValue = staff.InstituteID;
         }
 
         private void btnOk_Click(object sender, EventArgs e)

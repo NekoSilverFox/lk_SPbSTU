@@ -99,6 +99,7 @@ namespace DAL
             staff.InstituteID = (int)row["InstituteID"];
 
             staff.Login = row["Login"].ToString().Trim();
+            staff.Passwd = row["Passwd"].ToString().Trim();
             staff.Email = row["Email"].ToString().Trim();
             staff.Hiredate = Convert.ToDateTime(row["Hiredate"]);
             staff.NamePost = row["NamePost"].ToString().Trim();

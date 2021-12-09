@@ -830,7 +830,7 @@ IF exists(select * from sysobjects where name='usp_getAllStaff')
 GO
 CREATE PROC usp_getAllStaff
 AS
-	SELECT DISTINCT IDStaff, NameStaff, Gender, Birthday, tb_Staff.Phone, AccountID, Login, tb_Staff.Email, Hiredate, PostID, NamePost, InstituteID, ShortNameInst, NameInstitute
+	SELECT DISTINCT IDStaff, NameStaff, Gender, Birthday, tb_Staff.Phone, AccountID, Login, Passwd, tb_Staff.Email, Hiredate, PostID, NamePost, InstituteID, ShortNameInst, NameInstitute
 	FROM tb_Staff
 		INNER JOIN tb_Account
 			ON tb_Staff.AccountID=tb_Account.IDAccount

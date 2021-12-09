@@ -213,7 +213,9 @@ namespace UI
 
             this.dtpEnrollTime.Value = student.EnrollTime;
 
-            this.cboAddGroup.SelectedIndex = student.GroupID;
+            this.cboAddInstitute.SelectedIndex = this.cboAddInstitute.SelectedIndex;
+            this.cboAddProfession.SelectedIndex = this.cboProfession.SelectedIndex;
+            this.cboAddGroup.SelectedValue = this.cboGroup.SelectedValue;
         }
 
         #region + 新增/修改 列表点击 OK 按钮

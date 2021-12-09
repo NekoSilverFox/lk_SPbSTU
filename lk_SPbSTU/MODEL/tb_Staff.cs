@@ -19,7 +19,7 @@ namespace MODEL
 		private string _namestaff;
 		private bool _gender;
 		private string _strgender;
-		private DateTime? _birthday;
+		private DateTime _birthday;
 		private string _phone;
 		private int _accountid;
 		private string _email;
@@ -98,7 +98,7 @@ namespace MODEL
 		/// <summary>
 		///
 		/// </summary>
-		public DateTime? Birthday
+		public DateTime Birthday
 		{
 			set { _birthday = value; }
 			get { return _birthday; }
