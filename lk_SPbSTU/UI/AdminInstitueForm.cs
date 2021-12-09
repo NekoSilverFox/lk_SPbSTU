@@ -115,7 +115,7 @@ namespace UI
         bool ValidataUser()
         {
             // 如果为空，或者有非法字符
-            if (string.IsNullOrEmpty(this.txtNameInst.Text.Trim()) || Regex.IsMatch(txtNameInst.Text.Trim(), @"\W"))
+            if (string.IsNullOrEmpty(this.txtNameInst.Text.Trim()))
             {
                 MessageBox.Show("Please enter a legal institute name string");
 
@@ -125,7 +125,7 @@ namespace UI
             }
 
             // 如果为空，或者有非法字符
-            if (string.IsNullOrEmpty(this.txtShortNameInst.Text.Trim()) || Regex.IsMatch(txtShortNameInst.Text.Trim(), @"\W"))
+            if (string.IsNullOrEmpty(this.txtShortNameInst.Text.Trim()))
             {
                 MessageBox.Show("Please enter a legal institute short name string");
 

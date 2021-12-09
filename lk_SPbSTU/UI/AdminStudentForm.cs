@@ -327,7 +327,7 @@ namespace UI
             }
 
             // 如果为空，或者有非法字符
-            if (string.IsNullOrEmpty(this.txtName.Text.Trim()) || Regex.IsMatch(txtName.Text.Trim(), @"\W"))
+            if (string.IsNullOrEmpty(this.txtName.Text.Trim()))
             {
                 MessageBox.Show("Please enter a legal name");
 

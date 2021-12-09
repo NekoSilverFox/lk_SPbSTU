@@ -119,7 +119,7 @@ namespace UI
         bool ValidataUser()
         {
             // 如果为空，或者有非法字符
-            if (string.IsNullOrEmpty(this.txtNameProfession.Text.Trim()) || Regex.IsMatch(txtNameProfession.Text.Trim(), @"\W"))
+            if (string.IsNullOrEmpty(this.txtNameProfession.Text.Trim()))
             {
                 MessageBox.Show("Please enter a legal name profession");
 
