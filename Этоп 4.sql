@@ -885,6 +885,59 @@ EXEC usp_addStudentByGroupID
 	@EnrollTime='2012-5-6', @GroupID=696
 
 
+--更新学生和他的账号密码
+use db_SPbSTU
+IF exists(select * from sysobjects where name='usp_updateStudentAndAccount')
+	drop proc usp_updateStudentAndAccount
+GO
+CREATE PROC usp_updateStudentAndAccount
+	@Login			varchar(64)		,
+	@Passwd			char(32)		,
+	@IDStudent		int				,
+	@NameStudent	nvarchar(64)	,
+	@Gender			bit=1			,
+	@Birthday		date=NULL		,
+	@Phone			char(15)		,
+	@AccountID		int				,
+	@Email			varchar(64)=NULL,
+	@EnrollTime		date			,	
+	@GroupID		int
+AS
+BEGIN TRANSACTION
+	DECLARE @errorNum INT=0;
+
+	UPDATE tb_Account SET Login=@Login, Passwd=@Passwd WHERE IDAccount=@AccountID
+	SET @errorNum+=@@ERROR
+
+	UPDATE tb_Student SET NameStudent=@NameStudent, Gender=@Gender, Birthday=@Birthday, Phone=@Phone, Email=@Email, EnrollTime=@EnrollTime, GroupID=@GroupID WHERE IDStudent=@IDStudent
+	SET @errorNum+=@@ERROR
+
+	IF (@errorNum<>0)
+		ROLLBACK TRANSACTION
+	ELSE
+		COMMIT TRANSACTION
+GO
+
+
+DECLARE @ValLogin			varchar(64)		= 'TEST@TT.CN'
+DECLARE @ValPasswd			char(32)		= 'TEST'
+DECLARE @ValIDStudent		int				=1942421
+DECLARE @ValNameStudent		nvarchar(64)	='TTTTEST'
+DECLARE @ValGender			bit				=1
+DECLARE @ValBirthday		date			='2000-9-9'
+DECLARE @ValPhone			char(15)		='594646456'
+DECLARE @ValAccountID		int				=7447
+DECLARE @ValEmail			varchar(64)		='TESTADAS@ASD.CX'
+DECLARE @ValEnrollTime		date			='2019-8-8'
+DECLARE @ValGroupID			int				=696
+EXEC usp_updateStudentAndAccount 
+@Login='TEST@TT.CN', @Passwd=, @IDStudent=1942421, 
+@NameStudent='TTTTEST', @Gender=1, @Birthday='2000-9-9', 
+@Phone=, @AccountID=, @Email=, @EnrollTime=, @GroupID=
+
+SELECT * FROM tb_Student JOIN tb_Account ON tb_Student.AccountID=tb_Account.IDAccount WHERE IDStudent=1942421 
+
+
 
 -- 增加员工（根据ID）
 IF exists(select * from sysobjects where name='usp_addStaffByPostandInstID')
@@ -919,6 +972,9 @@ BEGIN TRANSACTION
 	ELSE 
 		COMMIT TRANSACTION
 GO
+
+
+
 -- ============================================================================================
 --Триггеры
 -- ============================================================================================

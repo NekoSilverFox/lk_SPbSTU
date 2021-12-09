@@ -135,5 +135,32 @@ namespace DAL
         }
         #endregion
 
+        #region 修改账号信息+ int UpdateStudent(MODEL.tb_Student updateStudent)
+        /// <summary>
+        /// 修改账号信息
+        /// </summary>
+        /// <param name="updateStudent"></param>
+        public int UpdateStudent(MODEL.tb_Student updateStudent)
+        {
+            string sql = "EXEC usp_updateStudentAndAccount @Login=@ValLogin, @Passwd=@ValPasswd, @IDStudent=@ValIDStudent, @NameStudent=@ValNameStudent, @Gender=@ValGender, @Birthday=@ValBirthday, @Phone=@ValPhone, @AccountID=@ValAccountID, @Email=@ValEmail, @EnrollTime=@ValEnrollTime, @GroupID=@ValGroupID";
+
+            SqlParameter[] ps =
+            {
+                new SqlParameter("@ValLogin", updateStudent.Login),
+                new SqlParameter("@ValPasswd", updateStudent.Passwd),
+                new SqlParameter("@ValIDStudent", updateStudent.IDStudent),
+                new SqlParameter("@ValNameStudent", updateStudent.NameStudent),
+                new SqlParameter("@ValGender", updateStudent.Gender),
+                new SqlParameter("@ValBirthday", updateStudent.Birthday),
+                new SqlParameter("@ValPhone", updateStudent.Phone),
+                new SqlParameter("@ValAccountID", updateStudent.AccountID),
+                new SqlParameter("@ValEmail", updateStudent.Email),
+                new SqlParameter("@ValEnrollTime", updateStudent.EnrollTime),
+                new SqlParameter("@ValGroupID", updateStudent.GroupID)
+            };
+            return SqlHelper.ExecuteNonQuery(sql, ps);
+        }
+        #endregion
+
     }
 }

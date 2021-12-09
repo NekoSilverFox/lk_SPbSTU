@@ -57,9 +57,7 @@ namespace BLL
         /// <param name="updateStudent"></param>
         public int UpdateStudent(MODEL.tb_Student updateStudent)
         {
-            // return studentServer.UpdateStudent(updateStudent);
-            return 0;
-
+            return studentServer.UpdateStudent(updateStudent);
         }
         #endregion
     }

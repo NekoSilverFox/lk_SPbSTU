@@ -213,8 +213,13 @@ namespace UI
 
             this.dtpEnrollTime.Value = student.EnrollTime;
 
+            this.cboAddInstitute.DataSource = this.cboAddInstitute.DataSource;
             this.cboAddInstitute.SelectedIndex = this.cboAddInstitute.SelectedIndex;
+
+            this.cboAddProfession.DataSource = this.cboProfession.DataSource;
             this.cboAddProfession.SelectedIndex = this.cboProfession.SelectedIndex;
+
+            this.cboAddGroup.DataSource = this.cboGroup.DataSource;
             this.cboAddGroup.SelectedValue = this.cboGroup.SelectedValue;
         }
 
