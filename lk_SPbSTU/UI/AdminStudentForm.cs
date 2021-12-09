@@ -168,7 +168,15 @@ namespace UI
 
             int idGroup = (cboGroup.SelectedItem as MODEL.tb_Group).IDGroup;
 
-            this.dgvList.DataSource = studentManger.GetStudentListByGroupID(idGroup);
+            List<MODEL.tb_Student> studentListByGroupID = studentManger.GetStudentListByGroupID(idGroup);
+
+            if (studentListByGroupID.Count == 0)
+            {
+                MessageBox.Show("Do not have any student in this group");
+                return;
+            }
+
+            this.dgvList.DataSource = studentListByGroupID;
         }
 
         private void tsmiAddInstitue_Click(object sender, EventArgs e)

@@ -75,6 +75,8 @@
             this.btnSeachByInst = new System.Windows.Forms.Button();
             this.btnSeachByPost = new System.Windows.Forms.Button();
             this.btnShowAllStaff = new System.Windows.Forms.Button();
+            this.txtFindName = new System.Windows.Forms.TextBox();
+            this.btnFindByName = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
             this.gpAdd.SuspendLayout();
@@ -474,15 +476,15 @@
             // 
             this.cboPost.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPost.FormattingEnabled = true;
-            this.cboPost.Location = new System.Drawing.Point(610, 30);
+            this.cboPost.Location = new System.Drawing.Point(380, 29);
             this.cboPost.Name = "cboPost";
-            this.cboPost.Size = new System.Drawing.Size(286, 26);
+            this.cboPost.Size = new System.Drawing.Size(174, 26);
             this.cboPost.TabIndex = 23;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(556, 33);
+            this.label3.Location = new System.Drawing.Point(326, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 18);
             this.label3.TabIndex = 22;
@@ -491,7 +493,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 33);
+            this.label4.Location = new System.Drawing.Point(13, 33);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 18);
             this.label4.TabIndex = 38;
@@ -501,16 +503,16 @@
             // 
             this.cboInstitute.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboInstitute.FormattingEnabled = true;
-            this.cboInstitute.Location = new System.Drawing.Point(96, 30);
+            this.cboInstitute.Location = new System.Drawing.Point(91, 30);
             this.cboInstitute.Name = "cboInstitute";
-            this.cboInstitute.Size = new System.Drawing.Size(286, 26);
+            this.cboInstitute.Size = new System.Drawing.Size(109, 26);
             this.cboInstitute.TabIndex = 42;
             // 
             // btnSeachByInst
             // 
-            this.btnSeachByInst.Location = new System.Drawing.Point(388, 30);
+            this.btnSeachByInst.Location = new System.Drawing.Point(206, 28);
             this.btnSeachByInst.Name = "btnSeachByInst";
-            this.btnSeachByInst.Size = new System.Drawing.Size(106, 27);
+            this.btnSeachByInst.Size = new System.Drawing.Size(106, 29);
             this.btnSeachByInst.TabIndex = 43;
             this.btnSeachByInst.Text = "Найти";
             this.btnSeachByInst.UseVisualStyleBackColor = true;
@@ -518,9 +520,9 @@
             // 
             // btnSeachByPost
             // 
-            this.btnSeachByPost.Location = new System.Drawing.Point(902, 29);
+            this.btnSeachByPost.Location = new System.Drawing.Point(560, 29);
             this.btnSeachByPost.Name = "btnSeachByPost";
-            this.btnSeachByPost.Size = new System.Drawing.Size(106, 27);
+            this.btnSeachByPost.Size = new System.Drawing.Size(106, 26);
             this.btnSeachByPost.TabIndex = 44;
             this.btnSeachByPost.Text = "Найти";
             this.btnSeachByPost.UseVisualStyleBackColor = true;
@@ -529,19 +531,39 @@
             // btnShowAllStaff
             // 
             this.btnShowAllStaff.BackColor = System.Drawing.Color.Gold;
-            this.btnShowAllStaff.Location = new System.Drawing.Point(1064, 28);
+            this.btnShowAllStaff.Location = new System.Drawing.Point(1114, 28);
             this.btnShowAllStaff.Name = "btnShowAllStaff";
-            this.btnShowAllStaff.Size = new System.Drawing.Size(181, 27);
+            this.btnShowAllStaff.Size = new System.Drawing.Size(131, 28);
             this.btnShowAllStaff.TabIndex = 45;
             this.btnShowAllStaff.Text = "Найти все";
             this.btnShowAllStaff.UseVisualStyleBackColor = false;
             this.btnShowAllStaff.Click += new System.EventHandler(this.btnShowAllStaff_Click);
+            // 
+            // txtFindName
+            // 
+            this.txtFindName.Location = new System.Drawing.Point(691, 29);
+            this.txtFindName.Name = "txtFindName";
+            this.txtFindName.Size = new System.Drawing.Size(265, 26);
+            this.txtFindName.TabIndex = 46;
+            // 
+            // btnFindByName
+            // 
+            this.btnFindByName.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnFindByName.Location = new System.Drawing.Point(962, 28);
+            this.btnFindByName.Name = "btnFindByName";
+            this.btnFindByName.Size = new System.Drawing.Size(125, 28);
+            this.btnFindByName.TabIndex = 47;
+            this.btnFindByName.Text = "Найти по ФИО";
+            this.btnFindByName.UseVisualStyleBackColor = false;
+            this.btnFindByName.Click += new System.EventHandler(this.btnFindByName_Click);
             // 
             // AdminStaffForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.btnFindByName);
+            this.Controls.Add(this.txtFindName);
             this.Controls.Add(this.btnShowAllStaff);
             this.Controls.Add(this.btnSeachByPost);
             this.Controls.Add(this.btnSeachByInst);
@@ -616,5 +638,7 @@
         private System.Windows.Forms.Button btnSeachByInst;
         private System.Windows.Forms.Button btnSeachByPost;
         private System.Windows.Forms.Button btnShowAllStaff;
+        private System.Windows.Forms.TextBox txtFindName;
+        private System.Windows.Forms.Button btnFindByName;
     }
 }

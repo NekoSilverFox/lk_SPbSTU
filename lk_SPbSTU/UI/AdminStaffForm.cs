@@ -281,5 +281,28 @@ namespace UI
 
             this.dgvList.DataSource = staffListByPost;
         }
+
+        private void btnFindByName_Click(object sender, EventArgs e)
+        {
+            string name = this.txtFindName.Text.Trim();
+            if (string.IsNullOrEmpty(name))
+            {
+                MessageBox.Show("Please input a name");
+            }
+
+            List<MODEL.tb_Staff> allStaffList = staffManger.GetAllStaffList();
+
+            List<MODEL.tb_Staff> staffListByName = new List<MODEL.tb_Staff>();
+            foreach (MODEL.tb_Staff staff in allStaffList)
+            {
+                if (staff.NameStaff == name)
+                {
+                    staffListByName.Add(staff);
+                    break;
+                }
+            }
+
+            this.dgvList.DataSource = staffListByName;
+        }
     }
 }
