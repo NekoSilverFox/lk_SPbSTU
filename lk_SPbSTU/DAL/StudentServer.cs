@@ -39,6 +39,7 @@ namespace DAL
                     student.Birthday = Convert.ToDateTime(reader["Birthday"]);
                     student.Phone = reader["Phone"].ToString();
                     student.Email = reader["Email"].ToString();
+                    student.GroupID = (int)reader["GroupID"];
                     student.Namegroup = reader["Namegroup"].ToString();
                     student.Grade = (int)reader["Grade"];
                     student.EnrollTime = Convert.ToDateTime(reader["EnrollTime"]);

@@ -94,12 +94,6 @@
     <Compile Include="AdminStudyPlanForm.Designer.cs">
       <DependentUpon>AdminStudyPlanForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChangePasswordForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ChangePasswordForm.Designer.cs">
-      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="LKStaffInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,9 +161,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminStudyPlanForm.resx">
       <DependentUpon>AdminStudyPlanForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ChangePasswordForm.resx">
-      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LKStaffInfoForm.resx">
       <DependentUpon>LKStaffInfoForm.cs</DependentUpon>

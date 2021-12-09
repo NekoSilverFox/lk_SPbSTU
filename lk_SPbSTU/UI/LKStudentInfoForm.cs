@@ -30,16 +30,17 @@ namespace UI
 
             this.txtID.Text = student.IDStudent.ToString();
             this.txtLogin.Text = student.Login;
+            this.txtPwd.Text = student.Passwd.ToString().Trim();
             this.txtName.Text = student.NameStudent;
-            this.txtGender.Text = student.StrGender;
-            this.txtBirthday.Text = Convert.ToDateTime(student.Birthday.ToString()).Year.ToString()
-                + "-" + Convert.ToDateTime(student.Birthday.ToString()).Month.ToString()
-                + "-" + Convert.ToDateTime(student.Birthday.ToString()).Day.ToString();
+            this.rdoMan.Checked = student.Gender;
+            this.rdoWoman.Checked = !student.Gender;
+            this.dtpBirthday.Value = student.Birthday;
             this.txtPhone.Text = student.Phone.Trim();
             this.txtEmail.Text = student.Email;
             this.txtInstitulate.Text = student.NameInstitute;
             this.txtProfessionCode.Text = student.CodeProfession;
             this.txtProfession.Text = student.NameProfession;
+            this.txtGroupID.Text = student.GroupID.ToString();
             this.txtGroup.Text = student.Namegroup;
             this.txtGrade.Text = student.Grade.ToString();
             this.txtEnrollTime.Text = Convert.ToDateTime(student.EnrollTime.ToString()).Year.ToString()
@@ -53,6 +54,29 @@ namespace UI
             {
                 return;
             }
+            // 获取这个学生的账号ID用于显示
+            int accountID = MODEL.tb_Account.accountIDNow;
+
+            // 从 Student 表中获取他的具体信息
+            BLL.StudentManger studentManger = new BLL.StudentManger();
+            MODEL.tb_Student student = studentManger.getStudentInfo(accountID);
+
+            // ----------------------------------------------------------------------------------------------------------
+            student.Passwd = this.txtPwd.Text.ToString().Trim();
+            student.Gender = this.rdoMan.Checked ? true : false;
+            student.Birthday = this.dtpBirthday.Value;
+            student.Phone = this.txtPhone.Text.ToString().Trim();
+            student.Email = this.txtEmail.Text.ToString().Trim();
+            // ----------------------------------------------------------------------------------------------------------
+
+            if (studentManger.UpdateStudent(student) != 0)
+            {
+                MessageBox.Show("Successfully change info");
+            }
+            else
+            {
+                MessageBox.Show("Failed to change info");
+            }
         }
 
         #region 用户信息输入检测+bool ValidataUser()
@@ -62,40 +86,24 @@ namespace UI
         /// <returns></returns>
         bool ValidataUser()
         {
+
             // 如果为空，或者有非法字符
-            if (string.IsNullOrEmpty(this.txtGender.Text.Trim()))
+            if (string.IsNullOrEmpty(this.txtPwd.Text.Trim()))
             {
-                MessageBox.Show("Gender can not be empty");
+                MessageBox.Show("Password can not be empty");
 
                 // 【重点】定位光标
-                this.txtGender.Focus();
+                txtPwd.Focus();
                 return false;
             }
 
-            if (this.txtGender.Text.Trim() != "Man" && this.txtGender.Text.Trim() != "Male")
+            // 如果为空，或者有非法字符
+            if (string.IsNullOrEmpty(this.txtPhone.Text.Trim()) || Regex.IsMatch(txtPhone.Text.Trim(), @"\W"))
             {
-                MessageBox.Show("Gender should be `Man` or `Male`");
+                MessageBox.Show("Please enter a legal phone number");
 
                 // 【重点】定位光标
-                this.txtGender.Focus();
-                return false;
-            }
-
-            if (!Regex.IsMatch(this.txtBirthday.Text.Trim(), @"\d{4}-\d{1,2}-\d{1,2}"))
-            {
-                MessageBox.Show("Birthday should be `YYYY-MM-dd`");
-
-                // 【重点】定位光标
-                this.txtBirthday.Focus();
-                return false;
-            }
-
-            if (!Regex.IsMatch(this.txtPhone.Text.Trim(), @"\d{5,10}"))
-            {
-                MessageBox.Show("Incorrect phone number");
-
-                // 【重点】定位光标
-                this.txtPhone.Focus();
+                txtPhone.Focus();
                 return false;
             }
 
@@ -104,12 +112,11 @@ namespace UI
             {
                 if (!Regex.IsMatch(txtEmail.Text.Trim(), @"\w+[@]\w+[.]\w+"))
                 {
-                    MessageBox.Show("Incorrect email");
+                    MessageBox.Show("Please enter a legal Email");
                     txtEmail.Focus();
                     return false;
                 }
             }
-
             return true;
         }
         #endregion

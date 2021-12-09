@@ -717,14 +717,14 @@ GO
 EXEC usp_getStaffInfo 3
 
 
---通过账号ID获取员工个人信息
+--通过账号ID获取学生个人信息
 IF exists(select * from sysobjects where name='usp_getStudentInfo')
 	drop proc usp_getStudentInfo
 GO
 CREATE PROC usp_getStudentInfo
 	@AccountID		INT
 AS
-	SELECT IDStudent, AccountID, Login, Passwd, NameStudent, Gender, Birthday, tb_Student.Phone, tb_Student.Email, NameGroup, Grade, EnrollTime, NameInstitute, CodeProfession, NameProfession
+	SELECT IDStudent, AccountID, Login, Passwd, NameStudent, Gender, Birthday, tb_Student.Phone, tb_Student.Email, GroupID, NameGroup, Grade, EnrollTime, NameInstitute, CodeProfession, NameProfession
 	FROM tb_Student
 		INNER JOIN tb_Account
 			ON tb_Student.AccountID=tb_Account.IDAccount

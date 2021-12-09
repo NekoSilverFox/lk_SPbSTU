@@ -72,6 +72,7 @@ namespace UI
 
             // ----------------------------------------------------------------------------------------------------------
             staff.Passwd = this.txtPwd.Text.ToString().Trim();
+            staff.Gender = this.rdoMan.Checked ? true : false;
             staff.Birthday = this.dtpBirthday.Value;
             staff.Phone = this.txtPhone.Text.ToString().Trim();
             staff.Email = this.txtEmail.Text.ToString().Trim();

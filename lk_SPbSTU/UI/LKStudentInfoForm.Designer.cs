@@ -42,10 +42,8 @@
             this.txtEnrollTime = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtInstitulate = new System.Windows.Forms.TextBox();
-            this.txtBirthday = new System.Windows.Forms.TextBox();
             this.txtLogin = new System.Windows.Forms.TextBox();
             this.txtGroup = new System.Windows.Forms.TextBox();
-            this.txtGender = new System.Windows.Forms.TextBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
@@ -57,6 +55,13 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtGrade = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
+            this.rdoWoman = new System.Windows.Forms.RadioButton();
+            this.rdoMan = new System.Windows.Forms.RadioButton();
+            this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
+            this.txtPwd = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtGroupID = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,7 +107,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("JetBrains Mono NL Light", 10.5F);
             this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label6.Location = new System.Drawing.Point(689, 129);
+            this.label6.Location = new System.Drawing.Point(694, 95);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 18);
@@ -174,7 +179,7 @@
             this.ID.AutoSize = true;
             this.ID.Font = new System.Drawing.Font("JetBrains Mono NL Light", 10.5F);
             this.ID.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.ID.Location = new System.Drawing.Point(625, 58);
+            this.ID.Location = new System.Drawing.Point(630, 50);
             this.ID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ID.Name = "ID";
             this.ID.Size = new System.Drawing.Size(112, 18);
@@ -211,19 +216,10 @@
             this.txtInstitulate.Size = new System.Drawing.Size(279, 101);
             this.txtInstitulate.TabIndex = 10;
             // 
-            // txtBirthday
-            // 
-            this.txtBirthday.Font = new System.Drawing.Font("JetBrains Mono NL Light", 10.5F);
-            this.txtBirthday.Location = new System.Drawing.Point(140, 357);
-            this.txtBirthday.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBirthday.Name = "txtBirthday";
-            this.txtBirthday.Size = new System.Drawing.Size(241, 26);
-            this.txtBirthday.TabIndex = 9;
-            // 
             // txtLogin
             // 
             this.txtLogin.Font = new System.Drawing.Font("JetBrains Mono NL Light", 10.5F);
-            this.txtLogin.Location = new System.Drawing.Point(745, 126);
+            this.txtLogin.Location = new System.Drawing.Point(750, 92);
             this.txtLogin.Margin = new System.Windows.Forms.Padding(4);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.ReadOnly = true;
@@ -239,15 +235,6 @@
             this.txtGroup.ReadOnly = true;
             this.txtGroup.Size = new System.Drawing.Size(185, 26);
             this.txtGroup.TabIndex = 7;
-            // 
-            // txtGender
-            // 
-            this.txtGender.Font = new System.Drawing.Font("JetBrains Mono NL Light", 10.5F);
-            this.txtGender.Location = new System.Drawing.Point(140, 285);
-            this.txtGender.Margin = new System.Windows.Forms.Padding(4);
-            this.txtGender.Name = "txtGender";
-            this.txtGender.Size = new System.Drawing.Size(241, 26);
-            this.txtGender.TabIndex = 6;
             // 
             // txtPhone
             // 
@@ -271,7 +258,7 @@
             // txtID
             // 
             this.txtID.Font = new System.Drawing.Font("JetBrains Mono NL Light", 10.5F);
-            this.txtID.Location = new System.Drawing.Point(745, 55);
+            this.txtID.Location = new System.Drawing.Point(750, 47);
             this.txtID.Margin = new System.Windows.Forms.Padding(4);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
@@ -369,17 +356,103 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // rdoWoman
+            // 
+            this.rdoWoman.AutoSize = true;
+            this.rdoWoman.Font = new System.Drawing.Font("JetBrains Mono NL Light", 10.5F);
+            this.rdoWoman.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.rdoWoman.Location = new System.Drawing.Point(310, 284);
+            this.rdoWoman.Name = "rdoWoman";
+            this.rdoWoman.Size = new System.Drawing.Size(34, 22);
+            this.rdoWoman.TabIndex = 37;
+            this.rdoWoman.TabStop = true;
+            this.rdoWoman.Text = "W";
+            this.rdoWoman.UseVisualStyleBackColor = true;
+            // 
+            // rdoMan
+            // 
+            this.rdoMan.AutoSize = true;
+            this.rdoMan.Checked = true;
+            this.rdoMan.Font = new System.Drawing.Font("JetBrains Mono NL Light", 10.5F);
+            this.rdoMan.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.rdoMan.Location = new System.Drawing.Point(174, 284);
+            this.rdoMan.Name = "rdoMan";
+            this.rdoMan.Size = new System.Drawing.Size(34, 22);
+            this.rdoMan.TabIndex = 36;
+            this.rdoMan.TabStop = true;
+            this.rdoMan.Text = "M";
+            this.rdoMan.UseVisualStyleBackColor = true;
+            // 
+            // dtpBirthday
+            // 
+            this.dtpBirthday.CalendarFont = new System.Drawing.Font("JetBrains Mono NL Light", 10.5F);
+            this.dtpBirthday.Font = new System.Drawing.Font("JetBrains Mono NL Light", 10.5F);
+            this.dtpBirthday.Location = new System.Drawing.Point(139, 358);
+            this.dtpBirthday.MinDate = new System.DateTime(1930, 12, 18, 0, 0, 0, 0);
+            this.dtpBirthday.Name = "dtpBirthday";
+            this.dtpBirthday.Size = new System.Drawing.Size(241, 26);
+            this.dtpBirthday.TabIndex = 38;
+            // 
+            // txtPwd
+            // 
+            this.txtPwd.Font = new System.Drawing.Font("JetBrains Mono NL Light", 10.5F);
+            this.txtPwd.Location = new System.Drawing.Point(750, 146);
+            this.txtPwd.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPwd.Name = "txtPwd";
+            this.txtPwd.Size = new System.Drawing.Size(244, 26);
+            this.txtPwd.TabIndex = 1;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("JetBrains Mono NL Light", 10.5F);
+            this.label9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label9.Location = new System.Drawing.Point(686, 149);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(56, 18);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Пароль";
+            // 
+            // txtGroupID
+            // 
+            this.txtGroupID.Font = new System.Drawing.Font("JetBrains Mono NL Light", 10.5F);
+            this.txtGroupID.Location = new System.Drawing.Point(1020, 289);
+            this.txtGroupID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtGroupID.Name = "txtGroupID";
+            this.txtGroupID.ReadOnly = true;
+            this.txtGroupID.Size = new System.Drawing.Size(185, 26);
+            this.txtGroupID.TabIndex = 7;
+            this.txtGroupID.Visible = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("JetBrains Mono NL Light", 10.5F);
+            this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label10.Location = new System.Drawing.Point(932, 292);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(80, 18);
+            this.label10.TabIndex = 16;
+            this.label10.Text = "ID Группа";
+            this.label10.Visible = false;
+            // 
             // LKStudentInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.dtpBirthday);
+            this.Controls.Add(this.rdoWoman);
+            this.Controls.Add(this.rdoMan);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtGrade);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtProfessionCode);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.txtProfession);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
@@ -387,17 +460,18 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Email);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.Group);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.phone);
             this.Controls.Add(this.ID);
             this.Controls.Add(this.txtEnrollTime);
             this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtPwd);
             this.Controls.Add(this.txtInstitulate);
-            this.Controls.Add(this.txtBirthday);
             this.Controls.Add(this.txtLogin);
+            this.Controls.Add(this.txtGroupID);
             this.Controls.Add(this.txtGroup);
-            this.Controls.Add(this.txtGender);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.txtID);
@@ -428,10 +502,8 @@
         private System.Windows.Forms.TextBox txtEnrollTime;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtInstitulate;
-        private System.Windows.Forms.TextBox txtBirthday;
         private System.Windows.Forms.TextBox txtLogin;
         private System.Windows.Forms.TextBox txtGroup;
-        private System.Windows.Forms.TextBox txtGender;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtID;
@@ -443,5 +515,12 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtGrade;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.RadioButton rdoWoman;
+        private System.Windows.Forms.RadioButton rdoMan;
+        private System.Windows.Forms.DateTimePicker dtpBirthday;
+        private System.Windows.Forms.TextBox txtPwd;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtGroupID;
+        private System.Windows.Forms.Label label10;
     }
 }

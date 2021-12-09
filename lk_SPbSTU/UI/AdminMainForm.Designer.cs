@@ -38,7 +38,6 @@
             this.tsmiStudyPlan = new System.Windows.Forms.ToolStripMenuItem();
             this.tmiStudent = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiStaff = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiChangePwd = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiWindow = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiExit = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
@@ -55,7 +54,6 @@
             this.tsmiStudyPlan,
             this.tmiStudent,
             this.tsmiStaff,
-            this.tsmiChangePwd,
             this.tsmiWindow,
             this.tsmiExit});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -121,13 +119,6 @@
             this.tsmiStaff.Text = "Работник";
             this.tsmiStaff.Click += new System.EventHandler(this.tsmiStaff_Click);
             // 
-            // tsmiChangePwd
-            // 
-            this.tsmiChangePwd.Name = "tsmiChangePwd";
-            this.tsmiChangePwd.Size = new System.Drawing.Size(68, 21);
-            this.tsmiChangePwd.Text = "更改密码";
-            this.tsmiChangePwd.Click += new System.EventHandler(this.更改密码ToolStripMenuItem_Click);
-            // 
             // tsmiWindow
             // 
             this.tsmiWindow.Name = "tsmiWindow";
@@ -168,7 +159,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiExit;
         private System.Windows.Forms.ToolStripMenuItem tsmiMyInfo;
         private System.Windows.Forms.ToolStripMenuItem tmiStudent;
-        private System.Windows.Forms.ToolStripMenuItem tsmiChangePwd;
         private System.Windows.Forms.ToolStripMenuItem tsmiDiscipline;
         private System.Windows.Forms.ToolStripMenuItem tsmiStudyPlan;
     }
