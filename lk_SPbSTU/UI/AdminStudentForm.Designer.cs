@@ -151,8 +151,9 @@
             // tsmiDelete
             // 
             this.tsmiDelete.Name = "tsmiDelete";
-            this.tsmiDelete.Size = new System.Drawing.Size(32, 22);
-            this.tsmiDelete.Text = "删除";
+            this.tsmiDelete.Size = new System.Drawing.Size(66, 22);
+            this.tsmiDelete.Text = "Удаление";
+            this.tsmiDelete.Click += new System.EventHandler(this.tsmiDelete_Click);
             // 
             // tsmiExit
             // 

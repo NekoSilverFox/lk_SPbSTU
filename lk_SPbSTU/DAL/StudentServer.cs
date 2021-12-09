@@ -162,5 +162,19 @@ namespace DAL
         }
         #endregion
 
+
+        #region 删除Student +int DeleteStudent(int id)
+        /// <summary>
+        /// 删除人员
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public int DeleteStudent(int id)
+        {
+            string sql = "DELETE FROM tb_Student where IDStudent=@id";
+            SqlParameter p = new SqlParameter("@id", id);
+            return SqlHelper.ExecuteNonQuery(sql, p);
+        }
+        #endregion
     }
 }

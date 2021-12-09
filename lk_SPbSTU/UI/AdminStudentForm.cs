@@ -361,5 +361,31 @@ namespace UI
             return true;
         }
         #endregion
+
+        private void tsmiDelete_Click(object sender, EventArgs e)
+        {
+            if (this.dgvList.SelectedRows.Count == 0)
+            {
+                return;
+            }
+
+            int id = (this.dgvList.CurrentRow.DataBoundItem as MODEL.tb_Student).IDStudent;
+            int groupID = (this.dgvList.CurrentRow.DataBoundItem as MODEL.tb_Student).GroupID;
+
+            if (MessageBox.Show("Are you sure to delete this student？", "WANNING", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                if (studentManger.DeleteStudent(id) == 1)
+                {
+                    MessageBox.Show("Successfully delete");
+
+                    // 【重点】删除成功后记得刷新！！！！也就是重新加载一下
+                    this.dgvList.DataSource = studentManger.GetStudentListByGroupID(groupID);
+                }
+                else
+                {
+                    MessageBox.Show("Failed to delete");
+                }
+            }
+        }
     }
 }

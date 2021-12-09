@@ -60,5 +60,17 @@ namespace BLL
             return studentServer.UpdateStudent(updateStudent);
         }
         #endregion
+
+        #region 删除Student +int DeleteStudent(int id)
+        /// <summary>
+        /// 删除人员
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public int DeleteStudent(int id)
+        {
+            return studentServer.DeleteStudent(id);
+        }
+        #endregion
     }
 }
