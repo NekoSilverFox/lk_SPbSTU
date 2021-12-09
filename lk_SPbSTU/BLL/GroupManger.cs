@@ -30,9 +30,7 @@ namespace BLL
         /// <returns></returns>
         public int InsertGroup(MODEL.tb_Group newGroup)
         {
-            // return groupServer.InsertGroup(newGroup);
-            return 0;
-
+            return groupService.InsertGroup(newGroup);
         }
         #endregion
 
@@ -43,7 +41,7 @@ namespace BLL
         /// <param name="updateGroup"></param>
         public int UpdateGroup(MODEL.tb_Group updateGroup)
         {
-            // return groupServer.UpdateGroup(updateGroup);
+            // return groupService.UpdateGroup(updateGroup);
             return 0;
 
         }

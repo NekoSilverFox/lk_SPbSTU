@@ -155,9 +155,19 @@ namespace UI
         bool ValidataUser()
         {
             // 如果为空，或者有非法字符
+            if (string.IsNullOrEmpty(this.txtNameGroup.Text.Trim()))
+            {
+                MessageBox.Show("Please enter a legal group name");
+
+                // 【重点】定位光标
+                txtNameGroup.Focus();
+                return false;
+            }
+
+            // 如果为空，或者有非法字符
             if (string.IsNullOrEmpty(this.txtGrade.Text.Trim()) || Regex.IsMatch(txtGrade.Text.Trim(), @"\D"))
             {
-                MessageBox.Show("Please enter a legal grade");
+                MessageBox.Show("Please enter a legal grade like `2019`");
 
                 // 【重点】定位光标
                 txtGrade.Focus();

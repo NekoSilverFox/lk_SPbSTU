@@ -63,5 +63,27 @@ namespace DAL
         }
         #endregion
 
+        #region 插入新班级 +int InsertGroup(MODEL.tb_Group newGroup)
+        /// <summary>
+        /// 插入新方向
+        /// </summary>
+        /// <param name="newGroup"></param>
+        /// <returns></returns>
+        public int InsertGroup(MODEL.tb_Group newGroup)
+        {
+            string sql = "INSERT tb_Group VALUES(@NameGroup, @ProfessionID, @Grade, @Quantity)";
+
+            SqlParameter[] ps =
+            {
+                new SqlParameter("@NameGroup", newGroup.NameGroup),
+                new SqlParameter("@ProfessionID", newGroup.ProfessionID),
+                new SqlParameter("@Grade", newGroup.Grade),
+                new SqlParameter("@Quantity", newGroup.Quantity)
+            };
+
+            return SqlHelper.ExecuteNonQuery(sql, ps);
+        }
+        #endregion
+
     }
 }

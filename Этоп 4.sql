@@ -705,7 +705,7 @@ AS
 				WHEN 0 THEN 'Woman'
 		ELSE 'Empty'
 		END AS 'StrGender'
-	,Gender, Birthday, tb_Staff.Phone, tb_Account.[Login], Passwd, tb_Staff.Email, Hiredate, tb_Post.NamePost, tb_Institute.NameInstitute
+	,Gender, Birthday, tb_Staff.Phone, tb_Account.[Login], Passwd, tb_Staff.Email, Hiredate, PostID, tb_Post.NamePost, tb_Institute.NameInstitute
 		FROM tb_Staff
 		INNER JOIN tb_Account
 			ON tb_Account.IDAccount=tb_Staff.AccountID

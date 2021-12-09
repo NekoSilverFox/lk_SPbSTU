@@ -261,9 +261,9 @@ namespace UI
                 }
             }
 
-            if (cboInstitute.SelectedItem == null ||
-                cboProfession.SelectedItem == null ||
-                cboGroup.SelectedItem == null)
+            if (cboIAddnstitute.SelectedItem == null ||
+                cboAddProfession.SelectedItem == null ||
+                cboAddGroup.SelectedItem == null)
             {
                 MessageBox.Show("Please choose all items");
 
