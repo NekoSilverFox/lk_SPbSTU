@@ -196,6 +196,12 @@ namespace UI
             //MODEL.Person person = this.dgvList.CurrentRow.DataBoundItem as MODEL.Person;
         }
 
+        #region
+        /// <summary>
+        /// 新增/修改 列表点击 OK 按钮
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOk_Click(object sender, EventArgs e)
         {
             if (!ValidataUser())
@@ -255,6 +261,8 @@ namespace UI
                 }
             }
         }
+        #endregion
+
 
         #region 用户信息输入检测+bool ValidataUser()
         /// <summary>

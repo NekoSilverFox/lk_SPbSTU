@@ -52,6 +52,15 @@ namespace UI
 
             MODEL.tb_Profession newProfession = new MODEL.tb_Profession();
 
+            if (gpAdd.Text == "Добавление")
+            {
+                newProfession = new MODEL.tb_Profession();
+            }
+            else
+            {
+                newProfession = this.dgvList.CurrentRow.DataBoundItem as MODEL.tb_Profession;
+            }
+
             // ----------------------------------------------------------------------------------------------------------
             newProfession.InstituteID = (this.cboInstitute.SelectedItem as MODEL.tb_Institute).IDInstitute;
             newProfession.CodeProfession = this.txtCodeProfession.Text.ToString().Trim();
@@ -59,16 +68,33 @@ namespace UI
             newProfession.TuitionFee = Convert.ToDecimal(this.txtTuitionFee.Text.ToString().Trim());
             // ----------------------------------------------------------------------------------------------------------
 
-            if (professionManger.InsertProfession(newProfession) == 1)
+            if (gpAdd.Text == "Добавление")
             {
-                MessageBox.Show("Successfully added new profession");
+                if (professionManger.InsertProfession(newProfession) != 0)
+                {
+                    MessageBox.Show("Successfully added new Profession");
 
-                // 【重点】添加成功后记得刷新！！！！也就是重新加载一下
-                this.dgvList.DataSource = professionManger.GetAllProfessionList();
+                    // 【重点】添加成功后记得刷新！！！！也就是重新加载一下
+                    this.dgvList.DataSource = professionManger.GetAllProfessionList();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to add new Profession");
+                }
             }
             else
             {
-                MessageBox.Show("Failed to add new profession");
+                if (professionManger.UpdateProfession(newProfession) != 0)
+                {
+                    MessageBox.Show("Successfully change Profession");
+
+                    // 【重点】添加成功后记得刷新！！！！也就是重新加载一下
+                    this.dgvList.DataSource = professionManger.GetAllProfessionList();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to change Profession");
+                }
             }
         }
 

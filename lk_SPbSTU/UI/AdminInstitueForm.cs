@@ -50,6 +50,18 @@ namespace UI
                 return;
             }
 
+            MODEL.tb_Institute newInstitute = new MODEL.tb_Institute();
+
+            if (gpAdd.Text == "Добавление")
+            {
+                newInstitute = new MODEL.tb_Institute();
+            }
+            else
+            {
+                newInstitute = this.dgvList.CurrentRow.DataBoundItem as MODEL.tb_Institute;
+            }
+
+            // ----------------------------------------------------------------------------------------------------------
             /*
              一般有 2 种方式取出下拉列表中存储的 ID号：
                 1. 通过 SelectedValue，前提是你之前设置了 ValueMember 值
@@ -57,24 +69,41 @@ namespace UI
                     如果数据源是表，那么 SelectedItem 就是 DataRowView，
                     如果数据源是集合，那么 SelectedItem 就是对象
              */
-            MODEL.tb_Institute newInstitute = new MODEL.tb_Institute();
             newInstitute.NameInstitute = this.txtNameInst.Text.Trim();
             newInstitute.ShortNameInst = this.txtShortNameInst.Text.Trim();
             newInstitute.Email = this.txtEmail.Text.Trim();
             newInstitute.Phone = this.txtPhone.Text.Trim();
             newInstitute.Website = this.txtWebsite.Text.Trim();
             newInstitute.DetAddress = this.txtAdress.Text.Trim();
+            // ----------------------------------------------------------------------------------------------------------
 
-            if (instituteManger.InsertInstitute(newInstitute) == 1)
+            if (gpAdd.Text == "Добавление")
             {
-                MessageBox.Show("Successfully added new institute");
+                if (instituteManger.InsertInstitute(newInstitute) != 0)
+                {
+                    MessageBox.Show("Successfully added new institute");
 
-                // 【重点】添加成功后记得刷新！！！！也就是重新加载一下
-                this.dgvList.DataSource = instituteManger.GetAllInstituteList();
+                    // 【重点】添加成功后记得刷新！！！！也就是重新加载一下
+                    this.dgvList.DataSource = instituteManger.GetAllInstituteList();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to add new institute");
+                }
             }
             else
             {
-                MessageBox.Show("Failed to add new institute");
+                if (instituteManger.UpdateInstitute(newInstitute) != 0)
+                {
+                    MessageBox.Show("Successfully change institute");
+
+                    // 【重点】添加成功后记得刷新！！！！也就是重新加载一下
+                    this.dgvList.DataSource = instituteManger.GetAllInstituteList();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to change institute");
+                }
             }
         }
 
