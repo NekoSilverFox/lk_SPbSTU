@@ -104,7 +104,7 @@ namespace UI
 
             if (gpAdd.Text == "Добавление")
             {
-                if (staffManger.UpdateStaff(newStaff) != 1)
+                if (staffManger.InsertStaff(newStaff) != 1)
                 {
                     MessageBox.Show("Successfully added new staff");
 

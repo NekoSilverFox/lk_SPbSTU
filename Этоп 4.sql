@@ -885,6 +885,40 @@ EXEC usp_addStudentByGroupID
 	@EnrollTime='2012-5-6', @GroupID=696
 
 
+
+-- 增加员工（根据ID）
+IF exists(select * from sysobjects where name='usp_addStaffByPostandInstID')
+	drop proc usp_addStaffByPostandInstID
+GO
+CREATE PROC usp_addStaffByPostandInstID
+	@Login			varchar(64)		,
+	@Passwd			char(32)		,
+	@NameStaff		nvarchar(64)	,
+	@Gender			bit=1			,
+	@Birthday		date=NULL		,
+	@Phone			char(15)		,
+	@Email			varchar(64)=NULL,
+	@Hiredate		date			,	
+	@PostID			int				,		
+	@InstituteID	int
+AS
+BEGIN TRANSACTION
+	DECLARE @errorNum INT=0;
+
+	INSERT tb_Account([Login], Passwd) VALUES(@Login, @Passwd)
+	SET @errorNum+=@@ERROR
+
+	DECLARE @AccountID INT=(SELECT IDAccount FROM tb_Account WHERE [Login]=@Login)
+
+	INSERT tb_Staff(NameStaff, Gender, Birthday, Phone, AccountID, Email, Hiredate, PostID, InstituteID)
+		VALUES(@NameStaff, @Gender, @Birthday, @Phone, @AccountID, @Email, @Hiredate, @PostID, @InstituteID)
+	SET @errorNum+=@@ERROR
+
+	IF (@errorNum<>0)
+		ROLLBACK TRANSACTION
+	ELSE 
+		COMMIT TRANSACTION
+GO
 -- ============================================================================================
 --Триггеры
 -- ============================================================================================

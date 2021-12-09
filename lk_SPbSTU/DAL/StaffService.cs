@@ -106,5 +106,35 @@ namespace DAL
             staff.ShortNameInst = row["ShortNameInst"].ToString().Trim();
         }
         #endregion
+
+
+        #region 插入新员工 +int InsertStaff(MODEL.tb_Staff newStaff)
+        /// <summary>
+        /// 插入新员工
+        /// </summary>
+        /// <param name="newStaff"></param>
+        /// <returns></returns>
+        public int InsertStaff(MODEL.tb_Staff newStaff)
+        {
+            string sql = "EXEC usp_addStaffByPostandInstID @Login=@ValLogin, @Passwd=@ValPasswd, @NameStaff=@ValNameStaff, @Gender=@ValGender, @Birthday=@ValBirthday, @Phone=@ValPhone, @Email=@ValEmail, @Hiredate=@ValHiredate, @PostID=@ValPostID, @InstituteID=@ValInstituteID";
+
+            SqlParameter[] ps =
+            {
+                new SqlParameter("@ValLogin", newStaff.Login),
+                new SqlParameter("@ValPasswd", newStaff.Passwd),
+                new SqlParameter("@ValNameStaff", newStaff.@NameStaff),
+                new SqlParameter("@ValGender", newStaff.Gender),
+                new SqlParameter("@ValBirthday", newStaff.Birthday),
+                new SqlParameter("@ValPhone", newStaff.Phone),
+                new SqlParameter("@ValEmail", newStaff.Email),
+                new SqlParameter("@ValHiredate", newStaff.Hiredate),
+                new SqlParameter("@ValPostID", newStaff.PostID),
+                new SqlParameter("@ValInstituteID", newStaff.InstituteID)
+            };
+            return SqlHelper.ExecuteNonQuery(sql, ps);
+        }
+        #endregion
+
+
     }
 }

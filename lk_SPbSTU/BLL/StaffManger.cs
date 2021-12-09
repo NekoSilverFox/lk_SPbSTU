@@ -46,9 +46,7 @@ namespace BLL
         /// <returns></returns>
         public int InsertStaff(MODEL.tb_Staff newStaff)
         {
-            //return staffService.InsertStaff(newStaff);
-            return 0;
-
+            return staffService.InsertStaff(newStaff);
         }
         #endregion
 
