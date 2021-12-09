@@ -56,7 +56,31 @@ namespace DAL
             discipline.PeriodDiscipline = (int)row["PeriodDiscipline"];
             discipline.DescriptionDiscipline = row["DescriptionDiscipline"].ToString().Trim();
         }
-#endregion
+        #endregion
+
+
+        #region 插入新科目 +int InsertDiscipline(MODEL.tb_Discipline newDiscipline)
+        /// <summary>
+        /// 插入新科目
+        /// </summary>
+        /// <param name="newDiscipline"></param>
+        /// <returns></returns>
+        public int InsertDiscipline(MODEL.tb_Discipline newDiscipline)
+        {
+            string sql = "INSERT tb_Discipline VALUES(@NameDiscipline, @PeriodDiscipline, @DescriptionDiscipline)";
+
+            SqlParameter[] ps =
+            {
+                new SqlParameter("@NameDiscipline", newDiscipline.NameDiscipline),
+                new SqlParameter("@PeriodDiscipline", newDiscipline.PeriodDiscipline),
+                new SqlParameter("@DescriptionDiscipline", newDiscipline.DescriptionDiscipline)
+            };
+
+            return SqlHelper.ExecuteNonQuery(sql, ps);
+        }
+        #endregion
+
 
     }
+
 }
