@@ -54,7 +54,12 @@ namespace UI
             gpAdd.Text = "Изменение";
 
             // 获取绑定项
-            //MODEL.Person person = this.dgvList.CurrentRow.DataBoundItem as MODEL.Person;
+            MODEL.tb_Discipline discipline = this.dgvList.CurrentRow.DataBoundItem as MODEL.tb_Discipline;
+
+            // 将绑定项中的内容显示在修改窗口上
+            this.txtNameDiscipline.Text = discipline.NameDiscipline;
+            this.txtPeriodDiscipline.Text = discipline.PeriodDiscipline.ToString();
+            this.txtDescriptionDiscipline.Text = discipline.DescriptionDiscipline;
         }
 
         private void btnOk_Click(object sender, EventArgs e)
