@@ -102,5 +102,28 @@ namespace DAL
         }
         #endregion
 
+
+        #region 插入新培训计划 +int InsertStudyPlan(MODEL.tb_StudyPlan newStudyPlan)
+        /// <summary>
+        /// 插入新培训计划
+        /// </summary>
+        /// <param name="newStudent "></param>
+        /// <returns></returns>
+        public int InsertStudyPlan(MODEL.tb_StudyPlan newStudyPlan)
+        {
+            string sql = "INSERT tb_StudyPlan VALUES(@GroupID, @DisciplineID, @Semestr, @StaffID)";
+
+            SqlParameter[] ps =
+            {
+                new SqlParameter("GroupID", newStudyPlan.GroupID),
+                new SqlParameter("DisciplineID", newStudyPlan.DisciplineID),
+                new SqlParameter("Semestr", newStudyPlan.Semestr),
+                new SqlParameter("StaffID", newStudyPlan.StaffID)
+            };
+            return SqlHelper.ExecuteNonQuery(sql, ps);
+        }
+        #endregion
+
+
     }
 }

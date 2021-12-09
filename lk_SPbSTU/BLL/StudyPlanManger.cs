@@ -43,8 +43,7 @@ namespace BLL
         /// <returns></returns>
         public int InsertStudyPlan(MODEL.tb_StudyPlan newStudyPlan)
         {
-            //return studyPlanServer.InsertStudyPlan(newStudyPlan);
-            return 0;
+            return studyPlanServer.InsertStudyPlan(newStudyPlan);
         }
         #endregion
 

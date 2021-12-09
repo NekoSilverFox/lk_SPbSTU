@@ -312,6 +312,7 @@
             this.cboProfession.Name = "cboProfession";
             this.cboProfession.Size = new System.Drawing.Size(713, 26);
             this.cboProfession.TabIndex = 32;
+            this.cboProfession.SelectedIndexChanged += new System.EventHandler(this.cboProfession_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -330,6 +331,7 @@
             this.cboInstitute.Name = "cboInstitute";
             this.cboInstitute.Size = new System.Drawing.Size(713, 26);
             this.cboInstitute.TabIndex = 21;
+            this.cboInstitute.SelectedIndexChanged += new System.EventHandler(this.cboInstitute_SelectedIndexChanged);
             // 
             // label9
             // 
