@@ -60,7 +60,7 @@ namespace DAL
         /// <returns></returns>
         public List<MODEL.tb_Student> GetStudentListByGroupID(int idGroup)
         {
-            string sql = "SELECT IDStudent, NameStudent, Birthday, Phone, AccountID, Login, Email, EnrollTime, GroupID, NameGroup, Grade FROM tb_Student JOIN tb_Account ON tb_Student.AccountID=tb_Account.IDAccount JOIN tb_Group ON tb_Student.GroupID=tb_Group.IDGroup WHERE IDGroup=@IDGroup";
+            string sql = "SELECT IDStudent, NameStudent, Birthday, Phone, AccountID, Login, Passwd, Email, EnrollTime, GroupID, NameGroup, Grade FROM tb_Student JOIN tb_Account ON tb_Student.AccountID=tb_Account.IDAccount JOIN tb_Group ON tb_Student.GroupID=tb_Group.IDGroup WHERE IDGroup=@IDGroup";
             SqlParameter ps = new SqlParameter("@IDGroup", idGroup);
             DataTable dataTable = SqlHelper.ExectureTabel(sql, ps);
 
@@ -100,6 +100,7 @@ namespace DAL
             student.Phone = row["Phone"].ToString().Trim();
             student.AccountID = (int)row["AccountID"];
             student.Login = row["Login"].ToString().Trim();
+            student.Passwd = row["Passwd"].ToString().Trim();
             student.Email = row["Email"].ToString().Trim();
             student.EnrollTime = Convert.ToDateTime(row["EnrollTime"]);
             student.GroupID = (int)row["GroupID"];

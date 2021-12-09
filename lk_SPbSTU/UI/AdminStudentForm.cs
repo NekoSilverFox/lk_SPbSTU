@@ -181,6 +181,9 @@ namespace UI
         {
             // 隐藏面板
             this.gpAdd.Visible = false;
+            this.txtLogin.Text = this.txtPwd.Text = this.txtName.Text = this.txtPhone.Text = this.txtEmail.Text = "";
+            this.cboAddInstitute.SelectedIndex = this.cboAddProfession.SelectedIndex = this.cboAddGroup.SelectedIndex = 0;
+
         }
 
         private void tsmiUpdate_Click(object sender, EventArgs e)
@@ -193,10 +196,27 @@ namespace UI
             gpAdd.Text = "Изменение";
 
             // 获取绑定项
-            //MODEL.Person person = this.dgvList.CurrentRow.DataBoundItem as MODEL.Person;
+            MODEL.tb_Student student = this.dgvList.CurrentRow.DataBoundItem as MODEL.tb_Student;
+
+            // 将绑定项中的内容显示在修改窗口上
+            this.txtLogin.Text = student.Login;
+            this.txtPwd.Text = student.Passwd;
+            this.txtName.Text = student.NameStudent;
+
+            rdoMam.Checked = student.Gender;
+            rdoWoman.Checked = !student.Gender;
+
+            this.dtpBirthday.Value =  student.Birthday;
+
+            this.txtPhone.Text = student.Phone.ToString();
+            this.txtEmail.Text = student.Email;
+
+            this.dtpEnrollTime.Value = student.EnrollTime;
+
+            this.cboAddGroup.SelectedIndex = student.GroupID;
         }
 
-        #region
+        #region + 新增/修改 列表点击 OK 按钮
         /// <summary>
         /// 新增/修改 列表点击 OK 按钮
         /// </summary>
