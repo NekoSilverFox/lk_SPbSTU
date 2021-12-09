@@ -34,7 +34,7 @@ namespace UI
 
         private void AdminStaffForm_Load(object sender, EventArgs e)
         {
-            this.dgvList.DataSource = staffManger.GetAllStaffList();
+
 
             // 绑定学院下拉列表数据
             this.cboInstitute.DisplayMember = "ShortNameInst";      // 显示的值
@@ -44,6 +44,15 @@ namespace UI
             this.cboPost.DisplayMember = "NamePost";      // 显示的值
             this.cboPost.ValueMember = "IDPost";              // 注意这里，绑定实际的值
             this.cboPost.DataSource = postManger.GetAllPostList();  // 绑定集合
+
+            // 绑定学院下拉列表数据
+            this.cboAddInstitute.DisplayMember = "ShortNameInst";      // 显示的值
+            this.cboAddInstitute.ValueMember = "IDInstitute";              // 注意这里，绑定实际的值
+            this.cboAddInstitute.DataSource = instituteManger.GetAllInstituteList();  // 绑定集合
+
+            this.cboAddPost.DisplayMember = "NamePost";      // 显示的值
+            this.cboAddPost.ValueMember = "IDPost";              // 注意这里，绑定实际的值
+            this.cboAddPost.DataSource = postManger.GetAllPostList();  // 绑定集合
         }
 
         private void tsmiAddInstitue_Click(object sender, EventArgs e)
@@ -57,7 +66,7 @@ namespace UI
             // 隐藏面板
             this.gpAdd.Visible = false;
             this.txtLogin.Text = this.txtPwd.Text = this.txtName.Text = this.txtPhone.Text = this.txtEmail.Text = "";
-            this.cboInstitute.SelectedIndex = this.cboPost.SelectedIndex = 0;
+            this.cboAddInstitute.SelectedIndex = this.cboAddPost.SelectedIndex = 0;
         }
 
         private void tsmiUpdate_Click(object sender, EventArgs e)
@@ -87,8 +96,8 @@ namespace UI
 
             this.dtpHiredate.Value = staff.Hiredate;
 
-            this.cboPost.SelectedValue = staff.PostID;
-            this.cboInstitute.SelectedValue = staff.InstituteID;
+            this.cboAddPost.SelectedValue = this.cboPost.SelectedValue;
+            this.cboAddInstitute.SelectedValue = this.cboInstitute.SelectedValue;
         }
 
         private void btnOk_Click(object sender, EventArgs e)
@@ -117,8 +126,8 @@ namespace UI
             newStaff.Phone = this.txtPhone.Text.ToString().Trim();
             newStaff.Email = this.txtEmail.Text.ToString().Trim();
             newStaff.Hiredate = this.dtpHiredate.Value;
-            newStaff.PostID = (this.cboPost.SelectedItem as MODEL.tb_Post).IDPost;
-            newStaff.InstituteID = (this.cboInstitute.SelectedItem as MODEL.tb_Institute).IDInstitute;
+            newStaff.PostID = (this.cboAddPost.SelectedItem as MODEL.tb_Post).IDPost;
+            newStaff.InstituteID = (this.cboAddInstitute.SelectedItem as MODEL.tb_Institute).IDInstitute;
             newStaff.Gender = this.rdoMam.Checked ? true : false;
             // ----------------------------------------------------------------------------------------------------------
 
@@ -180,7 +189,7 @@ namespace UI
             }
 
             // 如果为空，或者有非法字符
-            if (string.IsNullOrEmpty(this.txtName.Text.Trim()) || Regex.IsMatch(txtName.Text.Trim(), @"\W"))
+            if (string.IsNullOrEmpty(this.txtName.Text.Trim()))
             {
                 MessageBox.Show("Please enter a legal name");
 
@@ -210,8 +219,8 @@ namespace UI
                 }
             }
 
-            if (cboPost.SelectedItem == null ||
-                cboInstitute.SelectedItem == null)
+            if (cboAddPost.SelectedItem == null ||
+                cboAddInstitute.SelectedItem == null)
             {
                 MessageBox.Show("Please choose all items");
 
@@ -221,5 +230,33 @@ namespace UI
             return true;
         }
         #endregion
+
+        private void btnShowAllStaff_Click(object sender, EventArgs e)
+        {
+            this.dgvList.DataSource = staffManger.GetAllStaffList();
+        }
+
+        private void btnSeachByInst_Click(object sender, EventArgs e)
+        {
+            if (cboInstitute.SelectedItem == null)
+            {
+                MessageBox.Show("Please chose a institute");
+            }
+
+            int idInst = (cboInstitute.SelectedItem as MODEL.tb_Institute).IDInstitute;
+
+            List<MODEL.tb_Staff> allStaffList =  staffManger.GetAllStaffList();
+
+            List<MODEL.tb_Staff> staffListByInst = new List<MODEL.tb_Staff>();
+            foreach (MODEL.tb_Staff staff in allStaffList)
+            {
+                if (staff.InstituteID == idInst)
+                {
+                    staffListByInst.Add(staff);
+                }
+            }
+
+            this.dgvList.DataSource = staffListByInst;
+        }
     }
 }

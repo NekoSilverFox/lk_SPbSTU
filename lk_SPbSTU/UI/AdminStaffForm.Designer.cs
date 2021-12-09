@@ -47,7 +47,7 @@
             this.gpAdd = new System.Windows.Forms.GroupBox();
             this.rdoWoman = new System.Windows.Forms.RadioButton();
             this.rdoMam = new System.Windows.Forms.RadioButton();
-            this.cboInstitute = new System.Windows.Forms.ComboBox();
+            this.cboAddInstitute = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dtpHiredate = new System.Windows.Forms.DateTimePicker();
@@ -64,10 +64,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.kbName = new System.Windows.Forms.Label();
-            this.cboPost = new System.Windows.Forms.ComboBox();
+            this.cboAddPost = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOk = new System.Windows.Forms.Button();
+            this.cboPost = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cboInstitute = new System.Windows.Forms.ComboBox();
+            this.btnSeachByInst = new System.Windows.Forms.Button();
+            this.btnSeachByPost = new System.Windows.Forms.Button();
+            this.btnShowAllStaff = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
             this.gpAdd.SuspendLayout();
@@ -134,14 +141,14 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvList.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvList.Location = new System.Drawing.Point(16, 34);
+            this.dgvList.Location = new System.Drawing.Point(16, 65);
             this.dgvList.Margin = new System.Windows.Forms.Padding(7, 9, 7, 9);
             this.dgvList.MultiSelect = false;
             this.dgvList.Name = "dgvList";
             this.dgvList.RowHeadersVisible = false;
             this.dgvList.RowTemplate.Height = 23;
             this.dgvList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvList.Size = new System.Drawing.Size(1229, 598);
+            this.dgvList.Size = new System.Drawing.Size(1229, 581);
             this.dgvList.TabIndex = 17;
             // 
             // Column6
@@ -226,7 +233,7 @@
             this.gpAdd.BackColor = System.Drawing.Color.Linen;
             this.gpAdd.Controls.Add(this.rdoWoman);
             this.gpAdd.Controls.Add(this.rdoMam);
-            this.gpAdd.Controls.Add(this.cboInstitute);
+            this.gpAdd.Controls.Add(this.cboAddInstitute);
             this.gpAdd.Controls.Add(this.label8);
             this.gpAdd.Controls.Add(this.label7);
             this.gpAdd.Controls.Add(this.dtpHiredate);
@@ -243,11 +250,11 @@
             this.gpAdd.Controls.Add(this.label1);
             this.gpAdd.Controls.Add(this.txtName);
             this.gpAdd.Controls.Add(this.kbName);
-            this.gpAdd.Controls.Add(this.cboPost);
+            this.gpAdd.Controls.Add(this.cboAddPost);
             this.gpAdd.Controls.Add(this.label9);
             this.gpAdd.Controls.Add(this.btnCancel);
             this.gpAdd.Controls.Add(this.btnOk);
-            this.gpAdd.Location = new System.Drawing.Point(182, 90);
+            this.gpAdd.Location = new System.Drawing.Point(177, 120);
             this.gpAdd.Name = "gpAdd";
             this.gpAdd.Size = new System.Drawing.Size(900, 500);
             this.gpAdd.TabIndex = 20;
@@ -278,14 +285,14 @@
             this.rdoMam.Text = "M";
             this.rdoMam.UseVisualStyleBackColor = true;
             // 
-            // cboInstitute
+            // cboAddInstitute
             // 
-            this.cboInstitute.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboInstitute.FormattingEnabled = true;
-            this.cboInstitute.Location = new System.Drawing.Point(541, 358);
-            this.cboInstitute.Name = "cboInstitute";
-            this.cboInstitute.Size = new System.Drawing.Size(286, 26);
-            this.cboInstitute.TabIndex = 37;
+            this.cboAddInstitute.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboAddInstitute.FormattingEnabled = true;
+            this.cboAddInstitute.Location = new System.Drawing.Point(541, 358);
+            this.cboAddInstitute.Name = "cboAddInstitute";
+            this.cboAddInstitute.Size = new System.Drawing.Size(286, 26);
+            this.cboAddInstitute.TabIndex = 37;
             // 
             // label8
             // 
@@ -425,14 +432,14 @@
             this.kbName.Text = "ФИО";
             this.kbName.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // cboPost
+            // cboAddPost
             // 
-            this.cboPost.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboPost.FormattingEnabled = true;
-            this.cboPost.Location = new System.Drawing.Point(114, 355);
-            this.cboPost.Name = "cboPost";
-            this.cboPost.Size = new System.Drawing.Size(286, 26);
-            this.cboPost.TabIndex = 21;
+            this.cboAddPost.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboAddPost.FormattingEnabled = true;
+            this.cboAddPost.Location = new System.Drawing.Point(114, 355);
+            this.cboAddPost.Name = "cboAddPost";
+            this.cboAddPost.Size = new System.Drawing.Size(286, 26);
+            this.cboAddPost.TabIndex = 21;
             // 
             // label9
             // 
@@ -463,11 +470,84 @@
             this.btnOk.UseVisualStyleBackColor = true;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
+            // cboPost
+            // 
+            this.cboPost.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboPost.FormattingEnabled = true;
+            this.cboPost.Location = new System.Drawing.Point(610, 30);
+            this.cboPost.Name = "cboPost";
+            this.cboPost.Size = new System.Drawing.Size(286, 26);
+            this.cboPost.TabIndex = 23;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(556, 33);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(48, 18);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Отдел";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(18, 33);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(72, 18);
+            this.label4.TabIndex = 38;
+            this.label4.Text = "Институт";
+            // 
+            // cboInstitute
+            // 
+            this.cboInstitute.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboInstitute.FormattingEnabled = true;
+            this.cboInstitute.Location = new System.Drawing.Point(96, 30);
+            this.cboInstitute.Name = "cboInstitute";
+            this.cboInstitute.Size = new System.Drawing.Size(286, 26);
+            this.cboInstitute.TabIndex = 42;
+            // 
+            // btnSeachByInst
+            // 
+            this.btnSeachByInst.Location = new System.Drawing.Point(388, 30);
+            this.btnSeachByInst.Name = "btnSeachByInst";
+            this.btnSeachByInst.Size = new System.Drawing.Size(106, 27);
+            this.btnSeachByInst.TabIndex = 43;
+            this.btnSeachByInst.Text = "Найти";
+            this.btnSeachByInst.UseVisualStyleBackColor = true;
+            this.btnSeachByInst.Click += new System.EventHandler(this.btnSeachByInst_Click);
+            // 
+            // btnSeachByPost
+            // 
+            this.btnSeachByPost.Location = new System.Drawing.Point(902, 29);
+            this.btnSeachByPost.Name = "btnSeachByPost";
+            this.btnSeachByPost.Size = new System.Drawing.Size(106, 27);
+            this.btnSeachByPost.TabIndex = 44;
+            this.btnSeachByPost.Text = "Найти";
+            this.btnSeachByPost.UseVisualStyleBackColor = true;
+            // 
+            // btnShowAllStaff
+            // 
+            this.btnShowAllStaff.BackColor = System.Drawing.Color.Gold;
+            this.btnShowAllStaff.Location = new System.Drawing.Point(1064, 28);
+            this.btnShowAllStaff.Name = "btnShowAllStaff";
+            this.btnShowAllStaff.Size = new System.Drawing.Size(181, 27);
+            this.btnShowAllStaff.TabIndex = 45;
+            this.btnShowAllStaff.Text = "Найти все";
+            this.btnShowAllStaff.UseVisualStyleBackColor = false;
+            this.btnShowAllStaff.Click += new System.EventHandler(this.btnShowAllStaff_Click);
+            // 
             // AdminStaffForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.btnShowAllStaff);
+            this.Controls.Add(this.btnSeachByPost);
+            this.Controls.Add(this.btnSeachByInst);
+            this.Controls.Add(this.cboInstitute);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.cboPost);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.gpAdd);
             this.Controls.Add(this.dgvList);
             this.Controls.Add(this.toolStrip1);
@@ -505,7 +585,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.GroupBox gpAdd;
-        private System.Windows.Forms.ComboBox cboPost;
+        private System.Windows.Forms.ComboBox cboAddPost;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnOk;
@@ -523,10 +603,17 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label lbPhone;
-        private System.Windows.Forms.ComboBox cboInstitute;
+        private System.Windows.Forms.ComboBox cboAddInstitute;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RadioButton rdoWoman;
         private System.Windows.Forms.RadioButton rdoMam;
+        private System.Windows.Forms.ComboBox cboPost;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cboInstitute;
+        private System.Windows.Forms.Button btnSeachByInst;
+        private System.Windows.Forms.Button btnSeachByPost;
+        private System.Windows.Forms.Button btnShowAllStaff;
     }
 }
