@@ -36,8 +36,8 @@
             this.tsmiClass = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDiscipline = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiStudyPlan = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiStaff = new System.Windows.Forms.ToolStripMenuItem();
             this.tmiStudent = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiStaff = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiChangePwd = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiWindow = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiExit = new System.Windows.Forms.ToolStripMenuItem();
@@ -107,19 +107,19 @@
             this.tsmiStudyPlan.Text = "Учебный план";
             this.tsmiStudyPlan.Click += new System.EventHandler(this.tsmiStudyPlan_Click);
             // 
-            // tsmiStaff
-            // 
-            this.tsmiStaff.Name = "tsmiStaff";
-            this.tsmiStaff.Size = new System.Drawing.Size(78, 21);
-            this.tsmiStaff.Text = "Работник";
-            this.tsmiStaff.Click += new System.EventHandler(this.tsmiStaff_Click);
-            // 
             // tmiStudent
             // 
             this.tmiStudent.Name = "tmiStudent";
             this.tmiStudent.Size = new System.Drawing.Size(66, 21);
             this.tmiStudent.Text = "Студент";
             this.tmiStudent.Click += new System.EventHandler(this.tmiStudent_Click);
+            // 
+            // tsmiStaff
+            // 
+            this.tsmiStaff.Name = "tsmiStaff";
+            this.tsmiStaff.Size = new System.Drawing.Size(78, 21);
+            this.tsmiStaff.Text = "Работник";
+            this.tsmiStaff.Click += new System.EventHandler(this.tsmiStaff_Click);
             // 
             // tsmiChangePwd
             // 

@@ -227,6 +227,31 @@ namespace UI
             return true;
         }
         #endregion
+
+        private void tsmiDelete_Click(object sender, EventArgs e)
+        {
+            if (this.dgvList.SelectedRows.Count == 0)
+            {
+                return;
+            }
+
+            int id = (this.dgvList.CurrentRow.DataBoundItem as MODEL.tb_StudyPlan).IDStudyPlan;
+
+            if (MessageBox.Show("Are you sure to delete this study plan？", "WANNING", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                if (studyPlanManger.DeleteStudyPlan(id) == 1)
+                {
+                    MessageBox.Show("Successfully delete");
+
+                    // 【重点】删除成功后记得刷新！！！！也就是重新加载一下
+                    this.dgvList.DataSource = studyPlanManger.GetAllStudyPlanList();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to delete");
+                }
+            }
+        }
     }
 
 }

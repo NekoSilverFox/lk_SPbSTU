@@ -38,7 +38,6 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsmiAddInstitue = new System.Windows.Forms.ToolStripLabel();
             this.tsmiUpdate = new System.Windows.Forms.ToolStripLabel();
-            this.tsmiDelete = new System.Windows.Forms.ToolStripLabel();
             this.tsmiExit = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.gpAdd = new System.Windows.Forms.GroupBox();
@@ -123,7 +122,6 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiAddInstitue,
             this.tsmiUpdate,
-            this.tsmiDelete,
             this.tsmiExit,
             this.toolStripSeparator2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
@@ -145,12 +143,6 @@
             this.tsmiUpdate.Size = new System.Drawing.Size(78, 22);
             this.tsmiUpdate.Text = "Изменение";
             this.tsmiUpdate.Click += new System.EventHandler(this.tsmiUpdate_Click);
-            // 
-            // tsmiDelete
-            // 
-            this.tsmiDelete.Name = "tsmiDelete";
-            this.tsmiDelete.Size = new System.Drawing.Size(32, 22);
-            this.tsmiDelete.Text = "删除";
             // 
             // tsmiExit
             // 
@@ -285,7 +277,6 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel tsmiAddInstitue;
         private System.Windows.Forms.ToolStripLabel tsmiUpdate;
-        private System.Windows.Forms.ToolStripLabel tsmiDelete;
         private System.Windows.Forms.ToolStripLabel tsmiExit;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;

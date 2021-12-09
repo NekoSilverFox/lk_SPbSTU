@@ -57,5 +57,18 @@ namespace BLL
             return studyPlanServer.UpdateStudyPlan(updateStudyPlan);
         }
         #endregion
+
+
+        #region 删除StudyPlan +int DeleteStudyPlan(int id)
+        /// <summary>
+        /// 删除人员
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public int DeleteStudyPlan(int id)
+        {
+            return studyPlanServer.DeleteStudyPlan(id);
+        }
+        #endregion
     }
 }

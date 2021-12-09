@@ -144,5 +144,19 @@ namespace DAL
             return SqlHelper.ExecuteNonQuery(sql, ps);
         }
         #endregion
+
+        #region 删除StudyPlan +int DeleteStudyPlan(int pid)
+        /// <summary>
+        /// 删除人员
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public int DeleteStudyPlan(int id)
+        {
+            string sql = "DELETE FROM tb_StudyPlan where IDStudyPlan=@id";
+            SqlParameter p = new SqlParameter("@id", id);
+            return SqlHelper.ExecuteNonQuery(sql, p);
+        }
+        #endregion
     }
 }
