@@ -101,6 +101,8 @@ namespace UI
         private void btnCancel_Click(object sender, EventArgs e)
         {
             gpAdd.Visible = false;
+            this.txtNameProfession.Text = this.txtCodeProfession.Text = this.txtTuitionFee.Text = "";
+            this.cboInstitute.SelectedIndex = 0;
         }
 
         private void tsmiAddInstitue_Click(object sender, EventArgs e)

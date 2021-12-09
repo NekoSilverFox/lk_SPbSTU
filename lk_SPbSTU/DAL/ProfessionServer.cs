@@ -82,5 +82,28 @@ namespace DAL
             return SqlHelper.ExecuteNonQuery(sql, ps);
         }
         #endregion
+
+        #region 修改方向信息+ int UpdateProfession(MODEL.tb_Profession updateProfession)
+        /// <summary>
+        /// 修改方向信息
+        /// </summary>
+        /// <param name="updateProfession"></param>
+        public int UpdateProfession(MODEL.tb_Profession updateProfession)
+        {
+            string sql = "UPDATE tb_Profession SET InstituteID=@InstituteID, CodeProfession=@CodeProfession, NameProfession=@NameProfession, TuitionFee=@TuitionFee WHERE IDProfession=@IDProfession";
+
+            SqlParameter[] ps =
+            {
+                new SqlParameter("IDProfession", updateProfession.IDProfession),
+                new SqlParameter("InstituteID", updateProfession.InstituteID),
+                new SqlParameter("CodeProfession", updateProfession.CodeProfession),
+                new SqlParameter("NameProfession", updateProfession.NameProfession),
+                new SqlParameter("TuitionFee", updateProfession.TuitionFee)
+            };
+            return SqlHelper.ExecuteNonQuery(sql, ps);
+        }
+        #endregion
+
+
     }
 }

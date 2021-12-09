@@ -170,6 +170,8 @@ namespace UI
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.gpAdd.Visible = false;
+            txtNameInst.Text = txtShortNameInst.Text = txtPhone.Text = txtEmail.Text = txtWebsite.Text = txtAdress.Text = "";
+
         }
 
         private void tsmiUpdate_Click(object sender, EventArgs e)
