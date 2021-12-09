@@ -138,11 +138,23 @@
     <Compile Include="StudentStudyPlanForm.Designer.cs">
       <DependentUpon>StudentStudyPlanForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TeacherGetStudentExamBoardByNameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherGetStudentExamBoardByNameForm.Designer.cs">
+      <DependentUpon>TeacherGetStudentExamBoardByNameForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TeacherMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TeacherMainForm.Designer.cs">
       <DependentUpon>TeacherMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherStudyPlanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherStudyPlanForm.Designer.cs">
+      <DependentUpon>TeacherStudyPlanForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AdminDisciplineForm.resx">
       <DependentUpon>AdminDisciplineForm.cs</DependentUpon>
@@ -201,8 +213,14 @@
     <EmbeddedResource Include="StudentStudyPlanForm.resx">
       <DependentUpon>StudentStudyPlanForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TeacherGetStudentExamBoardByNameForm.resx">
+      <DependentUpon>TeacherGetStudentExamBoardByNameForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TeacherMainForm.resx">
       <DependentUpon>TeacherMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherStudyPlanForm.resx">
+      <DependentUpon>TeacherStudyPlanForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

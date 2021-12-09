@@ -75,8 +75,9 @@
             // tsmiDiscipline
             // 
             this.tsmiDiscipline.Name = "tsmiDiscipline";
-            this.tsmiDiscipline.Size = new System.Drawing.Size(97, 21);
-            this.tsmiDiscipline.Text = "Дисциплине";
+            this.tsmiDiscipline.Size = new System.Drawing.Size(180, 21);
+            this.tsmiDiscipline.Text = "Зачетная книжка(Студент)";
+            this.tsmiDiscipline.Click += new System.EventHandler(this.tsmiDiscipline_Click);
             // 
             // tsmiStudyPlan
             // 
