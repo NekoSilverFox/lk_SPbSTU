@@ -42,9 +42,7 @@ namespace BLL
         /// <param name="updateInstitute"></param>
         public int UpdateInstitute(MODEL.tb_Institute updateInstitute)
         {
-            // return instituteService.UpdateInstitute(updateInstitute);
-            return 0;
-
+            return instituteService.UpdateInstitute(updateInstitute);
         }
         #endregion
     }

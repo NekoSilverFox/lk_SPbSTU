@@ -87,5 +87,29 @@ namespace DAL
         }
         #endregion
 
+        #region 修改学院信息+ int UpdateInstitute(MODEL.tb_Institute updateInstitute)
+        /// <summary>
+        /// 修改学院信息
+        /// </summary>
+        /// <param name="updateInstitute"></param>
+        public int UpdateInstitute(MODEL.tb_Institute updateInstitute)
+        {
+            string sql = "UPDATE tb_Institute SET NameInstitute=@NameInstitute, ShortNameInst=@ShortNameInst, Email=@Email, Website=@Website, DetAddress=@DetAddress, Phone=@Phone WHERE IDInstitute=@ID";
+
+            SqlParameter[] ps =
+            {
+                new SqlParameter("@ID", updateInstitute.IDInstitute),
+                new SqlParameter("@NameInstitute", updateInstitute.NameInstitute),
+                new SqlParameter("@ShortNameInst", updateInstitute.ShortNameInst),
+                new SqlParameter("@Email", string.IsNullOrEmpty(updateInstitute.Email) ? DBNull.Value : (object)updateInstitute.Email),
+                new SqlParameter("@Website", string.IsNullOrEmpty(updateInstitute.Website) ? DBNull.Value : (object)updateInstitute.Website),
+                new SqlParameter("@DetAddress", string.IsNullOrEmpty(updateInstitute.DetAddress) ? DBNull.Value : (object)updateInstitute.DetAddress),
+                new SqlParameter("@Phone", updateInstitute.Phone)
+            };
+
+            return SqlHelper.ExecuteNonQuery(sql, ps);
+        }
+        #endregion
+
     }
 }
