@@ -46,9 +46,7 @@ namespace BLL
         /// <returns></returns>
         public int InsertStudent(MODEL.tb_Student newStudent)
         {
-            //return studentServer.InsertStudent(newStudent);
-            return 0;
-
+            return studentServer.InsertStudent(newStudent);
         }
         #endregion
 

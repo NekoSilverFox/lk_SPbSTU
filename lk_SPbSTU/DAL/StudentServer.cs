@@ -107,5 +107,32 @@ namespace DAL
             student.Grade = (int)row["Grade"];
         }
         #endregion
+
+        #region 插入新学生 +int InsertStudent(MODEL.tb_Student newStudent)
+        /// <summary>
+        /// 插入新学生
+        /// </summary>
+        /// <param name="newStudent "></param>
+        /// <returns></returns>
+        public int InsertStudent(MODEL.tb_Student newStudent)
+        {
+            string sql = "EXEC usp_addStudentByGroupID @Login=@ValLogin, @Passwd=@ValPasswd, @NameStudent=@ValNameStudent, @Gender=@ValGender, @Birthday=@ValBirthday, @Phone=@ValPhone, @Email=@ValEmail, @EnrollTime=@ValEnrollTime, @GroupID=@ValGroupID";
+
+            SqlParameter[] ps =
+            {
+                new SqlParameter("@ValLogin", newStudent.Login),
+                new SqlParameter("@ValPasswd", newStudent.Passwd),
+                new SqlParameter("@ValNameStudent", newStudent.NameStudent),
+                new SqlParameter("@ValGender", newStudent.Gender),
+                new SqlParameter("@ValBirthday", newStudent.Birthday),
+                new SqlParameter("@ValPhone", newStudent.Phone),
+                new SqlParameter("@ValEmail", newStudent.Email),
+                new SqlParameter("@ValEnrollTime", newStudent.EnrollTime),
+                new SqlParameter("@ValGroupID", newStudent.GroupID)
+            };
+            return SqlHelper.ExecuteNonQuery(sql, ps);
+        }
+        #endregion
+
     }
 }

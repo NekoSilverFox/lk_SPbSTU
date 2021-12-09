@@ -56,7 +56,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cboAddProfession = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.cboIAddnstitute = new System.Windows.Forms.ComboBox();
+            this.cboAddInstitute = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.rdoWoman = new System.Windows.Forms.RadioButton();
             this.rdoMam = new System.Windows.Forms.RadioButton();
@@ -295,7 +295,7 @@
             this.gpAdd.Controls.Add(this.label5);
             this.gpAdd.Controls.Add(this.cboAddProfession);
             this.gpAdd.Controls.Add(this.label8);
-            this.gpAdd.Controls.Add(this.cboIAddnstitute);
+            this.gpAdd.Controls.Add(this.cboAddInstitute);
             this.gpAdd.Controls.Add(this.label10);
             this.gpAdd.Controls.Add(this.rdoWoman);
             this.gpAdd.Controls.Add(this.rdoMam);
@@ -350,6 +350,7 @@
             this.cboAddProfession.Name = "cboAddProfession";
             this.cboAddProfession.Size = new System.Drawing.Size(713, 26);
             this.cboAddProfession.TabIndex = 43;
+            this.cboAddProfession.SelectedIndexChanged += new System.EventHandler(this.cboAddProfession_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -360,14 +361,15 @@
             this.label8.TabIndex = 42;
             this.label8.Text = "Направление";
             // 
-            // cboIAddnstitute
+            // cboAddInstitute
             // 
-            this.cboIAddnstitute.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboIAddnstitute.FormattingEnabled = true;
-            this.cboIAddnstitute.Location = new System.Drawing.Point(114, 311);
-            this.cboIAddnstitute.Name = "cboIAddnstitute";
-            this.cboIAddnstitute.Size = new System.Drawing.Size(286, 26);
-            this.cboIAddnstitute.TabIndex = 41;
+            this.cboAddInstitute.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboAddInstitute.FormattingEnabled = true;
+            this.cboAddInstitute.Location = new System.Drawing.Point(114, 311);
+            this.cboAddInstitute.Name = "cboAddInstitute";
+            this.cboAddInstitute.Size = new System.Drawing.Size(286, 26);
+            this.cboAddInstitute.TabIndex = 41;
+            this.cboAddInstitute.SelectedIndexChanged += new System.EventHandler(this.cboAddInstitute_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -630,7 +632,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cboAddProfession;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox cboIAddnstitute;
+        private System.Windows.Forms.ComboBox cboAddInstitute;
         private System.Windows.Forms.Label label10;
     }
 }

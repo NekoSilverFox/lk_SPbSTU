@@ -59,6 +59,19 @@ namespace UI
             this.cboGroup.ValueMember = "IDGroup";
 
 
+            // 绑定学院下拉列表数据
+            this.cboAddInstitute.DisplayMember = "ShortNameInst";      // 显示的值
+            this.cboAddInstitute.ValueMember = "IDInstitute";              // 注意这里，绑定实际的值
+            this.cboAddInstitute.DataSource = instituteManger.GetAllInstituteList();  // 绑定集合
+
+            // 绑定方向下拉列表数据
+            this.cboAddProfession.DisplayMember = "NameProfession";
+            this.cboAddProfession.ValueMember = "IDProfession";              // 注意这里，绑定实际的值
+            //this.cboProfession.DataSource = professionManger.GetAllProfessionList();  // 绑定集合
+
+
+            this.cboAddGroup.DisplayMember = "NameGroup";
+            this.cboAddGroup.ValueMember = "IDGroup";
         }
 
         private void cboInstitute_SelectedIndexChanged(object sender, EventArgs e)
@@ -81,6 +94,26 @@ namespace UI
             this.cboProfession.DataSource = showProfessionsList;
         }
 
+        private void cboAddInstitute_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int instutiteID = (this.cboAddInstitute.SelectedItem as MODEL.tb_Institute).IDInstitute;
+
+            // 【重点】先清空！！！
+            //this.cboProfession.Items.Clear();
+
+            List<MODEL.tb_Profession> professionsList = professionManger.GetAllProfessionList();
+            List<MODEL.tb_Profession> showProfessionsList = new List<MODEL.tb_Profession>();
+            foreach (MODEL.tb_Profession profession in professionsList)
+            {
+                if (profession.InstituteID == instutiteID)
+                {
+                    showProfessionsList.Add(profession);
+                }
+            }
+
+            this.cboAddProfession.DataSource = showProfessionsList;
+        }
+
         private void cboProfession_SelectedIndexChanged(object sender, EventArgs e)
         {
             int professionID = (this.cboProfession.SelectedItem as MODEL.tb_Profession).IDProfession;
@@ -99,6 +132,26 @@ namespace UI
             }
 
             this.cboGroup.DataSource = showGroupList;
+        }
+
+        private void cboAddProfession_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int professionID = (this.cboAddProfession.SelectedItem as MODEL.tb_Profession).IDProfession;
+
+            // 【重点】先清空！！！
+            //this.cboProfession.Items.Clear();
+
+            List<MODEL.tb_Group> groupList = groupManger.GetAllGroupList();
+            List<MODEL.tb_Group> showGroupList = new List<MODEL.tb_Group>();
+            foreach (MODEL.tb_Group group in groupList)
+            {
+                if (group.IDProfession == professionID)
+                {
+                    showGroupList.Add(group);
+                }
+            }
+
+            this.cboAddGroup.DataSource = showGroupList;
         }
 
         private void dgvList_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -165,17 +218,17 @@ namespace UI
             newStudent.Login = this.txtLogin.Text.ToString().Trim();
             newStudent.Passwd = this.txtPwd.Text.ToString().Trim();
             newStudent.NameStudent = this.txtName.Text.ToString().Trim();
+            newStudent.Gender = this.rdoMam.Checked ? true : false;
             newStudent.Birthday = this.dtpBirthday.Value;
             newStudent.Phone = this.txtPhone.Text.ToString().Trim();
             newStudent.Email = this.txtEmail.Text.ToString().Trim();
             newStudent.EnrollTime = this.dtpEnrollTime.Value;
             newStudent.GroupID = (this.cboAddGroup.SelectedItem as MODEL.tb_Group).IDGroup;
-            newStudent.Gender = this.rdoMam.Checked ? true : false;
             // ----------------------------------------------------------------------------------------------------------
 
             if (gpAdd.Text == "Добавление")
             {
-                if (studentManger.UpdateStudent(newStudent) == 1)
+                if (studentManger.InsertStudent(newStudent) != 0)
                 {
                     MessageBox.Show("Successfully added new Student");
 
@@ -189,7 +242,7 @@ namespace UI
             }
             else
             {
-                if (studentManger.UpdateStudent(newStudent) == 1)
+                if (studentManger.UpdateStudent(newStudent) != 0)
                 {
                     MessageBox.Show("Successfully change Student");
 
@@ -261,7 +314,7 @@ namespace UI
                 }
             }
 
-            if (cboIAddnstitute.SelectedItem == null ||
+            if (cboAddInstitute.SelectedItem == null ||
                 cboAddProfession.SelectedItem == null ||
                 cboAddGroup.SelectedItem == null)
             {

@@ -792,6 +792,10 @@ GO
 EXEC usp_getAllStudyPlan
 
 
+
+
+
+
 -- 根据学生的账号ID获取他的 老师
 IF exists(select * from sysobjects where name='usp_getStudentsTeacher')
 	drop proc usp_getStudentsTeacher
@@ -837,6 +841,50 @@ AS
 GO
 
 EXEC usp_getAllStaff
+
+
+
+
+--增加学生（和账号密码一起）
+use db_SPbSTU
+IF exists(select * from sysobjects where name='usp_addStudentByGroupID')
+	drop proc usp_addStudentByGroupID
+GO
+CREATE PROC usp_addStudentByGroupID
+	@Login			varchar(64)		,
+	@Passwd			char(32)		,
+	@NameStudent	nvarchar(64)	,
+	@Gender			bit=1			,
+	@Birthday		date=NULL		,
+	@Phone			char(15)		,
+	@Email			varchar(64)=NULL,
+	@EnrollTime		date			,	
+	@GroupID		int
+AS
+BEGIN TRANSACTION
+	DECLARE @errorNum INT=0;
+
+	INSERT tb_Account(Login, Passwd) VALUES(@Login, @Passwd)
+	SET @errorNum+=@@ERROR
+
+	DECLARE @AccountID INT=(SELECT IDAccount FROM tb_Account WHERE Login=@Login)
+
+	INSERT tb_Student(NameStudent, Gender, Birthday, Phone, AccountID, Email, EnrollTime, GroupID)
+		VALUES(@NameStudent, @Gender, @Birthday, @Phone, @AccountID, @Email, @EnrollTime, @GroupID)
+	SET @errorNum+=@@ERROR
+
+	IF (@errorNum<>0)
+		ROLLBACK TRANSACTION
+	ELSE
+		COMMIT TRANSACTION
+GO
+
+EXEC usp_addStudentByGroupID 
+	@Login='asda55s@sad.cn', @Passwd='1616556', @NameStudent='hdfthcg',
+	@Gender=0, @Birthday='2002-5-6', @Phone='5555555554', @Email='asdasd@as.cn',
+	@EnrollTime='2012-5-6', @GroupID=696
+
+
 -- ============================================================================================
 --Триггеры
 -- ============================================================================================
