@@ -68,6 +68,35 @@ namespace DAL
             return account;
         }
 
+
+        #region 根据员工ID获取他的实体类账号对象+MODEL.tb_Account GetAccountByStaffID(int studentID)
+        /// <summary>
+        /// 根据员工ID获取他的实体类账号对象
+        /// </summary>
+        /// <param name="studentID"></param>
+        public MODEL.tb_Account GetAccountByStaffID(int studentID)
+        {
+            string sql = "SELECT IDAccount, Login, Passwd FROM tb_Account JOIN tb_Staff ON tb_Staff.AccountID=tb_Account.IDAccount WHERE IDStaff=@StaffID";
+            SqlParameter parameter = new SqlParameter("@StaffID", StaffID);
+
+            MODEL.tb_Account account = null;
+
+            using (SqlDataReader reader = SqlHelper.ExecuteReader(sql, parameter))  // SqlHelper.ExecuteReader(sql, parameter) 中合并 sql 语句中的各个参数
+            {
+                //声明实体对象
+                if (reader.Read())  // 就算有数据，也就一行。所以没有必要循环！
+                {
+                    account = new MODEL.tb_Account();
+
+                    account.IDAccount = (int)reader["IDAccount"];
+                    account.Login = reader["Login"].ToString().Trim();
+                    account.Passwd = reader["Passwd"].ToString().Trim();
+                }
+            }
+            return account;
+        }
+        #endregion
+
         /// <summary>
         /// 根据学生姓名获取他的实体类账号对象
         /// </summary>
