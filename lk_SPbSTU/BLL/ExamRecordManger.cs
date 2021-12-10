@@ -26,32 +26,6 @@ namespace BLL
         }
         #endregion
 
-        #region 插入新ExamRecord +int InsertExamRecord(MODEL.tb_ExamRecord newExamRecord)
-        /// <summary>
-        /// 插入新科目
-        /// </summary>
-        /// <param name="newExamRecord"></param>
-        /// <returns></returns>
-        public int InsertExamRecord(MODEL.tb_ExamRecord newExamRecord)
-        {
-            // return examRecordService.InsertExamRecord(newExamRecord);
-            return 0;
-
-        }
-        #endregion
-
-        #region 修改ExamRecord 信息+ int UpdateExamRecord(MODEL.tb_ExamRecord updateExamRecord)
-        /// <summary>
-        /// 修改ExamRecord 信息
-        /// </summary>
-        /// <param name="updateExamRecord"></param>
-        public int UpdateExamRecord(MODEL.tb_ExamRecord updateExamRecord)
-        {
-            //return examRecordService.UpdateExamRecord(updateExamRecord);
-            return 0;
-
-        }
-        #endregion
 
         #region 根据老师的ID获取他所有学生的成绩册 +List<MODEL.tb_ExamRecord> GetExamRecordsByStaffID(int staffID)
         /// <summary>
@@ -64,5 +38,42 @@ namespace BLL
             return examRecordService.GetExamRecordsByStaffID(staffID);
         }
         #endregion
+
+
+        #region 插入新成绩记录 +int InsertExamRecord(MODEL.tb_ExamRecord newExamRecord)
+        /// <summary>
+        /// 插入新成绩记录
+        /// </summary>
+        /// <param name="newExamRecord "></param>
+        /// <returns></returns>
+        public int InsertExamRecord(MODEL.tb_ExamRecord newExamRecord)
+        {
+            return examRecordService.InsertExamRecord(newExamRecord);
+        }
+        #endregion
+
+        #region 修改成绩记录 +int UpdateExamRecord(MODEL.tb_ExamRecord updateExamRecord)
+        /// <summary>
+        /// 修改成绩记录
+        /// </summary>
+        /// <param name="updateExamRecord"></param>
+        public int UpdateExamRecord(MODEL.tb_ExamRecord updateExamRecord)
+        {
+            return examRecordService.UpdateExamRecord(updateExamRecord);
+        }
+        #endregion
+
+        #region 删除成绩记录 +int DeleteExamRecord(int id)
+        /// <summary>
+        /// 删除成绩记录
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public int DeleteExamRecord(int id)
+        {
+            return examRecordService.DeleteExamRecord(id);
+        }
+        #endregion
+
     }
 }

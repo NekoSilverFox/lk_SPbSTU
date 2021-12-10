@@ -126,5 +126,60 @@ namespace DAL
         #endregion
 
 
+
+        #region 插入新成绩记录 +int InsertExamRecord(MODEL.tb_ExamRecord newExamRecord)
+        /// <summary>
+        /// 插入新成绩记录
+        /// </summary>
+        /// <param name="newExamRecord "></param>
+        /// <returns></returns>
+        public int InsertExamRecord(MODEL.tb_ExamRecord newExamRecord)
+        {
+            string sql = "INSERT tb_ExamRecord VALUES(@StudyPlanID, @StudentID, @Mark)";
+
+            SqlParameter[] ps =
+            {
+                new SqlParameter("StudyPlanID", newExamRecord.StudyPlanID),
+                new SqlParameter("StudentID", newExamRecord.StudentID),
+                new SqlParameter("Mark", newExamRecord.Mark)
+            };
+            return SqlHelper.ExecuteNonQuery(sql, ps);
+        }
+        #endregion
+
+        #region 修改成绩记录 +int UpdateExamRecord(MODEL.tb_ExamRecord updateExamRecord)
+        /// <summary>
+        /// 修改成绩记录
+        /// </summary>
+        /// <param name="updateExamRecord"></param>
+        public int UpdateExamRecord(MODEL.tb_ExamRecord updateExamRecord)
+        {
+            string sql = "UPDATE tb_ExamRecord SET StudyPlanID=@StudyPlanID, StudentID=@StudentID, Mark=@Mark WHERE IDExamRecord=@IDExamRecord";
+
+            SqlParameter[] ps =
+            {
+                new SqlParameter("IDStudyPlan", updateExamRecord.StudyPlanID),
+                new SqlParameter("GroupID", updateExamRecord.IdGroup),
+                new SqlParameter("DisciplineID", updateExamRecord.IdDiscipline),
+                new SqlParameter("IDExamRecord", updateExamRecord.IDExamRecord)
+            };
+            return SqlHelper.ExecuteNonQuery(sql, ps);
+        }
+        #endregion
+
+        #region 删除成绩记录 +int DeleteExamRecord(int id)
+        /// <summary>
+        /// 删除成绩记录
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public int DeleteExamRecord(int id)
+        {
+            string sql = "DELETE FROM tb_ExamRecord WHERE IDExamRecord=@id";
+            SqlParameter p = new SqlParameter("@id", id);
+            return SqlHelper.ExecuteNonQuery(sql, p);
+        }
+        #endregion
+
     }
 }
