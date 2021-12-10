@@ -202,5 +202,34 @@ namespace UI
             this.cboStudent.SelectedValue = examRecord.StudentID;
             this.cboMark.SelectedIndex = examRecord.Mark - 2;
         }
+
+        private void tsmiDelete_Click(object sender, EventArgs e)
+        {
+            if (this.dgvList.SelectedRows.Count == 0)
+            {
+                return;
+            }
+
+            int id = (this.dgvList.CurrentRow.DataBoundItem as MODEL.tb_ExamRecord).IDExamRecord;
+
+            if (MessageBox.Show("Are you sure to delete this student？", "WANNING", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                if (examRecordManger.DeleteExamRecord(id) == 1)
+                {
+                    MessageBox.Show("Successfully delete");
+
+                    // 【重点】删除成功后记得刷新！！！！也就是重新加载一下
+                    // 获取这个员工的账号ID用于显示
+                    int accountID = MODEL.tb_Account.accountIDNow;
+                    MODEL.tb_Staff staff = new MODEL.tb_Staff();
+                    staff = staffManger.getStaffInfo(accountID);
+                    this.dgvList.DataSource = examRecordManger.GetExamRecordsByStaffID(staff.IDStaff);
+                }
+                else
+                {
+                    MessageBox.Show("Failed to delete");
+                }
+            }
+        }
     }
 }
