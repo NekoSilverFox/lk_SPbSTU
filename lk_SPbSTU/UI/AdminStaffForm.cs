@@ -121,6 +121,7 @@ namespace UI
             // ----------------------------------------------------------------------------------------------------------
             newStaff.Login = this.txtLogin.Text.ToString().Trim();
             newStaff.Passwd = this.txtPwd.Text.ToString().Trim();
+            newStaff.Passwd = BLL.CommonHelper.GetMD5(newStaff.Passwd);
             newStaff.NameStaff = this.txtName.Text.ToString().Trim();
             newStaff.Birthday = this.dtpBirthday.Value;
             newStaff.Phone = this.txtPhone.Text.ToString().Trim();

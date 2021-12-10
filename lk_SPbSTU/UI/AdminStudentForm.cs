@@ -258,6 +258,7 @@ namespace UI
             // ----------------------------------------------------------------------------------------------------------
             newStudent.Login = this.txtLogin.Text.ToString().Trim();
             newStudent.Passwd = this.txtPwd.Text.ToString().Trim();
+            newStudent.Passwd = BLL.CommonHelper.GetMD5(newStudent.Passwd);
             newStudent.NameStudent = this.txtName.Text.ToString().Trim();
             newStudent.Gender = this.rdoMam.Checked ? true : false;
             newStudent.Birthday = this.dtpBirthday.Value;

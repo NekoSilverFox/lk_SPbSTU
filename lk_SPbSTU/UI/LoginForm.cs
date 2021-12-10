@@ -22,6 +22,7 @@ namespace UI
         {
             string login = this.txtLogin.Text.Trim();
             string pwd = this.txtPwd.Text.Trim();
+            pwd = BLL.CommonHelper.GetMD5(pwd);
 
             BLL.AccountManger accountManger = new BLL.AccountManger();
             MODEL.tb_Account account = accountManger.Login(login);

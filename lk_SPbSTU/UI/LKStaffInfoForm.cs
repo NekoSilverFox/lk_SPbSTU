@@ -72,6 +72,7 @@ namespace UI
 
             // ----------------------------------------------------------------------------------------------------------
             staff.Passwd = this.txtPwd.Text.ToString().Trim();
+            staff.Passwd = BLL.CommonHelper.GetMD5(staff.Passwd);
             staff.Gender = this.rdoMan.Checked ? true : false;
             staff.Birthday = this.dtpBirthday.Value;
             staff.Phone = this.txtPhone.Text.ToString().Trim();
