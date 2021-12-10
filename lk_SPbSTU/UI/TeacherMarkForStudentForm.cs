@@ -62,8 +62,6 @@ namespace UI
             this.cboSemester.DisplayMember = "Semestr";
             this.cboSemester.ValueMember = "Semestr";
             this.cboSemester.DataSource = studyPlanByStaffID;
-
-
         }
 
         private void tsmiAddInstitue_Click(object sender, EventArgs e)
@@ -118,38 +116,42 @@ namespace UI
             // ----------------------------------------------------------------------------------------------------------
             newExamRecord.StudyPlanID = (this.cboStudyPlanID.SelectedItem as MODEL.tb_StudyPlan).IDStudyPlan;
             newExamRecord.StudentID = (this.cboStudent.SelectedItem as MODEL.tb_Student).IDStudent;
-            newExamRecord.Mark = this.cboMark.SelectedIndex + 1;
+            newExamRecord.Mark = this.cboMark.SelectedIndex + 2;
             // ----------------------------------------------------------------------------------------------------------
 
+            // 获取这个员工的账号ID用于显示
+            int accountID = MODEL.tb_Account.accountIDNow;
+            MODEL.tb_Staff staff = new MODEL.tb_Staff();
+            staff = staffManger.getStaffInfo(accountID);
 
-            //if (gpAdd.Text == "Добавление")
-            //{
-            //    if (studyPlanManger.InsertStudyPlan(newExamRecord) == 1)
-            //    {
-            //        MessageBox.Show("Successfully added new Study Plan");
+            if (gpAdd.Text == "Добавление")
+            {
+                if (examRecordManger.InsertExamRecord(newExamRecord) == 1)
+                {
+                    MessageBox.Show("Successfully added new Exam Record");
 
-            //        // 【重点】添加成功后记得刷新！！！！也就是重新加载一下
-            //        this.dgvList.DataSource = studyPlanManger.GetAllStudyPlanList();
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Failed to add new group");
-            //    }
-            //}
-            //else
-            //{
-            //    if (studyPlanManger.UpdateStudyPlan(newExamRecord) == 1)
-            //    {
-            //        MessageBox.Show("Successfully change Study Plan");
+                    // 【重点】添加成功后记得刷新！！！！也就是重新加载一下
+                    this.dgvList.DataSource = examRecordManger.GetExamRecordsByStaffID(staff.IDStaff);
+                }
+                else
+                {
+                    MessageBox.Show("Failed to add new Exam Record");
+                }
+            }
+            else
+            {
+                if (examRecordManger.UpdateExamRecord(newExamRecord) == 1)
+                {
+                    MessageBox.Show("Successfully change Exam Record");
 
-            //        // 【重点】添加成功后记得刷新！！！！也就是重新加载一下
-            //        this.dgvList.DataSource = studyPlanManger.GetAllStudyPlanList();
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Failed to change group");
-            //    }
-            //}
+                    // 【重点】添加成功后记得刷新！！！！也就是重新加载一下
+                    this.dgvList.DataSource = examRecordManger.GetExamRecordsByStaffID(staff.IDStaff);
+                }
+                else
+                {
+                    MessageBox.Show("Failed to change Exam Record");
+                }
+            }
         }
 
 
@@ -194,8 +196,8 @@ namespace UI
             //this.cboInstitute.SelectedValue = 0;
             //this.cboProfession.SelectedValue = 0;
             this.cboStudyPlanID.SelectedValue = examRecord.StudyPlanID;
-            this.cboGroup.SelectedValue = examRecord.IdGroup;
-            this.cboSemester.SelectedValue = examRecord.Semester;
+            //this.cboGroup.SelectedValue = examRecord.IdGroup;
+            //this.cboSemester.SelectedValue = examRecord.Semester;
             //this.cboDiscipline.SelectedValue = examRecord.IdDiscipline;
             this.cboStudent.SelectedValue = examRecord.StudentID;
             this.cboMark.SelectedIndex = examRecord.Mark - 2;

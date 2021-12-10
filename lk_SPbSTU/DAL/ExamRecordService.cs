@@ -72,7 +72,7 @@ namespace DAL
         /// <returns></returns>
         public List<MODEL.tb_ExamRecord> GetExamRecordsByStaffID(int staffID)
         {
-            string sql = "SELECT DISTINCT IDInstitute, ShortNameInst, IDProfession, NameProfession, IDGroup, NameGroup, IDDiscipline, NameDiscipline, IDExamRecord, IDStudent, NameStudent, Semestr, Mark FROM tb_ExamRecord JOIN tb_StudyPlan ON tb_ExamRecord.StudyPlanID=tb_StudyPlan.IDStudyPlan JOIN tb_Discipline ON tb_StudyPlan.DisciplineID=tb_Discipline.IDDiscipline JOIN tb_Group ON tb_StudyPlan.GroupID=tb_Group.IDGroup JOIN tb_Profession ON tb_Group.ProfessionID=tb_Profession.IDProfession JOIN tb_Institute ON tb_Profession.InstituteID=tb_Institute.IDInstitute JOIN tb_Student ON tb_Student.GroupID=tb_Group.IDGroup WHERE tb_StudyPlan.StaffID=@ValstaffID ORDER BY Semestr, IDGroup, NameStudent";
+            string sql = "SELECT DISTINCT IDStudyPlan, IDInstitute, ShortNameInst, IDProfession, NameProfession, IDGroup, NameGroup, IDDiscipline, NameDiscipline, IDExamRecord, IDStudent, NameStudent, Semestr, Mark FROM tb_ExamRecord  JOIN tb_Student ON tb_Student.IDStudent=tb_ExamRecord.StudentID JOIN tb_Group ON tb_Group.IDGroup=tb_Student.GroupID JOIN tb_StudyPlan ON tb_StudyPlan.GroupID=tb_Group.IDGroup JOIN tb_Discipline ON tb_Discipline.IDDiscipline=tb_StudyPlan.DisciplineID JOIN tb_Profession ON tb_Profession.IDProfession=tb_Group.ProfessionID JOIN tb_Institute ON tb_Institute.IDInstitute=tb_Profession.InstituteID WHERE tb_StudyPlan.StaffID=@ValstaffID ORDER BY Semestr, IDGroup, NameStudent";
             SqlParameter parameter = new SqlParameter("@ValstaffID", staffID);
 
             DataTable dataTable = SqlHelper.ExectureTabel(sql, parameter);
@@ -109,6 +109,7 @@ namespace DAL
         /// <param name="examRecord"></param>
         void ExamRecordRow2ObjByStaffID(DataRow row, MODEL.tb_ExamRecord examRecord)
         {
+            examRecord.StudyPlanID = (int)row["IDStudyPlan"];
             examRecord.IDExamRecord = (int)row["IDExamRecord"];
             examRecord.IdInstitute = (int)row["IDInstitute"];
             examRecord.ShortNameInst = row["ShortNameInst"].ToString().Trim();
@@ -135,7 +136,7 @@ namespace DAL
         /// <returns></returns>
         public int InsertExamRecord(MODEL.tb_ExamRecord newExamRecord)
         {
-            string sql = "INSERT tb_ExamRecord VALUES(@StudyPlanID, @StudentID, @Mark)";
+            string sql = "INSERT tb_ExamRecord VALUES(@StudyPlanID, @StudentID, @Mark, default)";
 
             SqlParameter[] ps =
             {
@@ -158,9 +159,9 @@ namespace DAL
 
             SqlParameter[] ps =
             {
-                new SqlParameter("IDStudyPlan", updateExamRecord.StudyPlanID),
-                new SqlParameter("GroupID", updateExamRecord.IdGroup),
-                new SqlParameter("DisciplineID", updateExamRecord.IdDiscipline),
+                new SqlParameter("StudyPlanID", updateExamRecord.StudyPlanID),
+                new SqlParameter("StudentID", updateExamRecord.StudentID),
+                new SqlParameter("Mark", updateExamRecord.Mark),
                 new SqlParameter("IDExamRecord", updateExamRecord.IDExamRecord)
             };
             return SqlHelper.ExecuteNonQuery(sql, ps);
