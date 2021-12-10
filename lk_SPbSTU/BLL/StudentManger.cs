@@ -13,7 +13,19 @@ namespace BLL
         /// </summary>
         DAL.StudentServer studentServer = new DAL.StudentServer();
 
-        #region 获取单一员工的信息 + MODEL.tb_Student getStudentInfo(int accountID)
+        #region 根据职工ID获取他的所有学生 + List<MODEL.tb_Student> GetStudentListByStaffID(int idStaff)
+        /// <summary>
+        /// 根据职工ID获取他的所有学生
+        /// </summary>
+        /// <param name=""></param>
+        /// <returns></returns>
+        public List<MODEL.tb_Student> GetStudentListByStaffID(int idStaff)
+        {
+            return studentServer.GetStudentListByStaffID(idStaff);
+        }
+        #endregion
+
+        #region 获取单一学员的信息 + MODEL.tb_Student getStudentInfo(int accountID)
         /// <summary>
         /// 实现登录
         /// </summary>
