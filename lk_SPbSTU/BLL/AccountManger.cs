@@ -66,6 +66,18 @@ namespace BLL
             return accountService.GetAccountByStudentID(studentID);
         }
 
+        #region 根据员工ID获取他的实体类账号对象+MODEL.tb_Account GetAccountByStaffID(int staffID)
+        /// <summary>
+        /// 根据员工ID获取他的实体类账号对象
+        /// </summary>
+        /// <param name="staffID"></param>
+        public MODEL.tb_Account GetAccountByStaffID(int staffID)
+        {
+            return accountService.GetAccountByStaffID(staffID);
+        }
+        #endregion
+
+
         /// <summary>
         /// 根据学生姓名获取他的实体类账号对象
         /// </summary>

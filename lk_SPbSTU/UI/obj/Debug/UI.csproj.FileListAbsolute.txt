@@ -35,3 +35,4 @@ C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\UI\obj\Debug\UI.csproj.CopyCom
 C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\UI\obj\Debug\UI.TeacherMainForm.resources
 C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\UI\obj\Debug\UI.TeacherGetStudentExamBoardByNameForm.resources
 C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\UI\obj\Debug\UI.TeacherStudyPlanForm.resources
+C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\UI\obj\Debug\UI.TeacherWithHisGroupAndStudentForm.resources

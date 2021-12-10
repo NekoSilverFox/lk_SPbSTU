@@ -74,10 +74,10 @@ namespace DAL
         /// 根据员工ID获取他的实体类账号对象
         /// </summary>
         /// <param name="studentID"></param>
-        public MODEL.tb_Account GetAccountByStaffID(int studentID)
+        public MODEL.tb_Account GetAccountByStaffID(int staffID)
         {
             string sql = "SELECT IDAccount, Login, Passwd FROM tb_Account JOIN tb_Staff ON tb_Staff.AccountID=tb_Account.IDAccount WHERE IDStaff=@StaffID";
-            SqlParameter parameter = new SqlParameter("@StaffID", StaffID);
+            SqlParameter parameter = new SqlParameter("@StaffID", staffID);
 
             MODEL.tb_Account account = null;
 

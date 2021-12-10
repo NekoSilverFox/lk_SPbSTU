@@ -13,7 +13,7 @@ namespace UI
     public partial class TeacherWithHisGroupAndStudentForm : Form
     {
         BLL.StudentManger studentManger = new BLL.StudentManger();
-        BLL.AccountManger accountManger = new BLL.AccountManger();
+        BLL.StaffManger staffManger = new BLL.StaffManger();
 
         public TeacherWithHisGroupAndStudentForm()
         {
@@ -25,7 +25,12 @@ namespace UI
 
         private void TeacherWithHisGroupAndStudentForm_Load(object sender, EventArgs e)
         {
+            // 获取这个员工的账号ID用于显示
+            int accountID = MODEL.tb_Account.accountIDNow;
+            MODEL.tb_Staff staff = new MODEL.tb_Staff();
+            staff = staffManger.getStaffInfo(accountID);
 
+            this.dgvList.DataSource = studentManger.GetStudentListByStaffID(staff.IDStaff);
         }
     }
 }

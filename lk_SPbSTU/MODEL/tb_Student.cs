@@ -123,7 +123,7 @@ namespace MODEL
 		public string NameProfession { get => _nameprofession; set => _nameprofession = value; }
 		public string Login { get => _login; set => _login = value; }
 		public string Passwd { get => _passwd; set => _passwd = value; }
-		public string Shortnameinstitute { get => _shortnameinstitute; set => _shortnameinstitute = value; }
+		public string ShortNameInst { get => _shortnameinstitute; set => _shortnameinstitute = value; }
 		#endregion Model
 
 	}

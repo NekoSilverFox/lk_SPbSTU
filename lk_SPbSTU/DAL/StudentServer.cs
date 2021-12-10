@@ -109,7 +109,7 @@ namespace DAL
                 {
                     // 每一行就对应着一条数据
                     MODEL.tb_Student tmpStudent = new MODEL.tb_Student();
-                    StudentRow2Object(row, tmpStudent);
+                    StudentOnlyInfoRow2Object(row, tmpStudent);
                     // 将当前生成的对象添加到集合中
                     studentList.Add(tmpStudent);
                 }
@@ -119,6 +119,22 @@ namespace DAL
         }
         #endregion
 
+        #region 将 student 数据行转换为 student 对象 + void StudentOnlyInfoRow2Object(DataRow row, MODEL.tb_Student student)
+        /// <summary>
+        /// 将 institute 数据行转换为 Institute 对象
+        /// </summary>
+        /// <param name="row"></param>
+        /// <param name="student"></param>
+        void StudentOnlyInfoRow2Object(DataRow row, MODEL.tb_Student student)
+        {
+            student.IDStudent = (int)row["IDStudent"];
+            student.NameStudent = row["NameStudent"].ToString().Trim();
+            student.Login = row["Login"].ToString().Trim();
+            student.Namegroup = row["Namegroup"].ToString().Trim();
+            student.ShortNameInst = row["ShortNameInst"].ToString().Trim();
+            student.NameProfession = row["NameProfession"].ToString().Trim();
+        }
+        #endregion
 
         #region 将 student 数据行转换为 student 对象 + void StudentRow2Object(DataRow row, MODEL.tb_Student student)
         /// <summary>
@@ -140,9 +156,6 @@ namespace DAL
             student.GroupID = (int)row["GroupID"];
             student.Namegroup = row["Namegroup"].ToString().Trim();
             student.Grade = (int)row["Grade"];
-
-            student.Shortnameinstitute = row["ShortNameInst"].ToString().Trim();
-            student.NameProfession = row["NameProfession"].ToString().Trim();
         }
         #endregion
 

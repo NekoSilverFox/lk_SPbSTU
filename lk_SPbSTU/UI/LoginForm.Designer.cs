@@ -70,7 +70,7 @@
             this.txtPwd.Name = "txtPwd";
             this.txtPwd.Size = new System.Drawing.Size(217, 19);
             this.txtPwd.TabIndex = 3;
-            this.txtPwd.Text = "adminadmin";
+            this.txtPwd.Text = "teacher";
             // 
             // txtLogin
             // 
@@ -81,17 +81,19 @@
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(247, 19);
             this.txtLogin.TabIndex = 4;
-            this.txtLogin.Text = "admin@edu.spbstu.ru";
+            this.txtLogin.Text = "teacher@edu.spbstu.ru";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(208, 9);
+            this.label3.Font = new System.Drawing.Font("JetBrains Mono", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(142, 6);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 108);
+            this.label3.Size = new System.Drawing.Size(176, 198);
             this.label3.TabIndex = 9;
             this.label3.Text = "用于测试：\r\nAdmin账号：\r\nadmin@edu.spbstu.ru\r\nadminadmin\r\n\r\nStudent账号：\r\nmen.ts@edu.spbstu" +
-    ".ru\r\nstudent\r\n\r\n";
+    ".ru\r\nstudent\r\n\r\nteacher@edu.spbstu.ru\r\nteacher";
+            this.label3.Visible = false;
             // 
             // LoginForm
             // 

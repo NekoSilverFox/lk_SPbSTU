@@ -3,3 +3,4 @@ C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\MODEL\bin\Debug\MODEL.pdb
 C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\MODEL\obj\Debug\MODEL.csproj.CoreCompileInputs.cache
 C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\MODEL\obj\Debug\MODEL.dll
 C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\MODEL\obj\Debug\MODEL.pdb
+C:\Users\mi\Desktop\Programma\db_SPbSTU\lk_SPbSTU\MODEL\obj\Debug\MODEL.csprojAssemblyReference.cache
