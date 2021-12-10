@@ -62,5 +62,68 @@ namespace DAL
             examRecord.ExamDate = Convert.ToDateTime(row["ExamDate"]);
         }
         #endregion
+
+
+        #region 根据老师的ID获取他所有学生的成绩册 +List<MODEL.tb_ExamRecord> GetExamRecordsByStaffID(int staffID)
+        /// <summary>
+        /// 根据老师的ID获取他所有学生的成绩册
+        /// </summary>
+        /// <param name="staffID"></param>
+        /// <returns></returns>
+        public List<MODEL.tb_ExamRecord> GetExamRecordsByStaffID(int staffID)
+        {
+            string sql = "SELECT DISTINCT IDInstitute, ShortNameInst, IDProfession, NameProfession, IDGroup, NameGroup, IDDiscipline, NameDiscipline, IDStudent, NameStudent, Semestr, Mark FROM tb_ExamRecord JOIN tb_StudyPlan ON tb_ExamRecord.StudyPlanID=tb_StudyPlan.IDStudyPlan JOIN tb_Discipline ON tb_StudyPlan.DisciplineID=tb_Discipline.IDDiscipline JOIN tb_Group ON tb_StudyPlan.GroupID=tb_Group.IDGroup JOIN tb_Profession ON tb_Group.ProfessionID=tb_Profession.IDProfession JOIN tb_Institute ON tb_Profession.InstituteID=tb_Institute.IDInstitute JOIN tb_Student ON tb_Student.GroupID=tb_Group.IDGroup WHERE tb_StudyPlan.StaffID=@ValstaffID ORDER BY Semestr, IDGroup, NameStudent";
+            SqlParameter parameter = new SqlParameter("@ValstaffID", staffID);
+
+            DataTable dataTable = SqlHelper.ExectureTabel(sql, parameter);
+            List<MODEL.tb_ExamRecord> examRecordsList = null;
+
+            // 判断有没有行
+            if (dataTable.Rows.Count > 0)
+            {
+                examRecordsList = new List<MODEL.tb_ExamRecord>();
+
+                // 遍历表，将表的每一行转换为对应的实体对象
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    // 每一行数据对应一个 Person 对象
+                    MODEL.tb_ExamRecord tmpExamRecord = new MODEL.tb_ExamRecord();
+
+                    // 调用方法，将当前的数据行转换为 Person 对象
+                    ExamRecordRow2ObjByStaffID(row, tmpExamRecord);
+
+                    // 将对象添加到集合当中
+                    examRecordsList.Add(tmpExamRecord);
+                }
+            }
+            return examRecordsList;
+        }
+        #endregion
+
+
+        #region 将特定学员的成绩表的数据行转为实体对象（根据老师的ID）+ void ExamRecordRow2ObjByStaffID(DataRow row, MODEL.tb_ExamRecord examRecord)
+        /// <summary>
+        /// 将特定学员的成绩表的数据行转为实体对象（根据老师的ID）
+        /// </summary>
+        /// <param name="row"></param>
+        /// <param name="examRecord"></param>
+        void ExamRecordRow2ObjByStaffID(DataRow row, MODEL.tb_ExamRecord examRecord)
+        {
+            examRecord.IdInstitute = (int)row["IDInstitute"];
+            examRecord.ShortNameInst = row["ShortNameInst"].ToString().Trim();
+            examRecord.IdProfession = (int)row["IDProfession"];
+            examRecord.NameProfession = row["NameProfession"].ToString().Trim();
+            examRecord.IdGroup = (int)row["IDGroup"];
+            examRecord.NameGroup = row["NameGroup"].ToString().Trim();
+            examRecord.IdDiscipline = (int)row["IDDiscipline"];
+            examRecord.NameDiscipline = row["NameDiscipline"].ToString().Trim();
+            examRecord.StudentID = (int)row["IDStudent"];
+            examRecord.NameStudent = row["NameStudent"].ToString().Trim();
+            examRecord.Semester = (int)row["Semestr"];
+            examRecord.Mark = (int)row["Mark"];
+        }
+        #endregion
+
+
     }
 }

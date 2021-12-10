@@ -21,6 +21,17 @@ namespace MODEL
 		private int _mark;
 		private DateTime _examdate = DateTime.Now;
 
+		private int _idInstitute;
+		private string _shortNameInst;
+		private int _idProfession;
+		private string _nameProfession;
+		private int _idGroup;
+		private string _nameGroup;
+		private int _idDiscipline;
+		private string _nameDiscipline;
+		private string _nameStudent;
+
+		private int _id;
 		private int _semester;
 		private string _namediscipline;
 
@@ -76,6 +87,16 @@ namespace MODEL
 			set { _examdate = value; }
 			get { return _examdate; }
 		}
+
+		public int IdInstitute { get => _idInstitute; set => _idInstitute = value; }
+		public string ShortNameInst { get => _shortNameInst; set => _shortNameInst = value; }
+		public int IdProfession { get => _idProfession; set => _idProfession = value; }
+		public string NameProfession { get => _nameProfession; set => _nameProfession = value; }
+		public int IdGroup { get => _idGroup; set => _idGroup = value; }
+		public string NameGroup { get => _nameGroup; set => _nameGroup = value; }
+		public int IdDiscipline { get => _idDiscipline; set => _idDiscipline = value; }
+		public string NameDiscipline1 { get => _nameDiscipline; set => _nameDiscipline = value; }
+		public string NameStudent { get => _nameStudent; set => _nameStudent = value; }
 		#endregion Model
 
 	}

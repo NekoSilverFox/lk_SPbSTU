@@ -33,8 +33,7 @@
             this.tsmiMyInfo = new System.Windows.Forms.ToolStripMenuItem();
             this.tmiStudent = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDiscipline = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiStudyPlan = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiStaff = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiMarkForStudent = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiWindow = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiExit = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
@@ -46,8 +45,7 @@
             this.tsmiMyInfo,
             this.tmiStudent,
             this.tsmiDiscipline,
-            this.tsmiStudyPlan,
-            this.tsmiStaff,
+            this.tsmiMarkForStudent,
             this.tsmiWindow,
             this.tsmiExit});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -67,8 +65,8 @@
             // tmiStudent
             // 
             this.tmiStudent.Name = "tmiStudent";
-            this.tmiStudent.Size = new System.Drawing.Size(66, 21);
-            this.tmiStudent.Text = "Студент";
+            this.tmiStudent.Size = new System.Drawing.Size(154, 21);
+            this.tmiStudent.Text = "Мои груупы и студент";
             this.tmiStudent.Click += new System.EventHandler(this.tmiStudent_Click);
             // 
             // tsmiDiscipline
@@ -78,17 +76,12 @@
             this.tsmiDiscipline.Text = "Зачетная книжка(Студент)";
             this.tsmiDiscipline.Click += new System.EventHandler(this.tsmiDiscipline_Click);
             // 
-            // tsmiStudyPlan
+            // tsmiMarkForStudent
             // 
-            this.tsmiStudyPlan.Name = "tsmiStudyPlan";
-            this.tsmiStudyPlan.Size = new System.Drawing.Size(108, 21);
-            this.tsmiStudyPlan.Text = "Учебный план";
-            // 
-            // tsmiStaff
-            // 
-            this.tsmiStaff.Name = "tsmiStaff";
-            this.tsmiStaff.Size = new System.Drawing.Size(78, 21);
-            this.tsmiStaff.Text = "Работник";
+            this.tsmiMarkForStudent.Name = "tsmiMarkForStudent";
+            this.tsmiMarkForStudent.Size = new System.Drawing.Size(210, 21);
+            this.tsmiMarkForStudent.Text = "Присвоение оценок студентам";
+            this.tsmiMarkForStudent.Click += new System.EventHandler(this.tsmiMarkForStudent_Click);
             // 
             // tsmiWindow
             // 
@@ -111,7 +104,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "TeacherMainForm";
-            this.Text = "TeacherMainForm";
             this.Load += new System.EventHandler(this.TeacherMainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -125,9 +117,8 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem tsmiMyInfo;
         private System.Windows.Forms.ToolStripMenuItem tsmiDiscipline;
-        private System.Windows.Forms.ToolStripMenuItem tsmiStudyPlan;
+        private System.Windows.Forms.ToolStripMenuItem tsmiMarkForStudent;
         private System.Windows.Forms.ToolStripMenuItem tmiStudent;
-        private System.Windows.Forms.ToolStripMenuItem tsmiStaff;
         private System.Windows.Forms.ToolStripMenuItem tsmiWindow;
         private System.Windows.Forms.ToolStripMenuItem tsmiExit;
     }

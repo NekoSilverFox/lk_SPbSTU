@@ -81,5 +81,25 @@ namespace UI
                 Application.OpenForms["TeacherWithHisGroupAndStudentForm"].Show();
             }
         }
+
+        private void tsmiMarkForStudent_Click(object sender, EventArgs e)
+        {
+            // 使用另一种方式打开唯一的窗体
+            TeacherMarkForStudentForm teacherMarkForStudentForm = null;
+
+            // 所有生成的窗体都保存在了系统的 `Application` 中，可以通过使用 `Application.OpenForms["窗体名"]` 来调用
+            if (Application.OpenForms["TeacherMarkForStudentForm"] == null)
+            {
+                teacherMarkForStudentForm = new TeacherMarkForStudentForm();
+
+                // 【重点】这里是首次打开此窗体，所以要设置 MDI 父窗体
+                teacherMarkForStudentForm.MdiParent = this;
+                teacherMarkForStudentForm.Show();
+            }
+            else
+            {
+                Application.OpenForms["TeacherMarkForStudentForm"].Show();
+            }
+        }
     }
 }

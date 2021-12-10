@@ -52,5 +52,17 @@ namespace BLL
 
         }
         #endregion
+
+        #region 根据老师的ID获取他所有学生的成绩册 +List<MODEL.tb_ExamRecord> GetExamRecordsByStaffID(int staffID)
+        /// <summary>
+        /// 根据老师的ID获取他所有学生的成绩册
+        /// </summary>
+        /// <param name="staffID"></param>
+        /// <returns></returns>
+        public List<MODEL.tb_ExamRecord> GetExamRecordsByStaffID(int staffID)
+        {
+            return examRecordService.GetExamRecordsByStaffID(staffID);
+        }
+        #endregion
     }
 }
