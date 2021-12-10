@@ -31,12 +31,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentStudyPlanForm));
             this.dgvList = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NameStaff = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,16 +70,6 @@
             this.dgvList.Size = new System.Drawing.Size(1229, 598);
             this.dgvList.TabIndex = 16;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("JetBrains Mono NL Light", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(469, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(272, 47);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Учебный план";
-            // 
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -110,7 +100,7 @@
             this.Column4.MinimumWidth = 70;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 97;
+            this.Column4.Width = 75;
             // 
             // Column3
             // 
@@ -121,7 +111,7 @@
             this.Column3.MinimumWidth = 70;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 89;
+            this.Column3.Width = 70;
             // 
             // NameStaff
             // 
@@ -130,6 +120,16 @@
             this.NameStaff.HeaderText = "Преподаватель";
             this.NameStaff.MinimumWidth = 150;
             this.NameStaff.Name = "NameStaff";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("JetBrains Mono NL Light", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(469, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(272, 47);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Учебный план";
             // 
             // StudentStudyPlanForm
             // 
@@ -142,7 +142,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "StudentStudyPlanForm";
-            this.Text = "StudentStudyPlanForm";
+            this.Text = "Учебный план";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.StudentStudyPlanForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).EndInit();

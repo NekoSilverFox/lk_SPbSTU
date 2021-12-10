@@ -65,8 +65,8 @@
             // tmiStudent
             // 
             this.tmiStudent.Name = "tmiStudent";
-            this.tmiStudent.Size = new System.Drawing.Size(154, 21);
-            this.tmiStudent.Text = "Мои груупы и студент";
+            this.tmiStudent.Size = new System.Drawing.Size(163, 21);
+            this.tmiStudent.Text = "Мои груупы и студенты";
             this.tmiStudent.Click += new System.EventHandler(this.tmiStudent_Click);
             // 
             // tsmiDiscipline

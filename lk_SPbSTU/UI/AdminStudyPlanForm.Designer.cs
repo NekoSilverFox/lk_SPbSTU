@@ -33,6 +33,7 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsmiAddInstitue = new System.Windows.Forms.ToolStripLabel();
             this.tsmiUpdate = new System.Windows.Forms.ToolStripLabel();
+            this.tsmiDelete = new System.Windows.Forms.ToolStripLabel();
             this.tsmiExit = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.dgvList = new System.Windows.Forms.DataGridView();
@@ -57,7 +58,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOk = new System.Windows.Forms.Button();
-            this.tsmiDelete = new System.Windows.Forms.ToolStripLabel();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
             this.gpAdd.SuspendLayout();
@@ -90,6 +90,13 @@
             this.tsmiUpdate.Size = new System.Drawing.Size(78, 22);
             this.tsmiUpdate.Text = "Изменение";
             this.tsmiUpdate.Click += new System.EventHandler(this.tsmiUpdate_Click);
+            // 
+            // tsmiDelete
+            // 
+            this.tsmiDelete.Name = "tsmiDelete";
+            this.tsmiDelete.Size = new System.Drawing.Size(66, 22);
+            this.tsmiDelete.Text = "Удаление";
+            this.tsmiDelete.Click += new System.EventHandler(this.tsmiDelete_Click);
             // 
             // tsmiExit
             // 
@@ -356,13 +363,6 @@
             this.btnOk.UseVisualStyleBackColor = true;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
-            // tsmiDelete
-            // 
-            this.tsmiDelete.Name = "tsmiDelete";
-            this.tsmiDelete.Size = new System.Drawing.Size(66, 22);
-            this.tsmiDelete.Text = "Удаление";
-            this.tsmiDelete.Click += new System.EventHandler(this.tsmiDelete_Click);
-            // 
             // AdminStudyPlanForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -375,7 +375,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminStudyPlanForm";
-            this.Text = "AdminStudyPlanForm";
+            this.Text = "Учебный план";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AdminStudyPlanForm_Load);
             this.toolStrip1.ResumeLayout(false);

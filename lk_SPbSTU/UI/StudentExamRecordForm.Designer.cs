@@ -129,7 +129,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "StudentExamRecordForm";
-            this.Text = "StudentExamRecordForm";
+            this.Text = "Зачетная книжка";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.StudentExamRecordForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).EndInit();

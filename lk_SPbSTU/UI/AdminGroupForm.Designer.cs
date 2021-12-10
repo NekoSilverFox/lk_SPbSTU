@@ -337,7 +337,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminGroupForm";
-            this.Text = "AdminGroupForm";
+            this.Text = "Группа";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AdminGroupForm_Load);
             this.toolStrip1.ResumeLayout(false);

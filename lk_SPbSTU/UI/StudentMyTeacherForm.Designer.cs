@@ -151,7 +151,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "StudentMyTeacherForm";
-            this.Text = "StudentMyTeacherForm";
+            this.Text = "Мой преподаватель";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.StudentMyTeacherForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).EndInit();

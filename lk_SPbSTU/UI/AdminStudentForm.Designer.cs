@@ -573,7 +573,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminStudentForm";
-            this.Text = "AdminStudentForm";
+            this.Text = "Студент";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AdminStudentForm_Load);
             this.toolStrip1.ResumeLayout(false);
