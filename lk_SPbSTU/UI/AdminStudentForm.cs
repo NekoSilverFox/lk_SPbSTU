@@ -358,6 +358,7 @@ namespace UI
                 }
             }
 
+            // 没有选中所有的下拉列表
             if (cboAddInstitute.SelectedItem == null ||
                 cboAddProfession.SelectedItem == null ||
                 cboAddGroup.SelectedItem == null)
